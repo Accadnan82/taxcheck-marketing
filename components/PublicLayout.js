@@ -54,6 +54,191 @@ export default function PublicLayout({ children }) {
           </div>
         </div>
       </footer>
+
+      {/* ✅ Global CSS داخل الملف نفسه لضمان التطبيق */}
+      <style jsx global>{`
+        html, body {
+          padding: 0;
+          margin: 0;
+          font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          background: #F5F7FA;
+          color: #2C3E50;
+        }
+        * { box-sizing: border-box; }
+        a { color: inherit; text-decoration: none; }
+
+        .tc {
+          min-height: 100vh;
+          position: relative;
+          background: #F5F7FA;
+          color: #2C3E50;
+        }
+
+        .tc-bg {
+          position: absolute;
+          inset: 0;
+          overflow: hidden;
+          pointer-events: none;
+        }
+        .tc-glow {
+          position: absolute;
+          inset: -40% -30%;
+          background:
+            radial-gradient(circle at 25% 25%, rgba(46,204,113,0.22), transparent 55%),
+            radial-gradient(circle at 70% 35%, rgba(26,62,110,0.18), transparent 60%),
+            radial-gradient(circle at 45% 80%, rgba(142,68,173,0.10), transparent 60%);
+          filter: blur(16px);
+        }
+        .tc-shimmer {
+          position: absolute;
+          top: -140px;
+          left: -45%;
+          width: 65%;
+          height: 560px;
+          background: linear-gradient(115deg, transparent 0%, rgba(46,204,113,0.10) 45%, transparent 70%);
+          transform: rotate(10deg);
+          animation: tcShimmerMove 7.5s linear infinite;
+          filter: blur(2px);
+          opacity: 0.8;
+        }
+        @keyframes tcShimmerMove {
+          0% { transform: translateX(0) rotate(10deg); }
+          100% { transform: translateX(145%) rotate(10deg); }
+        }
+
+        .tc-container {
+          max-width: 1152px;
+          margin: 0 auto;
+          padding: 0 24px;
+          position: relative;
+          z-index: 1;
+        }
+
+        .tc-header {
+          position: sticky;
+          top: 0;
+          z-index: 10;
+          background: rgba(255,255,255,0.82);
+          backdrop-filter: blur(10px);
+          border-bottom: 1px solid #E5E7EB;
+        }
+        .tc-headerInner {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 14px 0;
+          gap: 16px;
+        }
+
+        .tc-brand {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+        }
+        .tc-logo {
+          width: 40px;
+          height: 40px;
+          border-radius: 14px;
+          background: #1A3E6E;
+          color: #fff;
+          display: grid;
+          place-items: center;
+          font-weight: 800;
+          letter-spacing: -0.02em;
+        }
+        .tc-brandTitle {
+          font-size: 14px;
+          font-weight: 800;
+          letter-spacing: -0.01em;
+          color: #0F172A;
+        }
+        .tc-brandSub {
+          font-size: 12px;
+          color: #64748B;
+          margin-top: 2px;
+        }
+
+        .tc-nav {
+          display: none;
+          gap: 18px;
+          font-size: 13px;
+          color: #475569;
+        }
+        @media (min-width: 900px) {
+          .tc-nav { display: flex; }
+        }
+
+        .tc-navLink {
+          padding: 8px 10px;
+          border-radius: 10px;
+        }
+        .tc-navLink:hover {
+          color: #0F172A;
+          background: rgba(15,23,42,0.04);
+        }
+        .tc-navLink.is-active {
+          color: #0F172A;
+          background: rgba(26,62,110,0.08);
+        }
+
+        .tc-actions {
+          display: flex;
+          gap: 10px;
+          align-items: center;
+        }
+
+        .tc-btn {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          padding: 10px 14px;
+          border-radius: 12px;
+          border: 1px solid #E5E7EB;
+          background: #fff;
+          color: #334155;
+          font-size: 13px;
+          font-weight: 700;
+        }
+        .tc-btn:hover { background: #F8FAFC; }
+
+        .tc-btnPrimary {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          padding: 10px 14px;
+          border-radius: 12px;
+          border: 1px solid transparent;
+          background: #2ECC71;
+          color: #fff;
+          font-size: 13px;
+          font-weight: 800;
+        }
+        .tc-btnPrimary:hover { opacity: 0.92; }
+
+        .tc-main {
+          position: relative;
+          z-index: 1;
+        }
+
+        .tc-footer {
+          margin-top: 56px;
+          border-top: 1px solid #E5E7EB;
+          background: rgba(255,255,255,0.9);
+        }
+        .tc-footerInner {
+          display: flex;
+          justify-content: space-between;
+          gap: 16px;
+          padding: 18px 0;
+          font-size: 13px;
+          color: #64748B;
+        }
+        .tc-footerLinks a {
+          margin-left: 12px;
+          color: #64748B;
+        }
+        .tc-footerLinks a:hover { color: #0F172A; }
+      `}</style>
     </div>
   );
 }
