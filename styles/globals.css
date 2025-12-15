@@ -219,6 +219,7 @@ button { font-family: inherit; }
 }
 .tc-featureText{ font-size: 12px; color:#475569; line-height:1.65; }
 
+/* ===== Screenshots Grid (FIXED) ===== */
 .tc-screensGrid{
   width: 100%;
   max-width: 980px;
@@ -229,13 +230,76 @@ button { font-family: inherit; }
 }
 
 .tc-screen{
-  background: rgba(255,255,255,0.75);
+  background: rgba(255,255,255,0.78);
   border: 1px solid rgba(229,231,235,0.9);
-  border-radius: 14px;
+  border-radius: 16px;
   padding: 0;
   overflow: hidden;
   box-shadow: 0 10px 26px rgba(15,23,42,0.06);
+  cursor: pointer;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  position: relative;
 }
+
+.tc-screen:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 14px 34px rgba(15,23,42,0.10);
+  border-color: rgba(26,62,110,0.35);
+}
+
+.tc-screen img{
+  width: 100%;
+  height: 340px;      /* نفس الارتفاع لكل الصور */
+  object-fit: cover;  /* قص أنيق بدل تمطيط بالطول */
+  display: block;
+}
+
+/* ===== Lightbox (Preview) ===== */
+.tc-lightbox{
+  position: fixed;
+  inset: 0;
+  background: rgba(2,6,23,0.72);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 18px;
+}
+
+.tc-lightboxInner{
+  max-width: 1100px;
+  width: 100%;
+  max-height: 90vh;
+  background: rgba(255,255,255,0.92);
+  border: 1px solid rgba(255,255,255,0.35);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+  position: relative;
+}
+
+.tc-lightboxImg{
+  width: 100%;
+  height: 90vh;
+  max-height: 90vh;
+  object-fit: contain; /* بالمعاينة: بدون قص */
+  background: #0b1220;
+  display: block;
+}
+
+.tc-lightboxClose{
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid rgba(226,232,240,0.8);
+  background: rgba(255,255,255,0.95);
+  font-weight: 900;
+  cursor: pointer;
+}
+.tc-lightboxClose:hover{ background: #fff; }
 
 /* ===== FOOTER ===== */
 .tc-footer{
