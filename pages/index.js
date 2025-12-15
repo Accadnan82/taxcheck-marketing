@@ -1,233 +1,306 @@
-import Link from "next/link";
-import { APP_LOGIN, APP_SIGNUP } from "../lib/links";
+import React, { useEffect, useMemo, useState } from "react";
+
+export default function HomePage() {
+  const [lang, setLang] = useState("en");
+
+  useEffect(() => {
+    const saved = typeof window !== "undefined" ? localStorage.getItem("tc_lang") : null;
+    if (saved === "ar" || saved === "en") setLang(saved);
+  }, []);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") localStorage.setItem("tc_lang", lang);
+  }, [lang]);
+
+  const copy = useMemo(() => getCopy(lang), [lang]);
+
+  return (
+    <div className="mkt" dir={copy.dir} lang={lang}>
+      {/* HERO */}
+      <section className="mkt-hero" id="home">
+        <div className="mkt-container">
+          <div className="mkt-heroGrid">
+            <div className="mkt-heroText">
+              <div className="mkt-badgeRow">
+                <span className="mkt-badgeDot" aria-hidden="true" />
+                <span className="mkt-badgeText">{copy.badge}</span>
+              </div>
+
+              <h1 className="mkt-h1">{copy.h1}</h1>
+              <h2 className="mkt-h2">{copy.h2}</h2>
+
+              <p className="mkt-heroP">{copy.heroP}</p>
+
+              <div className="mkt-tags">
+                {copy.tags.map((t) => (
+                  <span className="mkt-tag" key={t}>
+                    {t}
+                  </span>
+                ))}
+              </div>
+
+              {/* NOTE: لا يوجد Start Free هنا (حسب طلبك) */}
+              <div className="mkt-heroActions">
+                <a className="mkt-btn mkt-btnPrimary" href="#screens">
+                  {copy.viewScreens}
+                </a>
+                <a className="mkt-btn" href="#services">
+                  {copy.servicesCta}
+                </a>
+
+                {/* زر اللغة داخل الصفحة (اختياري) */}
+                <button
+                  type="button"
+                  className="mkt-btn mkt-btnLang"
+                  onClick={() => setLang((v) => (v === "en" ? "ar" : "en"))}
+                  aria-label="Switch language"
+                >
+                  {lang === "en" ? "AR" : "EN"}
+                </button>
+              </div>
+            </div>
+
+            <div className="mkt-heroCard">
+              <div className="mkt-heroCardHeader">
+                <div>
+                  <div className="mkt-heroCardTitle">{copy.whyTitle}</div>
+                  <div className="mkt-heroCardSub">{copy.whySub}</div>
+                </div>
+                <div className="mkt-pill">{copy.aiPill}</div>
+              </div>
+
+              <div className="mkt-heroCardList">
+                {copy.whyItems.map((x) => (
+                  <div className="mkt-heroCardItem" key={x.title}>
+                    <div className="mkt-heroCardItemTitle">{x.title}</div>
+                    <div className="mkt-heroCardItemDesc">{x.desc}</div>
+                  </div>
+                ))}
+
+                <div className="mkt-heroCardItem">
+                  <div className="mkt-heroCardItemTitle">{copy.useCasesTitle}</div>
+                  <div className="mkt-chipRow">
+                    {copy.useCaseChips.map((c) => (
+                      <span className="mkt-chip" key={c}>
+                        {c}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* شريط خفيف لتحريك الانتباه (مثل flash) */}
+          <div className="mkt-sheen" aria-hidden="true" />
+        </div>
+      </section>
+
+      {/* USE CASES (BENTO) */}
+      <section className="mkt-section mkt-sectionWhite" id="services">
+        <div className="mkt-container">
+          <div className="mkt-sectionHead">
+            <h3 className="mkt-sectionTitle">{copy.bentoTitle}</h3>
+            <p className="mkt-sectionSub">{copy.bentoSub}</p>
+          </div>
+
+          <div className="mkt-bento">
+            <div className="mkt-bentoCard mkt-bentoCardFeatured">
+              <div className="mkt-bentoIcon">📊</div>
+              <div className="mkt-bentoTitle">{copy.bentoFeatured.title}</div>
+              <div className="mkt-bentoDesc">{copy.bentoFeatured.desc}</div>
+            </div>
+
+            {copy.bentoCards.map((b) => (
+              <div className="mkt-bentoCard" key={b.title}>
+                <div className="mkt-bentoIcon">{b.icon}</div>
+                <div className="mkt-bentoTitle">{b.title}</div>
+                <div className="mkt-bentoDesc">{b.desc}</div>
+              </div>
+            ))}
+          </div>
+
+          {/* خدمات الاستشارات (حسب طلبك سابقاً) */}
+          <div className="mkt-servicesGrid">
+            {copy.services.map((s) => (
+              <div className="mkt-serviceBox" key={s.title}>
+                <div className="mkt-serviceTitle">{s.title}</div>
+                <div className="mkt-serviceDesc">{s.desc}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FEATURES */}
+      <section className="mkt-section" id="about">
+        <div className="mkt-container">
+          <div className="mkt-sectionHead">
+            <h3 className="mkt-sectionTitle">{copy.featuresTitle}</h3>
+            <p className="mkt-sectionSub">{copy.featuresSub}</p>
+          </div>
+
+          <div className="mkt-features">
+            {copy.features.map((f) => (
+              <div className="mkt-featureBox" key={f.title}>
+                <div className="mkt-featureTitle">
+                  <span className="mkt-featureIcon">{f.icon}</span>
+                  {f.title}
+                </div>
+                <div className="mkt-featureDesc">{f.desc}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SCREENSHOTS */}
+      <section className="mkt-section mkt-sectionWhite" id="screens">
+        <div className="mkt-container">
+          <div className="mkt-sectionHead">
+            <h3 className="mkt-sectionTitle">{copy.screensTitle}</h3>
+            <p className="mkt-sectionSub">{copy.screensSub}</p>
+          </div>
+
+          <div className="mkt-screens">
+            <a className="mkt-screen" href="/screens/screen-dashboard.png" target="_blank" rel="noreferrer">
+              <img src="/screens/screen-dashboard.png" alt="Dashboard" />
+            </a>
+
+            <a className="mkt-screen" href="/screens/screen-flow.png" target="_blank" rel="noreferrer">
+              <img src="/screens/screen-flow.png" alt="Flow" />
+            </a>
+
+            <a className="mkt-screen" href="/screens/screen-report.png" target="_blank" rel="noreferrer">
+              <img src="/screens/screen-report.png" alt="Report" />
+            </a>
+          </div>
+
+          <div className="mkt-note">
+            {copy.screensNote}
+          </div>
+        </div>
+      </section>
+
+      {/* لا يوجد Contact Section هنا نهائياً (حسب طلبك) */}
+    </div>
+  );
+}
 
 function getCopy(lang) {
   const en = {
     dir: "ltr",
     badge: "Corporate Tax + VAT • AI-assisted • Built for Accountants",
-    h1a: "Corporate Tax & VAT in the UAE",
-    h1b: "Clear workflows. Practical outputs.",
+    h1: "Corporate Tax & VAT in the UAE",
+    h2: "Clear workflows. Practical outputs.",
     heroP:
       "TaxCheck helps accountants and SMEs manage taxpayers, tax periods, and Corporate Tax / VAT filings through guided steps, validations, and professional reports.",
-    // ✅ Start Free removed from homepage
-    startFree: "",
+    tags: ["Guided workflows", "Accountant-grade outputs", "AI + deterministic rules", "Compliance-first"],
     viewScreens: "View Product Screens",
-    consulting: "Consulting Services",
-
-    m1t: "Guided workflows",
-    m1p: "Step-by-step flows with validations and clear checkpoints.",
-    m2t: "Professional outputs",
-    m2p: "Practical summaries and reporting-ready structures.",
+    servicesCta: "Consulting Services",
 
     whyTitle: "Why TaxCheck?",
-    whyP: "Accountant-grade experience with clarity, validations, and reliable outputs.",
-    w1t: "Corporate Tax workflow",
-    w1p: "Structured inputs and checkpoints to reduce errors.",
-    w2t: "VAT return preparation",
-    w2p: "Clean, section-based flow with practical summaries.",
-    w3t: "Taxpayer & period management",
-    w3p: "Organize clients, periods, and filings consistently.",
-    w4t: "AI + rules",
-    w4p: "Suggestions supported by deterministic validation gates.",
+    whySub: "Accountant-grade experience with clarity, validations, and reliable outputs.",
+    aiPill: "AI + Rules",
+    whyItems: [
+      { title: "Corporate Tax workflow", desc: "Structured inputs and checkpoints to reduce errors." },
+      { title: "VAT return preparation", desc: "Clean, section-based flow with practical summaries." },
+      { title: "Taxpayer & period management", desc: "Organize clients, periods, and filings consistently." },
+      { title: "AI + rules", desc: "Suggestions supported by deterministic validation gates." },
+    ],
+    useCasesTitle: "Typical use cases",
+    useCaseChips: ["VAT returns", "CT periods", "Accounting firms", "Pre-submission checks"],
 
-    useTitle: "Typical use cases",
-    tag1: "VAT returns",
-    tag2: "CT periods",
-    tag3: "Accounting firms",
-    tag4: "Pre-submission checks",
+    bentoTitle: "Typical use cases",
+    bentoSub: "A structured system designed for real tax work and predictable outcomes.",
+    bentoFeatured: {
+      title: "VAT returns",
+      desc: "Prepare and review VAT returns with validation gates and export-ready summaries.",
+    },
+    bentoCards: [
+      { icon: "🏢", title: "Corporate Tax periods", desc: "Manage CT periods, taxpayer data, and filing readiness." },
+      { icon: "💼", title: "Accounting firms", desc: "Operate across multiple clients with consistent workflows." },
+      { icon: "✅", title: "Pre-submission checks", desc: "Catch common issues before submission using checkpoints." },
+    ],
 
-    screensTitle: "Product Screenshots",
-    screensP: "A preview of the TaxCheck interface and workflows.",
+    services: [
+      { title: "Financial consulting", desc: "Workflow design, reporting structures, and accounting advisory." },
+      { title: "Technical consulting", desc: "Tax systems, finance software architecture, and ERP integrations." },
+      { title: "Bookkeeping services", desc: "Monthly bookkeeping support aligned with reporting needs." },
+      { title: "Tax consulting", desc: "Practical VAT and Corporate Tax guidance for SME operations." },
+    ],
+
+    featuresTitle: "Powerful features for tax work",
+    featuresSub: "Everything you need to deliver clean, client-ready results.",
+    features: [
+      { icon: "🎯", title: "Guided workflow", desc: "Step-by-step flows with validations and checkpoints." },
+      { icon: "📊", title: "Professional outputs", desc: "Practical summaries and export-ready structures." },
+      { icon: "✅", title: "Validation gates", desc: "Built-in checks to reduce errors and improve compliance." },
+      { icon: "🤖", title: "AI-supported (rules-first)", desc: "Helpful suggestions backed by deterministic rules." },
+    ],
+
+    screensTitle: "Product screenshots",
+    screensSub: "A quick preview of the interface and workflows.",
+    screensNote:
+      "Tip: Upload your 3 images into /public/screens/ with these names: screen-dashboard.png, screen-flow.png, screen-report.png",
   };
 
   const ar = {
     dir: "rtl",
-    badge: "الضريبة على الشركات + ضريبة القيمة المضافة • بمساعدة الذكاء الاصطناعي • مخصص للمحاسبين",
-    h1a: "الضريبة على الشركات وضريبة القيمة المضافة في الإمارات",
-    h1b: "خطوات واضحة. مخرجات عملية.",
+    badge: "الضريبة على الشركات + ضريبة القيمة المضافة • مدعوم بالذكاء الاصطناعي • للمحاسبين",
+    h1: "الضريبة على الشركات وضريبة القيمة المضافة في الإمارات",
+    h2: "سير عمل واضح. نتائج عملية.",
     heroP:
-      "يساعدك TaxCheck على إدارة المكلفين والفترات الضريبية وتجهيز إقرارات الضريبة على الشركات وضريبة القيمة المضافة عبر خطوات موجهة وتحقق ومخرجات احترافية.",
-    // ✅ إلغاء زر Start Free من الصفحة الرئيسية
-    startFree: "",
-    viewScreens: "عرض صور المنتج",
-    consulting: "الخدمات الاستشارية",
-
-    m1t: "خطوات موجهة",
-    m1p: "تسلسل واضح مع تحقق ونقاط تدقيق.",
-    m2t: "مخرجات احترافية",
-    m2p: "ملخصات عملية وتقارير جاهزة للمراجعة.",
+      "يساعد TaxCheck المحاسبين والشركات الصغيرة والمتوسطة على إدارة دافعي الضرائب والفترات الضريبية وتقديم الإقرارات عبر خطوات موجهة وتحققات وتقارير احترافية.",
+    tags: ["سير عمل موجّه", "مخرجات بمستوى المحاسبين", "ذكاء + قواعد حتمية", "تركيز على الامتثال"],
+    viewScreens: "عرض لقطات المنتج",
+    servicesCta: "خدمات الاستشارات",
 
     whyTitle: "لماذا TaxCheck؟",
-    whyP: "تجربة بمستوى مكاتب المحاسبة: وضوح، تحقق، ومخرجات موثوقة.",
-    w1t: "سير عمل الضريبة على الشركات",
-    w1p: "مدخلات منظمة ونقاط تدقيق لتقليل الأخطاء.",
-    w2t: "تحضير إقرار ضريبة القيمة المضافة",
-    w2p: "أقسام مرتبة مع ملخصات عملية.",
-    w3t: "إدارة المكلفين والفترات",
-    w3p: "تنظيم العملاء والفترات والإقرارات بشكل ثابت.",
-    w4t: "الذكاء الاصطناعي + القواعد",
-    w4p: "اقتراحات مدعومة بقواعد تحقق حتمية.",
+    whySub: "تجربة واضحة للمحاسب مع تحققات ومخرجات موثوقة.",
+    aiPill: "AI + قواعد",
+    whyItems: [
+      { title: "سير عمل الضريبة على الشركات", desc: "مدخلات منظمة ونقاط تحقق لتقليل الأخطاء." },
+      { title: "إعداد إقرار ضريبة القيمة المضافة", desc: "تدفق قائم على الأقسام مع ملخصات عملية." },
+      { title: "إدارة دافعي الضرائب والفترات", desc: "تنظيم العملاء والفترات والإقرارات باستمرار." },
+      { title: "ذكاء + قواعد", desc: "اقتراحات مدعومة ببوابات تحقق حتمية." },
+    ],
+    useCasesTitle: "حالات الاستخدام",
+    useCaseChips: ["إقرارات VAT", "فترات CT", "مكاتب محاسبة", "فحص قبل التقديم"],
 
-    useTitle: "حالات استخدام شائعة",
-    tag1: "إقرارات VAT",
-    tag2: "فترات CT",
-    tag3: "مكاتب محاسبة",
-    tag4: "فحص قبل التقديم",
+    bentoTitle: "حالات الاستخدام النموذجية",
+    bentoSub: "نظام منظم للعمل الضريبي الحقيقي بنتائج يمكن الاعتماد عليها.",
+    bentoFeatured: {
+      title: "إقرارات ضريبة القيمة المضافة",
+      desc: "إعداد ومراجعة الإقرارات مع تحققات وملخصات جاهزة للتصدير.",
+    },
+    bentoCards: [
+      { icon: "🏢", title: "فترات الضريبة على الشركات", desc: "إدارة الفترات وبيانات المكلف وجاهزية التقديم." },
+      { icon: "💼", title: "المكاتب المحاسبية", desc: "العمل على عدة عملاء بسير عمل موحد." },
+      { icon: "✅", title: "فحص قبل التقديم", desc: "التقاط الأخطاء الشائعة قبل رفع الإقرار." },
+    ],
 
-    screensTitle: "صور من داخل المنتج",
-    screensP: "لمحة عن الواجهة وسير العمل داخل TaxCheck.",
+    services: [
+      { title: "الاستشارات المالية", desc: "تصميم سير العمل، هياكل التقارير، واستشارات محاسبية." },
+      { title: "الاستشارات التقنية", desc: "أنظمة الضرائب، بنية البرامج المالية، وربط ERP." },
+      { title: "مسك الدفاتر", desc: "دعم شهري لمسكة الدفاتر متوافق مع احتياج التقارير." },
+      { title: "الاستشارات الضريبية", desc: "إرشاد عملي لضريبة القيمة المضافة والضريبة على الشركات." },
+    ],
+
+    featuresTitle: "مميزات قوية للعمل الضريبي",
+    featuresSub: "كل ما تحتاجه لإخراج نتائج منظمة وجاهزة للعميل.",
+    features: [
+      { icon: "🎯", title: "سير عمل موجّه", desc: "خطوات واضحة مع تحققات ونقاط تفتيش." },
+      { icon: "📊", title: "مخرجات احترافية", desc: "ملخصات عملية وهياكل جاهزة للتصدير." },
+      { icon: "✅", title: "تدقيقات مدمجة", desc: "تحققات تقلل الأخطاء وترفع الامتثال." },
+      { icon: "🤖", title: "ذكاء مدعوم بالقواعد", desc: "اقتراحات مفيدة مبنية على قواعد حتمية." },
+    ],
+
+    screensTitle: "لقطات من المنتج",
+    screensSub: "نظرة سريعة على الواجهة وسير العمل.",
+    screensNote:
+      "ملاحظة: ارفع 3 صور داخل /public/screens/ بالأسماء: screen-dashboard.png, screen-flow.png, screen-report.png",
   };
 
   return lang === "ar" ? ar : en;
-}
-
-export default function HomePage() {
-  // لغة بسيطة عبر query: ?lang=ar
-  const lang =
-    typeof window !== "undefined" &&
-    new URLSearchParams(window.location.search).get("lang") === "ar"
-      ? "ar"
-      : "en";
-
-  const c = getCopy(lang);
-
-  return (
-    <div dir={c.dir}>
-      <section className="tc-hero">
-        <div className="tc-heroGrid">
-          <div>
-            <div className="tc-pill">
-              <span className="tc-dot" />
-              <span>{c.badge}</span>
-            </div>
-
-            <h1 className="tc-heroTitle">
-              {c.h1a}
-              <br />
-              <span className="tc-heroTitleSoft">{c.h1b}</span>
-            </h1>
-
-            <p className="tc-heroSubtitle">{c.heroP}</p>
-
-            <div className="tc-heroActions">
-              {/* ✅ Start Free removed from homepage by empty text */}
-              {c.startFree ? (
-                <a className="tc-btnPrimary" href={APP_SIGNUP}>
-                  {c.startFree}
-                </a>
-              ) : null}
-
-              <a className="tc-btn" href="#screens">
-                {c.viewScreens}
-              </a>
-              <Link href="/services" legacyBehavior>
-                <a className="tc-btn">{c.consulting}</a>
-              </Link>
-
-              <Link href={{ pathname: "/", query: { lang: lang === "ar" ? "en" : "ar" } }} legacyBehavior>
-                <a className="tc-btn tc-langBtn">{lang === "ar" ? "EN" : "AR"}</a>
-              </Link>
-            </div>
-
-            <div className="tc-miniCards">
-              <div className="tc-miniCard">
-                <div className="tc-miniTitle">{c.m1t}</div>
-                <div className="tc-miniText">{c.m1p}</div>
-              </div>
-              <div className="tc-miniCard">
-                <div className="tc-miniTitle">{c.m2t}</div>
-                <div className="tc-miniText">{c.m2p}</div>
-              </div>
-            </div>
-          </div>
-
-          <div className="tc-sideCard">
-            <div className="tc-sideHeader">
-              <div>
-                <div className="tc-sideTitle">{c.whyTitle}</div>
-                <div className="tc-sideText">{c.whyP}</div>
-              </div>
-              <div className="tc-badge">AI + Rules</div>
-            </div>
-
-            <div className="tc-sideList">
-              <div className="tc-sideItem">
-                <div className="tc-sideItemTitle">{c.w1t}</div>
-                <div className="tc-sideItemText">{c.w1p}</div>
-              </div>
-              <div className="tc-sideItem">
-                <div className="tc-sideItemTitle">{c.w2t}</div>
-                <div className="tc-sideItemText">{c.w2p}</div>
-              </div>
-              <div className="tc-sideItem">
-                <div className="tc-sideItemTitle">{c.w3t}</div>
-                <div className="tc-sideItemText">{c.w3p}</div>
-              </div>
-              <div className="tc-sideItem">
-                <div className="tc-sideItemTitle">{c.w4t}</div>
-                <div className="tc-sideItemText">{c.w4p}</div>
-              </div>
-            </div>
-
-            <div className="tc-sideFooter">
-              <div className="tc-sideFooterTitle">{c.useTitle}</div>
-              <div className="tc-tags">
-                <span className="tc-tag">{c.tag1}</span>
-                <span className="tc-tag">{c.tag2}</span>
-                <span className="tc-tag">{c.tag3}</span>
-                <span className="tc-tag">{c.tag4}</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="screens" className="tc-section">
-        <h2 className="tc-sectionTitle">{c.screensTitle}</h2>
-        <p className="tc-sectionSub">{c.screensP}</p>
-
-        <div className="screens">
-          <img src="/screens/screen-dashboard.png" alt="Dashboard" />
-          <img src="/screens/screen-tax-wizard.png" alt="Tax Wizard" />
-          <img src="/screens/screen-reports.png" alt="Reports" />
-        </div>
-      </section>
-
-      <section id="contact" className="tc-section">
-        <h2 className="tc-sectionTitle">{lang === "ar" ? "اتصل بنا" : "Contact Us"}</h2>
-        <p className="tc-sectionSub">
-          {lang === "ar"
-            ? "أرسل لنا رسالة وسنعاود التواصل معك."
-            : "Send us a message and we’ll get back to you."}
-        </p>
-
-        <form className="tc-contactForm">
-          <div className="tc-formGrid">
-            <div>
-              <label className="tc-label">{lang === "ar" ? "الاسم" : "Name"}</label>
-              <input className="tc-input" placeholder={lang === "ar" ? "اسمك الكامل" : "Your full name"} />
-            </div>
-            <div>
-              <label className="tc-label">{lang === "ar" ? "البريد الإلكتروني" : "Email"}</label>
-              <input className="tc-input" placeholder="name@company.com" />
-            </div>
-          </div>
-
-          <div style={{ marginTop: 14 }}>
-            <label className="tc-label">{lang === "ar" ? "الرسالة" : "Message"}</label>
-            <textarea className="tc-textarea" rows={5} placeholder={lang === "ar" ? "اكتب رسالتك هنا..." : "Write your message..."} />
-          </div>
-
-          <div style={{ marginTop: 14, display: "flex", gap: 10 }}>
-            <button type="button" className="tc-btnPrimary">
-              {lang === "ar" ? "إرسال" : "Send"}
-            </button>
-            <a className="tc-btn" href={APP_LOGIN}>
-              {lang === "ar" ? "تسجيل الدخول" : "Sign in"}
-            </a>
-          </div>
-        </form>
-      </section>
-    </div>
-  );
 }
