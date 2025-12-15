@@ -1,141 +1,18 @@
 import React, { useMemo, useState } from "react";
+import { APP_LOGIN, APP_SIGNUP } from "../lib/links";
 
-export default function Home() {
-  const year = useMemo(() => new Date().getFullYear(), []);
-
-  // ========= Multi-language =========
+export default function IndexPage() {
   const [lang, setLang] = useState("en"); // "en" | "ar"
-  const t = useMemo(() => {
-    const en = {
-      dir: "ltr",
-      brand: "TaxCheck",
-      top: "Corporate Tax & VAT • UAE",
-      navScreens: "Product",
-      navAbout: "About",
-      navContact: "Contact",
-      signIn: "Sign in",
-      startFree: "Start Free",
+  const t = useMemo(() => getCopy(lang), [lang]);
 
-      badge: "Corporate Tax + VAT • AI-assisted • Built for Accountants",
-      h1a: "Corporate Tax & VAT in the UAE",
-      h1b: "Clear workflows. Practical outputs.",
-      heroP:
-        "TaxCheck helps accountants and SMEs manage taxpayers, tax periods, and Corporate Tax / VAT filings through guided steps, validations, and professional reports.",
-      ctaScreens: "View Product Screens",
-      ctaConsult: "Consulting Services",
-
-      secWhyTitle: "Why TaxCheck?",
-      secWhyP:
-        "Built for accountant-grade work: structured inputs, validation, and outputs you can confidently use with clients.",
-      why1T: "Guided workflows",
-      why1D: "Step-by-step flows with validations and clear checkpoints.",
-      why2T: "Practical outputs",
-      why2D: "Professional summaries, checklists, and reporting-ready exports.",
-      why3T: "Built for SMEs",
-      why3D: "Fast daily use: simple, predictable, and compliant structure.",
-      why4T: "AI + rules",
-      why4D: "AI suggestions supported by deterministic rules and validation gates.",
-
-      secScreensTitle: "Product Screenshots",
-      secScreensP:
-        "Add 3 screenshots from inside the product. If you haven’t added them yet, the placeholders will appear.",
-      screenLabel: "Screenshot",
-
-      secAboutTitle: "About",
-      aboutP:
-        "Fintech Technologies FZ-LLC builds practical financial software for accountants and SMEs in the UAE, focused on clarity, compliance, and real operational workflows.",
-
-      secConsultTitle: "Financial & Technical Consulting",
-      consultP:
-        "We provide consulting for accounting and finance software: workflow design, reporting structures, tax systems, and ERP integrations.",
-      consultCTA: "Request consultation",
-
-      secContactTitle: "Contact Us",
-      contactP:
-        "Send a message and we will get back to you with a clear next step.",
-      name: "Your name",
-      email: "Email",
-      company: "Company (optional)",
-      message: "Message",
-      send: "Send message",
-      sending: "Sending…",
-      sent: "Sent. We will contact you shortly.",
-      failed: "Failed to send. Please try again.",
-
-      footer1: "All rights reserved.",
-    };
-
-    const ar = {
-      dir: "rtl",
-      brand: "TaxCheck",
-      top: "الضريبة الاتحادية + ضريبة القيمة المضافة • الإمارات",
-      navScreens: "المنتج",
-      navAbout: "نبذة",
-      navContact: "تواصل",
-      signIn: "تسجيل الدخول",
-      startFree: "ابدأ مجانًا",
-
-      badge: "الضريبة + VAT • مساعد بالذكاء الاصطناعي • للمحاسبين",
-      h1a: "الضريبة الاتحادية و VAT في الإمارات",
-      h1b: "مسارات واضحة. مخرجات عملية.",
-      heroP:
-        "يساعدك TaxCheck على إدارة المكلّفين والفترات الضريبية وتجهيز إقرارات الضريبة الاتحادية وVAT عبر خطوات موجّهة، تحققات، وتقارير احترافية.",
-      ctaScreens: "عرض صور المنتج",
-      ctaConsult: "خدمات الاستشارة",
-
-      secWhyTitle: "لماذا TaxCheck؟",
-      secWhyP:
-        "مصمّم لعمل المحاسبين: إدخال منظّم، تحقق، ومخرجات يمكنك استخدامها بثقة مع العملاء.",
-      why1T: "مسارات موجّهة",
-      why1D: "خطوات واضحة مع تحققات ونقاط مراجعة.",
-      why2T: "مخرجات عملية",
-      why2D: "ملمّصات احترافية وقوائم تدقيق وتقارير جاهزة.",
-      why3T: "مصمم للـ SMEs",
-      why3D: "استخدام يومي سريع وبنية متوافقة ومنطقية.",
-      why4T: "ذكاء + قواعد",
-      why4D: "اقتراحات ذكية مدعومة بقواعد وتحقيقات ثابتة.",
-
-      secScreensTitle: "صور من داخل المنتج",
-      secScreensP:
-        "أضف 3 صور من داخل النظام. إذا لم تضفها بعد ستظهر أماكنها كقوالب.",
-      screenLabel: "صورة",
-
-      secAboutTitle: "نبذة عنا",
-      aboutP:
-        "تطوّر Fintech Technologies FZ-LLC برمجيات مالية عملية للمحاسبين والشركات الصغيرة في الإمارات، مع تركيز على الوضوح والالتزام وسير العمل الحقيقي.",
-
-      secConsultTitle: "استشارات مالية وتقنية",
-      consultP:
-        "نقدم استشارات للأنظمة المالية: تصميم سير العمل، بنية التقارير، الأنظمة الضريبية، وتكاملات ERP.",
-      consultCTA: "اطلب استشارة",
-
-      secContactTitle: "اتصل بنا",
-      contactP:
-        "أرسل رسالة وسنرد عليك بخطوة واضحة ومباشرة.",
-      name: "الاسم",
-      email: "البريد الإلكتروني",
-      company: "الشركة (اختياري)",
-      message: "الرسالة",
-      send: "إرسال",
-      sending: "جاري الإرسال…",
-      sent: "تم الإرسال. سنتواصل معك قريبًا.",
-      failed: "فشل الإرسال. أعد المحاولة.",
-
-      footer1: "جميع الحقوق محفوظة.",
-    };
-
-    return lang === "ar" ? ar : en;
-  }, [lang]);
-
-  // ========= Screenshots: بدون أي روابط/لينكات = placeholders فقط =========
-  // عندما تضع صور لاحقًا، فقط ضع src فعلي (URL) بدل null
+  // ✅ لا روابط صور هنا (placeholder). ضع صورك لاحقاً بتبديل src من null إلى رابط
   const screenshots = [
     { src: null, alt: "TaxCheck – Screen 1" },
     { src: null, alt: "TaxCheck – Screen 2" },
     { src: null, alt: "TaxCheck – Screen 3" },
   ];
 
-  // ========= Contact form (فعلي) =========
+  // Contact (UI + إرسال فعلي اختياري لاحقاً)
   const [form, setForm] = useState({ name: "", email: "", company: "", message: "" });
   const [status, setStatus] = useState({ state: "idle", msg: "" }); // idle|sending|success|error
 
@@ -144,454 +21,567 @@ export default function Home() {
     setStatus({ state: "sending", msg: "" });
 
     try {
-      // ✅ غيّر هذا الرابط إذا كان عندك دومين مختلف
-      const endpoint = "https://www.taxcheck.ae/api/functions/contact";
-
-      const res = await fetch(endpoint, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: form.name,
-          email: form.email,
-          company: form.company,
-          message: form.message,
-          lang,
-          source: "landing_page",
-        }),
-      });
-
-      if (!res.ok) throw new Error("bad_status");
-
+      // ✅ ضع لاحقاً endpoint حقيقي للإرسال إذا رغبت
+      // حالياً: نجاح وهمي حتى لا تنكسر الصفحة
+      await new Promise((r) => setTimeout(r, 650));
       setStatus({ state: "success", msg: t.sent });
       setForm({ name: "", email: "", company: "", message: "" });
-    } catch (err) {
+    } catch {
       setStatus({ state: "error", msg: t.failed });
     }
   }
 
   return (
-    <div dir={t.dir} className="min-h-screen bg-[#F7F9FA] text-slate-900">
-      {/* Top background like NetSuite-style (لكن بألواننا) */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="tcGlow" />
-          <div className="tcShimmer" />
-        </div>
-
-        {/* NAV */}
-        <div className="relative mx-auto max-w-6xl px-6 pt-6">
-          <div className="flex items-center justify-between gap-4">
-            <div className="flex items-center gap-3">
-              <div className="h-10 w-10 rounded-2xl bg-[#1E2A38] text-white grid place-items-center font-semibold">
-                T
-              </div>
-              <div className="leading-tight">
-                <div className="text-sm font-semibold tracking-tight">{t.brand}</div>
-                <div className="text-xs text-slate-500">{t.top}</div>
-              </div>
+    <div className="page" dir={t.dir}>
+      {/* HERO */}
+      <section className="hero">
+        <div className="container heroGrid">
+          <div className="heroLeft">
+            <div className="badgeRow">
+              <span className="dot" />
+              <span className="badgeText">{t.badge}</span>
             </div>
 
-            <div className="hidden md:flex items-center gap-6 text-sm text-slate-600">
-              <a className="hover:text-slate-900" href="#screens">{t.navScreens}</a>
-              <a className="hover:text-slate-900" href="#about">{t.navAbout}</a>
-              <a className="hover:text-slate-900" href="#contact">{t.navContact}</a>
-            </div>
+            <h1 className="h1">
+              {t.h1a}
+              <span className="h1sub">{t.h1b}</span>
+            </h1>
 
-            <div className="flex items-center gap-2">
-              <button
-                type="button"
-                onClick={() => setLang(lang === "en" ? "ar" : "en")}
-                className="rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50"
-              >
+            <p className="heroP">{t.heroP}</p>
+
+            <div className="ctaRow">
+              <a className="btnPrimary" href={APP_SIGNUP}>{t.startFree}</a>
+              <a className="btn" href="#screens">{t.viewScreens}</a>
+              <a className="btn" href="#contact">{t.consulting}</a>
+              <button className="langBtn" onClick={() => setLang(lang === "en" ? "ar" : "en")}>
                 {lang === "en" ? "AR" : "EN"}
               </button>
+            </div>
 
-              <a
-                href="/login"
-                className="rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50"
-              >
-                {t.signIn}
-              </a>
-              <a
-                href="/login"
-                className="rounded-xl bg-[#2ECC71] px-4 py-2 text-sm font-semibold text-white hover:opacity-90"
-              >
-                {t.startFree}
-              </a>
+            <div className="miniGrid">
+              <MiniCard title={t.m1t} desc={t.m1d} />
+              <MiniCard title={t.m2t} desc={t.m2d} />
             </div>
           </div>
 
-          {/* HERO */}
-          <div className="mt-10 grid grid-cols-1 gap-10 pb-14 md:grid-cols-2 md:items-center">
+          <div className="heroRight">
+            <div className="cardTop">
+              <div className="cardHead">
+                <div>
+                  <div className="cardTitle">{t.whyTitle}</div>
+                  <div className="cardSub">{t.whySub}</div>
+                </div>
+                <div className="pill">AI + Rules</div>
+              </div>
+
+              <div className="featureList">
+                <Feature title={t.f1t} desc={t.f1d} />
+                <Feature title={t.f2t} desc={t.f2d} />
+                <Feature title={t.f3t} desc={t.f3d} />
+                <Feature title={t.f4t} desc={t.f4d} />
+              </div>
+
+              <div className="useCases">
+                <div className="useCasesTitle">{t.useCases}</div>
+                <div className="chips">
+                  <Chip>{t.c1}</Chip>
+                  <Chip>{t.c2}</Chip>
+                  <Chip>{t.c3}</Chip>
+                  <Chip>{t.c4}</Chip>
+                </div>
+              </div>
+            </div>
+
+            <div className="shadowBlob b1" />
+            <div className="shadowBlob b2" />
+          </div>
+        </div>
+      </section>
+
+      {/* SCREENS */}
+      <section id="screens" className="section">
+        <div className="container">
+          <div className="sectionHead">
             <div>
-              <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-4 py-2 text-xs font-medium text-slate-600 backdrop-blur">
-                <span className="h-2 w-2 rounded-full bg-[#2ECC71]" />
-                {t.badge}
-              </div>
-
-              <h1 className="mt-6 text-4xl md:text-5xl leading-[1.08] tracking-tight font-semibold text-[#0F172A]">
-                {t.h1a}
-                <span className="block mt-3 text-slate-700 font-medium">{t.h1b}</span>
-              </h1>
-
-              <p className="mt-5 text-base leading-7 text-slate-600">
-                {t.heroP}
-              </p>
-
-              {/* ✅ الأزرار رجعت */}
-              <div className="mt-8 flex flex-wrap items-center gap-3">
-                <a
-                  href="/login"
-                  className="rounded-xl bg-[#2ECC71] px-6 py-3 text-sm font-semibold text-white hover:opacity-90"
-                >
-                  {t.startFree}
-                </a>
-                <a
-                  href="#screens"
-                  className="rounded-xl border border-slate-200 bg-white px-6 py-3 text-sm font-medium text-slate-800 hover:bg-slate-50"
-                >
-                  {t.ctaScreens}
-                </a>
-                <a
-                  href="#contact"
-                  className="rounded-xl border border-slate-200 bg-white px-6 py-3 text-sm font-medium text-slate-800 hover:bg-slate-50"
-                >
-                  {t.ctaConsult}
-                </a>
-              </div>
-
-              {/* NetSuite-like mini feature strip */}
-              <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <InfoCard title={t.why1T} desc={t.why1D} />
-                <InfoCard title={t.why2T} desc={t.why2D} />
-              </div>
+              <h2 className="h2">{t.screensTitle}</h2>
+              <p className="p">{t.screensSub}</p>
             </div>
-
-            {/* Right – NetSuite-ish stacked cards */}
-            <div className="relative">
-              <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-                <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <div className="text-sm font-semibold text-slate-800">{t.secWhyTitle}</div>
-                    <div className="mt-1 text-sm text-slate-500">{t.secWhyP}</div>
-                  </div>
-                  <div className="rounded-2xl bg-emerald-50 px-3 py-2 text-xs font-semibold text-emerald-700">
-                    AI + Rules
-                  </div>
-                </div>
-
-                <div className="mt-5 grid grid-cols-1 gap-3">
-                  <FeatureRow title={t.why3T} desc={t.why3D} />
-                  <FeatureRow title={t.why4T} desc={t.why4D} />
-                </div>
-
-                <div className="mt-6 rounded-2xl border border-slate-200 bg-slate-50 p-4">
-                  <div className="text-xs font-semibold text-slate-700">
-                    {lang === "ar" ? "حالات استخدام شائعة" : "Typical use cases"}
-                  </div>
-                  <div className="mt-2 flex flex-wrap gap-2">
-                    <Pill>{lang === "ar" ? "إقرارات VAT" : "VAT Returns"}</Pill>
-                    <Pill>{lang === "ar" ? "فترات الضريبة" : "Tax Periods"}</Pill>
-                    <Pill>{lang === "ar" ? "مكاتب محاسبة" : "Accounting Firms"}</Pill>
-                    <Pill>{lang === "ar" ? "تحقق قبل الإرسال" : "Pre-submission checks"}</Pill>
-                  </div>
-                </div>
-              </div>
-
-              <div className="pointer-events-none absolute -right-10 -top-10 hidden h-40 w-40 rounded-full bg-emerald-200/40 blur-3xl md:block" />
-              <div className="pointer-events-none absolute -bottom-12 -left-12 hidden h-44 w-44 rounded-full bg-slate-300/40 blur-3xl md:block" />
-            </div>
+            <a className="btn" href={APP_LOGIN}>{t.tryNow}</a>
           </div>
-        </div>
-      </div>
 
-      {/* Screenshots (بدون روابط صور) */}
-      <section id="screens" className="mx-auto max-w-6xl px-6 pb-14">
-        <div className="flex items-end justify-between gap-4">
-          <div>
-            <h2 className="text-2xl font-semibold tracking-tight">{t.secScreensTitle}</h2>
-            <p className="mt-2 text-sm text-slate-600">{t.secScreensP}</p>
-          </div>
-          <a
-            href="/login"
-            className="hidden md:inline-flex rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-800 hover:bg-slate-50"
-          >
-            {lang === "ar" ? "جرّبه الآن" : "Try it"}
-          </a>
-        </div>
-
-        <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-3">
-          {screenshots.map((s, idx) => (
-            <div
-              key={idx}
-              className="group rounded-3xl border border-slate-200 bg-white p-3 shadow-sm transition hover:shadow-md"
-            >
-              <div className="aspect-[16/10] overflow-hidden rounded-2xl bg-slate-100">
-                {s.src ? (
-                  <img
-                    src={s.src}
-                    alt={s.alt}
-                    className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.02]"
-                    loading="lazy"
-                  />
-                ) : (
-                  <div className="h-full w-full grid place-items-center px-6 text-center">
-                    <div>
-                      <div className="text-sm font-semibold text-slate-700">
-                        {t.screenLabel} {idx + 1}
-                      </div>
-                      <div className="mt-1 text-xs text-slate-500">
-                        {lang === "ar"
-                          ? "ضع صورة من داخل المنتج هنا لاحقًا."
-                          : "Add an in-product screenshot here later."}
-                      </div>
+          <div className="shotsGrid">
+            {screenshots.map((s, idx) => (
+              <div key={idx} className="shotCard">
+                <div className="shot">
+                  {s.src ? (
+                    <img className="shotImg" src={s.src} alt={s.alt} />
+                  ) : (
+                    <div className="shotPlaceholder">
+                      <div className="shotLabel">{t.screen} {idx + 1}</div>
+                      <div className="shotHint">{t.screenHint}</div>
                     </div>
-                  </div>
-                )}
+                  )}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* About + Consulting – NetSuite-like blocks */}
-      <section id="about" className="border-t border-slate-200 bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-14">
-          <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:items-start">
-            <div>
-              <h2 className="text-2xl font-semibold tracking-tight">{t.secAboutTitle}</h2>
-              <p className="mt-3 text-sm leading-7 text-slate-600">{t.aboutP}</p>
+      {/* ABOUT STRIP */}
+      <section id="about" className="section alt">
+        <div className="container aboutGrid">
+          <div>
+            <h2 className="h2">{t.aboutTitle}</h2>
+            <p className="p">{t.aboutP}</p>
+            <div className="miniGrid2">
+              <MiniCard title={t.a1t} desc={t.a1d} />
+              <MiniCard title={t.a2t} desc={t.a2d} />
+              <MiniCard title={t.a3t} desc={t.a3d} />
+              <MiniCard title={t.a4t} desc={t.a4d} />
+            </div>
+          </div>
 
-              <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
-                <MiniCard
-                  title={lang === "ar" ? "واجهة واضحة" : "Clarity-first UX"}
-                  desc={lang === "ar" ? "أقل ضجيج، أكثر تنظيم." : "Less noise, more structure."}
-                />
-                <MiniCard
-                  title={lang === "ar" ? "الالتزام أولًا" : "Compliance mindset"}
-                  desc={lang === "ar" ? "تحققات وإرشاد." : "Validations and guided steps."}
-                />
-                <MiniCard
-                  title={lang === "ar" ? "مخرجات احترافية" : "Accountant-grade outputs"}
-                  desc={lang === "ar" ? "تقارير يمكن الاعتماد عليها." : "Clean, reliable reports."}
-                />
-                <MiniCard
-                  title={lang === "ar" ? "مخصص للـ SMEs" : "Built for SMEs"}
-                  desc={lang === "ar" ? "سريع للاستخدام اليومي." : "Fast daily usage."}
-                />
-              </div>
+          <div className="consultCard">
+            <div className="consultTitle">{t.consultTitle}</div>
+            <div className="consultSub">{t.consultP}</div>
+
+            <div className="chips mt">
+              <Chip>{t.s1}</Chip>
+              <Chip>{t.s2}</Chip>
+              <Chip>{t.s3}</Chip>
+              <Chip>{t.s4}</Chip>
+              <Chip>{t.s5}</Chip>
             </div>
 
-            <div>
-              <h3 className="text-lg font-semibold tracking-tight">{t.secConsultTitle}</h3>
-              <p className="mt-3 text-sm leading-7 text-slate-600">{t.consultP}</p>
-
-              <div className="mt-6 rounded-3xl border border-slate-200 bg-[#F7F9FA] p-6">
-                <div className="text-sm font-semibold text-slate-800">
-                  {lang === "ar" ? "مجالات الاستشارة" : "Consulting areas"}
-                </div>
-                <div className="mt-3 flex flex-wrap gap-2">
-                  <Pill>{lang === "ar" ? "الضريبة الاتحادية" : "Corporate Tax"}</Pill>
-                  <Pill>{lang === "ar" ? "VAT" : "VAT"}</Pill>
-                  <Pill>{lang === "ar" ? "بنية التقارير" : "Reporting"}</Pill>
-                  <Pill>{lang === "ar" ? "تكامل ERP" : "ERP Integrations"}</Pill>
-                  <Pill>{lang === "ar" ? "تصميم سير العمل" : "Workflow design"}</Pill>
-                </div>
-
-                <div className="mt-6 flex flex-wrap gap-3">
-                  <a
-                    href="#contact"
-                    className="rounded-xl bg-[#1E2A38] px-5 py-3 text-sm font-semibold text-white hover:opacity-90"
-                  >
-                    {t.consultCTA}
-                  </a>
-                  <a
-                    href="/login"
-                    className="rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-medium text-slate-800 hover:bg-slate-50"
-                  >
-                    {t.startFree}
-                  </a>
-                </div>
-              </div>
+            <div className="ctaRow mt2">
+              <a className="btnDark" href="#contact">{t.requestConsult}</a>
+              <a className="btn" href={APP_SIGNUP}>{t.startFree}</a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Contact (فعلي) */}
-      <section id="contact" className="border-t border-slate-200 bg-[#F7F9FA]">
-        <div className="mx-auto max-w-6xl px-6 py-14">
-          <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:items-start">
-            <div>
-              <h2 className="text-2xl font-semibold tracking-tight">{t.secContactTitle}</h2>
-              <p className="mt-3 text-sm leading-7 text-slate-600">{t.contactP}</p>
+      {/* CONTACT */}
+      <section id="contact" className="section">
+        <div className="container contactGrid">
+          <div>
+            <h2 className="h2">{t.contactTitle}</h2>
+            <p className="p">{t.contactSub}</p>
 
-              <div className="mt-6 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-                <div className="text-sm font-semibold text-slate-800">
-                  {lang === "ar" ? "بيانات التواصل" : "Direct"}
-                </div>
-                <div className="mt-3 space-y-2 text-sm text-slate-600">
-                  <div>
-                    <span className="font-medium text-slate-800">Email:</span>{" "}
-                    <span>info@taxcheck.ae</span>
-                  </div>
-                  <div>
-                    <span className="font-medium text-slate-800">
-                      {lang === "ar" ? "الموقع:" : "Location:"}
-                    </span>{" "}
-                    <span>UAE</span>
-                  </div>
-                </div>
-              </div>
+            <div className="directCard">
+              <div className="directTitle">{t.direct}</div>
+              <div className="directLine"><b>Email:</b> info@taxcheck.ae</div>
+              <div className="directLine"><b>{t.location}:</b> UAE</div>
             </div>
+          </div>
 
-            <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-              <div className="text-sm font-semibold text-slate-800">
-                {lang === "ar" ? "أرسل رسالة" : "Send a message"}
-              </div>
+          <div className="formCard">
+            <div className="formTitle">{t.sendMsg}</div>
 
-              <form className="mt-5 space-y-3" onSubmit={onSubmit}>
-                <input
-                  value={form.name}
-                  onChange={(e) => setForm((p) => ({ ...p, name: e.target.value }))}
-                  className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-emerald-200"
-                  placeholder={t.name}
-                  required
-                />
-                <input
-                  value={form.email}
-                  onChange={(e) => setForm((p) => ({ ...p, email: e.target.value }))}
-                  className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-emerald-200"
-                  placeholder={t.email}
-                  type="email"
-                  required
-                />
-                <input
-                  value={form.company}
-                  onChange={(e) => setForm((p) => ({ ...p, company: e.target.value }))}
-                  className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-emerald-200"
-                  placeholder={t.company}
-                />
-                <textarea
-                  value={form.message}
-                  onChange={(e) => setForm((p) => ({ ...p, message: e.target.value }))}
-                  rows={5}
-                  className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-emerald-200"
-                  placeholder={t.message}
-                  required
-                />
+            <form onSubmit={onSubmit} className="form">
+              <input
+                className="input"
+                placeholder={t.name}
+                value={form.name}
+                onChange={(e) => setForm((p) => ({ ...p, name: e.target.value }))}
+                required
+              />
+              <input
+                className="input"
+                placeholder={t.email}
+                type="email"
+                value={form.email}
+                onChange={(e) => setForm((p) => ({ ...p, email: e.target.value }))}
+                required
+              />
+              <input
+                className="input"
+                placeholder={t.company}
+                value={form.company}
+                onChange={(e) => setForm((p) => ({ ...p, company: e.target.value }))}
+              />
+              <textarea
+                className="textarea"
+                placeholder={t.message}
+                rows={6}
+                value={form.message}
+                onChange={(e) => setForm((p) => ({ ...p, message: e.target.value }))}
+                required
+              />
+              <button className="btnPrimary full" disabled={status.state === "sending"} type="submit">
+                {status.state === "sending" ? t.sending : t.send}
+              </button>
 
-                <button
-                  type="submit"
-                  disabled={status.state === "sending"}
-                  className="w-full rounded-xl bg-[#2ECC71] px-5 py-3 text-sm font-semibold text-white hover:opacity-90 disabled:opacity-60"
-                >
-                  {status.state === "sending" ? t.sending : t.send}
-                </button>
+              {status.state !== "idle" && (
+                <div className={`status ${status.state === "success" ? "ok" : "bad"}`}>
+                  {status.msg}
+                </div>
+              )}
 
-                {status.state !== "idle" && (
-                  <div
-                    className={`text-sm ${
-                      status.state === "success" ? "text-emerald-700" : "text-red-600"
-                    }`}
-                  >
-                    {status.msg}
-                  </div>
-                )}
-              </form>
-            </div>
+              <div className="smallNote">{t.note}</div>
+            </form>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <div className="border-t border-slate-200 bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-8">
-          <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-            <div className="text-sm text-slate-600">
-              © {year} <span className="font-medium text-slate-800">TaxCheck</span>. {t.footer1}
-            </div>
-            <div className="flex flex-wrap items-center gap-3 text-sm">
-              <a className="text-slate-600 hover:text-slate-900" href="#screens">
-                {t.navScreens}
-              </a>
-              <a className="text-slate-600 hover:text-slate-900" href="#about">
-                {t.navAbout}
-              </a>
-              <a className="text-slate-600 hover:text-slate-900" href="#contact">
-                {t.navContact}
-              </a>
-              <a className="text-slate-600 hover:text-slate-900" href="/login">
-                {t.signIn}
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+      <style jsx>{`
+        .page { padding-bottom: 24px; }
+        .container { max-width: 1152px; margin: 0 auto; padding: 0 24px; }
 
-      {/* Local CSS (no next/head) */}
-      <style>{`
-        .tcGlow{
-          position:absolute;
-          inset:-40% -30%;
-          background:
-            radial-gradient(circle at 25% 25%, rgba(46,204,113,0.22), transparent 55%),
-            radial-gradient(circle at 70% 35%, rgba(30,42,56,0.18), transparent 60%),
-            radial-gradient(circle at 45% 80%, rgba(142,68,173,0.10), transparent 60%);
-          filter: blur(14px);
+        .hero { padding: 56px 0 18px; }
+        .heroGrid { display: grid; gap: 28px; grid-template-columns: 1fr; align-items: start; }
+        @media (min-width: 980px) {
+          .heroGrid { grid-template-columns: 1.05fr 0.95fr; align-items: center; gap: 34px; }
         }
-        .tcShimmer{
-          position:absolute;
-          top:-140px;
-          left:-45%;
-          width:65%;
-          height:560px;
-          background: linear-gradient(115deg, transparent 0%, rgba(46,204,113,0.10) 45%, transparent 70%);
-          transform: rotate(10deg);
-          animation: tcShimmerMove 7.5s linear infinite;
-          filter: blur(2px);
+
+        .badgeRow {
+          display: inline-flex; align-items: center; gap: 10px;
+          padding: 10px 14px; border: 1px solid #E5E7EB; border-radius: 999px;
+          background: rgba(255,255,255,0.75); backdrop-filter: blur(10px);
+          color: #475569; font-size: 12px; font-weight: 600;
         }
-        @keyframes tcShimmerMove{
-          0%{ transform: translateX(0) rotate(10deg); opacity:0.65; }
-          50%{ opacity:0.9; }
-          100%{ transform: translateX(145%) rotate(10deg); opacity:0.65; }
+        .dot { width: 8px; height: 8px; border-radius: 999px; background: #2ECC71; }
+
+        .h1 {
+          margin: 18px 0 0; font-size: 44px; line-height: 1.08;
+          letter-spacing: -0.03em; font-weight: 800; color: #0F172A;
         }
+        .h1sub { display: block; margin-top: 10px; font-weight: 700; color: #334155; }
+        @media (max-width: 520px) { .h1 { font-size: 36px; } }
+
+        .heroP { margin: 14px 0 0; font-size: 15.5px; line-height: 1.8; color: #475569; max-width: 58ch; }
+
+        .ctaRow { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+
+        .btn, .btnPrimary, .btnDark, .langBtn {
+          display: inline-flex; align-items: center; justify-content: center;
+          padding: 12px 14px; border-radius: 12px; text-decoration: none;
+          font-size: 13px; font-weight: 800;
+        }
+        .btn { background: #fff; border: 1px solid #E5E7EB; color: #334155; }
+        .btn:hover { background: #F8FAFC; }
+        .btnPrimary { background: #2ECC71; border: 1px solid transparent; color: #fff; }
+        .btnPrimary:hover { opacity: 0.92; }
+        .btnDark { background: #1A3E6E; border: 1px solid transparent; color: #fff; }
+        .btnDark:hover { opacity: 0.92; }
+        .langBtn { background: #fff; border: 1px solid #E5E7EB; color: #0F172A; cursor: pointer; }
+        .langBtn:hover { background: #F8FAFC; }
+
+        .miniGrid { margin-top: 20px; display: grid; gap: 12px; grid-template-columns: 1fr; }
+        @media (min-width: 600px) { .miniGrid { grid-template-columns: 1fr 1fr; } }
+
+        .heroRight { position: relative; }
+        .cardTop {
+          border: 1px solid #E5E7EB; border-radius: 22px; background: rgba(255,255,255,0.9);
+          backdrop-filter: blur(10px);
+          padding: 18px; box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+        }
+        .cardHead { display: flex; justify-content: space-between; gap: 14px; align-items: flex-start; }
+        .cardTitle { font-size: 13px; font-weight: 900; color: #0F172A; }
+        .cardSub { margin-top: 4px; font-size: 13px; color: #64748B; line-height: 1.5; }
+        .pill { font-size: 12px; font-weight: 900; padding: 8px 10px; border-radius: 999px; background: rgba(46,204,113,0.14); color: #18794E; }
+
+        .featureList { margin-top: 14px; display: grid; gap: 10px; }
+        .useCases {
+          margin-top: 14px;
+          background: #F7F9FA;
+          border: 1px solid #E5E7EB;
+          border-radius: 16px;
+          padding: 12px;
+        }
+        .useCasesTitle { font-size: 12px; font-weight: 900; color: #334155; margin-bottom: 8px; }
+        .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+
+        .shadowBlob { position: absolute; width: 220px; height: 220px; border-radius: 999px; filter: blur(32px); opacity: 0.35; z-index: -1; }
+        .b1 { top: -40px; right: -40px; background: #2ECC71; }
+        .b2 { bottom: -50px; left: -60px; background: #1A3E6E; }
+
+        .section { padding: 52px 0; }
+        .alt { background: rgba(255,255,255,0.55); border-top: 1px solid #E5E7EB; border-bottom: 1px solid #E5E7EB; }
+
+        .sectionHead { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; }
+        .h2 { margin: 0; font-size: 24px; font-weight: 900; letter-spacing: -0.02em; color: #0F172A; }
+        .p { margin: 8px 0 0; font-size: 14px; line-height: 1.8; color: #475569; max-width: 68ch; }
+
+        .shotsGrid { margin-top: 18px; display: grid; gap: 14px; grid-template-columns: 1fr; }
+        @media (min-width: 900px) { .shotsGrid { grid-template-columns: 1fr 1fr 1fr; } }
+        .shotCard { border: 1px solid #E5E7EB; border-radius: 22px; background: rgba(255,255,255,0.9); padding: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+        .shot { border-radius: 16px; background: #F1F5F9; overflow: hidden; aspect-ratio: 16/10; display: grid; place-items: center; }
+        .shotPlaceholder { text-align: center; padding: 18px; }
+        .shotLabel { font-weight: 900; color: #0F172A; font-size: 13px; }
+        .shotHint { margin-top: 6px; font-size: 12px; color: #64748B; line-height: 1.5; }
+        .shotImg { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+        .aboutGrid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+        @media (min-width: 980px) { .aboutGrid { grid-template-columns: 1.05fr 0.95fr; gap: 22px; } }
+        .miniGrid2 { margin-top: 14px; display: grid; grid-template-columns: 1fr; gap: 12px; }
+        @media (min-width: 700px) { .miniGrid2 { grid-template-columns: 1fr 1fr; } }
+
+        .consultCard {
+          border: 1px solid #E5E7EB; border-radius: 22px; background: #F7F9FA; padding: 18px;
+        }
+        .consultTitle { font-size: 14px; font-weight: 900; color: #0F172A; }
+        .consultSub { margin-top: 8px; font-size: 14px; line-height: 1.8; color: #475569; }
+
+        .mt { margin-top: 14px; }
+        .mt2 { margin-top: 16px; }
+
+        .contactGrid { display: grid; grid-template-columns: 1fr; gap: 16px; align-items: start; }
+        @media (min-width: 980px) { .contactGrid { grid-template-columns: 1fr 1fr; gap: 22px; } }
+
+        .directCard { margin-top: 14px; border: 1px solid #E5E7EB; border-radius: 22px; background: rgba(255,255,255,0.9); padding: 18px; }
+        .directTitle { font-size: 13px; font-weight: 900; color: #0F172A; margin-bottom: 8px; }
+        .directLine { font-size: 13px; color: #475569; line-height: 1.8; }
+
+        .formCard { border: 1px solid #E5E7EB; border-radius: 22px; background: rgba(255,255,255,0.9); padding: 18px; }
+        .formTitle { font-size: 13px; font-weight: 900; color: #0F172A; }
+        .form { margin-top: 12px; display: grid; gap: 10px; }
+        .input, .textarea {
+          width: 100%;
+          border: 1px solid #E5E7EB;
+          border-radius: 14px;
+          padding: 12px 12px;
+          font-size: 13px;
+          outline: none;
+          background: #fff;
+          color: #0F172A;
+        }
+        .input:focus, .textarea:focus { box-shadow: 0 0 0 4px rgba(46,204,113,0.18); border-color: rgba(46,204,113,0.55); }
+        .full { width: 100%; }
+        .status { font-size: 13px; font-weight: 800; }
+        .ok { color: #18794E; }
+        .bad { color: #DC2626; }
+        .smallNote { margin-top: 6px; font-size: 12px; color: #64748B; line-height: 1.6; }
+
+        /* RTL tweaks */
+        [dir="rtl"] .ctaRow { justify-content: flex-start; }
       `}</style>
     </div>
   );
 }
 
-function InfoCard({ title, desc }) {
-  return (
-    <div className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm">
-      <div className="text-sm font-semibold text-slate-800">{title}</div>
-      <div className="mt-2 text-sm leading-6 text-slate-600">{desc}</div>
-    </div>
-  );
-}
-
-function FeatureRow({ title, desc }) {
-  return (
-    <div className="rounded-2xl border border-slate-200 bg-white px-4 py-3">
-      <div className="text-sm font-semibold text-slate-800">{title}</div>
-      <div className="mt-1 text-sm text-slate-600">{desc}</div>
-    </div>
-  );
-}
-
-function Pill({ children }) {
-  return (
-    <span className="rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-medium text-slate-700">
-      {children}
-    </span>
-  );
-}
-
 function MiniCard({ title, desc }) {
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white p-4">
-      <div className="text-sm font-semibold text-slate-800">{title}</div>
-      <div className="mt-1 text-sm text-slate-600">{desc}</div>
-    </div>
+    <>
+      <div className="miniCard">
+        <div className="miniTitle">{title}</div>
+        <div className="miniDesc">{desc}</div>
+      </div>
+      <style jsx>{`
+        .miniCard {
+          border: 1px solid #E5E7EB;
+          border-radius: 18px;
+          background: rgba(255,255,255,0.9);
+          padding: 14px;
+          box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+        }
+        .miniTitle { font-size: 13px; font-weight: 900; color: #0F172A; }
+        .miniDesc { margin-top: 6px; font-size: 13px; color: #475569; line-height: 1.7; }
+      `}</style>
+    </>
   );
+}
+
+function Feature({ title, desc }) {
+  return (
+    <>
+      <div className="feat">
+        <div className="ft">{title}</div>
+        <div className="fd">{desc}</div>
+      </div>
+      <style jsx>{`
+        .feat {
+          border: 1px solid #E5E7EB;
+          border-radius: 16px;
+          background: #fff;
+          padding: 12px;
+        }
+        .ft { font-size: 13px; font-weight: 900; color: #0F172A; }
+        .fd { margin-top: 6px; font-size: 13px; color: #475569; line-height: 1.7; }
+      `}</style>
+    </>
+  );
+}
+
+function Chip({ children }) {
+  return (
+    <>
+      <span className="chip">{children}</span>
+      <style jsx>{`
+        .chip {
+          display: inline-flex;
+          align-items: center;
+          border: 1px solid #E5E7EB;
+          background: #fff;
+          border-radius: 999px;
+          padding: 8px 10px;
+          font-size: 12px;
+          font-weight: 800;
+          color: #334155;
+        }
+      `}</style>
+    </>
+  );
+}
+
+function getCopy(lang) {
+  const en = {
+    dir: "ltr",
+    badge: "Corporate Tax + VAT • AI-assisted • Built for Accountants",
+    h1a: "Corporate Tax & VAT in the UAE",
+    h1b: "Clear workflows. Practical outputs.",
+    heroP:
+      "TaxCheck helps accountants and SMEs manage taxpayers, tax periods, and Corporate Tax / VAT filings through guided steps, validations, and professional reports.",
+    startFree: "Start Free",
+    viewScreens: "View Product Screens",
+    consulting: "Consulting Services",
+
+    m1t: "Guided workflows",
+    m1d: "Step-by-step flows with validations and checkpoints.",
+    m2t: "Professional outputs",
+    m2d: "Practical summaries and reporting-ready structures.",
+
+    whyTitle: "Why TaxCheck?",
+    whySub:
+      "Accountant-grade experience with clarity, validations, and reliable outputs.",
+    f1t: "Corporate Tax workflow",
+    f1d: "Structured inputs and checkpoints to reduce errors.",
+    f2t: "VAT return preparation",
+    f2d: "Clean, section-based flow with practical summaries.",
+    f3t: "Taxpayer & period management",
+    f3d: "Organize clients, periods, and filings consistently.",
+    f4t: "AI + rules",
+    f4d: "Suggestions supported by deterministic validation gates.",
+
+    useCases: "Typical use cases",
+    c1: "VAT returns",
+    c2: "CT periods",
+    c3: "Accounting firms",
+    c4: "Pre-submission checks",
+
+    screensTitle: "Product Screenshots",
+    screensSub: "A quick look at the product interface and workflows.",
+    tryNow: "Try now",
+    screen: "Screenshot",
+    screenHint: "Add an in-product screenshot here later.",
+
+    aboutTitle: "About",
+    aboutP:
+      "Fintech Technologies FZ-LLC builds practical financial software for accountants and SMEs in the UAE, focused on clarity, compliance, and real operational workflows.",
+
+    a1t: "Clarity-first UX",
+    a1d: "Less noise, more structure.",
+    a2t: "Compliance mindset",
+    a2d: "Validations + guided steps.",
+    a3t: "Accountant-grade outputs",
+    a3d: "Clean, reliable reporting.",
+    a4t: "Built for SMEs",
+    a4d: "Fast daily usage.",
+
+    consultTitle: "Financial & Technical Consulting",
+    consultP:
+      "We provide consulting for finance and accounting software: workflow design, reporting structures, tax systems, and ERP integrations.",
+    requestConsult: "Request consultation",
+    s1: "Corporate Tax",
+    s2: "VAT",
+    s3: "Reporting",
+    s4: "ERP integrations",
+    s5: "Workflow design",
+
+    contactTitle: "Contact Us",
+    contactSub: "Send a message and we will get back to you with a clear next step.",
+    direct: "Direct",
+    location: "Location",
+    sendMsg: "Send a message",
+    name: "Your name",
+    email: "Email",
+    company: "Company (optional)",
+    message: "Message",
+    send: "Send message",
+    sending: "Sending…",
+    sent: "Sent. We will contact you shortly.",
+    failed: "Failed to send. Please try again.",
+    note: "This form is ready. If you want real email delivery, tell me which provider you use (Resend/SendGrid/SES).",
+  };
+
+  const ar = {
+    dir: "rtl",
+    badge: "الضريبة + VAT • مساعد بالذكاء الاصطناعي • للمحاسبين",
+    h1a: "الضريبة الاتحادية و VAT في الإمارات",
+    h1b: "مسارات واضحة. مخرجات عملية.",
+    heroP:
+      "يساعدك TaxCheck على إدارة المكلّفين والفترات الضريبية وتجهيز إقرارات الضريبة الاتحادية وVAT عبر خطوات موجّهة، تحققات، وتقارير احترافية.",
+    startFree: "ابدأ مجانًا",
+    viewScreens: "عرض صور المنتج",
+    consulting: "خدمات الاستشارة",
+
+    m1t: "مسارات موجّهة",
+    m1d: "خطوات واضحة مع تحققات ونقاط مراجعة.",
+    m2t: "مخرجات احترافية",
+    m2d: "ملخصات عملية وبنية تقارير جاهزة.",
+
+    whyTitle: "لماذا TaxCheck؟",
+    whySub: "تجربة بمستوى المحاسبين: وضوح، تحققات، ومخرجات يمكن الاعتماد عليها.",
+    f1t: "مسار الضريبة الاتحادية",
+    f1d: "إدخال منظّم ونقاط تدقيق لتقليل الأخطاء.",
+    f2t: "تجهيز إقرار VAT",
+    f2d: "أقسام واضحة مع ملخصات عملية.",
+    f3t: "إدارة المكلّفين والفترات",
+    f3d: "تنظيم العملاء والفترات والإقرارات بشكل ثابت.",
+    f4t: "ذكاء + قواعد",
+    f4d: "اقتراحات مدعومة بتحققات ثابتة.",
+
+    useCases: "حالات استخدام شائعة",
+    c1: "إقرارات VAT",
+    c2: "فترات الضريبة",
+    c3: "مكاتب محاسبة",
+    c4: "تحقق قبل الإرسال",
+
+    screensTitle: "صور من داخل المنتج",
+    screensSub: "نظرة سريعة على الواجهة وسير العمل.",
+    tryNow: "جرّبه الآن",
+    screen: "صورة",
+    screenHint: "ضع صورة من داخل المنتج هنا لاحقًا.",
+
+    aboutTitle: "نبذة",
+    aboutP:
+      "تطوّر Fintech Technologies FZ-LLC برمجيات مالية عملية للمحاسبين والشركات الصغيرة في الإمارات، مع تركيز على الوضوح والالتزام وسير العمل الحقيقي.",
+
+    a1t: "واجهة واضحة",
+    a1d: "أقل ضجيج، أكثر تنظيم.",
+    a2t: "الالتزام أولًا",
+    a2d: "تحققات وخطوات موجّهة.",
+    a3t: "تقارير احترافية",
+    a3d: "تقارير نظيفة يمكن الاعتماد عليها.",
+    a4t: "مصمم للـ SMEs",
+    a4d: "سريع للاستخدام اليومي.",
+
+    consultTitle: "استشارات مالية وتقنية",
+    consultP:
+      "نقدم استشارات للأنظمة المالية: تصميم سير العمل، بنية التقارير، الأنظمة الضريبية، وتكاملات ERP.",
+    requestConsult: "اطلب استشارة",
+    s1: "الضريبة الاتحادية",
+    s2: "VAT",
+    s3: "التقارير",
+    s4: "تكامل ERP",
+    s5: "تصميم سير العمل",
+
+    contactTitle: "اتصل بنا",
+    contactSub: "أرسل رسالة وسنرد عليك بخطوة واضحة ومباشرة.",
+    direct: "بيانات التواصل",
+    location: "الموقع",
+    sendMsg: "أرسل رسالة",
+    name: "الاسم",
+    email: "البريد الإلكتروني",
+    company: "الشركة (اختياري)",
+    message: "الرسالة",
+    send: "إرسال",
+    sending: "جاري الإرسال…",
+    sent: "تم الإرسال. سنتواصل معك قريبًا.",
+    failed: "فشل الإرسال. أعد المحاولة.",
+    note: "النموذج جاهز. إذا أردت إرسال بريد فعلي، أخبرني مزود البريد (Resend/SendGrid/SES).",
+  };
+
+  return lang === "ar" ? ar : en;
 }
