@@ -1,64 +1,62 @@
+// components/PublicLayout.js
+import React, { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useEffect, useMemo, useState } from "react";
+
+function applyDir(lang) {
+  const dir = lang === "ar" ? "rtl" : "ltr";
+  if (typeof document !== "undefined") {
+    document.documentElement.lang = lang;
+    document.documentElement.dir = dir;
+  }
+}
 
 export default function PublicLayout({ children }) {
   const router = useRouter();
-  const [lang, setLang] = useState("en");
+  const [lang, setLang] = useState("ar");
 
   useEffect(() => {
-    const saved = typeof window !== "undefined" ? localStorage.getItem("tc_lang") : null;
-    if (saved === "ar" || saved === "en") setLang(saved);
+    const saved =
+      (typeof window !== "undefined" && localStorage.getItem("tc_lang")) || "ar";
+    setLang(saved);
+    applyDir(saved);
   }, []);
 
-  const isAr = lang === "ar";
-  const dir = isAr ? "rtl" : "ltr";
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    localStorage.setItem("tc_lang", lang);
+    applyDir(lang);
+
+    // إشعار لكل الصفحات لتحديث النصوص فوراً
+    window.dispatchEvent(new CustomEvent("tc-lang-change", { detail: { lang } }));
+  }, [lang]);
 
   const t = useMemo(() => {
-    const en = {
-      brandSub: "Corporate Tax & VAT • UAE",
-      home: "Home",
-      pricing: "Pricing",
-      about: "About",
-      services: "Services",
-      contact: "Contact",
-      signin: "Sign in",
-      // (ملاحظة) لا يوجد Start Free في الهيدر أو الصفحة
-      footerLeft: `© ${new Date().getFullYear()} TaxCheck`,
-    };
-
     const ar = {
-      brandSub: "ضريبة الشركات والـ VAT • الإمارات",
       home: "الرئيسية",
       pricing: "الأسعار",
       about: "من نحن",
       services: "الخدمات",
       contact: "تواصل معنا",
       signin: "تسجيل الدخول",
-      footerLeft: `© ${new Date().getFullYear()} TaxCheck`,
+      brandSub: "ضريبة الشركات والـ VAT • الإمارات",
     };
-
-    return isAr ? ar : en;
-  }, [isAr]);
-
-  const nav = [
-    { href: "/", label: t.home },
-    { href: "/pricing", label: t.pricing },
-    { href: "/about", label: t.about },
-    { href: "/services", label: t.services },
-    { href: "/contact", label: t.contact },
-  ];
+    const en = {
+      home: "Home",
+      pricing: "Pricing",
+      about: "About",
+      services: "Services",
+      contact: "Contact",
+      signin: "Sign in",
+      brandSub: "Corporate Tax & VAT • UAE",
+    };
+    return lang === "ar" ? ar : en;
+  }, [lang]);
 
   const isActive = (href) => router.pathname === href;
 
-  const toggleLang = () => {
-    const next = isAr ? "en" : "ar";
-    setLang(next);
-    if (typeof window !== "undefined") localStorage.setItem("tc_lang", next);
-  };
-
   return (
-    <div className="tc" dir={dir} lang={lang}>
+    <div className="tc">
       <header className="tc-header">
         <div className="tc-headerInner">
           <div className="tc-brand">
@@ -69,45 +67,56 @@ export default function PublicLayout({ children }) {
             </div>
           </div>
 
-          <nav className="tc-nav" aria-label="Primary">
-            {nav.map((item) => (
-              <Link
-                key={item.href}
-                className={`tc-navLink ${isActive(item.href) ? "is-active" : ""}`}
-                href={item.href}
-              >
-                {item.label}
-              </Link>
-            ))}
+          <nav className="tc-nav">
+            <Link className={`tc-navLink ${isActive("/") ? "is-active" : ""}`} href="/">
+              {t.home}
+            </Link>
+            <Link
+              className={`tc-navLink ${isActive("/pricing") ? "is-active" : ""}`}
+              href="/pricing"
+            >
+              {t.pricing}
+            </Link>
+            <Link
+              className={`tc-navLink ${isActive("/about") ? "is-active" : ""}`}
+              href="/about"
+            >
+              {t.about}
+            </Link>
+
+            {/* رابط خدمات (يروح لقسم الخدمات بالهوم) */}
+            <a className="tc-navLink" href="/#services">
+              {t.services}
+            </a>
+
+            {/* رابط تواصل (إذا بدك القسم لاحقاً) */}
+            <a className="tc-navLink" href="/#contact">
+              {t.contact}
+            </a>
           </nav>
 
           <div className="tc-actions">
-            <button className="tc-lang" onClick={toggleLang} type="button">
-              {isAr ? "EN" : "AR"}
+            {/* زر اللغة جنب Sign in */}
+            <button
+              className="tc-lang"
+              type="button"
+              onClick={() => setLang((p) => (p === "ar" ? "en" : "ar"))}
+              aria-label="Language"
+              title="Language"
+            >
+              {lang === "ar" ? "EN" : "AR"}
             </button>
 
             <a className="tc-btn" href="https://app.taxcheck.ae/login">
               {t.signin}
             </a>
+
+            {/* تم حذف Start Free نهائياً */}
           </div>
         </div>
       </header>
 
-      <main className="tc-main">
-        {/* نمرر اللغة للصفحات لو احتاجتها */}
-        {typeof children === "object" ? children : children}
-      </main>
-
-      <footer className="tc-footer">
-        <div className="tc-footerInner">
-          <div>{t.footerLeft}</div>
-          <div className="tc-footerLinks">
-            <Link href="/pricing">{t.pricing}</Link>
-            <Link href="/about">{t.about}</Link>
-            <Link href="/services">{t.services}</Link>
-          </div>
-        </div>
-      </footer>
+      {children}
     </div>
   );
 }
