@@ -433,7 +433,6 @@ function getCopy(lang) {
     h1b: "Clear workflows. Practical outputs.",
     heroP:
       "TaxCheck helps accountants and SMEs manage taxpayers, tax periods, and Corporate Tax / VAT filings through guided steps, validations, and professional reports.",
-    startFree: "Start Free",
     viewScreens: "View Product Screens",
     consulting: "Consulting Services",
 
