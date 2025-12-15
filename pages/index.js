@@ -3,225 +3,244 @@ import React, { useMemo } from "react";
 export default function Home() {
   const year = useMemo(() => new Date().getFullYear(), []);
 
-  const APP_BASE = "https://app.taxcheck.ae";
-  const APP_LOGIN = `${APP_BASE}/login`;
-  const APP_ONBOARDING = `${APP_BASE}/onboarding`;
+  // Screenshots (عدّل الروابط لاحقًا إذا رغبت)
+  const screenshots = [
+    { src: "REPLACE_WITH_SCREENSHOT_1_URL", alt: "TaxCheck – Screen 1" },
+    { src: "REPLACE_WITH_SCREENSHOT_2_URL", alt: "TaxCheck – Screen 2" },
+    { src: "REPLACE_WITH_SCREENSHOT_3_URL", alt: "TaxCheck – Screen 3" },
+  ];
 
   return (
-    <div style={styles.page}>
-      {/* Top Bar */}
-      <div style={styles.topBar}>
-        <div style={styles.brand}>
-          <div style={styles.logo}>▦</div>
-          <div>
-            <div style={styles.brandName}>TaxCheck UAE</div>
-            <div style={styles.brandSub}>Corporate Tax · VAT · Free Zone</div>
-          </div>
+    <div className="min-h-screen bg-white text-slate-900">
+      {/* Hero background effects */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="heroGlow" />
+          <div className="heroShimmer" />
         </div>
 
-        <div style={styles.topActions}>
-          <a href="#product" style={styles.ghostBtn}>Product</a>
-          <a href="#customers" style={styles.ghostBtn}>Customers</a>
-          <a href={APP_LOGIN} style={styles.primaryBtn}>Sign in</a>
+        {/* Header */}
+        <div className="relative mx-auto max-w-6xl px-6 pt-10">
+          <div className="flex items-center justify-between">
+            <div className="text-sm font-medium text-slate-800">
+              TaxCheck
+              <div className="text-xs text-slate-500">
+                Corporate Tax & VAT • UAE
+              </div>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <a
+                href="/login"
+                className="rounded-xl border border-slate-200 px-4 py-2 text-sm text-slate-700 hover:bg-slate-50"
+              >
+                Sign in
+              </a>
+              <a
+                href="/login"
+                className="rounded-xl bg-emerald-600 px-4 py-2 text-sm font-medium text-white hover:bg-emerald-700"
+              >
+                Start Free
+              </a>
+            </div>
+          </div>
+
+          {/* Hero */}
+          <div className="mt-14 grid grid-cols-1 gap-10 pb-14 md:grid-cols-2 md:items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-4 py-2 text-xs text-slate-600 backdrop-blur">
+                Corporate Tax + VAT • AI-assisted • Built for Accountants
+              </div>
+
+              <h1 className="mt-6 text-4xl md:text-5xl font-semibold tracking-tight leading-[1.1]">
+                Corporate Tax & VAT in the UAE
+                <span className="block mt-3 text-slate-700 font-medium">
+                  Clear workflows. Practical outputs.
+                </span>
+              </h1>
+
+              <p className="mt-5 text-base leading-7 text-slate-600">
+                TaxCheck helps accountants and SMEs manage taxpayers, tax
+                periods, and Corporate Tax / VAT filings through guided steps,
+                validations, and professional reports.
+              </p>
+
+              <div className="mt-8 flex flex-wrap gap-3">
+                <a
+                  href="/login"
+                  className="rounded-xl bg-emerald-600 px-6 py-3 text-sm font-medium text-white hover:bg-emerald-700"
+                >
+                  Start Free
+                </a>
+                <a
+                  href="#screens"
+                  className="rounded-xl border border-slate-200 px-6 py-3 text-sm text-slate-700 hover:bg-slate-50"
+                >
+                  View Product Screens
+                </a>
+                <a
+                  href="#contact"
+                  className="rounded-xl border border-slate-200 px-6 py-3 text-sm text-slate-700 hover:bg-slate-50"
+                >
+                  Contact Us
+                </a>
+              </div>
+            </div>
+
+            {/* Right card */}
+            <div className="relative">
+              <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+                <div className="flex justify-between items-start">
+                  <div>
+                    <div className="text-sm font-medium text-slate-800">
+                      What you get
+                    </div>
+                    <div className="text-sm text-slate-500 mt-1">
+                      Designed for real tax work
+                    </div>
+                  </div>
+                  <div className="text-xs bg-emerald-50 text-emerald-700 px-3 py-2 rounded-xl font-medium">
+                    AI + Rules
+                  </div>
+                </div>
+
+                <div className="mt-5 space-y-3">
+                  <Feature
+                    title="Guided Corporate Tax workflow"
+                    desc="Clear steps, validations, and checkpoints."
+                  />
+                  <Feature
+                    title="VAT return preparation"
+                    desc="Structured sections with practical summaries."
+                  />
+                  <Feature
+                    title="Professional outputs"
+                    desc="Reports ready for review and submission."
+                  />
+                  <Feature
+                    title="Client-ready structure"
+                    desc="Organized per taxpayer and tax period."
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Hero */}
-      <div style={styles.container}>
-        <div style={styles.heroCard}>
-          <div style={styles.badge}>
-            Corporate Tax + VAT • AI-assisted • Built for Accountants
-          </div>
+      {/* Screenshots */}
+      <div id="screens" className="mx-auto max-w-6xl px-6 pb-14">
+        <h2 className="text-2xl font-semibold tracking-tight">
+          Product Screenshots
+        </h2>
+        <p className="mt-2 text-sm text-slate-600">
+          A preview of the TaxCheck interface and workflows.
+        </p>
 
-          <h1 style={styles.h1}>
-            Corporate Tax & VAT in the UAE
-            <br />
-            Clear workflows. Practical outputs.
-          </h1>
-
-          <p style={styles.p}>
-            TaxCheck helps accountants and SMEs manage taxpayers, tax periods,
-            and Corporate Tax / VAT filings through guided steps, validations,
-            and professional reports.
-          </p>
-
-          <div style={styles.heroCtas}>
-            <a href={APP_ONBOARDING} style={styles.primaryBtnLarge}>
-              Start Free
-            </a>
-            <a href="#screenshots" style={styles.secondaryBtnLarge}>
-              View Product Screens
-            </a>
-            <a href="#consulting" style={styles.secondaryBtnLarge}>
-              Consulting Services
-            </a>
-          </div>
-        </div>
-
-        {/* Screenshots */}
-        <div id="screenshots" style={styles.section}>
-          <div style={styles.sectionTitle}>Product Screenshots</div>
-
-          <div style={styles.screensGrid}>
-            <img src="/screens/taxpayers-list.png" style={styles.screenImg} />
-            <img src="/screens/taxpayers-page.png" style={styles.screenImg} />
-            <img src="/screens/pdf-generator.png" style={styles.screenImg} />
-          </div>
-        </div>
-
-        {/* About */}
-        <div id="product" style={styles.section}>
-          <div style={styles.sectionTitle}>About TaxCheck</div>
-          <p style={styles.p}>
-            <b>Fintech Technologies FZ-LLC</b> builds practical financial software
-            for accountants and SMEs in the UAE, focused on clarity, compliance,
-            and real operational workflows.
-          </p>
-        </div>
-
-        {/* Customers */}
-        <div id="customers" style={styles.section}>
-          <div style={styles.sectionTitle}>Companies using TaxCheck</div>
-          <div style={styles.customersRow}>
-            <div style={styles.customerPill}>New Vision Systems</div>
-            <div style={styles.customerPill}>RAST LLC</div>
-            <div style={styles.customerPill}>EMPA Business Solutions</div>
-          </div>
-        </div>
-
-        {/* Consulting */}
-        <div id="consulting" style={styles.section}>
-          <div style={styles.sectionTitle}>Financial & Technical Consulting</div>
-          <p style={styles.p}>
-            We provide financial and technical consulting for accounting and
-            finance software, including workflow design, reporting structures,
-            tax systems, and ERP integrations.
-          </p>
-        </div>
-
-        {/* Footer */}
-        <div style={styles.footer}>
-          © {year} TaxCheck UAE · Fintech Technologies FZ-LLC ·
-          support@fintechtech.com
+        <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-5">
+          {screenshots.map((s, i) => (
+            <div
+              key={i}
+              className="rounded-3xl border border-slate-200 bg-white p-3 shadow-sm"
+            >
+              <div className="aspect-[16/10] rounded-2xl bg-slate-100 grid place-items-center text-sm text-slate-500">
+                Screenshot {i + 1}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
+
+      {/* About */}
+      <div className="border-t border-slate-200 bg-slate-50">
+        <div className="mx-auto max-w-6xl px-6 py-14">
+          <h2 className="text-2xl font-semibold tracking-tight">
+            About TaxCheck
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-600 max-w-3xl">
+            TaxCheck is developed by Fintech Technologies FZ-LLC to provide
+            accountants and SMEs in the UAE with practical, compliance-focused
+            tax software that prioritizes clarity and real operational needs.
+          </p>
+
+          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <MiniCard title="Clarity-first UX" desc="Simple, structured workflows." />
+            <MiniCard title="Compliance mindset" desc="Validations and guidance." />
+            <MiniCard title="Accountant-grade outputs" desc="Clean, reliable reports." />
+            <MiniCard title="Built for SMEs" desc="Fast daily usage." />
+          </div>
+        </div>
+      </div>
+
+      {/* Contact */}
+      <div id="contact" className="mx-auto max-w-6xl px-6 py-14">
+        <h2 className="text-2xl font-semibold tracking-tight">Contact Us</h2>
+        <p className="mt-3 text-sm text-slate-600 max-w-xl">
+          For product questions, consulting, or implementation support.
+        </p>
+
+        <div className="mt-6 rounded-3xl border border-slate-200 bg-white p-6 max-w-xl">
+          <div className="text-sm text-slate-600">
+            <div>Email: info@taxcheck.ae</div>
+            <div className="mt-1">Location: UAE</div>
+          </div>
+        </div>
+      </div>
+
+      {/* Footer */}
+      <div className="border-t border-slate-200 bg-white">
+        <div className="mx-auto max-w-6xl px-6 py-8 flex justify-between text-sm text-slate-600">
+          <div>© {year} TaxCheck</div>
+          <div className="flex gap-4">
+            <a href="#screens" className="hover:text-slate-900">Screens</a>
+            <a href="#contact" className="hover:text-slate-900">Contact</a>
+            <a href="/login" className="hover:text-slate-900">Sign in</a>
+          </div>
+        </div>
+      </div>
+
+      {/* Local CSS */}
+      <style>{`
+        .heroGlow {
+          position:absolute;
+          inset:-40% -30%;
+          background:
+            radial-gradient(circle at 30% 30%, rgba(16,185,129,0.18), transparent 55%),
+            radial-gradient(circle at 70% 40%, rgba(15,23,42,0.14), transparent 60%);
+          filter: blur(12px);
+        }
+        .heroShimmer {
+          position:absolute;
+          top:-120px;
+          left:-40%;
+          width:60%;
+          height:520px;
+          background: linear-gradient(115deg, transparent 0%, rgba(16,185,129,0.10) 45%, transparent 70%);
+          animation: shimmerMove 7s linear infinite;
+        }
+        @keyframes shimmerMove {
+          from { transform: translateX(0); }
+          to { transform: translateX(140%); }
+        }
+      `}</style>
     </div>
   );
 }
 
-const styles = {
-  page: {
-    minHeight: "100vh",
-    fontFamily: "Inter, system-ui, Arial",
-    background:
-      "radial-gradient(1200px 700px at 18% 0%, rgba(34,197,94,0.16), transparent 60%), #ffffff",
-    padding: 24,
-  },
+function Feature({ title, desc }) {
+  return (
+    <div className="rounded-2xl border border-slate-200 bg-white px-4 py-3">
+      <div className="text-sm font-medium text-slate-800">{title}</div>
+      <div className="text-sm text-slate-600 mt-1">{desc}</div>
+    </div>
+  );
+}
 
-  topBar: {
-    maxWidth: 1100,
-    margin: "0 auto",
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-  },
-
-  brand: { display: "flex", gap: 12, alignItems: "center" },
-  logo: {
-    width: 44,
-    height: 44,
-    borderRadius: 12,
-    background: "#1f4b8f",
-    color: "#fff",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    fontWeight: 900,
-  },
-  brandName: { fontWeight: 900 },
-  brandSub: { fontSize: 12, opacity: 0.7 },
-
-  topActions: { display: "flex", gap: 10 },
-
-  ghostBtn: {
-    padding: "10px 12px",
-    borderRadius: 10,
-    border: "1px solid #ddd",
-    textDecoration: "none",
-    fontWeight: 700,
-    color: "#111",
-  },
-
-  primaryBtn: {
-    padding: "10px 14px",
-    borderRadius: 10,
-    background: "#16a34a",
-    color: "#fff",
-    textDecoration: "none",
-    fontWeight: 900,
-  },
-
-  container: { maxWidth: 1100, margin: "20px auto" },
-
-  heroCard: {
-    padding: 24,
-    borderRadius: 16,
-    background: "#fff",
-    border: "1px solid #eee",
-  },
-
-  badge: { fontWeight: 700, fontSize: 12, marginBottom: 10 },
-
-  h1: { fontSize: 42, margin: 0 },
-  p: { fontSize: 16, opacity: 0.85 },
-
-  heroCtas: { display: "flex", gap: 10, marginTop: 14 },
-
-  primaryBtnLarge: {
-    padding: "12px 18px",
-    background: "#16a34a",
-    color: "#fff",
-    borderRadius: 12,
-    textDecoration: "none",
-    fontWeight: 900,
-  },
-
-  secondaryBtnLarge: {
-    padding: "12px 18px",
-    borderRadius: 12,
-    border: "1px solid #ddd",
-    textDecoration: "none",
-    fontWeight: 800,
-    color: "#111",
-  },
-
-  section: { marginTop: 30 },
-  sectionTitle: { fontWeight: 900, fontSize: 18, marginBottom: 10 },
-
-  screensGrid: {
-    display: "grid",
-    gridTemplateColumns: "repeat(3, 1fr)",
-    gap: 12,
-  },
-
-  screenImg: {
-    width: "100%",
-    borderRadius: 12,
-    border: "1px solid #ddd",
-  },
-
-  customersRow: { display: "flex", gap: 10, flexWrap: "wrap" },
-  customerPill: {
-    padding: "8px 12px",
-    borderRadius: 20,
-    border: "1px solid #ddd",
-    fontWeight: 800,
-  },
-
-  footer: {
-    marginTop: 40,
-    fontSize: 12,
-    opacity: 0.7,
-    textAlign: "center",
-  },
-};
+function MiniCard({ title, desc }) {
+  return (
+    <div className="rounded-2xl border border-slate-200 bg-white p-4">
+      <div className="text-sm font-medium text-slate-800">{title}</div>
+      <div className="text-sm text-slate-600 mt-1">{desc}</div>
+    </div>
+  );
+}
