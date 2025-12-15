@@ -6,7 +6,8 @@ import PublicLayout from "../components/PublicLayout";
 export default function App({ Component, pageProps }) {
   const router = useRouter();
 
-  const marketingRoutes = ["/", "/about", "/pricing"];
+  // ✅ كل الصفحات التسويقية
+  const marketingRoutes = ["/", "/about", "/pricing", "/services"];
   const isMarketing = marketingRoutes.includes(router.pathname);
 
   if (isMarketing) {
