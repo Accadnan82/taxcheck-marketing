@@ -23,7 +23,7 @@ a { color: inherit; text-decoration: none; }
 .tc-headerInner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 14px 24px;
+  padding: 12px 24px; /* ✅ أقل شوي */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -77,11 +77,35 @@ a { color: inherit; text-decoration: none; }
 }
 .tc-btnPrimary:hover { opacity: 0.92; }
 
+/* ✅ زر اللغة (AR/EN) إذا استخدمته بنفس كلاس tc-btn + tc-langBtn */
+.tc-langBtn{
+  font-weight: 800;
+  min-width: 52px;
+  text-align: center;
+}
+
 /* ===== MAIN ===== */
 .tc-main {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 72px 24px;
+  padding: 36px 24px; /* ✅ ارفع المحتوى لفوق و قلل الفراغ */
+}
+
+/* ✅ تقليل حجم العناوين بالـ Hero إذا استعملت هذه الكلاسات */
+.tc-heroKicker {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.tc-heroTitle {
+  font-size: 52px;
+  line-height: 1.06;
+  margin: 0 0 12px 0;
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 900px) {
+  .tc-heroTitle { font-size: 40px; }
 }
 
 /* ===== FOOTER ===== */
@@ -104,3 +128,20 @@ a { color: inherit; text-decoration: none; }
 
 .tc-footerLinks a { margin-left: 12px; }
 .tc-footerLinks a:hover { color: #0f172a; }
+
+/* ✅ كروت بسيطة للخدمات إن احتجتها */
+.tc-card{
+  background:#fff;
+  border:1px solid #e5e7eb;
+  border-radius:16px;
+  padding:16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+.tc-cardTitle{
+  font-weight:800;
+  margin-bottom:6px;
+}
+.tc-cardText{
+  color:#475569;
+  line-height:1.5;
+}
