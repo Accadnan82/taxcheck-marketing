@@ -72,11 +72,20 @@ export default function HomePage() {
         عاين واجهات TaxCheck
       </h2>
 
-      <div className="tc-screensGrid">
-        <div className="tc-screen">Dashboard View</div>
-        <div className="tc-screen">Tax Return Flow</div>
-        <div className="tc-screen">Reports</div>
-      </div>
+     <div className="tc-screensGrid">
+  <div className="tc-screen">
+    <img src="/screens/screen-1.png" alt="Dashboard" />
+  </div>
+
+  <div className="tc-screen">
+    <img src="/screens/screen-2.png" alt="Tax Flow" />
+  </div>
+
+  <div className="tc-screen">
+    <img src="/screens/screen-3.png" alt="Reports" />
+  </div>
+</div>
+
 
       {/* ملاحظة: تم حذف قسم "تواصل معنا" والفورم بالكامل حسب طلبك */}
     </div>
