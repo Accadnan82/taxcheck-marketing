@@ -1,3 +1,4 @@
+// pages/contact.js
 import React, { useEffect, useMemo, useState } from "react";
 
 export default function ContactPage() {
@@ -20,80 +21,39 @@ export default function ContactPage() {
   const c = useMemo(() => {
     const en = {
       title: "Contact",
-      sub: "Request a demo or ask a compliance question.",
-      email: "info@taxcheck.ae",
-      cta1: "Request a Demo",
-      cta2: "Email us",
+      sub: "Reach out for product inquiries, demos, or consulting.",
+      email: "info@TaxCheck.com",
+      phone: "+971505523307"
     };
     const ar = {
       title: "تواصل معنا",
-      sub: "اطلب عرضاً توضيحياً أو اسأل سؤال امتثال.",
-      email: "info@taxcheck.ae",
-      cta1: "طلب عرض توضيحي",
-      cta2: "راسلنا عبر البريد",
+      sub: "للاستفسار عن المنتج أو العروض أو الاستشارات.",
+      email: "info@TaxCheck.com",
+      phone: "+971505523307"
     };
     return lang === "ar" ? ar : en;
   }, [lang]);
 
   return (
     <div dir={isAR ? "rtl" : "ltr"}>
-      <section className="tc-section">
-        <h1 className="tc-pageTitle">{c.title}</h1>
-        <p className="tc-pageSub">{c.sub}</p>
+      <section className="tc-pageHeader">
+        <h1 className="tc-h1">{c.title}</h1>
+        <p className="tc-sub">{c.sub}</p>
+      </section>
 
-        <div className="tc-contactCard">
-          <div className="tc-contactLine">
-            <strong>{isAR ? "البريد:" : "Email:"}</strong> {c.email}
+      <section className="tc-section">
+        <div className="tc-card">
+          <div className="tc-contactRow">
+            <div className="tc-contactLabel">Email</div>
+            <a className="tc-contactValue" href={`mailto:${c.email}`}>{c.email}</a>
           </div>
 
-          <div className="tc-contactActions">
-            <a className="tc-btnPrimary" href="https://app.taxcheck.ae/request-demo">
-              {c.cta1}
-            </a>
-            <a className="tc-btn" href={`mailto:${c.email}`}>
-              {c.cta2}
-            </a>
+          <div className="tc-contactRow">
+            <div className="tc-contactLabel">Mobile</div>
+            <a className="tc-contactValue" href={`tel:${c.phone}`}>{c.phone}</a>
           </div>
         </div>
       </section>
-
-      <style jsx>{`
-        .tc-pageTitle {
-          text-align: center;
-          font-size: 34px;
-          margin: 10px 0 6px;
-          color: #0b1220;
-          font-weight: 900;
-        }
-        .tc-pageSub {
-          text-align: center;
-          max-width: 820px;
-          margin: 0 auto 18px;
-          color: #64748b;
-          font-weight: 650;
-          line-height: 1.7;
-        }
-        .tc-contactCard {
-          max-width: 760px;
-          margin: 0 auto;
-          background: rgba(255, 255, 255, 0.68);
-          border: 1px solid rgba(229, 231, 235, 0.92);
-          border-radius: 16px;
-          padding: 18px;
-          box-shadow: 0 14px 34px rgba(15, 23, 42, 0.08);
-        }
-        .tc-contactLine {
-          color: #0b1220;
-          font-weight: 700;
-          margin-bottom: 14px;
-        }
-        .tc-contactActions {
-          display: flex;
-          gap: 10px;
-          justify-content: center;
-          flex-wrap: wrap;
-        }
-      `}</style>
     </div>
   );
 }
