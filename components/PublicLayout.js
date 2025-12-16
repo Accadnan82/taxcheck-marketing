@@ -33,7 +33,6 @@ export default function PublicLayout({ children }) {
     const ar = {
       home: "الرئيسية",
       pricing: "الأسعار",
-      about: "من نحن",
       services: "الخدمات",
       contact: "تواصل معنا",
       signin: "تسجيل الدخول",
@@ -42,7 +41,6 @@ export default function PublicLayout({ children }) {
     const en = {
       home: "Home",
       pricing: "Pricing",
-      about: "About",
       services: "Services",
       contact: "Contact",
       signin: "Login",
@@ -54,16 +52,7 @@ export default function PublicLayout({ children }) {
   const isActive = (href) => router.pathname === href;
 
   return (
-    <div className="tc tc-bg">
-      {/* حماية عامة: لا نسمح لأي CSS بتلوين/فلترة الصور (خصوصاً لوغوهات العملاء) */}
-      <style jsx global>{`
-        img {
-          filter: none !important;
-          opacity: 1 !important;
-          mix-blend-mode: normal !important;
-        }
-      `}</style>
-
+    <div className="tc">
       <header className="tc-header">
         <div className="tc-headerInner">
           <div className="tc-brand">
@@ -74,7 +63,7 @@ export default function PublicLayout({ children }) {
             </div>
           </div>
 
-          <nav className="tc-nav">
+          <nav className="tc-nav" aria-label="Primary">
             <Link className={`tc-navLink ${isActive("/") ? "is-active" : ""}`} href="/">
               {t.home}
             </Link>
@@ -87,19 +76,18 @@ export default function PublicLayout({ children }) {
             </Link>
 
             <Link
-              className={`tc-navLink ${isActive("/about") ? "is-active" : ""}`}
-              href="/about"
+              className={`tc-navLink ${isActive("/services") ? "is-active" : ""}`}
+              href="/services"
             >
-              {t.about}
+              {t.services}
             </Link>
 
-            <a className="tc-navLink" href="/#services">
-              {t.services}
-            </a>
-
-            <a className="tc-navLink" href="/#contact">
+            <Link
+              className={`tc-navLink ${isActive("/contact") ? "is-active" : ""}`}
+              href="/contact"
+            >
               {t.contact}
-            </a>
+            </Link>
           </nav>
 
           <div className="tc-actions">
