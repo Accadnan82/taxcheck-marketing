@@ -5,6 +5,8 @@ export default function IndexPage() {
   const [lang, setLang] = useState("ar");
   const isAR = lang === "ar";
 
+  const [modal, setModal] = useState({ open: false, title: "", img: "" });
+
   useEffect(() => {
     const saved =
       (typeof window !== "undefined" && localStorage.getItem("tc_lang")) || "ar";
@@ -16,6 +18,14 @@ export default function IndexPage() {
     };
     window.addEventListener("tc-lang-change", onLang);
     return () => window.removeEventListener("tc-lang-change", onLang);
+  }, []);
+
+  useEffect(() => {
+    const onEsc = (e) => {
+      if (e.key === "Escape") setModal({ open: false, title: "", img: "" });
+    };
+    window.addEventListener("keydown", onEsc);
+    return () => window.removeEventListener("keydown", onEsc);
   }, []);
 
   const c = useMemo(() => {
@@ -90,6 +100,9 @@ export default function IndexPage() {
     return lang === "ar" ? ar : en;
   }, [lang]);
 
+  const openModal = (title, img) => setModal({ open: true, title, img });
+  const closeModal = () => setModal({ open: false, title: "", img: "" });
+
   return (
     <div dir={isAR ? "rtl" : "ltr"}>
       {/* HERO */}
@@ -110,8 +123,8 @@ export default function IndexPage() {
         </div>
 
         <div className="tc-heroRight">
-          <div className="tc-heroScreenCard">
-            <img src="/screens/screen-2.png" alt="Product preview" />
+          <div className="tc-heroScreenCard" role="button" tabIndex={0} onClick={() => openModal(c.screens[1].title, c.screens[1].img)}>
+            <img src={c.screens[1].img} alt="Product preview" />
           </div>
 
           <div className="tc-quote">
@@ -139,18 +152,23 @@ export default function IndexPage() {
         <h2 className="tc-sectionTitle">{c.screensTitle}</h2>
         <div className="tc-screensGrid">
           {c.screens.map((s) => (
-            <div className="tc-screen" key={s.title}>
+            <button
+              key={s.title}
+              type="button"
+              className="tc-screen"
+              onClick={() => openModal(s.title, s.img)}
+              aria-label={s.title}
+            >
               <img src={s.img} alt={s.title} />
               <div className="tc-screenCap">{s.title}</div>
-            </div>
+            </button>
           ))}
         </div>
       </section>
 
-      {/* TRUSTED BY (BOTTOM, HORIZONTAL) */}
+      {/* TRUSTED BY – BOTTOM / HORIZONTAL */}
       <section className="tc-section">
         <h2 className="tc-sectionTitle">{c.customersTitle}</h2>
-
         <div className="tc-logosRow">
           {c.customers.map((cu) => (
             <div className="tc-logoPill" key={cu.name} title={cu.name}>
@@ -161,6 +179,23 @@ export default function IndexPage() {
 
         <div className="tc-footerMini">{c.footer}</div>
       </section>
+
+      {/* MODAL */}
+      {modal.open && (
+        <div className="tc-modalOverlay" role="dialog" aria-modal="true" onClick={closeModal}>
+          <div className="tc-modal" onClick={(e) => e.stopPropagation()}>
+            <div className="tc-modalTop">
+              <div className="tc-modalTitle">{modal.title}</div>
+              <button className="tc-modalClose" type="button" onClick={closeModal}>
+                Close
+              </button>
+            </div>
+            <div className="tc-modalBody">
+              <img src={modal.img} alt={modal.title} />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
