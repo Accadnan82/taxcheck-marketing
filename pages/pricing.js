@@ -43,9 +43,6 @@ export default function PricingPage() {
       accountNumber: "019100279275",
       iban: "AE430330000019100279275",
       currency: "AED",
-      // Balance is informational; shown as "Current Balance"
-      currentBalance: "8,029.23",
-      beneficiaryName: "TaxCheck",
       referenceHint: "Use your email + plan name as the transfer reference.",
       activationNote: "After transfer, submit the receipt here to activate your subscription.",
     }),
@@ -125,7 +122,6 @@ export default function PricingPage() {
         subtitle: "Complete a bank transfer to activate your selected plan.",
         selectedPlanLabel: "Selected plan",
         amountLabel: "Amount (AED)",
-        currentBalance: "Current Balance",
         close: "Close",
         copy: "Copy",
         havePaid: "I have paid",
@@ -186,7 +182,6 @@ export default function PricingPage() {
         subtitle: "قم بالتحويل البنكي لتفعيل الخطة التي اخترتها.",
         selectedPlanLabel: "الخطة المختارة",
         amountLabel: "المبلغ (درهم)",
-        currentBalance: "الرصيد الحالي",
         close: "إغلاق",
         copy: "نسخ",
         havePaid: "تم التحويل",
@@ -623,8 +618,6 @@ export default function PricingPage() {
 
                   <div style={S.infoRow}>
                     <div style={S.pill}>
-                      <div style={S.pillLabel}>{t.bank.currentBalance}</div>
-                      <div style={S.pillValue}>AED {BANK_DETAILS.currentBalance}</div>
                     </div>
                     <div style={S.pill}>
                       <div style={S.pillLabel}>{t.bank.fields.currency}</div>
