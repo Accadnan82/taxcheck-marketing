@@ -4,7 +4,7 @@ export default function IndexPage() {
   const [lang, setLang] = useState("ar");
   const isAR = lang === "ar";
 
-  // Read language from PublicLayout + listen for changes
+  // Read language set by PublicLayout + listen for changes
   useEffect(() => {
     const saved =
       (typeof window !== "undefined" && localStorage.getItem("tc_lang")) || "ar";
@@ -90,8 +90,7 @@ export default function IndexPage() {
         "مصمم للمحاسبين وفرق المالية. تدفقات عمل منظمة، مصادقات آلية، ومخرجات جاهزة للمراجعة بما يتوافق مع متطلبات الضرائب في الإمارات.",
       cta1: "طلب عرض توضيحي",
       cta2: "شاشات المنتج",
-      quote:
-        "خدمة موثوقة تجعل إدارة الضرائب أسهل وأكثر احترافية.",
+      quote: "خدمة موثوقة تجعل إدارة الضرائب أسهل وأكثر احترافية.",
       quoteBy: "— المدير المالي",
 
       featuresTitle: "ميزات قوية لإدارة الضرائب",
@@ -150,7 +149,6 @@ export default function IndexPage() {
     return lang === "ar" ? ar : en;
   }, [lang]);
 
-  // Ensure page direction matches selected language
   return (
     <div dir={isAR ? "rtl" : "ltr"}>
       {/* HERO */}
@@ -161,7 +159,6 @@ export default function IndexPage() {
           <p className="tc-heroSub">{c.heroP}</p>
 
           <div className="tc-heroActions">
-            {/* No Start Free Trial anywhere */}
             <a className="tc-btnPrimary" href="https://app.taxcheck.ae/request-demo">
               {c.cta1}
             </a>
@@ -236,7 +233,7 @@ export default function IndexPage() {
         <div className="tc-footerMini">{c.footer}</div>
       </section>
 
-      {/* Page-scoped styling to match the agreed design */}
+      {/* Page-scoped styling (only for landing page blocks) */}
       <style jsx>{`
         .tc-hero {
           display: grid;
