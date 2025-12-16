@@ -1,124 +1,296 @@
-// components/PublicLayout.js
-import React, { useEffect, useMemo, useState } from "react";
-import Link from "next/link";
-import { useRouter } from "next/router";
+/* styles/globals.css */
 
-function applyDir(lang) {
-  const dir = lang === "ar" ? "rtl" : "ltr";
-  if (typeof document !== "undefined") {
-    document.documentElement.lang = lang;
-    document.documentElement.dir = dir;
-  }
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; }
+
+/* TOKENS */
+:root{
+  --tc-navy:#1a3e6e;
+  --tc-mint:#c9f3e2;
+  --tc-text:#0f172a;
+  --tc-muted:#64748b;
+  --tc-border:#e5e7eb;
+  --tc-green:#22c55e;
 }
 
-export default function PublicLayout({ children }) {
-  const router = useRouter();
-  const [lang, setLang] = useState("ar");
+/* MARKETING SCOPE */
+.tc{
+  min-height:100vh;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: linear-gradient(120deg, var(--tc-mint) 0%, #e9edf2 60%);
+  color: var(--tc-text);
+}
 
-  useEffect(() => {
-    const saved =
-      (typeof window !== "undefined" && localStorage.getItem("tc_lang")) || "ar";
-    setLang(saved);
-    applyDir(saved);
-  }, []);
+/* No bold anywhere inside marketing */
+.tc, .tc * { font-weight: 400 !important; }
+.tc strong, .tc b { font-weight: 400 !important; }
 
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    localStorage.setItem("tc_lang", lang);
-    applyDir(lang);
-    window.dispatchEvent(new CustomEvent("tc-lang-change", { detail: { lang } }));
-  }, [lang]);
+/* Keep logos in original colors */
+.tc img{
+  display:block;
+  max-width:100%;
+  height:auto;
+  filter:none !important;
+  opacity:1 !important;
+  mix-blend-mode: normal !important;
+}
 
-  const t = useMemo(() => {
-    const ar = {
-      home: "الرئيسية",
-      pricing: "الأسعار",
-      about: "من نحن",
-      services: "الخدمات",
-      contact: "تواصل معنا",
-      signin: "تسجيل الدخول",
-      brandSub: "ضريبة الشركات والـ VAT • الإمارات",
-    };
-    const en = {
-      home: "Home",
-      pricing: "Pricing",
-      about: "About",
-      services: "Services",
-      contact: "Contact",
-      signin: "Login",
-      brandSub: "Corporate Tax & VAT • UAE",
-    };
-    return lang === "ar" ? ar : en;
-  }, [lang]);
+/* HEADER */
+.tc-header{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--tc-border);
+}
+.tc-headerInner{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 16px;
+}
+.tc-brand{ display:flex; align-items:center; gap:12px; min-width: 220px; }
+.tc-logo{
+  width: 42px; height: 42px;
+  border-radius: 12px;
+  background: var(--tc-navy);
+  color:#fff;
+  display:grid;
+  place-items:center;
+  box-shadow: 0 8px 18px rgba(26,62,110,0.18);
+}
+.tc-brandText{ display:flex; flex-direction:column; line-height:1.05; }
+.tc-brandSub{ font-size: 12px; color: var(--tc-muted); margin-top: 2px; }
 
-  const isActive = (href) => router.pathname === href;
+/* NAV */
+.tc-nav{ display:flex; align-items:center; gap: 10px; }
+.tc-navLink{
+  padding: 10px 12px;
+  border-radius: 12px;
+  color: #334155;
+  transition: background .15s ease, color .15s ease;
+}
+.tc-navLink:hover{ background: rgba(26,62,110,0.08); }
+.tc-navLink.is-active{ background: rgba(26,62,110,0.12); color: #0b1220; }
 
-  return (
-    <div className="tc tc-bg">
-      <header className="tc-header">
-        <div className="tc-headerInner">
-          <div className="tc-brand">
-            <div className="tc-logo">T</div>
-            <div className="tc-brandText">
-              <div className="tc-brandTitle">TaxCheck</div>
-              <div className="tc-brandSub">{t.brandSub}</div>
-            </div>
-          </div>
+/* ACTIONS */
+.tc-actions{ display:flex; align-items:center; gap: 10px; min-width: 220px; justify-content: flex-end; }
+.tc-btn{
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--tc-border);
+  background: #fff;
+  cursor:pointer;
+  transition: background .15s ease, border-color .15s ease, transform .15s ease;
+}
+.tc-btn:hover{ background:#f8fafc; border-color:#d7dde3; }
+.tc-btn:active{ transform: translateY(1px); }
 
-          <nav className="tc-nav">
-            <Link className={`tc-navLink ${isActive("/") ? "is-active" : ""}`} href="/">
-              {t.home}
-            </Link>
+.tc-btnPrimary{
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: var(--tc-green);
+  border: 1px solid transparent;
+  color:#fff;
+  cursor:pointer;
+  transition: opacity .15s ease, transform .15s ease;
+}
+.tc-btnPrimary:hover{ opacity: .93; }
+.tc-btnPrimary:active{ transform: translateY(1px); }
 
-            <Link
-              className={`tc-navLink ${isActive("/pricing") ? "is-active" : ""}`}
-              href="/pricing"
-            >
-              {t.pricing}
-            </Link>
+.tc-lang{
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--tc-border);
+  background: #fff;
+  cursor:pointer;
+}
 
-            <Link
-              className={`tc-navLink ${isActive("/about") ? "is-active" : ""}`}
-              href="/about"
-            >
-              {t.about}
-            </Link>
+/* MAIN */
+.tc-main{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 24px 72px;
+}
 
-            <Link
-              className={`tc-navLink ${isActive("/services") ? "is-active" : ""}`}
-              href="/services"
-            >
-              {t.services}
-            </Link>
+/* SECTIONS */
+.tc-section{ margin-top: 26px; }
+.tc-sectionTitle{
+  text-align:center;
+  font-size: 18px;
+  color: #0b1220;
+  margin: 28px 0 14px;
+}
 
-            {/* ✅ Contact الآن صفحة مستقلة */}
-            <Link
-              className={`tc-navLink ${isActive("/contact") ? "is-active" : ""}`}
-              href="/contact"
-            >
-              {t.contact}
-            </Link>
-          </nav>
+/* HERO */
+.tc-hero{
+  display:grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 16px;
+  padding: 18px 0 6px;
+  align-items:start;
+}
+.tc-heroLeft{
+  background: rgba(255,255,255,0.62);
+  border: 1px solid rgba(229,231,235,0.92);
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 14px 34px rgba(15,23,42,0.08);
+}
+.tc-heroKicker{
+  display:inline-flex;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(26,62,110,0.08);
+  color:#0b1220;
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+.tc-heroTitle{
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.1;
+  letter-spacing: -0.6px;
+  color:#0b1220;
+}
+.tc-heroSub{
+  margin: 12px 0 16px;
+  color:#475569;
+  line-height: 1.7;
+  font-size: 14px;
+}
+.tc-heroActions{
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.tc-heroRight{
+  display:grid;
+  gap: 12px;
+}
+.tc-heroScreenCard{
+  background: rgba(255,255,255,0.62);
+  border: 1px solid rgba(229,231,235,0.92);
+  border-radius: 16px;
+  overflow:hidden;
+  box-shadow: 0 14px 34px rgba(15,23,42,0.08);
+}
+.tc-heroScreenCard img{
+  width:100%;
+  height: 220px;
+  object-fit: cover;
+}
+.tc-quote{
+  background: rgba(255,255,255,0.62);
+  border: 1px solid rgba(229,231,235,0.92);
+  border-radius: 16px;
+  padding: 14px 16px;
+  box-shadow: 0 14px 34px rgba(15,23,42,0.08);
+  line-height: 1.55;
+}
+.tc-quoteBy{
+  margin-top: 8px;
+  color: var(--tc-muted);
+  font-size: 12px;
+}
 
-          <div className="tc-actions">
-            <button
-              className="tc-lang"
-              type="button"
-              onClick={() => setLang((p) => (p === "ar" ? "en" : "ar"))}
-              aria-label="Language"
-              title="Language"
-            >
-              {lang === "ar" ? "EN" : "AR"}
-            </button>
+/* FEATURES */
+.tc-featureGrid{
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.tc-featureCard{
+  background: rgba(255,255,255,0.7);
+  border: 1px solid rgba(229,231,235,0.9);
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 10px 26px rgba(15,23,42,0.06);
+}
+.tc-featureHead{ font-size: 14px; margin-bottom: 6px; color:#0b1220; }
+.tc-featureText{ font-size: 12px; color:#475569; line-height:1.65; }
 
-            <a className="tc-btn" href="https://app.taxcheck.ae/login">
-              {t.signin}
-            </a>
-          </div>
-        </div>
-      </header>
+/* SCREENS */
+.tc-screensGrid{
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.tc-screen{
+  background: rgba(255,255,255,0.75);
+  border: 1px solid rgba(229,231,235,0.9);
+  border-radius: 14px;
+  overflow:hidden;
+  box-shadow: 0 10px 26px rgba(15,23,42,0.06);
+}
+.tc-screen img{
+  width:100%;
+  height: 260px;
+  object-fit: cover;
+}
+.tc-screenCap{
+  padding: 10px 12px;
+  font-size: 12px;
+  color:#0b1220;
+}
 
-      <main className="tc-main">{children}</main>
-    </div>
-  );
+/* LOGOS – ALWAYS HORIZONTAL */
+.tc-logosRow{
+  max-width: 980px;
+  margin: 0 auto;
+  display:flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content:center;
+  align-items:center;
+}
+.tc-logoPill{
+  height: 64px;
+  padding: 10px 14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: rgba(255,255,255,0.75);
+  border: 1px solid rgba(229,231,235,0.92);
+  border-radius: 14px;
+  box-shadow: 0 10px 26px rgba(15,23,42,0.06);
+}
+.tc-logoPill img{
+  max-height: 42px;
+  max-width: 160px;
+  object-fit: contain;
+}
+
+.tc-footerMini{
+  text-align:center;
+  margin-top: 18px;
+  color: var(--tc-muted);
+  font-size: 13px;
+}
+
+/* RTL */
+[dir="rtl"] .tc-headerInner{ flex-direction: row-reverse; }
+[dir="rtl"] .tc-brand{ flex-direction: row-reverse; }
+[dir="rtl"] .tc-nav{ flex-direction: row-reverse; }
+[dir="rtl"] .tc-actions{ justify-content: flex-start; }
+
+/* Responsive */
+@media (max-width: 980px){
+  .tc-nav{ display:none; }
+  .tc-hero{ grid-template-columns: 1fr; }
+  .tc-featureGrid{ grid-template-columns: 1fr; }
+  .tc-screensGrid{ grid-template-columns: 1fr; }
+  .tc-screen img{ height: 280px; }
 }
