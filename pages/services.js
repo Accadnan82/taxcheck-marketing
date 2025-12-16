@@ -19,25 +19,37 @@ export default function ServicesPage() {
 
   const c = useMemo(() => {
     const en = {
-      title: "Services",
-      sub: "Financial and technical consulting for accounting and tax systems.",
+      title: "Financial Services",
       items: [
-        { h: "Tax workflow design", p: "Workflow mapping, checkpoints, and validations." },
-        { h: "Data & reporting", p: "Review-ready outputs, summaries, and checklists." },
-        { h: "Implementation support", p: "Setup, onboarding, and best practices." },
+        "Corporate Tax readiness assessment and filing preparation",
+        "VAT return review and preparation (UAE)",
+        "Tax period closing checklist and review-ready summaries",
+        "Revenue classification and tax mapping (accounts-to-tax outputs)",
+        "Policy documentation (tax & accounting procedures)",
+        "Internal controls review for finance processes",
+        "Financial reporting review (management summaries and KPI packs)",
+        "Data cleanup and reconciliation support (TB / GL review)",
+        "Branch / entity structure review (multi-branch consistency)",
+        "Training for accountants and finance teams",
       ],
-      cta: "Request a Demo",
     };
+
     const ar = {
-      title: "الخدمات",
-      sub: "استشارات مالية وتقنية للأنظمة المحاسبية والضريبية.",
+      title: "الخدمات المالية",
       items: [
-        { h: "تصميم سير العمل الضريبي", p: "خرائط تدفق، نقاط تفتيش، ومصادقات." },
-        { h: "البيانات والتقارير", p: "مخرجات جاهزة للمراجعة، ملخصات، وقوائم تحقق." },
-        { h: "دعم التطبيق", p: "إعداد، تدريب، وأفضل الممارسات." },
+        "تقييم جاهزية ضريبة الشركات والتحضير للإيداع",
+        "مراجعة وتجهيز إقرار VAT (الإمارات)",
+        "قوائم تحقق لإقفال الفترات وملخصات جاهزة للمراجعة",
+        "تصنيف الإيرادات وربط الحسابات بالمخرجات الضريبية",
+        "توثيق السياسات والإجراءات (محاسبية وضريبية)",
+        "مراجعة الضوابط الداخلية لعمليات المالية",
+        "مراجعة التقارير المالية (ملخصات إدارية وحزم KPI)",
+        "تنظيف البيانات ودعم المطابقات (TB / GL)",
+        "مراجعة هيكل الفروع/الكيانات لضمان الاتساق",
+        "تدريب للمحاسبين وفرق المالية",
       ],
-      cta: "طلب عرض توضيحي",
     };
+
     return lang === "ar" ? ar : en;
   }, [lang]);
 
@@ -45,21 +57,13 @@ export default function ServicesPage() {
     <div dir={isAR ? "rtl" : "ltr"}>
       <section className="tc-section">
         <h1 className="tc-pageTitle">{c.title}</h1>
-        <p className="tc-pageSub">{c.sub}</p>
 
-        <div className="tc-svcGrid">
-          {c.items.map((x) => (
-            <div className="tc-svcCard" key={x.h}>
-              <div className="tc-svcH">{x.h}</div>
-              <div className="tc-svcP">{x.p}</div>
-            </div>
-          ))}
-        </div>
-
-        <div className="tc-centerCta">
-          <a className="tc-btnPrimary" href="https://app.taxcheck.ae/request-demo">
-            {c.cta}
-          </a>
+        <div className="tc-listCard">
+          <ul className="tc-list">
+            {c.items.map((x) => (
+              <li key={x}>{x}</li>
+            ))}
+          </ul>
         </div>
       </section>
 
@@ -67,52 +71,43 @@ export default function ServicesPage() {
         .tc-pageTitle {
           text-align: center;
           font-size: 34px;
-          margin: 10px 0 6px;
+          margin: 10px 0 16px;
           color: #0b1220;
-          font-weight: 900;
         }
-        .tc-pageSub {
-          text-align: center;
-          max-width: 820px;
-          margin: 0 auto 18px;
-          color: #64748b;
-          font-weight: 650;
-          line-height: 1.7;
-        }
-        .tc-svcGrid {
+
+        .tc-listCard {
           max-width: 980px;
           margin: 0 auto;
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 14px;
-        }
-        .tc-svcCard {
           background: rgba(255, 255, 255, 0.68);
           border: 1px solid rgba(229, 231, 235, 0.92);
           border-radius: 16px;
-          padding: 18px;
+          padding: 16px;
           box-shadow: 0 14px 34px rgba(15, 23, 42, 0.08);
         }
-        .tc-svcH {
-          font-weight: 900;
-          font-size: 16px;
+
+        .tc-list {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          display: grid;
+          gap: 10px;
           color: #0b1220;
-          margin-bottom: 8px;
-        }
-        .tc-svcP {
-          color: #64748b;
-          font-weight: 650;
           line-height: 1.7;
         }
-        .tc-centerCta {
-          display: flex;
-          justify-content: center;
-          margin-top: 16px;
+
+        .tc-list li {
+          padding: 10px 10px;
+          border-bottom: 1px dashed rgba(100, 116, 139, 0.25);
         }
-        @media (max-width: 980px) {
-          .tc-svcGrid {
-            grid-template-columns: 1fr;
-          }
+
+        .tc-list li:last-child {
+          border-bottom: 0;
+        }
+
+        .tc-list li::before {
+          content: "•";
+          margin-inline-end: 10px;
+          color: #16a34a;
         }
       `}</style>
     </div>
