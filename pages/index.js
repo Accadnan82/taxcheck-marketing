@@ -2,28 +2,29 @@
 import React, { useMemo, useState } from "react";
 
 /**
- * TaxCheck Home (Marketing) — Re-designed to match:
- * ✅ Official TaxCheck colors (saved)
- * ✅ Official TaxCheck typography system (saved)
+ * TaxCheck Home (Marketing) — FINAL (with product screens images restored)
  *
- * Changes requested:
- * ✅ Remove quote box:
- *   “A reliable service that makes tax management easy and professional.” — CFO
- * ✅ Hero container becomes FULL WIDTH
- * ✅ Remove the right-side hero image/card entirely
- * ✅ Enlarge hero title + description + CTA area
- * ✅ Remove “View Product Screens” text/button (and remove any 404 link behavior)
- * ✅ Fix "Request a Demo" NOT to navigate to /request-demo (which causes 404)
- *    → now opens an in-page modal (no routing)
- * ✅ Remove ALL customer logos section and remove "Trusted by" container
+ * ✅ Uses saved TaxCheck colors + typography
+ * ✅ Quote box removed
+ * ✅ Hero is full width
+ * ✅ Right-side hero image removed
+ * ✅ "View Product Screens" removed
+ * ✅ "Request a Demo" opens modal (no 404 routes)
+ * ✅ "Trusted by" + all customer logos removed
+ * ✅ Language toggle REMOVED from the page (returned to header/layout)
+ *
+ * ✅ Product Screens now show images from /public using the SAME names you confirmed:
+ * - /public/Comprehensive Dashboard.png
+ * - /public/Guided Tax Workflow.png
+ * - /public/Review-Ready Reports.png
+ *
+ * IMPORTANT:
+ * Put these files in /public exactly with the same names (including spaces and capitalization).
+ * If you used .jpg or .webp, change the extension below.
  */
 
 export default function Home() {
   const year = useMemo(() => new Date().getFullYear(), []);
-  const [lang, setLang] = useState("EN");
-  const isAR = lang === "AR";
-
-  // Demo modal
   const [demoOpen, setDemoOpen] = useState(false);
   const [demoSent, setDemoSent] = useState(false);
   const [demo, setDemo] = useState({
@@ -33,6 +34,10 @@ export default function Home() {
     company: "",
     message: "",
   });
+
+  // ✅ Default language direction only (no language button inside the page)
+  // If your header controls lang/dir globally, you can remove this and rely on the app-level setting.
+  const isAR = true;
 
   const t = useMemo(() => {
     const EN = {
@@ -48,30 +53,12 @@ export default function Home() {
         screensTitle: "Product Screens",
       },
       features: [
-        {
-          title: "Audit-Level Confidence & Accuracy",
-          desc: "Professional validations for reliable outputs.",
-        },
-        {
-          title: "Reduce Errors by up to 90%",
-          desc: "Structured inputs and checkpoints reduce mistakes.",
-        },
-        {
-          title: "Easy VAT Return Preparation",
-          desc: "Section-based VAT flow with practical summaries.",
-        },
-        {
-          title: "Client & Period Management",
-          desc: "Organize clients, periods, and filings across teams.",
-        },
-        {
-          title: "Rules-Gated AI Intelligence",
-          desc: "AI suggestions validated by deterministic rules.",
-        },
-        {
-          title: "Professional Outputs",
-          desc: "Summaries, checklists, and review-ready reports.",
-        },
+        { title: "Audit-Level Confidence & Accuracy", desc: "Professional validations for reliable outputs." },
+        { title: "Reduce Errors by up to 90%", desc: "Structured inputs and checkpoints reduce mistakes." },
+        { title: "Easy VAT Return Preparation", desc: "Section-based VAT flow with practical summaries." },
+        { title: "Client & Period Management", desc: "Organize clients, periods, and filings across teams." },
+        { title: "Rules-Gated AI Intelligence", desc: "AI suggestions validated by deterministic rules." },
+        { title: "Professional Outputs", desc: "Summaries, checklists, and review-ready reports." },
       ],
       screens: [
         { title: "Comprehensive Dashboard" },
@@ -88,7 +75,6 @@ export default function Home() {
         message: "Message (optional)",
         send: "Send",
         close: "Close",
-        back: "Back",
         successTitle: "Request sent",
         successBody: "Thank you. We will contact you soon.",
       },
@@ -115,7 +101,11 @@ export default function Home() {
         { title: "ذكاء اصطناعي بضوابط قواعد", desc: "اقتراحات AI يتم التحقق منها بقواعد حتمية." },
         { title: "مخرجات احترافية", desc: "ملخصات وقوائم تدقيق وتقارير جاهزة للمراجعة." },
       ],
-      screens: [{ title: "لوحة شاملة" }, { title: "سير عمل موجّه" }, { title: "تقارير جاهزة" }],
+      screens: [
+        { title: "Comprehensive Dashboard" },
+        { title: "Guided Tax Workflow" },
+        { title: "Review-Ready Reports" },
+      ],
       demo: {
         title: "طلب عرض توضيحي",
         subtitle: "اترك بياناتك وسنتواصل معك قريبًا.",
@@ -126,7 +116,6 @@ export default function Home() {
         message: "رسالة (اختياري)",
         send: "إرسال",
         close: "إغلاق",
-        back: "رجوع",
         successTitle: "تم الإرسال",
         successBody: "شكرًا لك. سنعاود التواصل قريبًا.",
       },
@@ -188,7 +177,6 @@ export default function Home() {
         marginBottom: 14,
       },
 
-      // Requested: Bigger title + desc
       // Hero Titles: 48px / 700 / 1.2
       heroTitle: {
         fontSize: 48,
@@ -233,19 +221,6 @@ export default function Home() {
         cursor: "pointer",
       },
 
-      // Language toggle (in-page)
-      topRow: { marginTop: 14, display: "flex", justifyContent: "flex-end", gap: 10 },
-      btnLang: {
-        fontSize: 15,
-        fontWeight: 600,
-        padding: "10px 14px",
-        borderRadius: 12,
-        border: `1px solid ${C.border}`,
-        background: C.bg1,
-        color: C.heading,
-        cursor: "pointer",
-      },
-
       // Section titles: 36px / 700
       sectionTitle: {
         margin: "28px 0 14px",
@@ -273,27 +248,19 @@ export default function Home() {
       cardTitle: { fontSize: 16, fontWeight: 600, color: C.heading, margin: "0 0 6px" },
       cardText: { fontSize: 14, fontWeight: 400, color: C.text, lineHeight: 1.7, margin: 0 },
 
-      // Screens placeholders (no "View Product Screens" button; no broken links)
+      // Screens (with real images)
       screensGrid: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 14 },
-      screenBox: {
+      screenCard: {
         background: C.bg1,
         border: `1px solid ${C.border}`,
         borderRadius: 16,
-        padding: 16,
+        overflow: "hidden",
         boxShadow: "0 10px 26px rgba(15,23,42,0.06)",
-        minHeight: 180,
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between",
       },
+      screenImg: { width: "100%", height: 260, objectFit: "cover", display: "block" },
+      screenCap: { padding: "12px 12px", fontSize: 16, fontWeight: 600, color: C.heading },
 
-      footer: {
-        marginTop: 28,
-        textAlign: "center",
-        color: C.muted,
-        fontSize: 14,
-        fontWeight: 400,
-      },
+      footer: { marginTop: 28, textAlign: "center", color: C.muted, fontSize: 14, fontWeight: 400 },
 
       // Modal
       modalOverlay: {
@@ -378,6 +345,9 @@ export default function Home() {
     [C, FONT_STACK]
   );
 
+  // Images from /public (exact names you confirmed)
+  const imageSrcForTitle = (title) => `/${title}.png`; // change .png if your files are .jpg/.webp
+
   const openDemo = () => {
     setDemoOpen(true);
     setDemoSent(false);
@@ -388,7 +358,6 @@ export default function Home() {
 
   const submitDemo = (e) => {
     e.preventDefault();
-    // Front-end confirmation only (no routing, no 404)
     setDemoSent(true);
   };
 
@@ -397,7 +366,9 @@ export default function Home() {
       <main style={S.main}>
         {/* HERO – full width, no right image, no quote */}
         <section style={S.heroCard}>
-          <div style={S.heroPill}>{t.hero.pill}</div>
+          <div style={{ display: "flex", justifyContent: "flex-end" }}>
+            <div style={S.heroPill}>{t.hero.pill}</div>
+          </div>
 
           <h2 style={S.heroTitle}>{t.hero.title}</h2>
           <p style={S.heroDesc}>{t.hero.desc}</p>
@@ -405,13 +376,6 @@ export default function Home() {
           <div style={S.heroActions}>
             <button style={S.btnPrimary} type="button" onClick={openDemo}>
               {t.hero.cta}
-            </button>
-          </div>
-
-          {/* Language toggle kept inside page (doesn't depend on routes) */}
-          <div style={S.topRow}>
-            <button style={S.btnLang} type="button" onClick={() => setLang(isAR ? "EN" : "AR")}>
-              {lang}
             </button>
           </div>
         </section>
@@ -427,36 +391,27 @@ export default function Home() {
           ))}
         </section>
 
-        {/* PRODUCT SCREENS (kept, but no "View Product Screens" button and no broken routes) */}
+        {/* PRODUCT SCREENS (real images from /public) */}
         <div style={S.sectionTitle}>{t.sections.screensTitle}</div>
         <section style={S.screensGrid}>
           {t.screens.map((s, idx) => (
-            <div key={idx} style={S.screenBox}>
-              <div>
-                <div style={S.cardTitle}>{s.title}</div>
-                <p style={S.cardText}>
-                  {/* Placeholder text only; you can replace with real images later */}
-                  Screens are shown below in the page. No external navigation.
-                </p>
-              </div>
-              <div
-                style={{
-                  height: 78,
-                  borderRadius: 12,
-                  border: `1px dashed ${C.border}`,
-                  background: C.bg2,
-                }}
+            <div key={idx} style={S.screenCard}>
+              <img
+                src={imageSrcForTitle(s.title)}
+                alt={s.title}
+                style={S.screenImg}
+                loading="lazy"
               />
+              <div style={S.screenCap}>{s.title}</div>
             </div>
           ))}
         </section>
 
-        {/* REMOVED: Trusted by section + logos completely */}
-
+        {/* REMOVED: Trusted by + logos completely */}
         <footer style={S.footer}>{t.footer}</footer>
       </main>
 
-      {/* DEMO MODAL (replaces broken /request-demo route) */}
+      {/* DEMO MODAL (no route, no 404) */}
       {demoOpen ? (
         <div style={S.modalOverlay} onClick={closeDemo} role="presentation">
           <div style={S.modal} role="dialog" aria-modal="true" onClick={(e) => e.stopPropagation()}>
@@ -484,15 +439,46 @@ export default function Home() {
               ) : (
                 <form onSubmit={submitDemo}>
                   <div style={S.formGrid}>
-                    <Input S={S} label={t.demo.name} value={demo.name} onChange={(v) => setDemo((p) => ({ ...p, name: v }))} type="text" required />
-                    <Input S={S} label={t.demo.email} value={demo.email} onChange={(v) => setDemo((p) => ({ ...p, email: v }))} type="email" required />
-                    <Input S={S} label={t.demo.phone} value={demo.phone} onChange={(v) => setDemo((p) => ({ ...p, phone: v }))} type="tel" required />
-                    <Input S={S} label={t.demo.company} value={demo.company} onChange={(v) => setDemo((p) => ({ ...p, company: v }))} type="text" />
+                    <Input
+                      S={S}
+                      label={t.demo.name}
+                      value={demo.name}
+                      onChange={(v) => setDemo((p) => ({ ...p, name: v }))}
+                      type="text"
+                      required
+                    />
+                    <Input
+                      S={S}
+                      label={t.demo.email}
+                      value={demo.email}
+                      onChange={(v) => setDemo((p) => ({ ...p, email: v }))}
+                      type="email"
+                      required
+                    />
+                    <Input
+                      S={S}
+                      label={t.demo.phone}
+                      value={demo.phone}
+                      onChange={(v) => setDemo((p) => ({ ...p, phone: v }))}
+                      type="tel"
+                      required
+                    />
+                    <Input
+                      S={S}
+                      label={t.demo.company}
+                      value={demo.company}
+                      onChange={(v) => setDemo((p) => ({ ...p, company: v }))}
+                      type="text"
+                    />
                   </div>
 
                   <div style={{ marginTop: 12 }}>
                     <div style={S.inputLabel}>{t.demo.message}</div>
-                    <textarea style={S.textarea} value={demo.message} onChange={(e) => setDemo((p) => ({ ...p, message: e.target.value }))} />
+                    <textarea
+                      style={S.textarea}
+                      value={demo.message}
+                      onChange={(e) => setDemo((p) => ({ ...p, message: e.target.value }))}
+                    />
                   </div>
 
                   <div style={S.modalActions}>
@@ -517,7 +503,13 @@ function Input({ S, label, value, onChange, type, required }) {
   return (
     <div style={S.inputWrap}>
       <div style={S.inputLabel}>{label}</div>
-      <input style={S.input} value={value} onChange={(e) => onChange(e.target.value)} type={type} required={!!required} />
+      <input
+        style={S.input}
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        type={type}
+        required={!!required}
+      />
     </div>
   );
 }
