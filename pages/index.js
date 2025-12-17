@@ -2,25 +2,13 @@
 import React, { useMemo, useState } from "react";
 
 /**
- * TaxCheck Home (Marketing) — FINAL (with product screens images restored)
+ * TaxCheck Home (Marketing) — FINAL (Product Screens fixed to your actual file names)
  *
- * ✅ Uses saved TaxCheck colors + typography
- * ✅ Quote box removed
- * ✅ Hero is full width
- * ✅ Right-side hero image removed
- * ✅ "View Product Screens" removed
- * ✅ "Request a Demo" opens modal (no 404 routes)
- * ✅ "Trusted by" + all customer logos removed
- * ✅ Language toggle REMOVED from the page (returned to header/layout)
- *
- * ✅ Product Screens now show images from /public using the SAME names you confirmed:
- * - /public/Comprehensive Dashboard.png
- * - /public/Guided Tax Workflow.png
- * - /public/Review-Ready Reports.png
- *
- * IMPORTANT:
- * Put these files in /public exactly with the same names (including spaces and capitalization).
- * If you used .jpg or .webp, change the extension below.
+ * Fix applied:
+ * ✅ Images now load from:
+ *   /public/screens/Dashboard.png
+ *   /public/screens/Workflow.png
+ *   /public/screens/Reports.png
  */
 
 export default function Home() {
@@ -35,8 +23,7 @@ export default function Home() {
     message: "",
   });
 
-  // ✅ Default language direction only (no language button inside the page)
-  // If your header controls lang/dir globally, you can remove this and rely on the app-level setting.
+  // Default language direction only (no language button inside the page)
   const isAR = true;
 
   const t = useMemo(() => {
@@ -125,7 +112,7 @@ export default function Home() {
     return isAR ? AR : EN;
   }, [isAR, year]);
 
-  // ✅ Official TaxCheck colors (saved)
+  // Official TaxCheck colors
   const C = useMemo(
     () => ({
       heading: "#1e3a5f",
@@ -142,7 +129,7 @@ export default function Home() {
     []
   );
 
-  // ✅ Official font system (saved)
+  // Official font system
   const FONT_STACK =
     "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif";
 
@@ -156,7 +143,6 @@ export default function Home() {
       },
       main: { maxWidth: 1200, margin: "0 auto", padding: "22px 24px 72px" },
 
-      // HERO FULL WIDTH CARD
       heroCard: {
         width: "100%",
         background: C.bg1,
@@ -177,7 +163,6 @@ export default function Home() {
         marginBottom: 14,
       },
 
-      // Hero Titles: 48px / 700 / 1.2
       heroTitle: {
         fontSize: 48,
         fontWeight: 700,
@@ -187,7 +172,6 @@ export default function Home() {
         margin: "0 0 12px",
         maxWidth: 980,
       },
-      // Hero description: 18px / 400 / 1.7
       heroDesc: {
         fontSize: 18,
         fontWeight: 400,
@@ -199,7 +183,6 @@ export default function Home() {
 
       heroActions: { marginTop: 18, display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center" },
 
-      // Buttons
       btnPrimary: {
         fontSize: 16,
         fontWeight: 600,
@@ -221,7 +204,6 @@ export default function Home() {
         cursor: "pointer",
       },
 
-      // Section titles: 36px / 700
       sectionTitle: {
         margin: "28px 0 14px",
         textAlign: "center",
@@ -230,13 +212,7 @@ export default function Home() {
         color: C.heading,
       },
 
-      // Features grid
-      grid3: {
-        display: "grid",
-        gridTemplateColumns: "repeat(3, 1fr)",
-        gap: 14,
-        width: "100%",
-      },
+      grid3: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 14, width: "100%" },
 
       card: {
         background: C.bg1,
@@ -248,7 +224,6 @@ export default function Home() {
       cardTitle: { fontSize: 16, fontWeight: 600, color: C.heading, margin: "0 0 6px" },
       cardText: { fontSize: 14, fontWeight: 400, color: C.text, lineHeight: 1.7, margin: 0 },
 
-      // Screens (with real images)
       screensGrid: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 14 },
       screenCard: {
         background: C.bg1,
@@ -262,7 +237,6 @@ export default function Home() {
 
       footer: { marginTop: 28, textAlign: "center", color: C.muted, fontSize: 14, fontWeight: 400 },
 
-      // Modal
       modalOverlay: {
         position: "fixed",
         inset: 0,
@@ -345,8 +319,17 @@ export default function Home() {
     [C, FONT_STACK]
   );
 
-  // Images from /public (exact names you confirmed)
-  const imageSrcForTitle = (title) => `/${title}.png`; // change .png if your files are .jpg/.webp
+  // ✅ FIX: Map titles to your actual file names in /public/screens/
+  const SCREEN_IMAGE_MAP = useMemo(
+    () => ({
+      "Comprehensive Dashboard": "/screens/Dashboard.png",
+      "Guided Tax Workflow": "/screens/Workflow.png",
+      "Review-Ready Reports": "/screens/Reports.png",
+    }),
+    []
+  );
+
+  const imageSrcForTitle = (title) => SCREEN_IMAGE_MAP[title] || "/screens/Dashboard.png";
 
   const openDemo = () => {
     setDemoOpen(true);
@@ -364,7 +347,6 @@ export default function Home() {
   return (
     <div style={S.page} dir={isAR ? "rtl" : "ltr"}>
       <main style={S.main}>
-        {/* HERO – full width, no right image, no quote */}
         <section style={S.heroCard}>
           <div style={{ display: "flex", justifyContent: "flex-end" }}>
             <div style={S.heroPill}>{t.hero.pill}</div>
@@ -380,7 +362,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* FEATURES */}
         <div style={S.sectionTitle}>{t.sections.featuresTitle}</div>
         <section style={S.grid3}>
           {t.features.map((f, idx) => (
@@ -391,7 +372,6 @@ export default function Home() {
           ))}
         </section>
 
-        {/* PRODUCT SCREENS (real images from /public) */}
         <div style={S.sectionTitle}>{t.sections.screensTitle}</div>
         <section style={S.screensGrid}>
           {t.screens.map((s, idx) => (
@@ -401,17 +381,19 @@ export default function Home() {
                 alt={s.title}
                 style={S.screenImg}
                 loading="lazy"
+                onError={(e) => {
+                  // fallback in case one file name changes
+                  e.currentTarget.src = "/screens/Dashboard.png";
+                }}
               />
               <div style={S.screenCap}>{s.title}</div>
             </div>
           ))}
         </section>
 
-        {/* REMOVED: Trusted by + logos completely */}
         <footer style={S.footer}>{t.footer}</footer>
       </main>
 
-      {/* DEMO MODAL (no route, no 404) */}
       {demoOpen ? (
         <div style={S.modalOverlay} onClick={closeDemo} role="presentation">
           <div style={S.modal} role="dialog" aria-modal="true" onClick={(e) => e.stopPropagation()}>
