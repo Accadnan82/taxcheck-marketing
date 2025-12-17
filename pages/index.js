@@ -1,30 +1,52 @@
-// src/pages/Home.jsx
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 
 /**
- * TaxCheck Home (Marketing) — FINAL (Product Screens fixed to your actual file names)
- *
- * Fix applied:
- * ✅ Images now load from:
- *   /public/screens/Dashboard.png
- *   /public/screens/Workflow.png
- *   /public/screens/Reports.png
+ * Home.jsx — Bilingual via localStorage tc_lang
+ * tc_lang values: "EN" | "AR"
+ * Pages listen to: window "storage" + custom event "tc_lang_change"
  */
+
+function useTcLang(defaultLang = "EN") {
+  const [lang, setLang] = useState(defaultLang);
+
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem("tc_lang");
+      if (saved === "AR" || saved === "EN") setLang(saved);
+    } catch (_) {}
+
+    const onStorage = (e) => {
+      if (e.key === "tc_lang" && (e.newValue === "AR" || e.newValue === "EN")) {
+        setLang(e.newValue);
+      }
+    };
+
+    const onCustom = () => {
+      try {
+        const saved = localStorage.getItem("tc_lang");
+        if (saved === "AR" || saved === "EN") setLang(saved);
+      } catch (_) {}
+    };
+
+    window.addEventListener("storage", onStorage);
+    window.addEventListener("tc_lang_change", onCustom);
+    return () => {
+      window.removeEventListener("storage", onStorage);
+      window.removeEventListener("tc_lang_change", onCustom);
+    };
+  }, []);
+
+  return lang;
+}
 
 export default function Home() {
   const year = useMemo(() => new Date().getFullYear(), []);
+  const lang = useTcLang("EN");
+  const isAR = lang === "AR";
+
   const [demoOpen, setDemoOpen] = useState(false);
   const [demoSent, setDemoSent] = useState(false);
-  const [demo, setDemo] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    company: "",
-    message: "",
-  });
-
-  // Default language direction only (no language button inside the page)
-  const isAR = true;
+  const [demo, setDemo] = useState({ name: "", email: "", phone: "", company: "", message: "" });
 
   const t = useMemo(() => {
     const EN = {
@@ -35,10 +57,7 @@ export default function Home() {
           "Built for accountants and finance teams. Structured workflows, automated validations, and review-ready outputs aligned with UAE tax requirements.",
         cta: "Request a Demo",
       },
-      sections: {
-        featuresTitle: "Powerful Features",
-        screensTitle: "Product Screens",
-      },
+      sections: { featuresTitle: "Powerful Features", screensTitle: "Product Screens" },
       features: [
         { title: "Audit-Level Confidence & Accuracy", desc: "Professional validations for reliable outputs." },
         { title: "Reduce Errors by up to 90%", desc: "Structured inputs and checkpoints reduce mistakes." },
@@ -76,10 +95,7 @@ export default function Home() {
           "مصمم للمحاسبين وفرق المالية. سير عمل منظم، تحققات تلقائية، ومخرجات جاهزة للمراجعة ومتوافقة مع متطلبات الضرائب في الإمارات.",
         cta: "اطلب عرضًا توضيحيًا",
       },
-      sections: {
-        featuresTitle: "مميزات قوية",
-        screensTitle: "شاشات المنتج",
-      },
+      sections: { featuresTitle: "مميزات قوية", screensTitle: "شاشات المنتج" },
       features: [
         { title: "دقة وثقة بمستوى تدقيق", desc: "تحققات احترافية لمخرجات موثوقة." },
         { title: "تقليل الأخطاء حتى 90%", desc: "مدخلات منظمة ونقاط تدقيق تقلل الأخطاء." },
@@ -112,7 +128,6 @@ export default function Home() {
     return isAR ? AR : EN;
   }, [isAR, year]);
 
-  // Official TaxCheck colors
   const C = useMemo(
     () => ({
       heading: "#1e3a5f",
@@ -129,197 +144,61 @@ export default function Home() {
     []
   );
 
-  // Official font system
   const FONT_STACK =
     "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif";
 
   const S = useMemo(
     () => ({
-      page: {
-        minHeight: "100vh",
-        fontFamily: FONT_STACK,
-        background: `linear-gradient(180deg, ${C.bg2} 0%, ${C.bg1} 60%)`,
-        color: C.text,
-      },
+      page: { minHeight: "100vh", fontFamily: FONT_STACK, background: `linear-gradient(180deg, ${C.bg2} 0%, ${C.bg1} 60%)`, color: C.text },
       main: { maxWidth: 1200, margin: "0 auto", padding: "22px 24px 72px" },
 
-      heroCard: {
-        width: "100%",
-        background: C.bg1,
-        border: `1px solid ${C.border}`,
-        borderRadius: 18,
-        padding: 28,
-        boxShadow: "0 18px 48px rgba(15,23,42,0.10)",
-      },
-      heroPill: {
-        display: "inline-flex",
-        padding: "8px 12px",
-        borderRadius: 999,
-        background: `linear-gradient(135deg, ${C.useCaseFrom} 0%, ${C.useCaseTo} 100%)`,
-        border: `1px solid ${C.border}`,
-        fontSize: 13,
-        fontWeight: 600,
-        color: C.heading,
-        marginBottom: 14,
-      },
+      heroCard: { width: "100%", background: C.bg1, border: `1px solid ${C.border}`, borderRadius: 18, padding: 28, boxShadow: "0 18px 48px rgba(15,23,42,0.10)" },
+      heroPill: { display: "inline-flex", padding: "8px 12px", borderRadius: 999, background: `linear-gradient(135deg, ${C.useCaseFrom} 0%, ${C.useCaseTo} 100%)`, border: `1px solid ${C.border}`, fontSize: 13, fontWeight: 600, color: C.heading, marginBottom: 14 },
 
-      heroTitle: {
-        fontSize: 48,
-        fontWeight: 700,
-        lineHeight: 1.2,
-        letterSpacing: -0.6,
-        color: C.heading,
-        margin: "0 0 12px",
-        maxWidth: 980,
-      },
-      heroDesc: {
-        fontSize: 18,
-        fontWeight: 400,
-        lineHeight: 1.7,
-        color: C.text,
-        margin: 0,
-        maxWidth: 980,
-      },
+      heroTitle: { fontSize: 48, fontWeight: 700, lineHeight: 1.2, letterSpacing: -0.6, color: C.heading, margin: "0 0 12px", maxWidth: 980 },
+      heroDesc: { fontSize: 18, fontWeight: 400, lineHeight: 1.7, color: C.text, margin: 0, maxWidth: 980 },
 
       heroActions: { marginTop: 18, display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center" },
+      btnPrimary: { fontSize: 16, fontWeight: 600, padding: "12px 16px", borderRadius: 12, border: "1px solid transparent", background: `linear-gradient(135deg, ${C.greenFrom} 0%, ${C.greenTo} 100%)`, color: "#fff", cursor: "pointer" },
+      btnSecondary: { fontSize: 16, fontWeight: 600, padding: "12px 16px", borderRadius: 12, border: `1px solid ${C.border}`, background: C.bg1, color: C.heading, cursor: "pointer" },
 
-      btnPrimary: {
-        fontSize: 16,
-        fontWeight: 600,
-        padding: "12px 16px",
-        borderRadius: 12,
-        border: "1px solid transparent",
-        background: `linear-gradient(135deg, ${C.greenFrom} 0%, ${C.greenTo} 100%)`,
-        color: "#fff",
-        cursor: "pointer",
-      },
-      btnSecondary: {
-        fontSize: 16,
-        fontWeight: 600,
-        padding: "12px 16px",
-        borderRadius: 12,
-        border: `1px solid ${C.border}`,
-        background: C.bg1,
-        color: C.heading,
-        cursor: "pointer",
-      },
-
-      sectionTitle: {
-        margin: "28px 0 14px",
-        textAlign: "center",
-        fontSize: 36,
-        fontWeight: 700,
-        color: C.heading,
-      },
+      sectionTitle: { margin: "28px 0 14px", textAlign: "center", fontSize: 36, fontWeight: 700, color: C.heading },
 
       grid3: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 14, width: "100%" },
-
-      card: {
-        background: C.bg1,
-        border: `1px solid ${C.border}`,
-        borderRadius: 16,
-        padding: 16,
-        boxShadow: "0 10px 26px rgba(15,23,42,0.06)",
-      },
+      card: { background: C.bg1, border: `1px solid ${C.border}`, borderRadius: 16, padding: 16, boxShadow: "0 10px 26px rgba(15,23,42,0.06)" },
       cardTitle: { fontSize: 16, fontWeight: 600, color: C.heading, margin: "0 0 6px" },
       cardText: { fontSize: 14, fontWeight: 400, color: C.text, lineHeight: 1.7, margin: 0 },
 
       screensGrid: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 14 },
-      screenCard: {
-        background: C.bg1,
-        border: `1px solid ${C.border}`,
-        borderRadius: 16,
-        overflow: "hidden",
-        boxShadow: "0 10px 26px rgba(15,23,42,0.06)",
-      },
+      screenCard: { background: C.bg1, border: `1px solid ${C.border}`, borderRadius: 16, overflow: "hidden", boxShadow: "0 10px 26px rgba(15,23,42,0.06)" },
       screenImg: { width: "100%", height: 260, objectFit: "cover", display: "block" },
       screenCap: { padding: "12px 12px", fontSize: 16, fontWeight: 600, color: C.heading },
 
       footer: { marginTop: 28, textAlign: "center", color: C.muted, fontSize: 14, fontWeight: 400 },
 
-      modalOverlay: {
-        position: "fixed",
-        inset: 0,
-        background: "rgba(15,23,42,0.55)",
-        backdropFilter: "blur(6px)",
-        display: "grid",
-        placeItems: "center",
-        zIndex: 9999,
-        padding: 18,
-      },
-      modal: {
-        width: "min(880px, 96vw)",
-        background: C.bg1,
-        border: `1px solid ${C.border}`,
-        borderRadius: 16,
-        overflow: "hidden",
-        boxShadow: "0 30px 80px rgba(15,23,42,0.22)",
-      },
-      modalTop: {
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-        gap: 10,
-        padding: "12px 14px",
-        borderBottom: `1px solid ${C.border}`,
-        background: C.bg2,
-      },
+      modalOverlay: { position: "fixed", inset: 0, background: "rgba(15,23,42,0.55)", backdropFilter: "blur(6px)", display: "grid", placeItems: "center", zIndex: 9999, padding: 18 },
+      modal: { width: "min(880px, 96vw)", background: C.bg1, border: `1px solid ${C.border}`, borderRadius: 16, overflow: "hidden", boxShadow: "0 30px 80px rgba(15,23,42,0.22)" },
+      modalTop: { display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10, padding: "12px 14px", borderBottom: `1px solid ${C.border}`, background: C.bg2 },
       modalTitle: { fontSize: 16, fontWeight: 600, color: C.heading },
-      modalClose: {
-        fontSize: 15,
-        fontWeight: 600,
-        padding: "8px 10px",
-        borderRadius: 10,
-        border: `1px solid ${C.border}`,
-        background: C.bg1,
-        cursor: "pointer",
-        color: C.heading,
-      },
+      modalClose: { fontSize: 15, fontWeight: 600, padding: "8px 10px", borderRadius: 10, border: `1px solid ${C.border}`, background: C.bg1, cursor: "pointer", color: C.heading },
       modalBody: { padding: 16 },
       modalSubtitle: { fontSize: 14, fontWeight: 400, color: C.muted, lineHeight: 1.6, margin: "6px 0 12px" },
 
       formGrid: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 },
       inputWrap: { border: `1px solid ${C.border}`, borderRadius: 12, padding: 12, background: C.bg1 },
       inputLabel: { fontSize: 13, fontWeight: 600, color: C.muted, marginBottom: 6 },
-      input: {
-        width: "100%",
-        border: `1px solid ${C.border}`,
-        borderRadius: 10,
-        padding: "10px 10px",
-        fontSize: 14,
-        fontWeight: 400,
-        color: C.text,
-        outline: "none",
-        background: C.bg1,
-      },
-      textarea: {
-        width: "100%",
-        border: `1px solid ${C.border}`,
-        borderRadius: 10,
-        padding: "10px 10px",
-        fontSize: 14,
-        fontWeight: 400,
-        color: C.text,
-        outline: "none",
-        background: C.bg1,
-        minHeight: 90,
-        resize: "vertical",
-      },
+      input: { width: "100%", border: `1px solid ${C.border}`, borderRadius: 10, padding: "10px 10px", fontSize: 14, fontWeight: 400, color: C.text, outline: "none", background: C.bg1 },
+      textarea: { width: "100%", border: `1px solid ${C.border}`, borderRadius: 10, padding: "10px 10px", fontSize: 14, fontWeight: 400, color: C.text, outline: "none", background: C.bg1, minHeight: 90, resize: "vertical" },
       modalActions: { marginTop: 12, display: "flex", gap: 10, justifyContent: "flex-end", flexWrap: "wrap" },
 
-      successBox: {
-        border: `1px solid ${C.border}`,
-        borderRadius: 12,
-        padding: 14,
-        background: `linear-gradient(135deg, ${C.useCaseFrom} 0%, ${C.useCaseTo} 100%)`,
-      },
+      successBox: { border: `1px solid ${C.border}`, borderRadius: 12, padding: 14, background: `linear-gradient(135deg, ${C.useCaseFrom} 0%, ${C.useCaseTo} 100%)` },
       successTitle: { fontSize: 16, fontWeight: 600, color: C.heading, marginBottom: 6 },
       successBody: { fontSize: 14, fontWeight: 400, color: C.text, lineHeight: 1.6 },
     }),
     [C, FONT_STACK]
   );
 
-  // ✅ FIX: Map titles to your actual file names in /public/screens/
+  // Images (your actual names in /public/screens/)
   const SCREEN_IMAGE_MAP = useMemo(
     () => ({
       "Comprehensive Dashboard": "/screens/Dashboard.png",
@@ -336,9 +215,7 @@ export default function Home() {
     setDemoSent(false);
     setDemo({ name: "", email: "", phone: "", company: "", message: "" });
   };
-
   const closeDemo = () => setDemoOpen(false);
-
   const submitDemo = (e) => {
     e.preventDefault();
     setDemoSent(true);
@@ -382,7 +259,6 @@ export default function Home() {
                 style={S.screenImg}
                 loading="lazy"
                 onError={(e) => {
-                  // fallback in case one file name changes
                   e.currentTarget.src = "/screens/Dashboard.png";
                 }}
               />
@@ -411,7 +287,6 @@ export default function Home() {
                 <div style={S.successBox}>
                   <div style={S.successTitle}>{t.demo.successTitle}</div>
                   <div style={S.successBody}>{t.demo.successBody}</div>
-
                   <div style={S.modalActions}>
                     <button style={S.btnSecondary} type="button" onClick={closeDemo}>
                       {t.demo.close}
@@ -421,46 +296,15 @@ export default function Home() {
               ) : (
                 <form onSubmit={submitDemo}>
                   <div style={S.formGrid}>
-                    <Input
-                      S={S}
-                      label={t.demo.name}
-                      value={demo.name}
-                      onChange={(v) => setDemo((p) => ({ ...p, name: v }))}
-                      type="text"
-                      required
-                    />
-                    <Input
-                      S={S}
-                      label={t.demo.email}
-                      value={demo.email}
-                      onChange={(v) => setDemo((p) => ({ ...p, email: v }))}
-                      type="email"
-                      required
-                    />
-                    <Input
-                      S={S}
-                      label={t.demo.phone}
-                      value={demo.phone}
-                      onChange={(v) => setDemo((p) => ({ ...p, phone: v }))}
-                      type="tel"
-                      required
-                    />
-                    <Input
-                      S={S}
-                      label={t.demo.company}
-                      value={demo.company}
-                      onChange={(v) => setDemo((p) => ({ ...p, company: v }))}
-                      type="text"
-                    />
+                    <Input S={S} label={t.demo.name} value={demo.name} onChange={(v) => setDemo((p) => ({ ...p, name: v }))} type="text" required />
+                    <Input S={S} label={t.demo.email} value={demo.email} onChange={(v) => setDemo((p) => ({ ...p, email: v }))} type="email" required />
+                    <Input S={S} label={t.demo.phone} value={demo.phone} onChange={(v) => setDemo((p) => ({ ...p, phone: v }))} type="tel" required />
+                    <Input S={S} label={t.demo.company} value={demo.company} onChange={(v) => setDemo((p) => ({ ...p, company: v }))} type="text" />
                   </div>
 
                   <div style={{ marginTop: 12 }}>
                     <div style={S.inputLabel}>{t.demo.message}</div>
-                    <textarea
-                      style={S.textarea}
-                      value={demo.message}
-                      onChange={(e) => setDemo((p) => ({ ...p, message: e.target.value }))}
-                    />
+                    <textarea style={S.textarea} value={demo.message} onChange={(e) => setDemo((p) => ({ ...p, message: e.target.value }))} />
                   </div>
 
                   <div style={S.modalActions}>
@@ -485,13 +329,7 @@ function Input({ S, label, value, onChange, type, required }) {
   return (
     <div style={S.inputWrap}>
       <div style={S.inputLabel}>{label}</div>
-      <input
-        style={S.input}
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        type={type}
-        required={!!required}
-      />
+      <input style={S.input} value={value} onChange={(e) => onChange(e.target.value)} type={type} required={!!required} />
     </div>
   );
 }
