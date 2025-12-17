@@ -4,33 +4,48 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 function applyDir(lang) {
-  const dir = lang === "ar" ? "rtl" : "ltr";
+  const isAR = lang === "AR";
+  const dir = isAR ? "rtl" : "ltr";
+
   if (typeof document !== "undefined") {
-    document.documentElement.lang = lang;
+    document.documentElement.lang = isAR ? "ar" : "en";
     document.documentElement.dir = dir;
   }
 }
 
 export default function PublicLayout({ children }) {
   const router = useRouter();
-  const [lang, setLang] = useState("ar");
 
+  // ✅ اجعل القيمة معيارية: "AR" / "EN"
+  const [lang, setLang] = useState("EN");
+
+  // ✅ اقرأ من localStorage مرة واحدة عند التحميل
   useEffect(() => {
-    const saved =
-      (typeof window !== "undefined" && localStorage.getItem("tc_lang")) || "ar";
-    setLang(saved);
-    applyDir(saved);
+    try {
+      const saved = localStorage.getItem("tc_lang");
+      const normalized = saved === "AR" || saved === "EN" ? saved : "EN";
+      setLang(normalized);
+      applyDir(normalized);
+    } catch (_) {
+      setLang("EN");
+      applyDir("EN");
+    }
   }, []);
 
+  // ✅ عند تغيير اللغة: خزّن + طبّق dir + أطلق الحدث الذي تنتظره الصفحات
   useEffect(() => {
-    if (typeof window === "undefined") return;
-    localStorage.setItem("tc_lang", lang);
+    try {
+      localStorage.setItem("tc_lang", lang);
+    } catch (_) {}
+
     applyDir(lang);
-    window.dispatchEvent(new CustomEvent("tc-lang-change", { detail: { lang } }));
+
+    // IMPORTANT: this matches Home/Pricing/Contact listeners
+    window.dispatchEvent(new Event("tc_lang_change"));
   }, [lang]);
 
   const t = useMemo(() => {
-    const ar = {
+    const AR = {
       home: "الرئيسية",
       pricing: "الأسعار",
       services: "الخدمات",
@@ -38,7 +53,7 @@ export default function PublicLayout({ children }) {
       signin: "تسجيل الدخول",
       brandSub: "ضريبة الشركات والـ VAT • الإمارات",
     };
-    const en = {
+    const EN = {
       home: "Home",
       pricing: "Pricing",
       services: "Services",
@@ -46,7 +61,7 @@ export default function PublicLayout({ children }) {
       signin: "Login",
       brandSub: "Corporate Tax & VAT • UAE",
     };
-    return lang === "ar" ? ar : en;
+    return lang === "AR" ? AR : EN;
   }, [lang]);
 
   const isActive = (href) => router.pathname === href;
@@ -68,24 +83,15 @@ export default function PublicLayout({ children }) {
               {t.home}
             </Link>
 
-            <Link
-              className={`tc-navLink ${isActive("/pricing") ? "is-active" : ""}`}
-              href="/pricing"
-            >
+            <Link className={`tc-navLink ${isActive("/pricing") ? "is-active" : ""}`} href="/pricing">
               {t.pricing}
             </Link>
 
-            <Link
-              className={`tc-navLink ${isActive("/services") ? "is-active" : ""}`}
-              href="/services"
-            >
+            <Link className={`tc-navLink ${isActive("/services") ? "is-active" : ""}`} href="/services">
               {t.services}
             </Link>
 
-            <Link
-              className={`tc-navLink ${isActive("/contact") ? "is-active" : ""}`}
-              href="/contact"
-            >
+            <Link className={`tc-navLink ${isActive("/contact") ? "is-active" : ""}`} href="/contact">
               {t.contact}
             </Link>
           </nav>
@@ -94,11 +100,11 @@ export default function PublicLayout({ children }) {
             <button
               className="tc-lang"
               type="button"
-              onClick={() => setLang((p) => (p === "ar" ? "en" : "ar"))}
+              onClick={() => setLang((p) => (p === "AR" ? "EN" : "AR"))}
               aria-label="Language"
               title="Language"
             >
-              {lang === "ar" ? "EN" : "AR"}
+              {lang === "AR" ? "EN" : "AR"}
             </button>
 
             <a className="tc-btn" href="https://app.taxcheck.ae/login">
