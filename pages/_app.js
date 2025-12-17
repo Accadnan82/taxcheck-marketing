@@ -7,7 +7,7 @@ export default function App({ Component, pageProps }) {
   const router = useRouter();
 
   // ✅ كل الصفحات التسويقية
-  const marketingRoutes = ["/", "/about", "/pricing", "/services"];
+  const marketingRoutes = ["/", "/about", "/pricing", "/services", "/contact"];
   const isMarketing = marketingRoutes.includes(router.pathname);
 
   if (isMarketing) {
