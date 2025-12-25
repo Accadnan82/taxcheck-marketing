@@ -53,14 +53,13 @@ export default function Pricing() {
     file: null,
   });
 
+  // ✅ Removed: currentBalance, beneficiaryName
   const BANK_DETAILS = useMemo(
     () => ({
       bankName: "Mashreq Bank",
       accountNumber: "019100279275",
       iban: "AE430330000019100279275",
       currency: "AED",
-      currentBalance: "8,029.23",
-      beneficiaryName: "TaxCheck",
       referenceHint: "Use your email + plan name as the transfer reference.",
       activationNote: "After transfer, submit the receipt here to activate your subscription.",
     }),
@@ -95,7 +94,6 @@ export default function Pricing() {
         subtitle: "Complete a bank transfer to activate your selected plan.",
         selectedPlanLabel: "Selected plan",
         amountLabel: "Amount (AED)",
-        currentBalance: "Current Balance",
         close: "Close",
         copy: "Copy",
         havePaid: "I have paid",
@@ -106,7 +104,6 @@ export default function Pricing() {
         successTitle: "Receipt submitted",
         successBody: "Thank you. We will review and activate your subscription.",
         fields: {
-          beneficiaryName: "Beneficiary Name",
           bankName: "Bank Name",
           accountNumber: "Account Number",
           iban: "IBAN",
@@ -148,7 +145,6 @@ export default function Pricing() {
         subtitle: "قم بالتحويل البنكي لتفعيل الخطة التي اخترتها.",
         selectedPlanLabel: "الخطة المختارة",
         amountLabel: "المبلغ (درهم)",
-        currentBalance: "الرصيد الحالي",
         close: "إغلاق",
         copy: "نسخ",
         havePaid: "تم التحويل",
@@ -159,7 +155,6 @@ export default function Pricing() {
         successTitle: "تم إرسال الإيصال",
         successBody: "شكرًا لك. سنراجع الطلب ونفعّل الاشتراك.",
         fields: {
-          beneficiaryName: "اسم المستفيد",
           bankName: "اسم البنك",
           accountNumber: "رقم الحساب",
           iban: "IBAN",
@@ -321,9 +316,9 @@ export default function Pricing() {
         </section>
 
         <section style={S.grid}>
-          <PlanCard S={S} C={C} t={t} planKey="basic" badge={null} recommended={false} onCta={() => onChoosePlan("basic")} />
-          <PlanCard S={S} C={C} t={t} planKey="pro" badge={t.plans.pro.badge} recommended onCta={() => onChoosePlan("pro")} />
-          <PlanCard S={S} C={C} t={t} planKey="firm" badge={null} recommended={false} onCta={() => onChoosePlan("firm")} />
+          <PlanCard S={S} t={t} planKey="basic" badge={null} recommended={false} onCta={() => onChoosePlan("basic")} />
+          <PlanCard S={S} t={t} planKey="pro" badge={t.plans.pro.badge} recommended onCta={() => onChoosePlan("pro")} />
+          <PlanCard S={S} t={t} planKey="firm" badge={null} recommended={false} onCta={() => onChoosePlan("firm")} />
         </section>
 
         <div style={S.foot}>{t.foot}</div>
@@ -355,20 +350,10 @@ export default function Pricing() {
                     </div>
                   </div>
 
-                  <div style={S.infoRow}>
-                    <div style={S.pill}>
-                      <div style={S.pillLabel}>{t.bank.currentBalance}</div>
-                      <div style={S.pillValue}>AED {BANK_DETAILS.currentBalance}</div>
-                    </div>
-                    <div style={S.pill}>
-                      <div style={S.pillLabel}>{t.bank.fields.currency}</div>
-                      <div style={S.pillValue}>{BANK_DETAILS.currency}</div>
-                    </div>
-                  </div>
-
+                  {/* ✅ Re-ordered fields (and removed Current Balance + Beneficiary Name) */}
                   <div style={S.modalGrid}>
-                    <Field S={S} label={t.bank.fields.beneficiaryName} value={BANK_DETAILS.beneficiaryName} onCopy={() => copy(BANK_DETAILS.beneficiaryName)} copyLabel={t.bank.copy} />
                     <Field S={S} label={t.bank.fields.bankName} value={BANK_DETAILS.bankName} onCopy={() => copy(BANK_DETAILS.bankName)} copyLabel={t.bank.copy} />
+                    <Field S={S} label={t.bank.fields.currency} value={BANK_DETAILS.currency} onCopy={() => copy(BANK_DETAILS.currency)} copyLabel={t.bank.copy} />
                     <Field S={S} label={t.bank.fields.accountNumber} value={BANK_DETAILS.accountNumber} onCopy={() => copy(BANK_DETAILS.accountNumber)} copyLabel={t.bank.copy} />
                     <Field S={S} label={t.bank.fields.iban} value={BANK_DETAILS.iban} onCopy={() => copy(BANK_DETAILS.iban)} copyLabel={t.bank.copy} />
                   </div>
