@@ -13,16 +13,21 @@ import { Resend } from "resend";
  * - company: string
  * - message: string
  *
- * Environment variables required:
- * - RESEND_API_KEY: Resend API key
- * - DEMO_TO_EMAIL: Email address to send notifications to
- * - DEMO_FROM_EMAIL: Email address to send from (must be verified in Resend)
+ * Environment variables supported (with fallback):
+ * - RESEND_API_KEY or TAXCHECK: Resend API key
+ * - DEMO_TO_EMAIL or DEMO: Email address to send notifications to
+ * - DEMO_FROM_EMAIL or FROM: Email address to send from (must be verified in Resend)
  */
 export default async function handler(req, res) {
   // Only allow POST requests
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
   }
+
+  // Map environment variables with fallback support
+  const RESEND_API_KEY = process.env.RESEND_API_KEY || process.env.TAXCHECK;
+  const DEMO_TO_EMAIL = process.env.DEMO_TO_EMAIL || process.env.DEMO;
+  const DEMO_FROM_EMAIL = process.env.DEMO_FROM_EMAIL || process.env.FROM;
 
   // Parse and validate request body
   const { name, email, phone, company = "", message = "" } = req.body;
@@ -41,24 +46,24 @@ export default async function handler(req, res) {
   }
 
   // Validate environment variables
-  if (!process.env.RESEND_API_KEY) {
-    console.error("RESEND_API_KEY not configured");
+  if (!RESEND_API_KEY) {
+    console.error("RESEND_API_KEY (TAXCHECK) not configured");
     return res.status(500).json({ error: "Email service not configured" });
   }
 
-  if (!process.env.DEMO_TO_EMAIL) {
-    console.error("DEMO_TO_EMAIL not configured");
+  if (!DEMO_TO_EMAIL) {
+    console.error("DEMO_TO_EMAIL (DEMO) not configured");
     return res.status(500).json({ error: "Email service not configured" });
   }
 
-  if (!process.env.DEMO_FROM_EMAIL) {
-    console.error("DEMO_FROM_EMAIL not configured");
+  if (!DEMO_FROM_EMAIL) {
+    console.error("DEMO_FROM_EMAIL (FROM) not configured");
     return res.status(500).json({ error: "Email service not configured" });
   }
 
   try {
     // Create Resend client only after validating environment variables
-    const resend = new Resend(process.env.RESEND_API_KEY);
+    const resend = new Resend(RESEND_API_KEY);
 
     // Format submission time
     const submissionTime = new Date().toLocaleString("en-AE", {
@@ -96,8 +101,8 @@ This is an automated message from your TaxCheck marketing website.
 
     // Send email via Resend (official SDK pattern)
     const { data, error } = await resend.emails.send({
-      from: process.env.DEMO_FROM_EMAIL,
-      to: process.env.DEMO_TO_EMAIL,
+      from: DEMO_FROM_EMAIL,
+      to: DEMO_TO_EMAIL,
       replyTo: email,
       subject: emailSubject,
       text: emailBody,
