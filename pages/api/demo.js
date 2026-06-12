@@ -1,7 +1,5 @@
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 /**
  * POST /api/demo
  * Handles demo request submissions and sends email notifications.
@@ -59,6 +57,9 @@ export default async function handler(req, res) {
   }
 
   try {
+    // Create Resend client only after validating environment variables
+    const resend = new Resend(process.env.RESEND_API_KEY);
+
     // Format submission time
     const submissionTime = new Date().toLocaleString("en-AE", {
       timeZone: "Asia/Dubai",
