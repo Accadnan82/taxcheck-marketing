@@ -46,6 +46,8 @@ export default function Home() {
 
   const [demoOpen, setDemoOpen] = useState(false);
   const [demoSent, setDemoSent] = useState(false);
+  const [demoLoading, setDemoLoading] = useState(false);
+  const [demoError, setDemoError] = useState("");
   const [demo, setDemo] = useState({ name: "", email: "", phone: "", company: "", message: "" });
 
   const t = useMemo(() => {
@@ -83,6 +85,8 @@ export default function Home() {
         close: "Close",
         successTitle: "Request sent",
         successBody: "Thank you. We will contact you soon.",
+        errorTitle: "Error",
+        errorBody: "Something went wrong. Please try again or contact us at info@taxcheck.ae",
       },
       footer: `© ${year} TaxCheck`,
     };
@@ -121,6 +125,8 @@ export default function Home() {
         close: "إغلاق",
         successTitle: "تم الإرسال",
         successBody: "شكرًا لك. سنعاود التواصل قريبًا.",
+        errorTitle: "خطأ",
+        errorBody: "حدث خطأ ما. يرجى المحاولة مرة أخرى أو الاتصال بنا على info@taxcheck.ae",
       },
       footer: `© ${year} TaxCheck`,
     };
@@ -140,6 +146,8 @@ export default function Home() {
       greenTo: "#059669",
       useCaseFrom: "#f0fdf4",
       useCaseTo: "#dcfce7",
+      redFrom: "#ef4444",
+      redTo: "#dc2626",
     }),
     []
   );
@@ -153,13 +161,13 @@ export default function Home() {
       main: { maxWidth: 1200, margin: "0 auto", padding: "22px 24px 72px" },
 
       heroCard: { width: "100%", background: C.bg1, border: `1px solid ${C.border}`, borderRadius: 18, padding: 28, boxShadow: "0 18px 48px rgba(15,23,42,0.10)" },
-      heroPill: { display: "inline-flex", padding: "8px 12px", borderRadius: 999, background: `linear-gradient(135deg, ${C.useCaseFrom} 0%, ${C.useCaseTo} 100%)`, border: `1px solid ${C.border}`, fontSize: 13, fontWeight: 600, color: C.heading, marginBottom: 14 },
+      heroPill: { display: "inline-flex", padding: "8px 12px", borderRadius: 999, background: `linear-gradient(135deg, ${C.useCaseFrom} 0%, ${C.useCaseTo} 100%)`, border: `1px solid ${C.border}`, fontSize: 14, fontWeight: 600, color: C.heading },
 
       heroTitle: { fontSize: 48, fontWeight: 700, lineHeight: 1.2, letterSpacing: -0.6, color: C.heading, margin: "0 0 12px", maxWidth: 980 },
       heroDesc: { fontSize: 18, fontWeight: 400, lineHeight: 1.7, color: C.text, margin: 0, maxWidth: 980 },
 
       heroActions: { marginTop: 18, display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center" },
-      btnPrimary: { fontSize: 16, fontWeight: 600, padding: "12px 16px", borderRadius: 12, border: "1px solid transparent", background: `linear-gradient(135deg, ${C.greenFrom} 0%, ${C.greenTo} 100%)`, color: "#fff", cursor: "pointer" },
+      btnPrimary: { fontSize: 16, fontWeight: 600, padding: "12px 16px", borderRadius: 12, border: "1px solid transparent", background: `linear-gradient(135deg, ${C.greenFrom} 0%, ${C.greenTo} 100%)`, color: "#fff", cursor: "pointer", opacity: 1 },
       btnSecondary: { fontSize: 16, fontWeight: 600, padding: "12px 16px", borderRadius: 12, border: `1px solid ${C.border}`, background: C.bg1, color: C.heading, cursor: "pointer" },
 
       sectionTitle: { margin: "28px 0 14px", textAlign: "center", fontSize: 36, fontWeight: 700, color: C.heading },
@@ -188,12 +196,16 @@ export default function Home() {
       inputWrap: { border: `1px solid ${C.border}`, borderRadius: 12, padding: 12, background: C.bg1 },
       inputLabel: { fontSize: 13, fontWeight: 600, color: C.muted, marginBottom: 6 },
       input: { width: "100%", border: `1px solid ${C.border}`, borderRadius: 10, padding: "10px 10px", fontSize: 14, fontWeight: 400, color: C.text, outline: "none", background: C.bg1 },
-      textarea: { width: "100%", border: `1px solid ${C.border}`, borderRadius: 10, padding: "10px 10px", fontSize: 14, fontWeight: 400, color: C.text, outline: "none", background: C.bg1, minHeight: 90, resize: "vertical" },
+      textarea: { width: "100%", border: `1px solid ${C.border}`, borderRadius: 10, padding: "10px 10px", fontSize: 14, fontWeight: 400, color: C.text, outline: "none", background: C.bg1, minHeight: 90, fontFamily: FONT_STACK, resize: "vertical" },
       modalActions: { marginTop: 12, display: "flex", gap: 10, justifyContent: "flex-end", flexWrap: "wrap" },
 
       successBox: { border: `1px solid ${C.border}`, borderRadius: 12, padding: 14, background: `linear-gradient(135deg, ${C.useCaseFrom} 0%, ${C.useCaseTo} 100%)` },
       successTitle: { fontSize: 16, fontWeight: 600, color: C.heading, marginBottom: 6 },
       successBody: { fontSize: 14, fontWeight: 400, color: C.text, lineHeight: 1.6 },
+
+      errorBox: { border: `1px solid ${C.border}`, borderRadius: 12, padding: 14, background: `linear-gradient(135deg, #fee2e2 0%, #fecaca 100%)` },
+      errorTitle: { fontSize: 16, fontWeight: 600, color: C.heading, marginBottom: 6 },
+      errorBody: { fontSize: 14, fontWeight: 400, color: C.text, lineHeight: 1.6 },
     }),
     [C, FONT_STACK]
   );
@@ -213,12 +225,59 @@ export default function Home() {
   const openDemo = () => {
     setDemoOpen(true);
     setDemoSent(false);
+    setDemoError("");
+    setDemoLoading(false);
     setDemo({ name: "", email: "", phone: "", company: "", message: "" });
   };
+  
   const closeDemo = () => setDemoOpen(false);
-  const submitDemo = (e) => {
+  
+  const submitDemo = async (e) => {
     e.preventDefault();
-    setDemoSent(true);
+    setDemoError("");
+    setDemoLoading(true);
+
+    try {
+      const response = await fetch("/api/demo", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: demo.name,
+          email: demo.email,
+          phone: demo.phone,
+          company: demo.company,
+          message: demo.message,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        setDemoError(result.error || "Failed to send request. Please try again.");
+        setDemoLoading(false);
+        return;
+      }
+
+      // Success: show success state and push GTM event
+      setDemoSent(true);
+      setDemoLoading(false);
+
+      // Push GA4/GTM conversion event
+      if (typeof window !== "undefined") {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: "request_demo",
+          lead_type: "demo_request",
+          form_location: "homepage_demo_modal",
+        });
+      }
+    } catch (error) {
+      console.error("Error submitting demo request:", error);
+      setDemoError("An unexpected error occurred. Please try again.");
+      setDemoLoading(false);
+    }
   };
 
   return (
@@ -293,26 +352,36 @@ export default function Home() {
                     </button>
                   </div>
                 </div>
+              ) : demoError ? (
+                <div style={S.errorBox}>
+                  <div style={S.errorTitle}>{t.demo.errorTitle}</div>
+                  <div style={S.errorBody}>{demoError}</div>
+                  <div style={S.modalActions}>
+                    <button style={S.btnSecondary} type="button" onClick={() => setDemoError("")}>
+                      {t.demo.close}
+                    </button>
+                  </div>
+                </div>
               ) : (
                 <form onSubmit={submitDemo}>
                   <div style={S.formGrid}>
-                    <Input S={S} label={t.demo.name} value={demo.name} onChange={(v) => setDemo((p) => ({ ...p, name: v }))} type="text" required />
-                    <Input S={S} label={t.demo.email} value={demo.email} onChange={(v) => setDemo((p) => ({ ...p, email: v }))} type="email" required />
-                    <Input S={S} label={t.demo.phone} value={demo.phone} onChange={(v) => setDemo((p) => ({ ...p, phone: v }))} type="tel" required />
-                    <Input S={S} label={t.demo.company} value={demo.company} onChange={(v) => setDemo((p) => ({ ...p, company: v }))} type="text" />
+                    <Input S={S} label={t.demo.name} value={demo.name} onChange={(v) => setDemo((p) => ({ ...p, name: v }))} type="text" required disabled={demoLoading} />
+                    <Input S={S} label={t.demo.email} value={demo.email} onChange={(v) => setDemo((p) => ({ ...p, email: v }))} type="email" required disabled={demoLoading} />
+                    <Input S={S} label={t.demo.phone} value={demo.phone} onChange={(v) => setDemo((p) => ({ ...p, phone: v }))} type="tel" required disabled={demoLoading} />
+                    <Input S={S} label={t.demo.company} value={demo.company} onChange={(v) => setDemo((p) => ({ ...p, company: v }))} type="text" disabled={demoLoading} />
                   </div>
 
                   <div style={{ marginTop: 12 }}>
                     <div style={S.inputLabel}>{t.demo.message}</div>
-                    <textarea style={S.textarea} value={demo.message} onChange={(e) => setDemo((p) => ({ ...p, message: e.target.value }))} />
+                    <textarea style={S.textarea} value={demo.message} onChange={(e) => setDemo((p) => ({ ...p, message: e.target.value }))} disabled={demoLoading} />
                   </div>
 
                   <div style={S.modalActions}>
-                    <button style={S.btnSecondary} type="button" onClick={closeDemo}>
+                    <button style={S.btnSecondary} type="button" onClick={closeDemo} disabled={demoLoading}>
                       {t.demo.close}
                     </button>
-                    <button style={S.btnPrimary} type="submit">
-                      {t.demo.send}
+                    <button style={{ ...S.btnPrimary, opacity: demoLoading ? 0.6 : 1, cursor: demoLoading ? "not-allowed" : "pointer" }} type="submit" disabled={demoLoading}>
+                      {demoLoading ? "Sending..." : t.demo.send}
                     </button>
                   </div>
                 </form>
@@ -325,11 +394,11 @@ export default function Home() {
   );
 }
 
-function Input({ S, label, value, onChange, type, required }) {
+function Input({ S, label, value, onChange, type, required, disabled }) {
   return (
     <div style={S.inputWrap}>
       <div style={S.inputLabel}>{label}</div>
-      <input style={S.input} value={value} onChange={(e) => onChange(e.target.value)} type={type} required={!!required} />
+      <input style={S.input} value={value} onChange={(e) => onChange(e.target.value)} type={type} required={!!required} disabled={!!disabled} />
     </div>
   );
 }
