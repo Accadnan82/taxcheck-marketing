@@ -4,6 +4,7 @@ import { Resend } from "resend";
  * POST /api/demo
  * Handles demo request submissions and sends email notifications.
  * Persists leads to HubSpot as contacts if token is configured.
+ * Phase 2: Creates a HubSpot Deal after successful contact sync.
  *
  * Required body fields:
  * - name: string
@@ -19,6 +20,8 @@ import { Resend } from "resend";
  * - DEMO_TO_EMAIL or DEMO: Email address to send notifications to
  * - DEMO_FROM_EMAIL or FROM: Email address to send from (must be verified in Resend)
  * - HUBSPOT_ACCESS_TOKEN or HUBSPOT: HubSpot Private App Access Token
+ * - HUBSPOT_PIPELINE_ID or HUBSPOTPIPELINE: HubSpot pipeline ID for deals
+ * - HUBSPOT_STAGE_NEW_DEMO or HUBSPOTSTAGE: HubSpot deal stage ID
  */
 
 async function searchHubSpotContactByEmail(email, hubspotToken) {
@@ -69,7 +72,6 @@ async function searchHubSpotContactByEmail(email, hubspotToken) {
 
 async function syncLeadToHubSpotContact(leadData, hubspotToken) {
   try {
-    // Extract first and last name
     const nameParts = leadData.name.trim().split(/\s+/);
     const firstname = nameParts[0] || "";
     const lastname = nameParts.slice(1).join(" ") || "";
@@ -81,12 +83,10 @@ async function syncLeadToHubSpotContact(leadData, hubspotToken) {
       phone: leadData.phone,
     };
 
-    // Add optional company field if present
     if (leadData.company) {
       contactProperties.company = leadData.company;
     }
 
-    // Search for existing contact by email
     const existingContactId = await searchHubSpotContactByEmail(
       leadData.email,
       hubspotToken
@@ -96,7 +96,6 @@ async function syncLeadToHubSpotContact(leadData, hubspotToken) {
     let method = "POST";
     let logAction = "created";
 
-    // If contact exists, update it
     if (existingContactId) {
       endpoint = `${endpoint}/${existingContactId}`;
       method = "PATCH";
@@ -129,7 +128,6 @@ async function syncLeadToHubSpotContact(leadData, hubspotToken) {
 
     console.log(`HubSpot contact ${logAction}: ${contactId}`);
 
-    // Log that a message was included without exposing PII
     if (leadData.message) {
       console.log(
         `Demo request included a message for HubSpot contact: ${contactId}`
@@ -143,36 +141,102 @@ async function syncLeadToHubSpotContact(leadData, hubspotToken) {
   }
 }
 
+async function createHubSpotDeal(
+  contactId,
+  leadData,
+  hubspotToken,
+  pipelineId,
+  stageId
+) {
+  try {
+    const dealLabel = leadData.company || leadData.name;
+    const dealName = `TaxCheck Demo Request - ${dealLabel}`;
+
+    const dealProperties = {
+      dealname: dealName,
+      pipeline: pipelineId,
+      dealstage: stageId,
+    };
+
+    const dealBody = {
+      properties: dealProperties,
+      associations: [
+        {
+          to: { id: contactId },
+          types: [
+            {
+              associationCategory: "HUBSPOT_DEFINED",
+              associationTypeId: 3,
+            },
+          ],
+        },
+      ],
+    };
+
+    const dealResponse = await fetch(
+      "https://api.hubapi.com/crm/v3/objects/deals",
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${hubspotToken}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(dealBody),
+      }
+    );
+
+    if (!dealResponse.ok) {
+      const errorData = await dealResponse.json();
+      console.error(
+        "HubSpot deal creation failed:",
+        dealResponse.status,
+        JSON.stringify(errorData)
+      );
+      return { success: false, dealId: null };
+    }
+
+    const dealData = await dealResponse.json();
+    const dealId = dealData.id;
+
+    console.log(
+      `HubSpot deal created: ${dealId}, associated with contact: ${contactId}`
+    );
+
+    return { success: true, dealId };
+  } catch (error) {
+    console.error("Error creating HubSpot deal:", error);
+    return { success: false, dealId: null };
+  }
+}
+
 export default async function handler(req, res) {
-  // Only allow POST requests
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
   }
 
-  // Map environment variables with fallback support
   const RESEND_API_KEY = process.env.RESEND_API_KEY || process.env.TAXCHECK;
   const DEMO_TO_EMAIL = process.env.DEMO_TO_EMAIL || process.env.DEMO;
   const DEMO_FROM_EMAIL = process.env.DEMO_FROM_EMAIL || process.env.FROM;
   const HUBSPOT_TOKEN =
     process.env.HUBSPOT_ACCESS_TOKEN || process.env.HUBSPOT;
+  const HUBSPOT_PIPELINE_ID =
+    process.env.HUBSPOT_PIPELINE_ID || process.env.HUBSPOTPIPELINE;
+  const HUBSPOT_STAGE_ID =
+    process.env.HUBSPOT_STAGE_NEW_DEMO || process.env.HUBSPOTSTAGE;
 
-  // Parse and validate request body
   const { name, email, phone, company = "", message = "" } = req.body;
 
-  // Validate required fields
   if (!name || !email || !phone) {
     return res.status(400).json({
       error: "Missing required fields: name, email, phone",
     });
   }
 
-  // Validate email format (basic check)
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
     return res.status(400).json({ error: "Invalid email format" });
   }
 
-  // Validate email service environment variables
   if (!RESEND_API_KEY) {
     console.error("RESEND_API_KEY (TAXCHECK) not configured");
     return res.status(500).json({ error: "Email service not configured" });
@@ -189,10 +253,8 @@ export default async function handler(req, res) {
   }
 
   try {
-    // Create Resend client only after validating environment variables
     const resend = new Resend(RESEND_API_KEY);
 
-    // Format submission time
     const submissionTime = new Date().toLocaleString("en-AE", {
       timeZone: "Asia/Dubai",
       year: "numeric",
@@ -203,7 +265,6 @@ export default async function handler(req, res) {
       second: "2-digit",
     });
 
-    // Prepare email content
     const emailSubject = "New TaxCheck Demo Request";
     const emailBody = `
 Dear TaxCheck Team,
@@ -226,7 +287,6 @@ Submission time: ${submissionTime} (UAE)
 This is an automated message from your TaxCheck marketing website.
     `.trim();
 
-    // Send email via Resend (official SDK pattern)
     const { data, error } = await resend.emails.send({
       from: DEMO_FROM_EMAIL,
       to: DEMO_TO_EMAIL,
@@ -235,7 +295,6 @@ This is an automated message from your TaxCheck marketing website.
       text: emailBody,
     });
 
-    // Handle Resend API errors
     if (error) {
       console.error("Resend email send failed:", error);
       return res.status(500).json({
@@ -243,7 +302,6 @@ This is an automated message from your TaxCheck marketing website.
       });
     }
 
-    // Validate response contains email ID
     if (!data?.id) {
       console.error("Unexpected Resend response - missing email ID:", data);
       return res.status(500).json({
@@ -251,16 +309,14 @@ This is an automated message from your TaxCheck marketing website.
       });
     }
 
-    // Email sent successfully, now attempt HubSpot contact sync
     let crmSynced = false;
+    let dealCreated = false;
+    let syncResult = { success: false, contactId: null };
 
     if (!HUBSPOT_TOKEN) {
-      console.log(
-        "HubSpot token not configured; skipping CRM persistence."
-      );
+      console.log("HubSpot token not configured; skipping CRM persistence.");
     } else {
-      // Attempt to sync lead to HubSpot contact
-      const syncResult = await syncLeadToHubSpotContact(
+      syncResult = await syncLeadToHubSpotContact(
         { name, email, phone, company, message },
         HUBSPOT_TOKEN
       );
@@ -270,21 +326,46 @@ This is an automated message from your TaxCheck marketing website.
         console.log(
           `Lead successfully synced to HubSpot contact: ${syncResult.contactId}`
         );
+
+        if (!HUBSPOT_PIPELINE_ID) {
+          console.log(
+            "HUBSPOT_PIPELINE_ID (HUBSPOTPIPELINE) not configured; skipping deal creation."
+          );
+        } else if (!HUBSPOT_STAGE_ID) {
+          console.log(
+            "HUBSPOT_STAGE_ID (HUBSPOT_STAGE_NEW_DEMO / HUBSPOTSTAGE) not configured; skipping deal creation."
+          );
+        } else {
+          const dealResult = await createHubSpotDeal(
+            syncResult.contactId,
+            { name, company },
+            HUBSPOT_TOKEN,
+            HUBSPOT_PIPELINE_ID,
+            HUBSPOT_STAGE_ID
+          );
+
+          if (dealResult.success) {
+            dealCreated = true;
+          } else {
+            console.error(
+              "HubSpot deal creation failed but form submission will still succeed."
+            );
+          }
+        }
       } else {
         console.error(
           "Failed to sync lead to HubSpot contact:",
           syncResult.error
         );
-        // Don't fail the form - email was already sent successfully
       }
     }
 
-    // Return success response
     return res.status(200).json({
       success: true,
       message: "Demo request sent successfully",
       id: data.id,
       crmSynced: crmSynced,
+      dealCreated: dealCreated,
     });
   } catch (error) {
     console.error("Error processing demo request:", error);
