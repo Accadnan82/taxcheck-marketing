@@ -1,21 +1,16 @@
 {
   "name": "taxcheck-marketing",
   "private": true,
-  "version": "1.0.0",
+  "version": "2.0.0",
+  "type": "module",
+  "description": "taxcheck.ae marketing site — static generator (EN/AR) + /api/demo serverless function",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "build": "node build.mjs",
+    "preview": "node preview.mjs",
+    "dev": "node build.mjs && npx --yes serve dist"
   },
+  "engines": { "node": ">=18" },
   "dependencies": {
-    "next": "14.2.35",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
     "resend": "^3.0.0"
-  },
-  "devDependencies": {
-    "eslint": "8.57.0",
-    "eslint-config-next": "14.2.35"
   }
 }
