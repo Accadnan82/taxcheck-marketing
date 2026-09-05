@@ -1,0 +1,122 @@
+{
+ "emirates": [
+  {
+   "k": "ad",
+   "a": 1250000,
+   "v": 62500,
+   "adj": 0
+  },
+  {
+   "k": "du",
+   "a": 3480000,
+   "v": 174000,
+   "adj": -2500
+  },
+  {
+   "k": "sh",
+   "a": 640000,
+   "v": 32000,
+   "adj": 0
+  },
+  {
+   "k": "aj",
+   "a": 118000,
+   "v": 5900,
+   "adj": 0
+  },
+  {
+   "k": "uq",
+   "a": 46000,
+   "v": 2300,
+   "adj": 0
+  },
+  {
+   "k": "rk",
+   "a": 210000,
+   "v": 10500,
+   "adj": 0
+  },
+  {
+   "k": "fj",
+   "a": 89000,
+   "v": 4450,
+   "adj": 0
+  }
+ ],
+ "vat": {
+  "tourist": -8400,
+  "rcA": 420000,
+  "rcV": 21000,
+  "zero": 560000,
+  "exempt": 130000,
+  "impA": 380000,
+  "impV": 19000,
+  "inA": 2900000,
+  "inV": 145000
+ },
+ "ct": {
+  "income": 1485000,
+  "nonDed": 92000,
+  "exemptDiv": -120000,
+  "taxable": 1457000,
+  "band0": 375000,
+  "band9": 1082000,
+  "tax": 97380
+ },
+ "taxpayers": [
+  {
+   "id": "tp1",
+   "type": "ct",
+   "period": "fy25",
+   "due": "2026-09-30",
+   "status": "review",
+   "risk": "high",
+   "open": 7
+  },
+  {
+   "id": "tp2",
+   "type": "vat",
+   "period": "q2",
+   "due": "2026-08-28",
+   "status": "ready",
+   "risk": "low",
+   "open": 0
+  },
+  {
+   "id": "tp3",
+   "type": "vat",
+   "period": "q2",
+   "due": "2026-08-28",
+   "status": "data",
+   "risk": "med",
+   "open": 3
+  },
+  {
+   "id": "tp4",
+   "type": "ct",
+   "period": "fy25",
+   "due": "2026-09-30",
+   "status": "review",
+   "risk": "med",
+   "open": 4
+  },
+  {
+   "id": "tp5",
+   "type": "vat",
+   "period": "jul",
+   "due": "2026-08-28",
+   "status": "overdue",
+   "risk": "high",
+   "open": 5
+  },
+  {
+   "id": "tp6",
+   "type": "ct",
+   "period": "fy25",
+   "due": "2026-12-31",
+   "status": "filed",
+   "risk": "low",
+   "open": 0
+  }
+ ]
+}
