@@ -631,7 +631,9 @@
     "title": "See your risks before the FTA does",
     "sub": "Run the free risk check, or bring your latest return data to a 30-minute demo."
    },
-   "ftrTag": "UAE Corporate Tax & VAT compliance software"
+   "ftrTag": "UAE Corporate Tax & VAT compliance software",
+   "seoTitle": "UAE Corporate Tax & VAT return software — catch errors before you file",
+   "seoDesc": "Prepares and checks UAE Corporate Tax and VAT 201 returns, shows the document behind every number and flags what doesn’t reconcile. Arabic and English."
   },
   "pages": {
    "product": {
@@ -1139,7 +1141,7 @@
   },
   "ct": {
    "kicker": "Corporate Tax",
-   "title": "The whole return, structured and checked",
+   "title": "The whole Corporate Tax return, structured and checked",
    "sub": "From taxpayer information to the 0%/9% computation — every Corporate Tax schedule in one reviewable structure.",
    "plateTitle": "Corporate Tax return — schedule status",
    "doc": "CT-FY25",
@@ -1251,11 +1253,13 @@
    ],
    "calcNote": "Sample computation. Rates per Federal Decree-Law No. 47 of 2022, Art. 3 (effective for financial years starting on or after 1 June 2023).",
    "ctaTitle": "Review a real return, not a sample",
-   "ctaSub": "Bring your FY2025 data to a demo and see your own schedules in this structure."
+   "ctaSub": "Bring your FY2025 data to a demo and see your own schedules in this structure.",
+   "seoTitle": "UAE Corporate Tax return software — from trial balance to filed return",
+   "seoDesc": "From trial balance to a checked UAE Corporate Tax return: adjustments, elections, 0%/9% computation and disclosures, each cited to Decree-Law 47/2022."
   },
   "vat": {
    "kicker": "VAT",
-   "title": "VAT 201, box by box, emirate by emirate",
+   "title": "Your VAT 201 return, box by box, emirate by emirate",
    "sub": "TaxCheck prepares and validates the VAT 201 the way the form is actually structured — with the reverse charge, adjustments, and input tax where they belong.",
    "emirates": [
     "Abu Dhabi",
@@ -1315,7 +1319,9 @@
    "netRefund": "Net VAT refundable",
    "note": "Sample data. Structure per VAT 201; reverse charge per Federal Decree-Law No. 8 of 2017, Art. 48.",
    "ctaTitle": "Validate your next VAT 201 before you file",
-   "ctaSub": "TaxCheck cross-checks every box against your ledger and flags what does not reconcile."
+   "ctaSub": "TaxCheck cross-checks every box against your ledger and flags what does not reconcile.",
+   "seoTitle": "UAE VAT return (VAT 201) checker — every box verified before filing",
+   "seoDesc": "Check your UAE VAT 201 return before filing: outputs by emirate, reverse charge, adjustments and input tax in the right boxes, every number traced to its invoice."
   },
   "ai": {
    "kicker": "AI Tax Assistant",
@@ -1393,7 +1399,9 @@
      "h": "Portfolio risk",
      "p": "Risk levels roll up across the book, so the riskiest client is never a surprise."
     }
-   ]
+   ],
+   "seoTitle": "Tax software for UAE accounting firms and tax agents",
+   "seoDesc": "Multi-client tax software for UAE accounting firms: every taxpayer, period, deadline and reviewer on one board, VAT 201 and Corporate Tax returns checked and cited."
   },
   "dash": {
    "kicker": "Dashboard",
@@ -1987,7 +1995,9 @@
    "disclaimer": "<b>Estimate only — not tax advice.</b> This tool applies the published penalty rules to the dates you enter. It has no access to your FTA account and cannot see prior violations, waivers granted, instalment arrangements, or assessments already raised. Figures verified against Cabinet Decision 75/2023 (as amended), Cabinet Decision 129/2025 and Cabinet Decision 49/2021 on 13 September 2026. Confirm any figure you intend to rely on with the FTA or a registered tax agent.",
    "h1Html": "What filing late <span class=\"hl\">actually costs</span>",
    "sub": "Estimate what late registration, late filing and late payment actually cost under the 2026 rules — with the law behind every number. Free, no signup.",
-   "kicker": "Free tool"
+   "kicker": "Free tool",
+   "seoTitle": "UAE Corporate Tax & VAT late filing penalty calculator 2026",
+   "seoDesc": "Free UAE tax penalty calculator: Corporate Tax and VAT late filing, late payment and late registration under the 2026 rules, with the law behind every figure."
   }
  },
  "ar": {
@@ -2622,7 +2632,9 @@
     "title": "اكتشف مخاطرك قبل أن تكتشفها الهيئة",
     "sub": "أجرِ فحص المخاطر المجاني، أو أحضر بيانات آخر إقرار إلى عرض تجريبي مدته 30 دقيقة."
    },
-   "ftrTag": "برنامج امتثال لضريبة الشركات والقيمة المضافة في الإمارات"
+   "ftrTag": "برنامج امتثال لضريبة الشركات والقيمة المضافة في الإمارات",
+   "seoTitle": "برنامج إقرارات ضريبة الشركات والقيمة المضافة في الإمارات — اكتشف الخطأ قبل التقديم",
+   "seoDesc": "يعدّ إقرارات ضريبة الشركات والقيمة المضافة (201) في الإمارات من مستنداتك، ويريك المستند وراء كل رقم، ويشير إلى ما لا يتطابق قبل التقديم. بالعربية والإنجليزية."
   },
   "pages": {
    "product": {
@@ -3130,7 +3142,7 @@
   },
   "ct": {
    "kicker": "ضريبة الشركات",
-   "title": "الإقرار كاملاً، منظماً ومفحوصاً",
+   "title": "إقرار ضريبة الشركات كاملاً، منظماً ومفحوصاً",
    "sub": "من بيانات الخاضع للضريبة إلى احتساب 0%/9% — كل جداول ضريبة الشركات في هيكل واحد قابل للمراجعة.",
    "plateTitle": "إقرار ضريبة الشركات — حالة الجداول",
    "doc": "CT-FY25",
@@ -3242,11 +3254,13 @@
    ],
    "calcNote": "احتساب تجريبي. النسب وفق المرسوم بقانون اتحادي رقم 47 لسنة 2022، المادة 3 (يسري على السنوات المالية التي تبدأ في 1 يونيو 2023 أو بعده).",
    "ctaTitle": "راجع إقراراً حقيقياً لا نموذجاً",
-   "ctaSub": "أحضر بيانات سنتك المالية 2025 إلى عرض تجريبي وشاهد جداولك أنت في هذا الهيكل."
+   "ctaSub": "أحضر بيانات سنتك المالية 2025 إلى عرض تجريبي وشاهد جداولك أنت في هذا الهيكل.",
+   "seoTitle": "برنامج إقرار ضريبة الشركات في الإمارات — من ميزان المراجعة إلى الإقرار",
+   "seoDesc": "من ميزان المراجعة إلى إقرار ضريبة شركات مفحوص: التعديلات والاختيارات واحتساب 0%/9% والإفصاحات، وكل بند مسند إلى مادته في المرسوم بقانون 47 لسنة 2022."
   },
   "vat": {
    "kicker": "ضريبة القيمة المضافة",
-   "title": "إقرار 201 خانة بخانة وإمارة بإمارة",
+   "title": "إقرار ضريبة القيمة المضافة 201، خانة بخانة وإمارة بإمارة",
    "sub": "يعد TaxCheck إقرار 201 ويتحقق منه بالهيكل الفعلي للنموذج — بالاحتساب العكسي والتعديلات وضريبة المدخلات في مواضعها الصحيحة.",
    "emirates": [
     "أبوظبي",
@@ -3306,7 +3320,9 @@
    "netRefund": "صافي الضريبة القابلة للاسترداد",
    "note": "بيانات تجريبية. الهيكل وفق إقرار 201؛ والاحتساب العكسي وفق المرسوم بقانون اتحادي رقم 8 لسنة 2017، المادة 48.",
    "ctaTitle": "تحقق من إقرارك القادم قبل تقديمه",
-   "ctaSub": "يطابق TaxCheck كل خانة مع دفاترك ويرصد ما لا يتطابق."
+   "ctaSub": "يطابق TaxCheck كل خانة مع دفاترك ويرصد ما لا يتطابق.",
+   "seoTitle": "مراجعة إقرار ضريبة القيمة المضافة (VAT 201) في الإمارات قبل التقديم",
+   "seoDesc": "أعدّ إقرار ضريبة القيمة المضافة 201 وراجعه قبل التقديم: المخرجات حسب الإمارة والاحتساب العكسي والتعديلات وضريبة المدخلات في خاناتها، وكل رقم مربوط بفاتورته."
   },
   "ai": {
    "kicker": "المساعد الضريبي الذكي",
@@ -3384,7 +3400,9 @@
      "h": "مخاطر المحفظة",
      "p": "تتجمع مستويات الخطورة عبر المحفظة، فلا يفاجئك العميل الأعلى خطورة أبداً."
     }
-   ]
+   ],
+   "seoTitle": "برنامج ضريبي لمكاتب المحاسبة والوكلاء الضريبيين في الإمارات",
+   "seoDesc": "برنامج ضريبي متعدد العملاء لمكاتب المحاسبة في الإمارات: كل خاضع للضريبة وفترة وموعد ومراجع على لوحة واحدة، وإقرارات القيمة المضافة وضريبة الشركات مفحوصة ومسندة."
   },
   "dash": {
    "kicker": "لوحة التحكم",
@@ -3978,7 +3996,9 @@
    "disclaimer": "<b>تقدير فقط — وليس استشارة ضريبية.</b> تطبّق هذه الأداة قواعد الغرامات المنشورة على التواريخ التي تدخلها. ولا تملك أي وصول إلى حسابك لدى الهيئة الاتحادية للضرائب، ولا ترى المخالفات السابقة ولا الإعفاءات الممنوحة ولا ترتيبات التقسيط ولا الربوط الصادرة. جرى التحقق من الأرقام مقابل قرار مجلس الوزراء ٧٥ لسنة ٢٠٢٣ (وتعديلاته) وقرار مجلس الوزراء ١٢٩ لسنة ٢٠٢٥ وقرار مجلس الوزراء ٤٩ لسنة ٢٠٢١ بتاريخ ١٣ سبتمبر ٢٠٢٦. أكّد أي رقم تنوي الاعتماد عليه مع الهيئة أو مع وكيل ضريبي معتمد.",
    "h1Html": "كم يكلّفك التأخير <span class=\"hl\">فعلياً</span>",
    "sub": "احسب التكلفة الفعلية للتأخر في التسجيل أو التقديم أو السداد وفق قواعد ٢٠٢٦ — مع النص القانوني وراء كل رقم. مجانية وبلا تسجيل.",
-   "kicker": "أداة مجانية"
+   "kicker": "أداة مجانية",
+   "seoTitle": "حاسبة غرامات التأخر في إقرار ضريبة الشركات والقيمة المضافة — الإمارات 2026",
+   "seoDesc": "حاسبة مجانية لغرامات التأخر في تسجيل وتقديم وسداد ضريبة الشركات والقيمة المضافة في الإمارات وفق قواعد 2026 (14% سنوياً)، مع المصدر القانوني لكل بند."
   }
  }
 }

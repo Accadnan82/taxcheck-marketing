@@ -22,8 +22,11 @@ const renderers = {
 const dictKey = { 'penalty-calculator': 'calc', 'corporate-tax': 'ct', accountants: 'acc', dashboard: 'dash', einvoicing: 'einv' };
 
 function meta(t, route) {
+  // SEO: a page dictionary may carry seoTitle (search phrase first, brand appended here)
+  // and seoDesc. Without them the visible H1 / lede are used as before.
+  const d = route === 'home' ? t.home : (t[dictKey[route] || route] || t.pages[route]);
+  if (d.seoTitle) return { title: `${d.seoTitle} | ${t.brand}`, titleFull: true, description: d.seoDesc || d.metaDesc || d.sub || t.notFTA };
   if (route === 'home') return { title: t.home.heroL1 + ' ' + t.home.heroL2, description: t.home.heroSub };
-  const d = t[dictKey[route] || route] || t.pages[route];
   return { title: d.title, description: d.sub || t.notFTA };
 }
 
@@ -39,13 +42,13 @@ for (const lang of ['en', 'ar']) {
   for (const route of ROUTES) {
     const render = renderers[route] || renderGeneric;
     const body = render({ lang, t, x, data, route });
-    const { title, description } = meta(t, route);
+    const { title, description, titleFull } = meta(t, route);
     const jsonLd = route === 'home' ? {
       '@context': 'https://schema.org', '@type': 'Organization', name: 'TaxCheck', url: SITE_URL, logo: SITE_URL + '/apple-touch-icon.png',
       email: 'info@taxcheck.ae', telephone: '+971505523307', address: { '@type': 'PostalAddress', addressLocality: 'Dubai', addressCountry: 'AE' },
       sameAs: ['https://x.com/TaxcheckUAE', 'https://www.linkedin.com/company/taxcheck-uae/'],
     } : null;
-    const html = shell({ lang, route, t, title, description, body, jsonLd });
+    const html = shell({ lang, route, t, title, description, body, jsonLd, titleFull });
     const path = href(lang, route);
     const outDir = join(dist, path);
     mkdirSync(outDir, { recursive: true });

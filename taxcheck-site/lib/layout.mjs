@@ -108,11 +108,11 @@ export function footer(lang, t) {
  * Wrap a page body in the full document.
  * opts: { lang, route, t, title, description, body, jsonLd }
  */
-export function shell({ lang, route, t, title, description, body, jsonLd }) {
+export function shell({ lang, route, t, title, description, body, jsonLd, titleFull = false }) {
   const path = href(lang, route);
   const enUrl = SITE_URL + href('en', route);
   const arUrl = SITE_URL + href('ar', route);
-  const fullTitle = route === 'home' ? `${t.brand} ${t.brandSuffix} — ${title}` : `${title} — ${t.brand}`;
+  const fullTitle = titleFull ? title : (route === 'home' ? `${t.brand} ${t.brandSuffix} — ${title}` : `${title} — ${t.brand}`);
   const dir = t.dir || (lang === 'ar' ? 'rtl' : 'ltr');
   return `<!doctype html>
 <html lang="${lang}" dir="${dir}">
