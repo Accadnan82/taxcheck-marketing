@@ -26,7 +26,8 @@
    "privacy": "Privacy",
    "terms": "Terms",
    "disclaimer": "AI & Tax Disclaimer",
-   "careers": "Careers"
+   "careers": "Careers",
+   "penalty-calculator": "Penalty calculator"
   },
   "navMain": [
    "product",
@@ -71,7 +72,8 @@
      "vat",
      "review",
      "dashboard",
-     "einvoicing"
+     "einvoicing",
+     "penalty-calculator"
     ]
    },
    {
@@ -1778,6 +1780,83 @@
     "sent": "Message sent — we will reply within one business day.",
     "err": "Please complete all fields."
    }
+  },
+  "calc": {
+   "title": "UAE Tax Penalty Calculator",
+   "metaDesc": "Free UAE tax penalty calculator. Corporate tax and VAT late filing, late payment and late registration — with the legal source behind every figure.",
+   "lede": "Estimate what late registration, late filing and late payment actually cost under the 2026 rules — with the law behind every number. Free, no signup.",
+   "currency": "AED",
+   "legendTax": "Which tax",
+   "legendScenario": "What went wrong (select all that apply)",
+   "legendDates": "Dates and amounts",
+   "taxCt": "Corporate Tax",
+   "taxVat": "VAT",
+   "scReg": "Late registration",
+   "scRegD": "Registered after the deadline for your first tax period.",
+   "scFile": "Late filing",
+   "scFileD": "The return was submitted after the due date.",
+   "scPay": "Late payment",
+   "scPayD": "The tax due was paid after the due date.",
+   "lblDue": "Due date",
+   "hintDue": "Corporate Tax: 9 months from the end of the tax period. VAT: 28 days from the end of the tax period.",
+   "lblFiled": "Date the return was filed",
+   "lblPaid": "Date the tax was paid",
+   "hintPaid": "Leave as-is if you paid on the day you filed. If still unpaid, use today.",
+   "lblTax": "Tax payable (AED)",
+   "hintTax": "The tax owed, not the penalty. Enter 0 if nothing was payable.",
+   "lblRepeat": "Repeat offence within 24 months",
+   "lblRepeatD": "A second or later failure to file a VAT return within 24 months.",
+   "resultsH": "Estimated penalty",
+   "thItem": "Penalty",
+   "thAmount": "Amount",
+   "thTotal": "Estimated total",
+   "rowReg": "Late tax registration",
+   "rowFileCt": "Late Corporate Tax return — {m}",
+   "rowFileVat": "Late VAT return — first offence",
+   "rowFileVatRepeat": "Late VAT return — repeat within 24 months",
+   "rowPay": "Late payment — {m} on {t}",
+   "srcCtReg": "Cabinet Decision 75/2023 — failure to submit a Tax Registration application",
+   "srcVatReg": "Cabinet Decision 49/2021 amending Cabinet Decision 40/2017",
+   "srcCtFile": "Cabinet Decision 75/2023 — AED 500 per month for the first 12 months, AED 1,000 per month from month 13. Charged on the return, not the tax.",
+   "srcVatFile": "Cabinet Decision 49/2021 — AED 1,000 first offence, AED 2,000 on repeat within 24 months",
+   "srcPay": "Cabinet Decision 129/2025, in force 14 April 2026 — 14% per annum, each month or part thereof, not compounded",
+   "perMonth": "Every further month adds about {a}.",
+   "emptyState": "Select what went wrong and fill in the dates to see an estimate.",
+   "waiverTitle": "A waiver may apply to this one.",
+   "waiverBody": "A waiver initiative for the AED 10,000 corporate tax late registration penalty was announced in April 2025, conditional on filing the first tax return or annual declaration within 7 months of the end of the first tax period. It is not modelled in the total above — check your EmaraTax account or ask your tax agent whether you qualify.",
+   "oldRegimeTitle": "This due date falls under the previous regime.",
+   "oldRegimeBody": "Cabinet Decision 129/2025 took effect on 14 April 2026. Before that date, late payment was charged differently (VAT: 2% immediately plus 4% monthly, capped at 300%). This calculator models the current 14% per annum rule only, so the late payment line above will not be accurate for periods before 14 April 2026.",
+   "ctaH": "The cheapest error is the one you find before you file.",
+   "ctaP": "TaxCheck reads your documents, checks the figures against UAE Corporate Tax and VAT rules, and shows you which document produced each number — before you submit.",
+   "ctaBtn": "Start free →",
+   "ctaFine": "Free early access. No card, no sales call. TaxCheck does not file on your behalf — you review and approve everything.",
+   "faqH": "Common questions",
+   "faq": [
+    {
+     "q": "How is the late payment penalty calculated?",
+     "a": "Under Cabinet Decision 129/2025, in force since 14 April 2026, unpaid tax accrues 14% per annum for each month or part thereof, on the unsettled amount. It does not compound. The same rule now applies to both Corporate Tax and VAT."
+    },
+    {
+     "q": "Does one day late really count as a whole month?",
+     "a": "Yes. The legislation charges \"each month or part thereof\", so a return filed one day after the deadline attracts a full month of penalty. This calculator follows that rule, with month-end clamping — 31 January to 28 February counts as one month, not two."
+    },
+    {
+     "q": "I have no tax to pay. Do I still get a penalty?",
+     "a": "For Corporate Tax, yes. The late filing penalty under Cabinet Decision 75/2023 is charged on the return, not on the tax. A loss-making company, or one claiming Small Business Relief with nothing to pay, still accrues AED 500 per month for the first twelve months."
+    },
+    {
+     "q": "Can the AED 10,000 late registration penalty be waived?",
+     "a": "A waiver initiative was announced in April 2025 for the corporate tax late registration penalty, conditional on filing the first tax return or annual declaration within 7 months of the end of the first tax period. Eligibility depends on your own dates — check EmaraTax or ask your tax agent. This calculator does not assume a waiver."
+    },
+    {
+     "q": "Is this an official FTA calculation?",
+     "a": "No. It is an estimate built from the published decisions. It cannot see your FTA account, your prior violations, any waiver you were granted, or an assessment the FTA has raised. Use it to understand the scale of the exposure, then confirm the real figure in EmaraTax or with your tax agent."
+    }
+   ],
+   "disclaimer": "<b>Estimate only — not tax advice.</b> This tool applies the published penalty rules to the dates you enter. It has no access to your FTA account and cannot see prior violations, waivers granted, instalment arrangements, or assessments already raised. Figures verified against Cabinet Decision 75/2023 (as amended), Cabinet Decision 129/2025 and Cabinet Decision 49/2021 on 13 September 2026. Confirm any figure you intend to rely on with the FTA or a registered tax agent.",
+   "h1Html": "What filing late <span class=\"hl\">actually costs</span>",
+   "sub": "Estimate what late registration, late filing and late payment actually cost under the 2026 rules — with the law behind every number. Free, no signup.",
+   "kicker": "Free tool"
   }
  },
  "ar": {
@@ -1807,7 +1886,8 @@
    "privacy": "الخصوصية",
    "terms": "الشروط",
    "disclaimer": "إخلاء المسؤولية",
-   "careers": "الوظائف"
+   "careers": "الوظائف",
+   "penalty-calculator": "حاسبة الغرامات"
   },
   "navMain": [
    "product",
@@ -1852,7 +1932,8 @@
      "vat",
      "review",
      "dashboard",
-     "einvoicing"
+     "einvoicing",
+     "penalty-calculator"
     ]
    },
    {
@@ -3559,6 +3640,83 @@
     "sent": "أُرسلت الرسالة — سنرد خلال يوم عمل واحد.",
     "err": "يرجى تعبئة جميع الحقول."
    }
+  },
+  "calc": {
+   "title": "حاسبة الغرامات الضريبية في الإمارات",
+   "metaDesc": "حاسبة مجانية لغرامات الضرائب في الإمارات. احسب غرامات التأخر في التسجيل والتقديم والسداد بنسبة ١٤٪ سنوياً، مع المصدر القانوني لكل بند.",
+   "lede": "احسب التكلفة الفعلية للتأخر في التسجيل أو التقديم أو السداد وفق قواعد ٢٠٢٦ — مع النص القانوني وراء كل رقم. مجانية وبلا تسجيل.",
+   "currency": "درهم",
+   "legendTax": "أي ضريبة",
+   "legendScenario": "ما الذي حدث (اختر كل ما ينطبق)",
+   "legendDates": "التواريخ والمبالغ",
+   "taxCt": "ضريبة الشركات",
+   "taxVat": "القيمة المضافة",
+   "scReg": "تأخر في التسجيل",
+   "scRegD": "تم التسجيل بعد الموعد النهائي لأول فترة ضريبية.",
+   "scFile": "تأخر في تقديم الإقرار",
+   "scFileD": "قُدّم الإقرار بعد تاريخ الاستحقاق.",
+   "scPay": "تأخر في السداد",
+   "scPayD": "دُفعت الضريبة المستحقة بعد تاريخ الاستحقاق.",
+   "lblDue": "تاريخ الاستحقاق",
+   "hintDue": "ضريبة الشركات: تسعة أشهر من نهاية الفترة الضريبية. القيمة المضافة: ٢٨ يوماً من نهاية الفترة الضريبية.",
+   "lblFiled": "تاريخ تقديم الإقرار",
+   "lblPaid": "تاريخ سداد الضريبة",
+   "hintPaid": "اتركه كما هو إن سدّدت يوم التقديم. وإن لم تسدّد بعد، ضع تاريخ اليوم.",
+   "lblTax": "الضريبة المستحقة (درهم)",
+   "hintTax": "الضريبة الواجبة لا الغرامة. ضع صفراً إن لم يكن هناك مستحق.",
+   "lblRepeat": "مخالفة متكررة خلال ٢٤ شهراً",
+   "lblRepeatD": "تأخر ثانٍ أو أكثر في تقديم إقرار القيمة المضافة خلال ٢٤ شهراً.",
+   "resultsH": "الغرامة التقديرية",
+   "thItem": "الغرامة",
+   "thAmount": "المبلغ",
+   "thTotal": "الإجمالي التقديري",
+   "rowReg": "التأخر في التسجيل الضريبي",
+   "rowFileCt": "التأخر في إقرار ضريبة الشركات — {m}",
+   "rowFileVat": "التأخر في إقرار القيمة المضافة — أول مخالفة",
+   "rowFileVatRepeat": "التأخر في إقرار القيمة المضافة — تكرار خلال ٢٤ شهراً",
+   "rowPay": "التأخر في السداد — {m} على {t}",
+   "srcCtReg": "قرار مجلس الوزراء ٧٥ لسنة ٢٠٢٣ — عدم تقديم طلب التسجيل الضريبي",
+   "srcVatReg": "قرار مجلس الوزراء ٤٩ لسنة ٢٠٢١ المعدِّل للقرار ٤٠ لسنة ٢٠١٧",
+   "srcCtFile": "قرار مجلس الوزراء ٧٥ لسنة ٢٠٢٣ — ٥٠٠ درهم شهرياً لأول ١٢ شهراً، ثم ١٬٠٠٠ درهم شهرياً من الشهر الثالث عشر. تُفرض على الإقرار لا على الضريبة.",
+   "srcVatFile": "قرار مجلس الوزراء ٤٩ لسنة ٢٠٢١ — ١٬٠٠٠ درهم لأول مخالفة، و٢٬٠٠٠ درهم عند التكرار خلال ٢٤ شهراً",
+   "srcPay": "قرار مجلس الوزراء ١٢٩ لسنة ٢٠٢٥، النافذ من ١٤ أبريل ٢٠٢٦ — ١٤٪ سنوياً عن كل شهر أو جزء منه، دون تراكم مركّب",
+   "perMonth": "كل شهر إضافي يضيف نحو {a}.",
+   "emptyState": "اختر ما حدث واملأ التواريخ لعرض التقدير.",
+   "waiverTitle": "قد يسري إعفاء على هذا البند.",
+   "waiverBody": "أُعلنت في أبريل ٢٠٢٥ مبادرة لإعفاء غرامة التأخر في تسجيل ضريبة الشركات البالغة ١٠٬٠٠٠ درهم، بشرط تقديم أول إقرار ضريبي أو إقرار سنوي خلال سبعة أشهر من نهاية أول فترة ضريبية. الإعفاء غير محتسب في الإجمالي أعلاه — راجع حسابك في EmaraTax أو اسأل وكيلك الضريبي عن أهليتك.",
+   "oldRegimeTitle": "تاريخ الاستحقاق هذا يقع تحت النظام السابق.",
+   "oldRegimeBody": "دخل قرار مجلس الوزراء ١٢٩ لسنة ٢٠٢٥ حيّز التنفيذ في ١٤ أبريل ٢٠٢٦. قبل ذلك التاريخ كان التأخر في السداد يُحتسب بطريقة مختلفة (في القيمة المضافة: ٢٪ فوراً و٤٪ شهرياً بحد أقصى ٣٠٠٪). هذه الحاسبة تطبّق قاعدة الـ١٤٪ السنوية الحالية فقط، لذا لن يكون بند التأخر في السداد أعلاه دقيقاً لفترات سابقة لـ١٤ أبريل ٢٠٢٦.",
+   "ctaH": "أرخص خطأ هو الذي تكتشفه قبل التقديم.",
+   "ctaP": "تقرأ TaxCheck مستنداتك، وتفحص الأرقام مقابل قواعد ضريبة الشركات والقيمة المضافة في الإمارات، وتبيّن لك أي مستند أنتج كل رقم — قبل أن ترسل الإقرار.",
+   "ctaBtn": "ابدأ مجاناً ←",
+   "ctaFine": "وصول مبكر مجاني. بلا بطاقة وبلا مكالمة مبيعات. لا تقدّم TaxCheck الإقرار نيابةً عنك — أنت تراجع وتعتمد كل شيء.",
+   "faqH": "أسئلة شائعة",
+   "faq": [
+    {
+     "q": "كيف تُحتسب غرامة التأخر في السداد؟",
+     "a": "بموجب قرار مجلس الوزراء ١٢٩ لسنة ٢٠٢٥، النافذ منذ ١٤ أبريل ٢٠٢٦، تتراكم على الضريبة غير المسددة نسبة ١٤٪ سنوياً عن كل شهر أو جزء منه، على المبلغ غير المسدد، دون تراكم مركّب. وتسري القاعدة نفسها الآن على ضريبة الشركات والقيمة المضافة معاً."
+    },
+    {
+     "q": "هل يوم واحد تأخير يُحتسب شهراً كاملاً فعلاً؟",
+     "a": "نعم. النص يفرض الغرامة عن «كل شهر أو جزء منه»، فإقرار يُقدَّم بعد الموعد بيوم واحد يستوجب شهراً كاملاً. وتتبع هذه الحاسبة القاعدة نفسها مع ضبط نهاية الشهر — من ٣١ يناير إلى ٢٨ فبراير يُحتسب شهراً واحداً لا شهرين."
+    },
+    {
+     "q": "ليس عليّ ضريبة مستحقة. هل تلحقني غرامة؟",
+     "a": "في ضريبة الشركات، نعم. غرامة التأخر في التقديم بموجب قرار مجلس الوزراء ٧٥ لسنة ٢٠٢٣ تُفرض على الإقرار لا على الضريبة. فالشركة الخاسرة، أو التي تطالب بإعفاء الأعمال الصغيرة ولا ضريبة عليها، تتراكم عليها ٥٠٠ درهم شهرياً لأول اثني عشر شهراً."
+    },
+    {
+     "q": "هل يمكن إعفاء غرامة التسجيل المتأخر البالغة ١٠٬٠٠٠ درهم؟",
+     "a": "أُعلنت في أبريل ٢٠٢٥ مبادرة لإعفاء غرامة التأخر في تسجيل ضريبة الشركات، بشرط تقديم أول إقرار ضريبي أو إقرار سنوي خلال سبعة أشهر من نهاية أول فترة ضريبية. والأهلية تعتمد على تواريخك أنت — راجع EmaraTax أو اسأل وكيلك الضريبي. هذه الحاسبة لا تفترض وجود إعفاء."
+    },
+    {
+     "q": "هل هذا احتساب رسمي من الهيئة الاتحادية للضرائب؟",
+     "a": "لا. هو تقدير مبني على القرارات المنشورة. لا يرى حسابك لدى الهيئة، ولا مخالفاتك السابقة، ولا أي إعفاء مُنح لك، ولا ربطاً ضريبياً أصدرته الهيئة. استخدمه لفهم حجم الانكشاف، ثم أكّد الرقم الفعلي في EmaraTax أو مع وكيلك الضريبي."
+    }
+   ],
+   "disclaimer": "<b>تقدير فقط — وليس استشارة ضريبية.</b> تطبّق هذه الأداة قواعد الغرامات المنشورة على التواريخ التي تدخلها. ولا تملك أي وصول إلى حسابك لدى الهيئة الاتحادية للضرائب، ولا ترى المخالفات السابقة ولا الإعفاءات الممنوحة ولا ترتيبات التقسيط ولا الربوط الصادرة. جرى التحقق من الأرقام مقابل قرار مجلس الوزراء ٧٥ لسنة ٢٠٢٣ (وتعديلاته) وقرار مجلس الوزراء ١٢٩ لسنة ٢٠٢٥ وقرار مجلس الوزراء ٤٩ لسنة ٢٠٢١ بتاريخ ١٣ سبتمبر ٢٠٢٦. أكّد أي رقم تنوي الاعتماد عليه مع الهيئة أو مع وكيل ضريبي معتمد.",
+   "h1Html": "كم يكلّفك التأخير <span class=\"hl\">فعلياً</span>",
+   "sub": "احسب التكلفة الفعلية للتأخر في التسجيل أو التقديم أو السداد وفق قواعد ٢٠٢٦ — مع النص القانوني وراء كل رقم. مجانية وبلا تسجيل.",
+   "kicker": "أداة مجانية"
   }
  }
 }

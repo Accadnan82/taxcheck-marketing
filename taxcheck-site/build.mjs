@@ -8,6 +8,7 @@ import { renderHome } from './render/home.mjs';
 import { renderGeneric } from './render/generic.mjs';
 import { renderCT, renderVAT, renderAI, renderACC, renderDash, renderPricing, renderEinv } from './render/pages.mjs';
 import { renderDemo, renderCareers, renderContact } from './render/forms.mjs';
+import { renderCalculator } from './render/calculator.mjs';
 
 const root = dirname(fileURLToPath(import.meta.url));
 const content = JSON.parse(readFileSync(join(root, 'content/content.json'), 'utf8'));
@@ -16,9 +17,9 @@ const dist = join(root, 'dist');
 
 const renderers = {
   home: renderHome, 'corporate-tax': renderCT, vat: renderVAT, ai: renderAI, accountants: renderACC, dashboard: renderDash,
-  pricing: renderPricing, einvoicing: renderEinv, demo: renderDemo, careers: renderCareers, contact: renderContact,
+  pricing: renderPricing, 'penalty-calculator': renderCalculator, einvoicing: renderEinv, demo: renderDemo, careers: renderCareers, contact: renderContact,
 };
-const dictKey = { 'corporate-tax': 'ct', accountants: 'acc', dashboard: 'dash', einvoicing: 'einv' };
+const dictKey = { 'penalty-calculator': 'calc', 'corporate-tax': 'ct', accountants: 'acc', dashboard: 'dash', einvoicing: 'einv' };
 
 function meta(t, route) {
   if (route === 'home') return { title: t.home.heroL1 + ' ' + t.home.heroL2, description: t.home.heroSub };

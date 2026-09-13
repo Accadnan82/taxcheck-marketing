@@ -16,7 +16,7 @@ export let ASSET_V = '';
 export function setAssetVersion(v) { ASSET_V = v; }
 export const GTM_ID = 'GTM-PLSJWP9C';
 
-export const ROUTES = ['home', 'product', 'ai', 'corporate-tax', 'vat', 'review', 'dashboard', 'accountants', 'businesses', 'services', 'einvoicing', 'pricing', 'demo', 'resources', 'security', 'about', 'contact', 'careers', 'privacy', 'terms', 'disclaimer'];
+export const ROUTES = ['home', 'product', 'ai', 'corporate-tax', 'vat', 'review', 'dashboard', 'accountants', 'businesses', 'services', 'einvoicing', 'penalty-calculator', 'pricing', 'demo', 'resources', 'security', 'about', 'contact', 'careers', 'privacy', 'terms', 'disclaimer'];
 
 // URL for a route in a language. EN lives at the root, AR under /ar.
 export function href(lang, route, hash = '') {
