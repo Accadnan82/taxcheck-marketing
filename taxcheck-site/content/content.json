@@ -11,7 +11,7 @@
    "ai": "AI Tax Assistant",
    "corporate-tax": "Corporate Tax",
    "vat": "VAT",
-   "review": "Tax Return Review",
+   "review": "Pre-Filing Review",
    "dashboard": "Dashboard",
    "accountants": "For Accountants",
    "businesses": "For Businesses",
@@ -148,7 +148,7 @@
    "heroL2": "while they’re still free to fix.",
    "heroSub": "Upload your invoices. TaxCheck reads every one, checks the figures against UAE VAT and Corporate Tax rules, and builds your return — showing you exactly which document produced each number.",
    "ctaStart": "Start free →",
-   "ctaNote": "No card. No sales call. Free during early access.",
+   "ctaNote": "One complete return, free. No card, no time limit.",
    "outcomes": {
     "items": [
      {
@@ -181,8 +181,8 @@
       "a": "It tells you. On our first real batch of 19 invoices, 16 were read perfectly and all three hard cases — a USD export, an invoice split across two pages, and a duplicate from an older batch — were flagged for review. Zero silent errors. That last number is the one that matters."
      },
      {
-      "q": "Is it really free?",
-      "a": "Yes, during early access — no card, no sales call. We are building this alongside accountants working on real returns, and right now your feedback is worth more to us than your subscription."
+      "q": "What does it cost?",
+      "a": "Your first complete return is free — no card, and no countdown running while you find the documents. After that, plans start at AED 750 a year for one company, from 1 October 2026. A single late Corporate Tax return costs more than that in penalties before you count the tax."
      },
      {
       "q": "Does it replace my accountant?",
@@ -597,8 +597,8 @@
    },
    "pricingPrev": {
     "kicker": "10 · Pricing",
-    "title": "Free app during early access — no card",
-    "note": "Everything is free while we build with the community. Commercial plans come later, with preferential terms for early users.",
+    "title": "Start free. Pay when it is worth paying for.",
+    "note": "Your first complete return is free, with no card and no time limit. Plans from AED 750 a year start on 1 October 2026.",
     "link": "Details"
    },
    "faq": {
@@ -1439,8 +1439,8 @@
   },
   "pricing": {
    "kicker": "Pricing",
-   "title": "The app is free during early access",
-   "sub": "The TaxCheck app is free while we build with the UAE accounting community. No credit card, no limits, no catch — your feedback shapes the product.",
+   "title": "One late return costs more than any plan here",
+   "sub": "Plans start 1 October 2026. Every plan covers VAT 201 and Corporate Tax, in Arabic and English, with every finding cited to its article.",
    "monthly": "Monthly",
    "annual": "Annual",
    "save": "",
@@ -1448,107 +1448,238 @@
     "m": "",
     "y": ""
    },
-   "popular": "Early access",
+   "popular": "Most chosen",
    "cta": "Start with",
    "ctaEnt": "Talk to us",
    "plans": [
     {
-     "id": "early",
-     "name": "Early Access",
+     "id": "free",
+     "name": "Free",
      "pm": "AED 0",
      "py": "AED 0",
-     "d": "Everything in the product. Free for everyone during early access.",
-     "pop": true,
+     "per": "",
+     "tag": "Start here",
+     "d": "One complete return, free. No card, and no countdown — it ends when you have your answer, not when a clock runs out.",
+     "pop": false,
      "f": [
-      "Unlimited taxpayers & returns",
-      "VAT 201 + Corporate Tax wizards",
-      "Legal review with article citations",
-      "AI Tax Assistant (fair-use daily limit)",
+      "One taxpayer",
+      "One complete return — Corporate Tax or VAT",
+      "Every finding cited to its article",
       "Tamper-evident audit trail",
-      "Arabic & English interface"
-     ]
+      "Arabic & English interface",
+      "No card. No time limit."
+     ],
+     "foot": "No card. No time limit."
     },
     {
-     "id": "review",
-     "name": "Expert Filing Review",
+     "id": "basic",
+     "name": "Basic",
      "pm": "AED 750",
      "py": "AED 750",
-     "d": "One return, reviewed before you file. Written report within 48 hours - every finding cited to the article. Five returns for AED 2,750.",
+     "per": "per year",
+     "tag": "One company",
+     "d": "One company, unlimited returns, all year.",
      "pop": false,
-     "link": "https://pay.ziina.com/taxcheck/D8rt-YjQc",
-     "cta": "Book a review",
      "f": [
-      "Any CT return, any size",
-      "48-hour written report",
-      "Article-by-article citations",
-      "Missing-document checklist",
-      "Penalty exposure if filed as-is",
-      "Free if no finding can be cited to the law"
-     ]
+      "1 taxpayer",
+      "3 users",
+      "Unlimited VAT 201 and Corporate Tax returns",
+      "Every finding cited to its article",
+      "Tamper-evident audit trail",
+      "AI Tax Assistant — 20 queries a day",
+      "Email support"
+     ],
+     "foot": "Billed yearly. Starts 1 October 2026."
+    },
+    {
+     "id": "pro",
+     "name": "Professional",
+     "pm": "AED 1,500",
+     "py": "AED 1,500",
+     "per": "per year",
+     "tag": "",
+     "d": "Several entities, or an accounting practice starting out. Founding price locked for the life of your subscription — first 50 accounts.",
+     "pop": true,
+     "f": [
+      "5 taxpayers",
+      "Unlimited users",
+      "Everything in Basic",
+      "AI Tax Assistant — 50 queries a day",
+      "Trial balance → Corporate Tax return mapping",
+      "Priority email support",
+      "Founding price locked for life"
+     ],
+     "foot": "Billed yearly. Starts 1 October 2026."
+    },
+    {
+     "id": "firm",
+     "name": "Firm",
+     "pm": "AED 3,000",
+     "py": "AED 3,000",
+     "per": "per year",
+     "tag": "For practices",
+     "d": "Unlimited clients, plus one Pre-Filing Review each year — a review on its own is AED 2,500.",
+     "pop": false,
+     "f": [
+      "Unlimited taxpayers",
+      "Unlimited users",
+      "Everything in Professional",
+      "Multi-client practice view",
+      "AI Tax Assistant — fair use",
+      "One Pre-Filing Review included each year",
+      "Priority support on email and WhatsApp"
+     ],
+     "foot": "Billed yearly. Starts 1 October 2026."
     }
    ],
-   "compTitle": "What you get today",
+   "compTitle": "Compare the plans",
    "compCols": [
     "",
-    "Early Access"
+    "Free",
+    "Basic",
+    "Professional",
+    "Firm"
    ],
    "compRows": [
     {
      "l": "Taxpayers",
      "v": [
+      "1",
+      "1",
+      "5",
       "Unlimited"
      ]
     },
     {
      "l": "Users",
      "v": [
+      "1",
+      "3",
+      "Unlimited",
       "Unlimited"
      ]
     },
     {
-     "l": "VAT returns",
+     "l": "Returns",
      "v": [
+      "1 in total",
+      "Unlimited",
+      "Unlimited",
       "Unlimited"
+     ]
+    },
+    {
+     "l": "VAT 201 returns",
+     "v": [
+      "✓",
+      "✓",
+      "✓",
+      "✓"
      ]
     },
     {
      "l": "Corporate Tax returns",
      "v": [
-      "Unlimited"
+      "✓",
+      "✓",
+      "✓",
+      "✓"
+     ]
+    },
+    {
+     "l": "Findings cited to the article",
+     "v": [
+      "✓",
+      "✓",
+      "✓",
+      "✓"
+     ]
+    },
+    {
+     "l": "Tamper-evident audit trail",
+     "v": [
+      "✓",
+      "✓",
+      "✓",
+      "✓"
+     ]
+    },
+    {
+     "l": "Arabic & English",
+     "v": [
+      "✓",
+      "✓",
+      "✓",
+      "✓"
      ]
     },
     {
      "l": "AI assistant queries / day",
      "v": [
-      "30 (fair use)"
+      "—",
+      "20",
+      "50",
+      "Fair use"
      ]
     },
     {
-     "l": "Findings & references",
+     "l": "Trial balance → CT return",
      "v": [
+      "—",
+      "—",
+      "✓",
       "✓"
      ]
     },
     {
-     "l": "Audit trail",
+     "l": "Multi-client practice view",
      "v": [
+      "—",
+      "—",
+      "—",
       "✓"
      ]
     },
     {
-     "l": "Print (VAT 201 / CT)",
+     "l": "Pre-Filing Review included",
      "v": [
-      "✓"
+      "—",
+      "—",
+      "—",
+      "1 per year"
      ]
     },
     {
      "l": "Support",
      "v": [
-      "Email"
+      "Email",
+      "Email",
+      "Priority email",
+      "Email + WhatsApp"
      ]
     }
    ],
-   "note": "The app is free during early access. The Expert Filing Review is a paid service - AED 750 per return, AED 2,750 for five, delivered within 48 hours. Commercial app plans come later, with preferential terms for early users."
+   "note": "Prices are per organisation, per year, and take effect on 1 October 2026. The Free plan has no card and no time limit — it covers one complete return. The Pre-Filing Review is a separate service, delivered as a written report, and is not a filing.",
+   "service": {
+    "id": "review",
+    "name": "Pre-Filing Review",
+    "pm": "AED 2,500",
+    "py": "AED 2,500",
+    "launch": "AED 1,500 for returns booked before 30 September 2026",
+    "d": "One return, read by a person before you file. A written report within 48 hours, every finding cited to its article. AED 1,500 for returns booked before 30 September 2026.",
+    "cta": "Book a review",
+    "link": "https://pay.ziina.com/taxcheck/D8rt-YjQc",
+    "f": [
+     "Any Corporate Tax or VAT return, any size",
+     "Written report within 48 hours",
+     "Every finding cited to its article",
+     "What is missing, listed specifically",
+     "Your penalty exposure if filed as it stands",
+     "Free if no finding can be cited to the law"
+    ],
+    "note": "A review, not a filing. TaxCheck does not submit anything to the FTA and does not act as your tax agent — you review, approve and file. The report is an independent second read of your figures against the published legislation."
+   },
+   "serviceKicker": "Reviewed by a person"
   },
   "demo": {
    "kicker": "Request a Demo",
@@ -1829,7 +1960,7 @@
    "ctaH": "The cheapest error is the one you find before you file.",
    "ctaP": "TaxCheck reads your documents, checks the figures against UAE Corporate Tax and VAT rules, and shows you which document produced each number — before you submit.",
    "ctaBtn": "Start free →",
-   "ctaFine": "Free early access. No card, no sales call. TaxCheck does not file on your behalf — you review and approve everything.",
+   "ctaFine": "Your first complete return is free — no card, no time limit. TaxCheck does not file on your behalf; you review and approve everything.",
    "faqH": "Common questions",
    "faq": [
     {
@@ -1871,7 +2002,7 @@
    "ai": "المساعد الضريبي الذكي",
    "corporate-tax": "ضريبة الشركات",
    "vat": "ضريبة القيمة المضافة",
-   "review": "مراجعة الإقرارات",
+   "review": "مراجعة ما قبل التقديم",
    "dashboard": "لوحة التحكم",
    "accountants": "للمحاسبين",
    "businesses": "للشركات",
@@ -2008,7 +2139,7 @@
    "heroL2": "وهو ما زال مجانياً.",
    "heroSub": "ارفع فواتيرك. يقرأ TaxCheck كل واحدة منها، ويدقّق الأرقام مقابل قواعد ضريبة القيمة المضافة وضريبة الشركات في الإمارات، ويبني إقرارك — ويريك أي مستند وراء كل رقم.",
    "ctaStart": "ابدأ مجاناً ←",
-   "ctaNote": "بلا بطاقة. بلا مكالمة مبيعات. مجاني خلال فترة الوصول المبكر.",
+   "ctaNote": "إقرار كامل واحد مجاناً. بلا بطاقة، وبلا مدة محددة.",
    "outcomes": {
     "items": [
      {
@@ -2041,8 +2172,8 @@
       "a": "يخبرك. في أول دفعة حقيقية من ١٩ فاتورة، قُرئت ١٦ منها بلا خطأ واحد، ورُفعت الحالات الصعبة الثلاث كلها للمراجعة — تصدير بالدولار، وفاتورة على صفحتين، ونسخة مكررة من دفعة أقدم. صفر أخطاء صامتة. وهذا الرقم الأخير هو المهم."
      },
      {
-      "q": "هل هو مجاني فعلاً؟",
-      "a": "نعم، خلال فترة الوصول المبكر — بلا بطاقة وبلا مكالمة مبيعات. نحن نبني هذا مع محاسبين يعملون على إقرارات حقيقية، وملاحظاتك اليوم أثمن لنا من اشتراكك."
+      "q": "كم يكلّف؟",
+      "a": "إقرارك الكامل الأول مجاني — بلا بطاقة، وبلا عدّاد يركض بينما تجمع مستنداتك. بعدها تبدأ الخطط من 750 درهماً سنوياً لشركة واحدة، اعتباراً من 1 أكتوبر 2026. وإقرار ضريبة شركات متأخر واحد يكلّف غرامات أكثر من ذلك قبل أن تحسب الضريبة نفسها."
      },
      {
       "q": "هل يحل محل محاسبي؟",
@@ -2457,8 +2588,8 @@
    },
    "pricingPrev": {
     "kicker": "10 · الأسعار",
-    "title": "التطبيق مجاني خلال الإطلاق المبكر — بلا بطاقة",
-    "note": "كل المزايا مجانية بينما نبني مع المجتمع. الخطط التجارية لاحقاً، بشروط تفضيلية للمستخدمين الأوائل.",
+    "title": "ابدأ مجاناً. وادفع حين يستحقّ الدفع.",
+    "note": "إقرارك الكامل الأول مجاني، بلا بطاقة وبلا مدة محددة. والخطط من 750 درهماً سنوياً تبدأ في 1 أكتوبر 2026.",
     "link": "التفاصيل"
    },
    "faq": {
@@ -3299,8 +3430,8 @@
   },
   "pricing": {
    "kicker": "الأسعار",
-   "title": "التطبيق مجاني خلال الإطلاق المبكر",
-   "sub": "تطبيق TaxCheck مجاني بينما نبنيه مع مجتمع المحاسبة الإماراتي. بلا بطاقة ائتمان، بلا حدود، بلا شروط خفية — ملاحظاتك هي التي تشكّل المنتج.",
+   "title": "إقرار متأخر واحد يكلّف أكثر من أي خطة هنا",
+   "sub": "الخطط تبدأ في 1 أكتوبر 2026. كل خطة تغطّي إقرار القيمة المضافة وإقرار ضريبة الشركات، بالعربية والإنجليزية، وكل ملاحظة مسندة إلى مادتها.",
    "monthly": "شهري",
    "annual": "سنوي",
    "save": "",
@@ -3308,107 +3439,238 @@
     "m": "",
     "y": ""
    },
-   "popular": "إطلاق مبكر",
-   "cta": "ابدأ بخطة",
+   "popular": "الأكثر اختياراً",
+   "cta": "ابدأ بـ",
    "ctaEnt": "تحدث إلينا",
    "plans": [
     {
-     "id": "early",
-     "name": "الوصول المبكر",
+     "id": "free",
+     "name": "مجانية",
      "pm": "0 درهم",
      "py": "0 درهم",
-     "d": "كل ما في المنتج. مجاني للجميع خلال فترة الإطلاق المبكر.",
-     "pop": true,
+     "per": "",
+     "tag": "ابدأ من هنا",
+     "d": "إقرار كامل واحد، مجاناً. بلا بطاقة وبلا عدّاد — تنتهي حين تحصل على جوابك، لا حين ينتهي الوقت.",
+     "pop": false,
      "f": [
-      "خاضعون وإقرارات بلا حدود",
-      "معالجا VAT 201 وضريبة الشركات",
-      "مراجعة قانونية باستشهادات المواد",
-      "المساعد الضريبي الذكي (حد استخدام عادل يومي)",
-      "سجل تدقيق غير قابل للتلاعب",
-      "واجهة عربية وإنجليزية"
-     ]
+      "مكلّف واحد",
+      "إقرار كامل واحد — ضريبة شركات أو قيمة مضافة",
+      "كل ملاحظة مسندة إلى مادتها",
+      "سجل تدقيق لا يقبل العبث",
+      "واجهة عربية وإنجليزية",
+      "بلا بطاقة. بلا مدة محددة."
+     ],
+     "foot": "بلا بطاقة. بلا مدة محددة."
     },
     {
-     "id": "review",
-     "name": "مراجعة خبير قبل التقديم",
+     "id": "basic",
+     "name": "الأساسية",
      "pm": "750 درهم",
      "py": "750 درهم",
-     "d": "إقرار واحد يُراجع قبل التقديم. تقرير مكتوب خلال 48 ساعة — كل ملاحظة باستشهاد بمادتها القانونية. خمسة إقرارات بـ 2,750 درهم.",
+     "per": "سنوياً",
+     "tag": "شركة واحدة",
+     "d": "شركة واحدة، إقرارات بلا حد، طوال السنة.",
      "pop": false,
-     "link": "https://pay.ziina.com/taxcheck/D8rt-YjQc",
-     "cta": "اطلب مراجعة",
      "f": [
-      "أي إقرار ضريبة شركات مهما كان حجمه",
-      "تقرير مكتوب خلال 48 ساعة",
-      "استشهاد بالمواد القانونية بندًا ببند",
-      "قائمة المستندات الناقصة",
-      "حجم الغرامات لو قُدّم كما هو",
-      "مجاني إذا لم نستطع إسناد أي ملاحظة للقانون"
-     ]
+      "مكلّف واحد",
+      "3 مستخدمين",
+      "إقرارات قيمة مضافة وضريبة شركات بلا حد",
+      "كل ملاحظة مسندة إلى مادتها",
+      "سجل تدقيق لا يقبل العبث",
+      "المساعد الضريبي الذكي — 20 استعلاماً يومياً",
+      "دعم عبر البريد"
+     ],
+     "foot": "فوترة سنوية. تبدأ في 1 أكتوبر 2026."
+    },
+    {
+     "id": "pro",
+     "name": "الاحترافية",
+     "pm": "1,500 درهم",
+     "py": "1,500 درهم",
+     "per": "سنوياً",
+     "tag": "",
+     "d": "عدة منشآت، أو مكتب محاسبة في بدايته. سعر التأسيس مثبّت مدى اشتراكك — لأول 50 حساباً.",
+     "pop": true,
+     "f": [
+      "5 مكلّفين",
+      "مستخدمون بلا حد",
+      "كل ما في الأساسية",
+      "المساعد الضريبي الذكي — 50 استعلاماً يومياً",
+      "ربط ميزان المراجعة بإقرار ضريبة الشركات",
+      "دعم ذو أولوية عبر البريد",
+      "سعر التأسيس مثبّت مدى الاشتراك"
+     ],
+     "foot": "فوترة سنوية. تبدأ في 1 أكتوبر 2026."
+    },
+    {
+     "id": "firm",
+     "name": "المكاتب",
+     "pm": "3,000 درهم",
+     "py": "3,000 درهم",
+     "per": "سنوياً",
+     "tag": "لمكاتب المحاسبة",
+     "d": "عملاء بلا حد، ومراجعة ما قبل التقديم واحدة كل سنة — والمراجعة وحدها بـ 2,500 درهم.",
+     "pop": false,
+     "f": [
+      "مكلّفون بلا حد",
+      "مستخدمون بلا حد",
+      "كل ما في الاحترافية",
+      "لوحة متعددة العملاء",
+      "المساعد الضريبي الذكي — استخدام عادل",
+      "مراجعة ما قبل التقديم واحدة مشمولة كل سنة",
+      "دعم ذو أولوية عبر البريد والواتساب"
+     ],
+     "foot": "فوترة سنوية. تبدأ في 1 أكتوبر 2026."
     }
    ],
-   "compTitle": "ما تحصل عليه اليوم",
+   "compTitle": "قارن الخطط",
    "compCols": [
     "",
-    "الوصول المبكر"
+    "مجانية",
+    "الأساسية",
+    "الاحترافية",
+    "المكاتب"
    ],
    "compRows": [
     {
-     "l": "الخاضعون للضريبة",
+     "l": "المكلّفون",
      "v": [
+      "1",
+      "1",
+      "5",
       "بلا حد"
      ]
     },
     {
      "l": "المستخدمون",
      "v": [
+      "1",
+      "3",
+      "بلا حد",
+      "بلا حد"
+     ]
+    },
+    {
+     "l": "الإقرارات",
+     "v": [
+      "إقرار واحد",
+      "بلا حد",
+      "بلا حد",
       "بلا حد"
      ]
     },
     {
      "l": "إقرارات القيمة المضافة",
      "v": [
-      "بلا حد"
+      "✓",
+      "✓",
+      "✓",
+      "✓"
      ]
     },
     {
      "l": "إقرارات ضريبة الشركات",
      "v": [
-      "بلا حد"
-     ]
-    },
-    {
-     "l": "استفسارات المساعد الذكي / يوم",
-     "v": [
-      "30 (استخدام عادل)"
-     ]
-    },
-    {
-     "l": "الملاحظات والمراجع",
-     "v": [
+      "✓",
+      "✓",
+      "✓",
       "✓"
      ]
     },
     {
-     "l": "سجل التدقيق",
+     "l": "ملاحظات مسندة إلى المادة",
      "v": [
+      "✓",
+      "✓",
+      "✓",
       "✓"
      ]
     },
     {
-     "l": "الطباعة (VAT 201 / ضريبة الشركات)",
+     "l": "سجل تدقيق لا يقبل العبث",
      "v": [
+      "✓",
+      "✓",
+      "✓",
       "✓"
+     ]
+    },
+    {
+     "l": "عربي وإنجليزي",
+     "v": [
+      "✓",
+      "✓",
+      "✓",
+      "✓"
+     ]
+    },
+    {
+     "l": "استعلامات المساعد الذكي / يوم",
+     "v": [
+      "—",
+      "20",
+      "50",
+      "استخدام عادل"
+     ]
+    },
+    {
+     "l": "ميزان المراجعة ← إقرار الشركات",
+     "v": [
+      "—",
+      "—",
+      "✓",
+      "✓"
+     ]
+    },
+    {
+     "l": "لوحة متعددة العملاء",
+     "v": [
+      "—",
+      "—",
+      "—",
+      "✓"
+     ]
+    },
+    {
+     "l": "مراجعة ما قبل التقديم مشمولة",
+     "v": [
+      "—",
+      "—",
+      "—",
+      "واحدة سنوياً"
      ]
     },
     {
      "l": "الدعم",
      "v": [
-      "بريد إلكتروني"
+      "بريد",
+      "بريد",
+      "بريد ذو أولوية",
+      "بريد وواتساب"
      ]
     }
    ],
-   "note": "التطبيق مجاني خلال فترة الإطلاق المبكر. مراجعة الخبير خدمة مدفوعة — 750 درهمًا للإقرار، و2,750 درهمًا لخمسة إقرارات، تُسلَّم خلال 48 ساعة. وستُعلن خطط التطبيق التجارية لاحقًا بشروط تفضيلية للمستخدمين الأوائل."
+   "note": "الأسعار للمنشأة سنوياً، وتسري من 1 أكتوبر 2026. الخطة المجانية بلا بطاقة وبلا مدة محددة — تغطّي إقراراً كاملاً واحداً. ومراجعة ما قبل التقديم خدمة منفصلة تُسلّم تقريراً مكتوباً، وليست تقديماً.",
+   "service": {
+    "id": "review",
+    "name": "مراجعة ما قبل التقديم",
+    "pm": "2,500 درهم",
+    "py": "2,500 درهم",
+    "launch": "1,500 درهم للإقرارات المحجوزة قبل 30 سبتمبر 2026",
+    "d": "إقرار واحد، يقرأه إنسان قبل أن تقدّمه. تقرير مكتوب خلال 48 ساعة، وكل ملاحظة مسندة إلى مادتها. 1,500 درهم للإقرارات المحجوزة قبل 30 سبتمبر 2026.",
+    "cta": "احجز مراجعة",
+    "link": "https://pay.ziina.com/taxcheck/D8rt-YjQc",
+    "f": [
+     "أي إقرار ضريبة شركات أو قيمة مضافة، مهما كان حجمه",
+     "تقرير مكتوب خلال 48 ساعة",
+     "كل ملاحظة مسندة إلى مادتها",
+     "ما هو ناقص، مذكوراً باسمه",
+     "انكشافك للغرامات لو قدّمته كما هو",
+     "مجانية إن لم نستطع إسناد أي ملاحظة إلى القانون"
+    ],
+    "note": "مراجعة، لا تقديم. لا ترسل TaxCheck شيئاً إلى الهيئة الاتحادية للضرائب ولا تعمل وكيلاً ضريبياً عنك — أنت تراجع وتعتمد وتقدّم. والتقرير قراءة ثانية مستقلة لأرقامك مقابل التشريع المنشور."
+   },
+   "serviceKicker": "يراجعها إنسان"
   },
   "demo": {
    "kicker": "اطلب عرضاً تجريبياً",
@@ -3689,7 +3951,7 @@
    "ctaH": "أرخص خطأ هو الذي تكتشفه قبل التقديم.",
    "ctaP": "تقرأ TaxCheck مستنداتك، وتفحص الأرقام مقابل قواعد ضريبة الشركات والقيمة المضافة في الإمارات، وتبيّن لك أي مستند أنتج كل رقم — قبل أن ترسل الإقرار.",
    "ctaBtn": "ابدأ مجاناً ←",
-   "ctaFine": "وصول مبكر مجاني. بلا بطاقة وبلا مكالمة مبيعات. لا تقدّم TaxCheck الإقرار نيابةً عنك — أنت تراجع وتعتمد كل شيء.",
+   "ctaFine": "إقرارك الكامل الأول مجاني — بلا بطاقة وبلا مدة محددة. لا تقدّم TaxCheck الإقرار نيابةً عنك — أنت تراجع وتعتمد كل شيء.",
    "faqH": "أسئلة شائعة",
    "faq": [
     {

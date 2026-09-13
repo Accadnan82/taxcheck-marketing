@@ -252,7 +252,7 @@ export function renderHome({ lang, t, x, data }) {
   <div class="wrap">
     ${sectionHead(h.pricingPrev.kicker, h.pricingPrev.title, h.pricingPrev.note)}
     <div class="grid g2" style="max-width:860px">
-      ${pp.map((p) => `<div class="card ${p.pop ? 'gold' : ''} rv" data-rv><span class="tag ${p.pop ? 'gold' : 'teal'}">${esc(p.pop ? t.pricing.popular : t.labels.review)}</span><h3 style="margin-top:12px">${esc(p.name)}</h3><div class="price" style="margin-top:8px"><span class="amt" style="font-size:38px">${esc(p.pm)}</span>${p.id === 'review' ? `<span class="per">${esc(x.perReturn)}</span>` : ''}</div><p>${esc(p.d)}</p></div>`).join('')}
+      ${pp.map((p) => `<div class="card ${p.pop ? 'gold' : ''} rv" data-rv><span class="tag ${p.pop ? 'gold' : 'teal'}">${esc(p.pop ? t.pricing.popular : (p.tag || p.name))}</span><h3 style="margin-top:12px">${esc(p.name)}</h3><div class="price" style="margin-top:8px"><span class="amt" style="font-size:38px">${esc(p.pm)}</span>${p.per ? `<span class="per">${esc(p.per)}</span>` : ''}</div><p>${esc(p.d)}</p></div>`).join('')}
     </div>
     <a class="btn btn-teal rv" data-rv style="margin-top:22px" href="${href(lang, 'pricing')}">${esc(h.pricingPrev.link)} ${icons.arrow(16)}</a>
   </div>

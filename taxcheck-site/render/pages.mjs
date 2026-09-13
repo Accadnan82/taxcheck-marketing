@@ -149,22 +149,40 @@ export function renderDash({ lang, t, x, data }) {
 // ---------------- Pricing ----------------
 export function renderPricing({ lang, t, x }) {
   const p = t.pricing;
+  const sv = p.service;
   const plan = (pl) => `
 <div class="plan ${pl.pop ? 'pop' : ''} rv" data-rv>
-  ${pl.pop ? `<span class="ribbon">${esc(p.popular)}</span>` : ''}
+  ${pl.pop ? `<span class="ribbon">${esc(p.popular)}</span>` : pl.tag ? `<span class="tag teal">${esc(pl.tag)}</span>` : ''}
   <div><h3>${esc(pl.name)}</h3><p class="d">${esc(pl.d)}</p></div>
-  <div class="price"><span class="amt">${esc(pl.pm)}</span>${pl.id === 'review' ? `<span class="per">${esc(x.perReturn)}</span>` : ''}</div>
+  <div class="price"><span class="amt">${esc(pl.pm)}</span>${pl.per ? `<span class="per">${esc(pl.per)}</span>` : ''}</div>
   <ul class="list">${pl.f.map((f) => `<li>${esc(f)}</li>`).join('')}</ul>
-  ${pl.id === 'review'
-    ? `<button type="button" class="btn btn-gold btn-lg" data-open="planModal">${esc(pl.cta)} ${icons.arrow(16)}</button><span class="ziina">${icons.lock(14)} ${esc(x.payZiina)} · <b>@taxcheck</b></span>`
-    : `<a class="btn btn-gold btn-lg" href="${APP_URL}">${esc(p.cta)} ${esc(pl.name)} ${icons.arrow(16)}</a><span class="ziina">${esc(t.home.ctaNote)}</span>`}
+  <a class="btn btn-gold btn-lg" href="${APP_URL}">${esc(p.cta)} ${esc(pl.name)} ${icons.arrow(16)}</a>${pl.foot ? `<span class="ziina">${esc(pl.foot)}</span>` : ''}
 </div>`;
   const comp = p.compRows.map((r) => `<tr><td>${esc(r.l)}</td>${r.v.map((v) => `<td class="num" style="text-align:start">${esc(v)}</td>`).join('')}</tr>`).join('');
-  const rev = p.plans.find((q) => q.id === 'review');
   return pageHero({ kicker: p.kicker, title: esc(p.title), sub: p.sub }) + `
 <section style="padding-top:24px">
   <div class="wrap">
     <div class="plans">${p.plans.map(plan).join('')}</div>
+  </div>
+</section>
+<section style="padding-top:8px">
+  <div class="wrap">
+    ${sectionHead(p.serviceKicker, sv.name, sv.d)}
+    <div class="card rv" data-rv style="max-width:900px;margin:0 auto">
+      <div class="price"><span class="amt" style="font-size:44px">${esc(sv.pm)}</span><span class="per">${esc(x.perReturn)}</span></div>
+      <p class="note" style="margin-top:10px"><b>${esc(sv.launch)}</b></p>
+      <ul class="list" style="margin-top:18px">${sv.f.map((f) => `<li>${esc(f)}</li>`).join('')}</ul>
+      <p class="note" style="margin-top:18px">${esc(sv.note)}</p>
+      <div class="acts2" style="margin-top:20px">
+        <button type="button" class="btn btn-gold btn-lg" data-open="planModal">${esc(sv.cta)} ${icons.arrow(16)}</button>
+        <a class="btn btn-ghost btn-lg" href="${href(lang, 'contact')}">${esc(p.ctaEnt)}</a>
+      </div>
+      <span class="ziina" style="margin-top:12px;display:block">${icons.lock(14)} ${esc(x.payZiina)} · <b>@taxcheck</b></span>
+    </div>
+  </div>
+</section>
+<section style="padding-top:8px">
+  <div class="wrap">
     <div class="comp">
       <h3 class="rv" data-rv>${esc(p.compTitle)}</h3>
       <div class="tbl-wrap rv" data-rv><table class="tbl"><thead><tr>${p.compCols.map((c) => `<th>${esc(c)}</th>`).join('')}</tr></thead><tbody>${comp}</tbody></table></div>
@@ -176,9 +194,9 @@ export function renderPricing({ lang, t, x }) {
 <div class="modal" id="planModal" role="dialog" aria-modal="true" aria-labelledby="planModalT" hidden>
   <div class="box">
     <button type="button" class="x" data-close aria-label="${attr(t.close)}">${icons.close(18)}</button>
-    <span class="tag gold">${esc(rev.name)}</span>
-    <h3 id="planModalT" style="margin-top:12px">${esc(rev.pm)} <small style="font-size:15px;color:var(--muted);font-weight:500">${esc(x.perReturn)}</small></h3>
-    <p>${esc(rev.d)}</p>
+    <span class="tag gold">${esc(sv.name)}</span>
+    <h3 id="planModalT" style="margin-top:12px">${esc(sv.pm)} <small style="font-size:15px;color:var(--muted);font-weight:500">${esc(x.perReturn)}</small></h3>
+    <p>${esc(sv.d)}</p>
     <p class="ziina" style="margin-top:14px">${icons.lock(14)} ${esc(x.ziinaHandle)}: <b>@taxcheck</b></p>
     <div class="acts2">
       <a class="btn btn-gold btn-lg" href="${ZIINA}" rel="noopener" target="_blank">${esc(x.payZiina)} ${icons.arrow(16)}</a>
