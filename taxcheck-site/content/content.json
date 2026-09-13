@@ -146,7 +146,7 @@
   "home": {
    "heroL1": "Catch the errors",
    "heroL2": "while they’re still free to fix.",
-   "heroSub": "Upload your invoices. TaxCheck reads every one, checks the figures against UAE VAT and Corporate Tax rules, and builds your return — showing you exactly which document produced each number.",
+   "heroSub": "Upload your documents. TaxCheck reads every one, checks the figures against UAE VAT and Corporate Tax rules, and builds your return — showing which document produced each number, and flagging what doesn’t reconcile instead of fixing it quietly. Both taxes, in Arabic and English.",
    "ctaStart": "Start free →",
    "ctaNote": "One complete return, free. No card, no time limit.",
    "outcomes": {
@@ -160,8 +160,8 @@
       "p": "No re-typing invoices into spreadsheets. Twenty documents read in about a minute, then you review what was flagged."
      },
      {
-      "h": "The cheapest time to find an error is now.",
-      "p": "Under the 2026 rules, an error you disclose yourself is priced at roughly 1% a month. The same error found in an FTA audit adds a further 15% on top."
+      "h": "It never corrects a number quietly.",
+      "p": "When a figure doesn’t reconcile you see both numbers and a flag — never a silent fix. It will refuse to invent an exchange rate rather than guess one. On our first real batch of invoices: zero silent errors."
      }
     ]
    },
@@ -519,7 +519,7 @@
    },
    "trio": {
     "kicker": "05 · Coverage",
-    "title": "Corporate Tax, VAT, and an assistant that shows its sources",
+    "title": "Corporate Tax and VAT in one place, and an assistant that shows its sources",
     "items": [
      {
       "r": "corporate-tax",
@@ -2137,7 +2137,7 @@
   "home": {
    "heroL1": "اكتشف الخطأ",
    "heroL2": "وهو ما زال مجانياً.",
-   "heroSub": "ارفع فواتيرك. يقرأ TaxCheck كل واحدة منها، ويدقّق الأرقام مقابل قواعد ضريبة القيمة المضافة وضريبة الشركات في الإمارات، ويبني إقرارك — ويريك أي مستند وراء كل رقم.",
+   "heroSub": "ارفع مستنداتك. يقرأ TaxCheck كل واحد منها، ويدقّق الأرقام مقابل قواعد ضريبة القيمة المضافة وضريبة الشركات في الإمارات، ويبني إقرارك — ويريك أي مستند وراء كل رقم، ويشير إلى ما لا يتطابق بدل أن يصلحه بصمت. الضريبتان معاً، بالعربية والإنجليزية.",
    "ctaStart": "ابدأ مجاناً ←",
    "ctaNote": "إقرار كامل واحد مجاناً. بلا بطاقة، وبلا مدة محددة.",
    "outcomes": {
@@ -2151,8 +2151,8 @@
       "p": "لا إعادة إدخال للفواتير في جداول. عشرون مستنداً تُقرأ في نحو دقيقة، ثم تراجع ما رُفع لك كعلم فقط."
      },
      {
-      "h": "أرخص وقت لاكتشاف الخطأ هو الآن.",
-      "p": "بموجب قواعد ٢٠٢٦، الخطأ الذي تفصح عنه بنفسك يُسعَّر بنحو ١٪ شهرياً. والخطأ نفسه إذا اكتشفه تدقيق الهيئة يضاف عليه ١٥٪ أخرى."
+      "h": "لا يصلح رقماً بصمت أبداً.",
+      "p": "حين لا يتطابق رقم ترى الرقمين معاً وإشارة — لا تصحيحاً صامتاً. ويرفض أن يخترع سعر صرف بدل أن يخمّنه. في أول دفعة فواتير حقيقية: صفر أخطاء صامتة."
      }
     ]
    },
@@ -2510,7 +2510,7 @@
    },
    "trio": {
     "kicker": "05 · نطاق التغطية",
-    "title": "ضريبة الشركات والقيمة المضافة، ومساعد يُظهر مصادره",
+    "title": "ضريبة الشركات والقيمة المضافة في مكان واحد، ومساعد يُظهر مصادره",
     "items": [
      {
       "r": "corporate-tax",
