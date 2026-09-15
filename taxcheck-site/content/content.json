@@ -912,7 +912,39 @@
       ]
      }
     ],
-    "note": "Services are delivered by accounting professionals. TaxCheck does not provide licensed tax-agent representation unless expressly agreed in writing."
+    "note": "Services are delivered by accounting professionals. TaxCheck does not provide licensed tax-agent representation unless expressly agreed in writing.",
+    "priceKicker": "Published prices",
+    "priceTitle": "Four services, priced up front",
+    "priceSub": "Everything else is on request — each case is quoted after a short call.",
+    "priceNote": "Prices are per service. The effort is an estimate, fixed in a written quote before work starts, and all services are subject to availability.",
+    "priceCta": "Request a quote",
+    "priceCols": [
+     "Service",
+     "Effort",
+     "Price"
+    ],
+    "prices": [
+     {
+      "h": "Pre-Filing Review",
+      "e": "Half a day – a day",
+      "amt": "AED 2,500"
+     },
+     {
+      "h": "Compliance health check",
+      "e": "A day",
+      "amt": "AED 3,500"
+     },
+     {
+      "h": "e-Invoicing readiness",
+      "e": "2–3 days",
+      "amt": "AED 7,500"
+     },
+     {
+      "h": "Cleanup, reconciliation or a late return",
+      "e": "2–4 days",
+      "amt": "From AED 5,000"
+     }
+    ]
    },
    "resources": {
     "kicker": "Resources",
@@ -1528,7 +1560,7 @@
      "py": "AED 3,000",
      "per": "per year",
      "tag": "For practices",
-     "d": "Unlimited clients, plus one Pre-Filing Review each year — a review on its own is AED 2,500.",
+     "d": "Unlimited clients on one board — plus 25% off every Pre-Filing Review.",
      "pop": false,
      "f": [
       "Unlimited taxpayers",
@@ -1536,7 +1568,7 @@
       "Everything in Professional",
       "Multi-client practice view",
       "AI Tax Assistant — fair use",
-      "One Pre-Filing Review included each year",
+      "25% off every Pre-Filing Review",
       "Priority support on email and WhatsApp"
      ],
      "foot": "Billed yearly. Starts 1 October 2026.",
@@ -1652,12 +1684,12 @@
      ]
     },
     {
-     "l": "Pre-Filing Review included",
+     "l": "Pre-Filing Review",
      "v": [
       "—",
       "—",
       "—",
-      "1 per year"
+      "25% off"
      ]
     },
     {
@@ -2918,7 +2950,39 @@
       ]
      }
     ],
-    "note": "تُقدَّم الخدمات بواسطة محاسبين مهنيين. لا يقدم TaxCheck تمثيلاً بوكيل ضريبي مرخص ما لم يُتفق على ذلك كتابةً وصراحةً."
+    "note": "تُقدَّم الخدمات بواسطة محاسبين مهنيين. لا يقدم TaxCheck تمثيلاً بوكيل ضريبي مرخص ما لم يُتفق على ذلك كتابةً وصراحةً.",
+    "priceKicker": "أسعار معلنة",
+    "priceTitle": "أربع خدمات بسعر ثابت",
+    "priceSub": "وما عداها على الطلب — كل حالة تُسعّر بعد مكالمة قصيرة.",
+    "priceNote": "الأسعار بالدرهم لكل خدمة. الجهد تقديري ويُثبّت في عرض مكتوب قبل البدء، وتخضع الخدمات للتوافر.",
+    "priceCta": "اطلب عرضاً",
+    "priceCols": [
+     "الخدمة",
+     "الجهد",
+     "السعر"
+    ],
+    "prices": [
+     {
+      "h": "مراجعة ما قبل التقديم",
+      "e": "نصف يوم – يوم",
+      "amt": "2,500 درهم"
+     },
+     {
+      "h": "فحص سلامة الامتثال",
+      "e": "يوم",
+      "amt": "3,500 درهم"
+     },
+     {
+      "h": "جاهزية الفوترة الإلكترونية",
+      "e": "2–3 أيام",
+      "amt": "7,500 درهم"
+     },
+     {
+      "h": "تنظيف وتسوية أو إقرار متأخر",
+      "e": "2–4 أيام",
+      "amt": "من 5,000 درهم"
+     }
+    ]
    },
    "resources": {
     "kicker": "المصادر",
@@ -3534,7 +3598,7 @@
      "py": "3,000 درهم",
      "per": "سنوياً",
      "tag": "لمكاتب المحاسبة",
-     "d": "عملاء بلا حد، ومراجعة ما قبل التقديم واحدة كل سنة — والمراجعة وحدها بـ 2,500 درهم.",
+     "d": "عملاء بلا حد على لوحة واحدة — وخصم 25% على كل مراجعة ما قبل التقديم.",
      "pop": false,
      "f": [
       "مكلّفون بلا حد",
@@ -3542,7 +3606,7 @@
       "كل ما في الاحترافية",
       "لوحة متعددة العملاء",
       "المساعد الضريبي الذكي — استخدام عادل",
-      "مراجعة ما قبل التقديم واحدة مشمولة كل سنة",
+      "خصم 25% على مراجعة ما قبل التقديم",
       "دعم ذو أولوية عبر البريد والواتساب"
      ],
      "foot": "فوترة سنوية. تبدأ في 1 أكتوبر 2026.",
@@ -3658,12 +3722,12 @@
      ]
     },
     {
-     "l": "مراجعة ما قبل التقديم مشمولة",
+     "l": "مراجعة ما قبل التقديم",
      "v": [
       "—",
       "—",
       "—",
-      "واحدة سنوياً"
+      "خصم 25%"
      ]
     },
     {

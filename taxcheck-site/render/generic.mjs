@@ -1,5 +1,5 @@
 import { esc, icons } from '../lib/html.mjs';
-import { href, APP_URL, pageHero, ctaBand } from '../lib/layout.mjs';
+import { href, APP_URL, pageHero, sectionHead, ctaBand } from '../lib/layout.mjs';
 
 // Dictionary-driven pages: kicker/title/sub/sections[{h,p,items[{h,p}]}]/note
 export function renderGeneric({ lang, t, x, route }) {
@@ -24,5 +24,16 @@ export function renderGeneric({ lang, t, x, route }) {
   const ctas = legal ? '' : `<a class="btn btn-gold btn-lg" href="${APP_URL}">${esc(t.ctaDemo)} ${icons.arrow(18)}</a><a class="btn btn-ghost btn-lg" href="${href(lang, 'demo')}">${esc(t.labels.demo)}</a>`;
   const note = p.note ? `<section class="gsec"><div class="wrap"><p class="note rv" data-rv><span class="tag muted">${esc(route === 'product' ? t.sample : t.labels[route])}</span> ${esc(p.note)}</p></div></section>` : '';
 
-  return pageHero({ kicker: p.kicker, title: esc(p.title), sub: p.sub, ctas }) + sections + note + cta;
+  // Fixed-price services table (only on pages whose dictionary carries `prices`).
+  const prices = p.prices ? `
+<section class="gsec">
+  <div class="wrap">
+    ${sectionHead(p.priceKicker, p.priceTitle, p.priceSub)}
+    <div class="tbl-wrap rv" data-rv><table class="tbl"><thead><tr>${p.priceCols.map((c) => `<th>${esc(c)}</th>`).join('')}</tr></thead><tbody>${p.prices.map((r) => `<tr><td>${esc(r.h)}</td><td>${esc(r.e)}</td><td class="num" style="text-align:start"><b>${esc(r.amt)}</b></td></tr>`).join('')}</tbody></table></div>
+    <p class="note rv" data-rv>${esc(p.priceNote)}</p>
+    <a class="btn btn-gold rv" data-rv style="margin-top:16px" href="${href(lang, 'contact')}">${esc(p.priceCta)} ${icons.arrow(16)}</a>
+  </div>
+</section>` : '';
+
+  return pageHero({ kicker: p.kicker, title: esc(p.title), sub: p.sub, ctas }) + prices + sections + note + cta;
 }
