@@ -1,0 +1,16 @@
+{
+  "name": "taxcheck-marketing",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "description": "taxcheck.ae marketing site — static generator (EN/AR) + /api/demo serverless function",
+  "scripts": {
+    "build": "node build.mjs",
+    "preview": "node preview.mjs",
+    "dev": "node build.mjs && npx --yes serve dist"
+  },
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "resend": "^3.0.0"
+  }
+}
