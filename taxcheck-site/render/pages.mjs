@@ -1,5 +1,5 @@
 import { esc, attr, icons, badge } from '../lib/html.mjs';
-import { href, APP_URL, ZIINA, pageHero, sectionHead, ctaBand, sampleNote } from '../lib/layout.mjs';
+import { href, APP_URL, ZIINA, PHONE_E164, pageHero, sectionHead, ctaBand, sampleNote } from '../lib/layout.mjs';
 import { fmtDate, fmtDay, money } from '../lib/fmt.mjs';
 
 const frameBar = (t, label) => `<div class="bar"><i></i><i></i><i></i><span class="url">app.taxcheck.ae · ${esc(label)}</span><span class="live"><i></i>${esc(t.sample)}</span></div>`;
@@ -156,13 +156,16 @@ export function renderPricing({ lang, t, x }) {
   <div><h3>${esc(pl.name)}</h3><p class="d">${esc(pl.d)}</p></div>
   <div class="price"><span class="amt">${esc(pl.pm)}</span>${pl.per ? `<span class="per">${esc(pl.per)}</span>` : ''}</div>
   <ul class="list">${pl.f.map((f) => `<li>${esc(f)}</li>`).join('')}</ul>
-  <a class="btn btn-gold btn-lg" href="${APP_URL}">${esc(p.cta)} ${esc(pl.name)} ${icons.arrow(16)}</a>${pl.foot ? `<span class="ziina">${esc(pl.foot)}</span>` : ''}
+  ${pl.wa
+    ? `<a class="btn btn-gold btn-lg" href="https://wa.me/${PHONE_E164}?text=${encodeURIComponent(pl.wa)}" rel="noopener" target="_blank">${icons.wa(16)} ${esc(p.ctaWa)} ${esc(pl.name)}</a>`
+    : `<a class="btn btn-gold btn-lg" href="${APP_URL}">${esc(p.cta)} ${esc(pl.name)} ${icons.arrow(16)}</a>`}${pl.foot ? `<span class="ziina">${esc(pl.foot)}</span>` : ''}
 </div>`;
   const comp = p.compRows.map((r) => `<tr><td>${esc(r.l)}</td>${r.v.map((v) => `<td class="num" style="text-align:start">${esc(v)}</td>`).join('')}</tr>`).join('');
   return pageHero({ kicker: p.kicker, title: esc(p.title), sub: p.sub }) + `
 <section style="padding-top:24px">
   <div class="wrap">
     <div class="plans">${p.plans.map(plan).join('')}</div>
+    ${p.howToPay ? `<p class="note rv" data-rv style="text-align:center;margin-top:20px">${esc(p.howToPay)}</p>` : ''}
   </div>
 </section>
 <section style="padding-top:8px">

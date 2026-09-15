@@ -1497,7 +1497,8 @@
       "AI Tax Assistant — 20 queries a day",
       "Email support"
      ],
-     "foot": "Billed yearly. Starts 1 October 2026."
+     "foot": "Billed yearly. Starts 1 October 2026.",
+     "wa": "Hello, I would like to subscribe to the Basic plan (AED 750 per year)."
     },
     {
      "id": "pro",
@@ -1517,7 +1518,8 @@
       "Priority email support",
       "Founding price locked for life"
      ],
-     "foot": "Billed yearly. Starts 1 October 2026."
+     "foot": "Billed yearly. Starts 1 October 2026.",
+     "wa": "Hello, I would like to subscribe to the Professional plan (AED 1,500 per year)."
     },
     {
      "id": "firm",
@@ -1537,7 +1539,8 @@
       "One Pre-Filing Review included each year",
       "Priority support on email and WhatsApp"
      ],
-     "foot": "Billed yearly. Starts 1 October 2026."
+     "foot": "Billed yearly. Starts 1 October 2026.",
+     "wa": "Hello, I would like to subscribe to the Firm plan (AED 3,000 per year)."
     }
    ],
    "compTitle": "Compare the plans",
@@ -1687,7 +1690,9 @@
     ],
     "note": "A review, not a filing. TaxCheck does not submit anything to the FTA and does not act as your tax agent — you review, approve and file. The report is an independent second read of your figures against the published legislation."
    },
-   "serviceKicker": "Reviewed by a person"
+   "serviceKicker": "Reviewed by a person",
+   "ctaWa": "Subscribe to",
+   "howToPay": "Subscribing goes through WhatsApp: we confirm your company details, send a secure payment link, then activate your account."
   },
   "demo": {
    "kicker": "Request a Demo",
@@ -3498,7 +3503,8 @@
       "المساعد الضريبي الذكي — 20 استعلاماً يومياً",
       "دعم عبر البريد"
      ],
-     "foot": "فوترة سنوية. تبدأ في 1 أكتوبر 2026."
+     "foot": "فوترة سنوية. تبدأ في 1 أكتوبر 2026.",
+     "wa": "مرحباً، أريد الاشتراك في خطة الأساسية (750 درهم سنوياً)."
     },
     {
      "id": "pro",
@@ -3518,7 +3524,8 @@
       "دعم ذو أولوية عبر البريد",
       "سعر التأسيس مثبّت مدى الاشتراك"
      ],
-     "foot": "فوترة سنوية. تبدأ في 1 أكتوبر 2026."
+     "foot": "فوترة سنوية. تبدأ في 1 أكتوبر 2026.",
+     "wa": "مرحباً، أريد الاشتراك في خطة الاحترافية (1,500 درهم سنوياً)."
     },
     {
      "id": "firm",
@@ -3538,7 +3545,8 @@
       "مراجعة ما قبل التقديم واحدة مشمولة كل سنة",
       "دعم ذو أولوية عبر البريد والواتساب"
      ],
-     "foot": "فوترة سنوية. تبدأ في 1 أكتوبر 2026."
+     "foot": "فوترة سنوية. تبدأ في 1 أكتوبر 2026.",
+     "wa": "مرحباً، أريد الاشتراك في خطة المكاتب (3,000 درهم سنوياً)."
     }
    ],
    "compTitle": "قارن الخطط",
@@ -3688,7 +3696,9 @@
     ],
     "note": "مراجعة، لا تقديم. لا ترسل TaxCheck شيئاً إلى الهيئة الاتحادية للضرائب ولا تعمل وكيلاً ضريبياً عنك — أنت تراجع وتعتمد وتقدّم. والتقرير قراءة ثانية مستقلة لأرقامك مقابل التشريع المنشور."
    },
-   "serviceKicker": "يراجعها إنسان"
+   "serviceKicker": "يراجعها إنسان",
+   "ctaWa": "اشترك بـ",
+   "howToPay": "الاشتراك عبر واتساب: نتحقق من بيانات شركتك، ونرسل لك رابط دفع آمن، ثم نفعّل حسابك."
   },
   "demo": {
    "kicker": "اطلب عرضاً تجريبياً",
