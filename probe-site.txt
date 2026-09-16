@@ -1,0 +1,135 @@
+SITE FOUND: C:\Users\AdnanAlAsheq\Downloads\Taxcheck\taxcheck-marketing\taxcheck-site
+
+=== files ===
+.: api/, build.mjs, build.mjs.bak.20260913070941, content/, lib/, package-lock.json, package.json, preview.mjs, public/, README.md, render/, vercel.json
+render: calculator.mjs, forms.mjs, generic.mjs, home.mjs, home.mjs.bak-pricing, pages.mjs, pages.mjs.bak-pricing
+lib: extra.mjs, extra.mjs.bak-pricing, fmt.mjs, html.mjs, layout.mjs, layout.mjs.bak.20260913070941
+content: content.json, content.json.bak-positioning, content.json.bak-pricing, content.json.bak.20260913070941, data.json
+public: anime.umd.min.js, apple-touch-icon.png, favicon.png, favicon.svg, logos/, og.png, site.css, site.js
+
+=== content.json ===
+top-level: en, ar
+en keys: dir, locale, langToggle, brand, brandSuffix, labels, navMain, announce, announceLink, ctaCheck, ctaDemo, signIn, sample, preliminary, notFTA, reviewed, menu, close, gcc, footerCols, risk, status, taxType, period, tpNames, reviewers, home, pages, ct, vat, ai, acc, dash, pricing, demo, einv, careers, contact, calc
+en.pages: product, review, businesses, services, resources, security, about, privacy, terms, disclaimer
+ar keys: dir, locale, langToggle, brand, brandSuffix, labels, navMain, announce, announceLink, ctaCheck, ctaDemo, signIn, sample, preliminary, notFTA, reviewed, menu, close, gcc, footerCols, risk, status, taxType, period, tpNames, reviewers, home, pages, ct, vat, ai, acc, dash, pricing, demo, einv, careers, contact, calc
+ar.pages: product, review, businesses, services, resources, security, about, privacy, terms, disclaimer
+
+=== shape of page 'product' ===
+{
+ "kicker": "Product",
+ "title": "One workspace for UAE tax compliance",
+ "sub": "TaxCheck holds your taxpayers, periods, returns, and evidence in one structure — and checks all of it before anything is filed.",
+ "sections": [
+  {
+   "h": "Structure",
+   "p": "Everything starts from a clean model of the taxpayer.",
+   "items": [
+    {
+     "h": "Taxpayer register",
+     "p": "Entities, TRNs, free-zone status, financial years, and group relationships in one registry."
+    },
+    {
+     "h": "Return workspaces",
+     "p": "Each Corporate Tax and VAT period gets a workspace with its schedules, data, and findings."
+    },
+    {
+     "h": "Data intake",
+     "p": "Trial balances, ledgers, and prior returns import and map to return structures."
+    }
+   ]
+  },
+  {
+   "h": "Validate",
+   "p": "Checks run continuously as data lands.",
+   "items": [
+    {
+     "h": "Completeness",
+     "p": "Missing schedules, unanswered elections, and empty required fields are flagged before review."
+    },
+    {
+     "h": "Consistency",
+     "p": "Cross-checks between ledger, schedules, and return boxes catch mismatched totals."
+    },
+    {
+     "h": "Risk findings",
+     "p": "Patterns associated with penalty or audit exposure are raised with legal references."
+    }
+   ]
+  },
+  {
+   "h": "Review",
+   "p": "The output is a defensible position, not just numbers.",
+   "items": [
+    {
+     "h": "Review workflow",
+     "p": "Findings are assigned, worked, and resolved with reviewer sign-off."
+    },
+    {
+
+=== build.mjs : relevant lines ===
+   1 | import { readFileSync, writeFileSync, mkdirSync, rmSync, cpSync } from 'node:fs';
+   5 | import { shell, href, ROUTES, SITE_URL, setAssetVersion } from './lib/layout.mjs';
+   8 | import { renderGeneric } from './render/generic.mjs';
+   9 | import { renderCT, renderVAT, renderAI, renderACC, renderDash, renderPricing, renderEinv } from './render/pages.mjs';
+  22 | const dictKey = { 'penalty-calculator': 'calc', 'corporate-tax': 'ct', accountants: 'acc', dashboard: 'dash', einvoicing: 'einv' };
+  24 | function meta(t, route) {
+  27 | const d = route === 'home' ? t.home : (t[dictKey[route] || route] || t.pages[route]);
+  29 | if (route === 'home') return { title: t.home.heroL1 + ' ' + t.home.heroL2, description: t.home.heroSub };
+  35 | mkdirSync(dist, { recursive: true });
+  42 | for (const route of ROUTES) {
+  43 | const render = renderers[route] || renderGeneric;
+  44 | const body = render({ lang, t, x, data, route });
+  45 | const { title, description, titleFull } = meta(t, route);
+  46 | const jsonLd = route === 'home' ? {
+  51 | const html = shell({ lang, route, t, title, description, body, jsonLd, titleFull });
+  52 | const path = href(lang, route);
+  54 | mkdirSync(outDir, { recursive: true });
+  55 | writeFileSync(join(outDir, 'index.html'), html);
+  56 | urls.push({ path, lang, route });
+  64 | ${urls.map((u) => `  <url><loc>${SITE_URL}${u.path}</loc><lastmod>${today}</lastmod><xhtml:link rel="alternate" hreflang="en" href="${SITE_URL}${href('en', u.ro
+  67 | writeFileSync(join(dist, 'sitemap.xml'), sitemap);
+  68 | writeFileSync(join(dist, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${SITE_URL}/sitemap.xml\n`);
+  70 | writeFileSync(join(dist, '404.html'), shell({ lang: 'en', route: 'home', t: content.en, title: 'Page not found', description: content.en.notFTA, body: `<section
+  72 | console.log(`built ${urls.length} pages → dist/`);
+
+=== render/generic.mjs : relevant lines ===
+   4 | // Dictionary-driven pages: kicker/title/sub/sections[{h,p,items[{h,p}]}]/note
+   5 | export function renderGeneric({ lang, t, x, route }) {
+   6 | const p = t.pages[route];
+  22 | const legal = ['privacy', 'terms', 'disclaimer'].includes(route);
+  25 | const note = p.note ? `<section class="gsec"><div class="wrap"><p class="note rv" data-rv><span class="tag muted">${esc(route === 'product' ? t.sample : t.label
+  27 | // Fixed-price services table (only on pages whose dictionary carries `prices`).
+
+=== lib/layout.mjs : relevant lines ===
+  19 | export const ROUTES = ['home', 'product', 'ai', 'corporate-tax', 'vat', 'review', 'dashboard', 'accountants', 'businesses', 'services', 'einvoicing', 'penalty-c
+  21 | // URL for a route in a language. EN lives at the root, AR under /ar.
+  22 | export function href(lang, route, hash = '') {
+  24 | const path = route === 'home' ? `${base}/` : `${base}/${route}`;
+  37 | function navLink(lang, t, route, current, cls = '') {
+  38 | const on = route === current ? ' on' : '';
+  39 | return `<a class="${cls}${on}" href="${href(lang, route)}"${on ? ' aria-current="page"' : ''}>${esc(t.labels[route])}</a>`;
+  42 | export function header(lang, t, route) {
+  44 | const nav = t.navMain.map((r) => navLink(lang, t, r, route)).join('');
+  45 | const mnav = ['home', ...t.navMain].map((r) => navLink(lang, t, r, route)).join('');
+  51 | <nav class="nav" aria-label="Primary">${nav}</nav>
+  53 | <a class="pill" href="${href(other, route)}" lang="${other}" hreflang="${other}" rel="alternate">${esc(t.langToggle)}</a>
+  56 | <button class="menu" type="button" aria-label="${attr(t.menu)}" aria-expanded="false" aria-controls="mnav" id="menuBtn">${icons.menu(20)}</button>
+  60 | <nav class="mnav" id="mnav" aria-label="Mobile">
+  61 | ${mnav}
+  62 | <div class="mnav-acts">
+  65 | <a class="pill" href="${href(other, route)}" lang="${other}">${esc(t.langToggle)}</a>
+  67 | </nav>`;
+  70 | export function footer(lang, t) {
+  71 | const cols = t.footerCols
+  77 | <footer class="ftr">
+ 104 | </footer>`;
+ 109 | * opts: { lang, route, t, title, description, body, jsonLd }
+ 111 | export function shell({ lang, route, t, title, description, body, jsonLd, titleFull = false }) {
+ 112 | const path = href(lang, route);
+ 113 | const enUrl = SITE_URL + href('en', route);
+ 114 | const arUrl = SITE_URL + href('ar', route);
+ 115 | const fullTitle = titleFull ? title : (route === 'home' ? `${t.brand} ${t.brandSuffix} — ${title}` : `${title} — ${t.brand}`);
+ 147 | <body data-lang="${lang}" data-route="${route}">
+ 153 | ${header(lang, t, route)}
+ 154 | <main id="main" class="pg pg-${route}">
+ 157 | ${footer(lang, t)}

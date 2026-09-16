@@ -11,7 +11,7 @@
    "ai": "AI Tax Assistant",
    "corporate-tax": "Corporate Tax",
    "vat": "VAT",
-   "review": "Pre-Filing Review",
+   "review": "Tax Return Review",
    "dashboard": "Dashboard",
    "accountants": "For Accountants",
    "businesses": "For Businesses",
@@ -26,9 +26,7 @@
    "privacy": "Privacy",
    "terms": "Terms",
    "disclaimer": "AI & Tax Disclaimer",
-   "careers": "Careers",
-   "penalty-calculator": "Penalty calculator",
-   "refund": "Refunds"
+   "careers": "Careers"
   },
   "navMain": [
    "product",
@@ -73,8 +71,7 @@
      "vat",
      "review",
      "dashboard",
-     "einvoicing",
-     "penalty-calculator"
+     "einvoicing"
     ]
    },
    {
@@ -147,9 +144,9 @@
   "home": {
    "heroL1": "Catch the errors",
    "heroL2": "while they’re still free to fix.",
-   "heroSub": "Upload your documents. TaxCheck reads every one, checks the figures against UAE VAT and Corporate Tax rules, and builds your return — showing which document produced each number, and flagging what doesn’t reconcile instead of fixing it quietly. Both taxes, in Arabic and English.",
+   "heroSub": "Upload your invoices. TaxCheck reads every one, checks the figures against UAE VAT and Corporate Tax rules, and builds your return — showing you exactly which document produced each number.",
    "ctaStart": "Start free →",
-   "ctaNote": "One complete return, free. No card, no time limit.",
+   "ctaNote": "No card. No sales call. Free during early access.",
    "outcomes": {
     "items": [
      {
@@ -161,8 +158,8 @@
       "p": "No re-typing invoices into spreadsheets. Twenty documents read in about a minute, then you review what was flagged."
      },
      {
-      "h": "It never corrects a number quietly.",
-      "p": "When a figure doesn’t reconcile you see both numbers and a flag — never a silent fix. It will refuse to invent an exchange rate rather than guess one. On our first real batch of invoices: zero silent errors."
+      "h": "The cheapest time to find an error is now.",
+      "p": "Under the 2026 rules, an error you disclose yourself is priced at roughly 1% a month. The same error found in an FTA audit adds a further 15% on top."
      }
     ]
    },
@@ -182,8 +179,8 @@
       "a": "It tells you. On our first real batch of 19 invoices, 16 were read perfectly and all three hard cases — a USD export, an invoice split across two pages, and a duplicate from an older batch — were flagged for review. Zero silent errors. That last number is the one that matters."
      },
      {
-      "q": "What does it cost?",
-      "a": "Your first complete return is free — no card, and no countdown running while you find the documents. After that, plans start at AED 750 a year for one company, from 1 October 2026. A single late Corporate Tax return costs more than that in penalties before you count the tax."
+      "q": "Is it really free?",
+      "a": "Yes, during early access — no card, no sales call. We are building this alongside accountants working on real returns, and right now your feedback is worth more to us than your subscription."
      },
      {
       "q": "Does it replace my accountant?",
@@ -520,7 +517,7 @@
    },
    "trio": {
     "kicker": "05 · Coverage",
-    "title": "Corporate Tax and VAT in one place, and an assistant that shows its sources",
+    "title": "Corporate Tax, VAT, and an assistant that shows its sources",
     "items": [
      {
       "r": "corporate-tax",
@@ -598,8 +595,8 @@
    },
    "pricingPrev": {
     "kicker": "10 · Pricing",
-    "title": "Start free. Pay when it is worth paying for.",
-    "note": "Your first complete return is free, with no card and no time limit. Plans from AED 750 a year start on 1 October 2026.",
+    "title": "Free app during early access — no card",
+    "note": "Everything is free while we build with the community. Commercial plans come later, with preferential terms for early users.",
     "link": "Details"
    },
    "faq": {
@@ -632,9 +629,7 @@
     "title": "See your risks before the FTA does",
     "sub": "Run the free risk check, or bring your latest return data to a 30-minute demo."
    },
-   "ftrTag": "UAE Corporate Tax & VAT compliance software",
-   "seoTitle": "UAE Corporate Tax & VAT return software — catch errors before you file",
-   "seoDesc": "Prepares and checks UAE Corporate Tax and VAT 201 returns, shows the document behind every number and flags what doesn’t reconcile. Arabic and English."
+   "ftrTag": "UAE Corporate Tax & VAT compliance software"
   },
   "pages": {
    "product": {
@@ -913,39 +908,7 @@
       ]
      }
     ],
-    "note": "Services are delivered by accounting professionals. TaxCheck does not provide licensed tax-agent representation unless expressly agreed in writing.",
-    "priceKicker": "Published prices",
-    "priceTitle": "Four services, priced up front",
-    "priceSub": "Everything else is on request — each case is quoted after a short call.",
-    "priceNote": "Prices are per service. The effort is an estimate, fixed in a written quote before work starts, and all services are subject to availability.",
-    "priceCta": "Request a quote",
-    "priceCols": [
-     "Service",
-     "Effort",
-     "Price"
-    ],
-    "prices": [
-     {
-      "h": "Pre-Filing Review",
-      "e": "Half a day – a day",
-      "amt": "AED 2,500"
-     },
-     {
-      "h": "Compliance health check",
-      "e": "A day",
-      "amt": "AED 3,500"
-     },
-     {
-      "h": "e-Invoicing readiness",
-      "e": "2–3 days",
-      "amt": "AED 7,500"
-     },
-     {
-      "h": "Cleanup, reconciliation or a late return",
-      "e": "2–4 days",
-      "amt": "From AED 5,000"
-     }
-    ]
+    "note": "Services are delivered by accounting professionals. TaxCheck does not provide licensed tax-agent representation unless expressly agreed in writing."
    },
    "resources": {
     "kicker": "Resources",
@@ -1073,138 +1036,70 @@
     "note": ""
    },
    "privacy": {
-    "kicker": "Legal",
-    "title": "Privacy Policy",
-    "sub": "What we hold, why, who else sees it, and the rights you have over it under UAE law. In force from 1 October 2026.",
+    "kicker": "Privacy",
+    "title": "Privacy policy",
+    "sub": "Last reviewed: August 2026.",
     "sections": [
      {
-      "h": "Who controls your data",
-      "p": "Finsuite technologies (professional licence 1653679, Dubai) is the controller of the personal data described here. We are established in Dubai mainland, so the UAE Personal Data Protection Law — Federal Decree-Law No. 45 of 2021 — applies to us."
+      "h": "1. What we collect",
+      "p": "Account details (name, work email, company), the tax and accounting data you upload, and usage logs needed to operate and secure the service.",
+      "items": []
      },
      {
-      "h": "What we hold",
-      "p": "Four kinds of data, and nothing else.",
-      "items": [
-       {
-        "h": "Account data",
-        "p": "Name, email, phone, company details and the plan you are on."
-       },
-       {
-        "h": "What you upload",
-        "p": "Invoices, trial balances, trade licences, draft returns and supporting documents. These may contain personal data about your staff, customers and suppliers."
-       },
-       {
-        "h": "What the service produces",
-        "p": "Extracted figures, findings, computed returns, and the audit trail of who changed what and when."
-       },
-       {
-        "h": "Technical data",
-        "p": "Log entries, error reports and basic usage analytics. We do not store card numbers — payments are taken outside the product by our payment provider."
-       }
-      ]
+      "h": "2. How we use it",
+      "p": "To provide the service: structuring, validating, and reviewing your tax data; to secure and support your account; and to improve the product using aggregated, de-identified usage patterns. We do not sell personal data.",
+      "items": []
      },
      {
-      "h": "Why we hold it, and on what basis",
-      "p": "To provide the service you asked for and to perform our contract with you; to keep the product secure and working; and to meet our own legal obligations. Where we rely on your consent — for example to send you product news — you can withdraw it at any time."
+      "h": "3. AI processing",
+      "p": "AI features process the data you submit to generate findings and answers. Your data is not used to train models for other customers without explicit consent.",
+      "items": []
      },
      {
-      "h": "Who else sees it",
-      "p": "A small number of processors, each bound to protect your data and to use it only on our instructions: Supabase (database, file storage and authentication), Vercel (hosting), Anthropic (reads uploaded documents to extract the figures — content sent for extraction is not used to train models), Sentry (error monitoring) and Ziina (payments). We do not sell your data, and we do not share it with the Federal Tax Authority or any other authority unless the law compels us."
+      "h": "4. Retention & deletion",
+      "p": "Data is retained while your account is active and per configured retention settings. You may export or request deletion, subject to legal record-keeping duties.",
+      "items": []
      },
      {
-      "h": "Where it is held",
-      "p": "Our processors operate infrastructure inside and outside the UAE. Where data leaves the country it goes only to providers contractually bound to protect it to a standard consistent with the Personal Data Protection Law."
-     },
-     {
-      "h": "How long we keep it",
-      "p": "For as long as your account is open, and for thirty days after closure so you can export it. Some records — invoices we issued, and the audit trail — are kept longer where we must keep them ourselves. Your own seven-year retention obligation is yours, not ours: keep your originals."
-     },
-     {
-      "h": "Your rights",
-      "p": "Under the Personal Data Protection Law you may ask us to give you a copy of your data, correct it, delete it, restrict or object to how we use it, or provide it in a portable format. You may also object to a decision made purely automatically. Write to info@taxcheck.ae and we will answer."
-     },
-     {
-      "h": "Security",
-      "p": "Access to your data is restricted to your own account by database-level row security; traffic is encrypted in transit; files are held in private storage behind time-limited links; and every change to a return is written to a tamper-evident audit trail. No system is perfect — if a breach affects you, we will tell you and the regulator."
+      "h": "5. Contact",
+      "p": "Privacy questions: info@taxcheck.ae.",
+      "items": []
      }
     ],
-    "note": "Questions about your data: info@taxcheck.ae · +971 50 552 3307 · Finsuite technologies, licence 1653679, Al Quoz 1, Bur Dubai, Dubai."
+    "note": ""
    },
    "terms": {
-    "kicker": "Legal",
-    "title": "Terms of Service",
-    "sub": "The agreement between you and Finsuite technologies when you use TaxCheck. In force from 1 October 2026.",
+    "kicker": "Terms",
+    "title": "Terms of service",
+    "sub": "Last reviewed: August 2026.",
     "sections": [
      {
-      "h": "Who you are contracting with",
-      "p": "TaxCheck is operated by Finsuite technologies, a sole establishment licensed in Dubai under professional licence 1653679 issued by the Department of Economy and Tourism. In these terms, “we” means Finsuite technologies and “you” means the person or business using the service."
+      "h": "1. The service",
+      "p": "TaxCheck provides software that structures, validates, and helps review UAE Corporate Tax and VAT data, plus optional professional accounting services agreed separately.",
+      "items": []
      },
      {
-      "h": "What TaxCheck is — and what it is not",
-      "p": "TaxCheck reads the documents you upload, builds a draft Corporate Tax or VAT return from them, and shows which document produced each figure. Where something does not reconcile it raises a finding and cites the article of the law behind it.",
-      "items": [
-       {
-        "h": "Software, not a tax agent",
-        "p": "We do not submit returns to the Federal Tax Authority and we do not represent you before it. Finsuite technologies is not a registered Tax Agent. Every figure you file, and the filing itself, remains yours."
-       },
-       {
-        "h": "Not advice",
-        "p": "Nothing in the product or in any report is legal or tax advice. Where a finding cites an article it is telling you where to look, not what to conclude."
-       }
-      ]
+      "h": "2. Not tax advice",
+      "p": "Software output — including AI answers and findings — is preliminary information to support review. It is not tax, legal, or accounting advice, and filing decisions remain yours.",
+      "items": []
      },
      {
-      "h": "Your records stay yours — we are not your system of record",
-      "p": "UAE law requires you to keep your own tax records for at least seven years from the end of the relevant tax period, and longer for certain real-estate records. TaxCheck holds copies of what you upload so the service can work; it is not your statutory record-keeping system, and using it does not discharge your retention obligation. Keep your own originals."
+      "h": "3. Your responsibilities",
+      "p": "You are responsible for the accuracy of data you provide and for meeting your own filing and payment obligations and deadlines.",
+      "items": []
      },
      {
-      "h": "Accounts",
-      "p": "You are responsible for everything done under your account and for keeping your credentials safe. Tell us promptly if you believe someone else has access."
+      "h": "4. Liability",
+      "p": "To the extent permitted by law, liability is limited to fees paid in the preceding twelve months; we are not liable for penalties arising from filings you submit.",
+      "items": []
      },
      {
-      "h": "Plans, payment and renewal",
-      "p": "A free account may complete one return. Beyond that a paid plan is required; the plans and their prices are published on the pricing page.",
-      "items": [
-       {
-        "h": "Annual, paid in advance",
-        "p": "We activate your plan manually once payment is received. There is no automatic renewal and no stored card — a subscription simply ends on its expiry date unless you renew it."
-       },
-       {
-        "h": "No VAT is charged",
-        "p": "Finsuite technologies is not registered for Value Added Tax, so no VAT is charged and no input tax may be recovered against our invoices. If we become registered we will say so and issue proper tax invoices from that date."
-       },
-       {
-        "h": "Price changes",
-        "p": "We may change prices for future terms. A change never affects a subscription you have already paid for."
-       }
-      ]
-     },
-     {
-      "h": "Acceptable use",
-      "p": "Use the service for your own business or for clients who have engaged you. Do not attempt to break, overload or reverse-engineer it, do not upload anything you have no right to upload, and do not resell access without our written agreement."
-     },
-     {
-      "h": "Availability",
-      "p": "We work to keep TaxCheck available and correct, but we do not promise uninterrupted service. Filing deadlines are yours to meet; do not leave a return to the last hour and rely on us being up."
-     },
-     {
-      "h": "Liability",
-      "p": "To the fullest extent the law allows, our total liability arising out of the service in any twelve-month period is limited to the fees you paid us in that period. We are not liable for penalties, interest or additional tax assessed against you, for lost profit, or for indirect or consequential loss. This limit does not apply to liability that cannot lawfully be limited."
-     },
-     {
-      "h": "Suspension and termination",
-      "p": "You may stop using the service at any time. We may suspend or close an account that breaches these terms or that we reasonably believe is being used unlawfully. On closure you may export your data for thirty days, after which we may delete it."
-     },
-     {
-      "h": "Changes to these terms",
-      "p": "We may update these terms. The version in force is the one published here on the day you use the service, and we will give notice of any material change before it takes effect."
-     },
-     {
-      "h": "Law and jurisdiction",
-      "p": "These terms are governed by the laws of the United Arab Emirates as applied in the Emirate of Dubai, and the Dubai courts have exclusive jurisdiction."
+      "h": "5. Changes",
+      "p": "We may update these terms with notice; continued use constitutes acceptance.",
+      "items": []
      }
     ],
-    "note": "Finsuite technologies · professional licence 1653679, Dubai Department of Economy and Tourism · Al Quoz 1, Bur Dubai, Dubai · info@taxcheck.ae · +971 50 552 3307"
+    "note": ""
    },
    "disclaimer": {
     "kicker": "AI & Tax Disclaimer",
@@ -1238,67 +1133,11 @@
      }
     ],
     "note": ""
-   },
-   "refund": {
-    "kicker": "Legal",
-    "title": "Refund and Cancellation",
-    "sub": "When you get your money back, and how to ask. In force from 1 October 2026.",
-    "sections": [
-     {
-      "h": "Try before you pay",
-      "p": "Every account can complete one return without paying. That is the trial, and it is deliberately a real one: you see the findings, the citations and the computed return before any money changes hands. We expect you to use it before you subscribe."
-     },
-     {
-      "h": "Subscriptions",
-      "p": "Subscriptions are annual and paid in advance.",
-      "items": [
-       {
-        "h": "Within 14 days of first activation",
-        "p": "If you have not completed a return on the paid plan, we refund in full, no questions asked."
-       },
-       {
-        "h": "After that",
-        "p": "Subscriptions are non-refundable for the remainder of the term. You keep access until the expiry date."
-       },
-       {
-        "h": "No surprises",
-        "p": "There is no automatic renewal and no stored card, so nothing can be charged without you deciding to pay it."
-       }
-      ]
-     },
-     {
-      "h": "Services",
-      "p": "The Pre-Filing Review, the compliance health check, e-invoicing readiness and cleanup work.",
-      "items": [
-       {
-        "h": "Before work starts",
-        "p": "Full refund on request."
-       },
-       {
-        "h": "After work starts, before delivery",
-        "p": "We refund the unused portion, assessed against the written scope and the days actually spent."
-       },
-       {
-        "h": "After delivery",
-        "p": "Non-refundable, because the work has been done and handed over. If we cannot start within the agreed window, or availability changes, we refund in full."
-       }
-      ]
-     },
-     {
-      "h": "If we get it wrong",
-      "p": "If the service is materially broken for you and we cannot fix it in a reasonable time, tell us and we will refund the affected period. We would rather return your money than argue about it."
-     },
-     {
-      "h": "How to ask",
-      "p": "Write to info@taxcheck.ae or message +971 50 552 3307 with your account email and the invoice number. We reply within two working days and pay approved refunds to the original payment method within fourteen days."
-     }
-    ],
-    "note": "Finsuite technologies · professional licence 1653679, Dubai · info@taxcheck.ae · +971 50 552 3307"
    }
   },
   "ct": {
    "kicker": "Corporate Tax",
-   "title": "The whole Corporate Tax return, structured and checked",
+   "title": "The whole return, structured and checked",
    "sub": "From taxpayer information to the 0%/9% computation — every Corporate Tax schedule in one reviewable structure.",
    "plateTitle": "Corporate Tax return — schedule status",
    "doc": "CT-FY25",
@@ -1410,13 +1249,11 @@
    ],
    "calcNote": "Sample computation. Rates per Federal Decree-Law No. 47 of 2022, Art. 3 (effective for financial years starting on or after 1 June 2023).",
    "ctaTitle": "Review a real return, not a sample",
-   "ctaSub": "Bring your FY2025 data to a demo and see your own schedules in this structure.",
-   "seoTitle": "UAE Corporate Tax return software — from trial balance to filed return",
-   "seoDesc": "From trial balance to a checked UAE Corporate Tax return: adjustments, elections, 0%/9% computation and disclosures, each cited to Decree-Law 47/2022."
+   "ctaSub": "Bring your FY2025 data to a demo and see your own schedules in this structure."
   },
   "vat": {
    "kicker": "VAT",
-   "title": "Your VAT 201 return, box by box, emirate by emirate",
+   "title": "VAT 201, box by box, emirate by emirate",
    "sub": "TaxCheck prepares and validates the VAT 201 the way the form is actually structured — with the reverse charge, adjustments, and input tax where they belong.",
    "emirates": [
     "Abu Dhabi",
@@ -1476,9 +1313,7 @@
    "netRefund": "Net VAT refundable",
    "note": "Sample data. Structure per VAT 201; reverse charge per Federal Decree-Law No. 8 of 2017, Art. 48.",
    "ctaTitle": "Validate your next VAT 201 before you file",
-   "ctaSub": "TaxCheck cross-checks every box against your ledger and flags what does not reconcile.",
-   "seoTitle": "UAE VAT return (VAT 201) checker — every box verified before filing",
-   "seoDesc": "Check your UAE VAT 201 return before filing: outputs by emirate, reverse charge, adjustments and input tax in the right boxes, every number traced to its invoice."
+   "ctaSub": "TaxCheck cross-checks every box against your ledger and flags what does not reconcile."
   },
   "ai": {
    "kicker": "AI Tax Assistant",
@@ -1556,9 +1391,7 @@
      "h": "Portfolio risk",
      "p": "Risk levels roll up across the book, so the riskiest client is never a surprise."
     }
-   ],
-   "seoTitle": "Tax software for UAE accounting firms and tax agents",
-   "seoDesc": "Multi-client tax software for UAE accounting firms: every taxpayer, period, deadline and reviewer on one board, VAT 201 and Corporate Tax returns checked and cited."
+   ]
   },
   "dash": {
    "kicker": "Dashboard",
@@ -1604,8 +1437,8 @@
   },
   "pricing": {
    "kicker": "Pricing",
-   "title": "One late return costs more than any plan here",
-   "sub": "Plans start 1 October 2026. Every plan covers VAT 201 and Corporate Tax, in Arabic and English, with every finding cited to its article.",
+   "title": "The app is free during early access",
+   "sub": "The TaxCheck app is free while we build with the UAE accounting community. No credit card, no limits, no catch — your feedback shapes the product.",
    "monthly": "Monthly",
    "annual": "Annual",
    "save": "",
@@ -1613,243 +1446,107 @@
     "m": "",
     "y": ""
    },
-   "popular": "Most chosen",
+   "popular": "Early access",
    "cta": "Start with",
    "ctaEnt": "Talk to us",
    "plans": [
     {
-     "id": "free",
-     "name": "Free",
+     "id": "early",
+     "name": "Early Access",
      "pm": "AED 0",
      "py": "AED 0",
-     "per": "",
-     "tag": "Start here",
-     "d": "One complete return, free. No card, and no countdown — it ends when you have your answer, not when a clock runs out.",
-     "pop": false,
-     "f": [
-      "One taxpayer",
-      "One complete return — Corporate Tax or VAT",
-      "Every finding cited to its article",
-      "Tamper-evident audit trail",
-      "Arabic & English interface",
-      "No card. No time limit."
-     ],
-     "foot": "No card. No time limit."
-    },
-    {
-     "id": "basic",
-     "name": "Basic",
-     "pm": "AED 750",
-     "py": "AED 750",
-     "per": "per year",
-     "tag": "One company",
-     "d": "One company, unlimited returns, all year.",
-     "pop": false,
-     "f": [
-      "1 taxpayer",
-      "3 users",
-      "Unlimited VAT 201 and Corporate Tax returns",
-      "Every finding cited to its article",
-      "Tamper-evident audit trail",
-      "AI Tax Assistant — 20 queries a day",
-      "Email support"
-     ],
-     "foot": "Billed yearly. Starts 1 October 2026.",
-     "wa": "Hello, I would like to subscribe to the Basic plan (AED 750 per year)."
-    },
-    {
-     "id": "pro",
-     "name": "Professional",
-     "pm": "AED 1,500",
-     "py": "AED 1,500",
-     "per": "per year",
-     "tag": "",
-     "d": "Several entities, or an accounting practice starting out. Founding price locked for the life of your subscription — first 50 accounts.",
+     "d": "Everything in the product. Free for everyone during early access.",
      "pop": true,
      "f": [
-      "5 taxpayers",
-      "Unlimited users",
-      "Everything in Basic",
-      "AI Tax Assistant — 50 queries a day",
-      "Trial balance → Corporate Tax return mapping",
-      "Priority email support",
-      "Founding price locked for life"
-     ],
-     "foot": "Billed yearly. Starts 1 October 2026.",
-     "wa": "Hello, I would like to subscribe to the Professional plan (AED 1,500 per year)."
+      "Unlimited taxpayers & returns",
+      "VAT 201 + Corporate Tax wizards",
+      "Legal review with article citations",
+      "AI Tax Assistant (fair-use daily limit)",
+      "Tamper-evident audit trail",
+      "Arabic & English interface"
+     ]
     },
     {
-     "id": "firm",
-     "name": "Firm",
-     "pm": "AED 3,000",
-     "py": "AED 3,000",
-     "per": "per year",
-     "tag": "For practices",
-     "d": "Unlimited clients on one board — plus 25% off every Pre-Filing Review.",
+     "id": "review",
+     "name": "Expert Filing Review",
+     "pm": "AED 750",
+     "py": "AED 750",
+     "d": "One return, reviewed before you file. Written report within 48 hours - every finding cited to the article. Five returns for AED 2,750.",
      "pop": false,
+     "link": "https://pay.ziina.com/taxcheck/D8rt-YjQc",
+     "cta": "Book a review",
      "f": [
-      "Unlimited taxpayers",
-      "Unlimited users",
-      "Everything in Professional",
-      "Multi-client practice view",
-      "AI Tax Assistant — fair use",
-      "25% off every Pre-Filing Review",
-      "Priority support on email and WhatsApp"
-     ],
-     "foot": "Billed yearly. Starts 1 October 2026.",
-     "wa": "Hello, I would like to subscribe to the Firm plan (AED 3,000 per year)."
+      "Any CT return, any size",
+      "48-hour written report",
+      "Article-by-article citations",
+      "Missing-document checklist",
+      "Penalty exposure if filed as-is",
+      "Free if no finding can be cited to the law"
+     ]
     }
    ],
-   "compTitle": "Compare the plans",
+   "compTitle": "What you get today",
    "compCols": [
     "",
-    "Free",
-    "Basic",
-    "Professional",
-    "Firm"
+    "Early Access"
    ],
    "compRows": [
     {
      "l": "Taxpayers",
      "v": [
-      "1",
-      "1",
-      "5",
       "Unlimited"
      ]
     },
     {
      "l": "Users",
      "v": [
-      "1",
-      "3",
-      "Unlimited",
       "Unlimited"
      ]
     },
     {
-     "l": "Returns",
+     "l": "VAT returns",
      "v": [
-      "1 in total",
-      "Unlimited",
-      "Unlimited",
       "Unlimited"
-     ]
-    },
-    {
-     "l": "VAT 201 returns",
-     "v": [
-      "✓",
-      "✓",
-      "✓",
-      "✓"
      ]
     },
     {
      "l": "Corporate Tax returns",
      "v": [
-      "✓",
-      "✓",
-      "✓",
-      "✓"
-     ]
-    },
-    {
-     "l": "Findings cited to the article",
-     "v": [
-      "✓",
-      "✓",
-      "✓",
-      "✓"
-     ]
-    },
-    {
-     "l": "Tamper-evident audit trail",
-     "v": [
-      "✓",
-      "✓",
-      "✓",
-      "✓"
-     ]
-    },
-    {
-     "l": "Arabic & English",
-     "v": [
-      "✓",
-      "✓",
-      "✓",
-      "✓"
+      "Unlimited"
      ]
     },
     {
      "l": "AI assistant queries / day",
      "v": [
-      "—",
-      "20",
-      "50",
-      "Fair use"
+      "30 (fair use)"
      ]
     },
     {
-     "l": "Trial balance → CT return",
+     "l": "Findings & references",
      "v": [
-      "—",
-      "—",
-      "✓",
       "✓"
      ]
     },
     {
-     "l": "Multi-client practice view",
+     "l": "Audit trail",
      "v": [
-      "—",
-      "—",
-      "—",
       "✓"
      ]
     },
     {
-     "l": "Pre-Filing Review",
+     "l": "Print (VAT 201 / CT)",
      "v": [
-      "—",
-      "—",
-      "—",
-      "25% off"
+      "✓"
      ]
     },
     {
      "l": "Support",
      "v": [
-      "Email",
-      "Email",
-      "Priority email",
-      "Email + WhatsApp"
+      "Email"
      ]
     }
    ],
-   "note": "Prices are per organisation, per year, and take effect on 1 October 2026. The Free plan has no card and no time limit — it covers one complete return. The Pre-Filing Review is a separate service, delivered as a written report, and is not a filing.",
-   "service": {
-    "id": "review",
-    "name": "Pre-Filing Review",
-    "pm": "AED 2,500",
-    "py": "AED 2,500",
-    "launch": "AED 1,500 for returns booked before 30 September 2026",
-    "d": "One return, read by a person before you file. A written report within 48 hours, every finding cited to its article. AED 1,500 for returns booked before 30 September 2026.",
-    "cta": "Book a review",
-    "link": "https://pay.ziina.com/taxcheck/D8rt-YjQc",
-    "f": [
-     "Any Corporate Tax or VAT return, any size",
-     "Written report within 48 hours",
-     "Every finding cited to its article",
-     "What is missing, listed specifically",
-     "Your penalty exposure if filed as it stands",
-     "Free if no finding can be cited to the law"
-    ],
-    "note": "A review, not a filing. TaxCheck does not submit anything to the FTA and does not act as your tax agent — you review, approve and file. The report is an independent second read of your figures against the published legislation."
-   },
-   "serviceKicker": "Reviewed by a person",
-   "ctaWa": "Subscribe to",
-   "howToPay": "Subscribing goes through WhatsApp: we confirm your company details, send a secure payment link, then activate your account."
+   "note": "The app is free during early access. The Expert Filing Review is a paid service - AED 750 per return, AED 2,750 for five, delivered within 48 hours. Commercial app plans come later, with preferential terms for early users."
   },
   "demo": {
    "kicker": "Request a Demo",
@@ -2081,85 +1778,6 @@
     "sent": "Message sent — we will reply within one business day.",
     "err": "Please complete all fields."
    }
-  },
-  "calc": {
-   "title": "UAE Tax Penalty Calculator",
-   "metaDesc": "Free UAE tax penalty calculator. Corporate tax and VAT late filing, late payment and late registration — with the legal source behind every figure.",
-   "lede": "Estimate what late registration, late filing and late payment actually cost under the 2026 rules — with the law behind every number. Free, no signup.",
-   "currency": "AED",
-   "legendTax": "Which tax",
-   "legendScenario": "What went wrong (select all that apply)",
-   "legendDates": "Dates and amounts",
-   "taxCt": "Corporate Tax",
-   "taxVat": "VAT",
-   "scReg": "Late registration",
-   "scRegD": "Registered after the deadline for your first tax period.",
-   "scFile": "Late filing",
-   "scFileD": "The return was submitted after the due date.",
-   "scPay": "Late payment",
-   "scPayD": "The tax due was paid after the due date.",
-   "lblDue": "Due date",
-   "hintDue": "Corporate Tax: 9 months from the end of the tax period. VAT: 28 days from the end of the tax period.",
-   "lblFiled": "Date the return was filed",
-   "lblPaid": "Date the tax was paid",
-   "hintPaid": "Leave as-is if you paid on the day you filed. If still unpaid, use today.",
-   "lblTax": "Tax payable (AED)",
-   "hintTax": "The tax owed, not the penalty. Enter 0 if nothing was payable.",
-   "lblRepeat": "Repeat offence within 24 months",
-   "lblRepeatD": "A second or later failure to file a VAT return within 24 months.",
-   "resultsH": "Estimated penalty",
-   "thItem": "Penalty",
-   "thAmount": "Amount",
-   "thTotal": "Estimated total",
-   "rowReg": "Late tax registration",
-   "rowFileCt": "Late Corporate Tax return — {m}",
-   "rowFileVat": "Late VAT return — first offence",
-   "rowFileVatRepeat": "Late VAT return — repeat within 24 months",
-   "rowPay": "Late payment — {m} on {t}",
-   "srcCtReg": "Cabinet Decision 75/2023 — failure to submit a Tax Registration application",
-   "srcVatReg": "Cabinet Decision 49/2021 amending Cabinet Decision 40/2017",
-   "srcCtFile": "Cabinet Decision 75/2023 — AED 500 per month for the first 12 months, AED 1,000 per month from month 13. Charged on the return, not the tax.",
-   "srcVatFile": "Cabinet Decision 49/2021 — AED 1,000 first offence, AED 2,000 on repeat within 24 months",
-   "srcPay": "Cabinet Decision 129/2025, in force 14 April 2026 — 14% per annum, each month or part thereof, not compounded",
-   "perMonth": "Every further month adds about {a}.",
-   "emptyState": "Select what went wrong and fill in the dates to see an estimate.",
-   "waiverTitle": "A waiver may apply to this one.",
-   "waiverBody": "A waiver initiative for the AED 10,000 corporate tax late registration penalty was announced in April 2025, conditional on filing the first tax return or annual declaration within 7 months of the end of the first tax period. It is not modelled in the total above — check your EmaraTax account or ask your tax agent whether you qualify.",
-   "oldRegimeTitle": "This due date falls under the previous regime.",
-   "oldRegimeBody": "Cabinet Decision 129/2025 took effect on 14 April 2026. Before that date, late payment was charged differently (VAT: 2% immediately plus 4% monthly, capped at 300%). This calculator models the current 14% per annum rule only, so the late payment line above will not be accurate for periods before 14 April 2026.",
-   "ctaH": "The cheapest error is the one you find before you file.",
-   "ctaP": "TaxCheck reads your documents, checks the figures against UAE Corporate Tax and VAT rules, and shows you which document produced each number — before you submit.",
-   "ctaBtn": "Start free →",
-   "ctaFine": "Your first complete return is free — no card, no time limit. TaxCheck does not file on your behalf; you review and approve everything.",
-   "faqH": "Common questions",
-   "faq": [
-    {
-     "q": "How is the late payment penalty calculated?",
-     "a": "Under Cabinet Decision 129/2025, in force since 14 April 2026, unpaid tax accrues 14% per annum for each month or part thereof, on the unsettled amount. It does not compound. The same rule now applies to both Corporate Tax and VAT."
-    },
-    {
-     "q": "Does one day late really count as a whole month?",
-     "a": "Yes. The legislation charges \"each month or part thereof\", so a return filed one day after the deadline attracts a full month of penalty. This calculator follows that rule, with month-end clamping — 31 January to 28 February counts as one month, not two."
-    },
-    {
-     "q": "I have no tax to pay. Do I still get a penalty?",
-     "a": "For Corporate Tax, yes. The late filing penalty under Cabinet Decision 75/2023 is charged on the return, not on the tax. A loss-making company, or one claiming Small Business Relief with nothing to pay, still accrues AED 500 per month for the first twelve months."
-    },
-    {
-     "q": "Can the AED 10,000 late registration penalty be waived?",
-     "a": "A waiver initiative was announced in April 2025 for the corporate tax late registration penalty, conditional on filing the first tax return or annual declaration within 7 months of the end of the first tax period. Eligibility depends on your own dates — check EmaraTax or ask your tax agent. This calculator does not assume a waiver."
-    },
-    {
-     "q": "Is this an official FTA calculation?",
-     "a": "No. It is an estimate built from the published decisions. It cannot see your FTA account, your prior violations, any waiver you were granted, or an assessment the FTA has raised. Use it to understand the scale of the exposure, then confirm the real figure in EmaraTax or with your tax agent."
-    }
-   ],
-   "disclaimer": "<b>Estimate only — not tax advice.</b> This tool applies the published penalty rules to the dates you enter. It has no access to your FTA account and cannot see prior violations, waivers granted, instalment arrangements, or assessments already raised. Figures verified against Cabinet Decision 75/2023 (as amended), Cabinet Decision 129/2025 and Cabinet Decision 49/2021 on 13 September 2026. Confirm any figure you intend to rely on with the FTA or a registered tax agent.",
-   "h1Html": "What filing late <span class=\"hl\">actually costs</span>",
-   "sub": "Estimate what late registration, late filing and late payment actually cost under the 2026 rules — with the law behind every number. Free, no signup.",
-   "kicker": "Free tool",
-   "seoTitle": "UAE Corporate Tax & VAT late filing penalty calculator 2026",
-   "seoDesc": "Free UAE tax penalty calculator: Corporate Tax and VAT late filing, late payment and late registration under the 2026 rules, with the law behind every figure."
   }
  },
  "ar": {
@@ -2174,7 +1792,7 @@
    "ai": "المساعد الضريبي الذكي",
    "corporate-tax": "ضريبة الشركات",
    "vat": "ضريبة القيمة المضافة",
-   "review": "مراجعة ما قبل التقديم",
+   "review": "مراجعة الإقرارات",
    "dashboard": "لوحة التحكم",
    "accountants": "للمحاسبين",
    "businesses": "للشركات",
@@ -2189,9 +1807,7 @@
    "privacy": "الخصوصية",
    "terms": "الشروط",
    "disclaimer": "إخلاء المسؤولية",
-   "careers": "الوظائف",
-   "penalty-calculator": "حاسبة الغرامات",
-   "refund": "الاسترداد"
+   "careers": "الوظائف"
   },
   "navMain": [
    "product",
@@ -2236,8 +1852,7 @@
      "vat",
      "review",
      "dashboard",
-     "einvoicing",
-     "penalty-calculator"
+     "einvoicing"
     ]
    },
    {
@@ -2310,9 +1925,9 @@
   "home": {
    "heroL1": "اكتشف الخطأ",
    "heroL2": "وهو ما زال مجانياً.",
-   "heroSub": "ارفع مستنداتك. يقرأ TaxCheck كل واحد منها، ويدقّق الأرقام مقابل قواعد ضريبة القيمة المضافة وضريبة الشركات في الإمارات، ويبني إقرارك — ويريك أي مستند وراء كل رقم، ويشير إلى ما لا يتطابق بدل أن يصلحه بصمت. الضريبتان معاً، بالعربية والإنجليزية.",
+   "heroSub": "ارفع فواتيرك. يقرأ TaxCheck كل واحدة منها، ويدقّق الأرقام مقابل قواعد ضريبة القيمة المضافة وضريبة الشركات في الإمارات، ويبني إقرارك — ويريك أي مستند وراء كل رقم.",
    "ctaStart": "ابدأ مجاناً ←",
-   "ctaNote": "إقرار كامل واحد مجاناً. بلا بطاقة، وبلا مدة محددة.",
+   "ctaNote": "بلا بطاقة. بلا مكالمة مبيعات. مجاني خلال فترة الوصول المبكر.",
    "outcomes": {
     "items": [
      {
@@ -2324,8 +1939,8 @@
       "p": "لا إعادة إدخال للفواتير في جداول. عشرون مستنداً تُقرأ في نحو دقيقة، ثم تراجع ما رُفع لك كعلم فقط."
      },
      {
-      "h": "لا يصلح رقماً بصمت أبداً.",
-      "p": "حين لا يتطابق رقم ترى الرقمين معاً وإشارة — لا تصحيحاً صامتاً. ويرفض أن يخترع سعر صرف بدل أن يخمّنه. في أول دفعة فواتير حقيقية: صفر أخطاء صامتة."
+      "h": "أرخص وقت لاكتشاف الخطأ هو الآن.",
+      "p": "بموجب قواعد ٢٠٢٦، الخطأ الذي تفصح عنه بنفسك يُسعَّر بنحو ١٪ شهرياً. والخطأ نفسه إذا اكتشفه تدقيق الهيئة يضاف عليه ١٥٪ أخرى."
      }
     ]
    },
@@ -2345,8 +1960,8 @@
       "a": "يخبرك. في أول دفعة حقيقية من ١٩ فاتورة، قُرئت ١٦ منها بلا خطأ واحد، ورُفعت الحالات الصعبة الثلاث كلها للمراجعة — تصدير بالدولار، وفاتورة على صفحتين، ونسخة مكررة من دفعة أقدم. صفر أخطاء صامتة. وهذا الرقم الأخير هو المهم."
      },
      {
-      "q": "كم يكلّف؟",
-      "a": "إقرارك الكامل الأول مجاني — بلا بطاقة، وبلا عدّاد يركض بينما تجمع مستنداتك. بعدها تبدأ الخطط من 750 درهماً سنوياً لشركة واحدة، اعتباراً من 1 أكتوبر 2026. وإقرار ضريبة شركات متأخر واحد يكلّف غرامات أكثر من ذلك قبل أن تحسب الضريبة نفسها."
+      "q": "هل هو مجاني فعلاً؟",
+      "a": "نعم، خلال فترة الوصول المبكر — بلا بطاقة وبلا مكالمة مبيعات. نحن نبني هذا مع محاسبين يعملون على إقرارات حقيقية، وملاحظاتك اليوم أثمن لنا من اشتراكك."
      },
      {
       "q": "هل يحل محل محاسبي؟",
@@ -2683,7 +2298,7 @@
    },
    "trio": {
     "kicker": "05 · نطاق التغطية",
-    "title": "ضريبة الشركات والقيمة المضافة في مكان واحد، ومساعد يُظهر مصادره",
+    "title": "ضريبة الشركات والقيمة المضافة، ومساعد يُظهر مصادره",
     "items": [
      {
       "r": "corporate-tax",
@@ -2761,8 +2376,8 @@
    },
    "pricingPrev": {
     "kicker": "10 · الأسعار",
-    "title": "ابدأ مجاناً. وادفع حين يستحقّ الدفع.",
-    "note": "إقرارك الكامل الأول مجاني، بلا بطاقة وبلا مدة محددة. والخطط من 750 درهماً سنوياً تبدأ في 1 أكتوبر 2026.",
+    "title": "التطبيق مجاني خلال الإطلاق المبكر — بلا بطاقة",
+    "note": "كل المزايا مجانية بينما نبني مع المجتمع. الخطط التجارية لاحقاً، بشروط تفضيلية للمستخدمين الأوائل.",
     "link": "التفاصيل"
    },
    "faq": {
@@ -2795,9 +2410,7 @@
     "title": "اكتشف مخاطرك قبل أن تكتشفها الهيئة",
     "sub": "أجرِ فحص المخاطر المجاني، أو أحضر بيانات آخر إقرار إلى عرض تجريبي مدته 30 دقيقة."
    },
-   "ftrTag": "برنامج امتثال لضريبة الشركات والقيمة المضافة في الإمارات",
-   "seoTitle": "برنامج إقرارات ضريبة الشركات والقيمة المضافة في الإمارات — اكتشف الخطأ قبل التقديم",
-   "seoDesc": "يعدّ إقرارات ضريبة الشركات والقيمة المضافة (201) في الإمارات من مستنداتك، ويريك المستند وراء كل رقم، ويشير إلى ما لا يتطابق قبل التقديم. بالعربية والإنجليزية."
+   "ftrTag": "برنامج امتثال لضريبة الشركات والقيمة المضافة في الإمارات"
   },
   "pages": {
    "product": {
@@ -3076,39 +2689,7 @@
       ]
      }
     ],
-    "note": "تُقدَّم الخدمات بواسطة محاسبين مهنيين. لا يقدم TaxCheck تمثيلاً بوكيل ضريبي مرخص ما لم يُتفق على ذلك كتابةً وصراحةً.",
-    "priceKicker": "أسعار معلنة",
-    "priceTitle": "أربع خدمات بسعر ثابت",
-    "priceSub": "وما عداها على الطلب — كل حالة تُسعّر بعد مكالمة قصيرة.",
-    "priceNote": "الأسعار بالدرهم لكل خدمة. الجهد تقديري ويُثبّت في عرض مكتوب قبل البدء، وتخضع الخدمات للتوافر.",
-    "priceCta": "اطلب عرضاً",
-    "priceCols": [
-     "الخدمة",
-     "الجهد",
-     "السعر"
-    ],
-    "prices": [
-     {
-      "h": "مراجعة ما قبل التقديم",
-      "e": "نصف يوم – يوم",
-      "amt": "2,500 درهم"
-     },
-     {
-      "h": "فحص سلامة الامتثال",
-      "e": "يوم",
-      "amt": "3,500 درهم"
-     },
-     {
-      "h": "جاهزية الفوترة الإلكترونية",
-      "e": "2–3 أيام",
-      "amt": "7,500 درهم"
-     },
-     {
-      "h": "تنظيف وتسوية أو إقرار متأخر",
-      "e": "2–4 أيام",
-      "amt": "من 5,000 درهم"
-     }
-    ]
+    "note": "تُقدَّم الخدمات بواسطة محاسبين مهنيين. لا يقدم TaxCheck تمثيلاً بوكيل ضريبي مرخص ما لم يُتفق على ذلك كتابةً وصراحةً."
    },
    "resources": {
     "kicker": "المصادر",
@@ -3236,138 +2817,70 @@
     "note": ""
    },
    "privacy": {
-    "kicker": "قانوني",
+    "kicker": "الخصوصية",
     "title": "سياسة الخصوصية",
-    "sub": "ما نحتفظ به ولماذا، ومن يطّلع عليه غيرنا، وحقوقك عليه بموجب القانون الإماراتي. سارٍ من ١ أكتوبر ٢٠٢٦.",
+    "sub": "آخر مراجعة: أغسطس 2026.",
     "sections": [
      {
-      "h": "من يتحكم ببياناتك",
-      "p": "مؤسسة فين سويت للتكنولوجيا (رخصة مهنية 1653679، دبي) هي المتحكّم بالبيانات الشخصية الموصوفة هنا. ومقرّنا في دبي، لذا يسري علينا قانون حماية البيانات الشخصية — المرسوم بقانون اتحادي رقم ٤٥ لسنة ٢٠٢١."
+      "h": "1. ما الذي نجمعه",
+      "p": "بيانات الحساب (الاسم، البريد المهني، الشركة)، والبيانات الضريبية والمحاسبية التي ترفعها، وسجلات الاستخدام اللازمة لتشغيل الخدمة وتأمينها.",
+      "items": []
      },
      {
-      "h": "ما الذي نحتفظ به",
-      "p": "أربعة أنواع من البيانات، ولا شيء غيرها.",
-      "items": [
-       {
-        "h": "بيانات الحساب",
-        "p": "الاسم والبريد والهاتف وبيانات المنشأة والخطة المشترك بها."
-       },
-       {
-        "h": "ما ترفعه",
-        "p": "فواتير وموازين مراجعة ورخص تجارية ومسودات إقرارات ومستندات مؤيدة، وقد تتضمن بيانات شخصية عن موظفيك وعملائك ومورديك."
-       },
-       {
-        "h": "ما تنتجه الخدمة",
-        "p": "الأرقام المستخرجة والملاحظات والإقرارات المحسوبة وسجل التدقيق الذي يبيّن من غيّر ماذا ومتى."
-       },
-       {
-        "h": "بيانات تقنية",
-        "p": "سجلات النظام وتقارير الأخطاء وتحليلات استخدام أساسية. ولا نحتفظ بأرقام البطاقات — فالدفع يتم خارج المنتج عبر مزوّد الدفع."
-       }
-      ]
+      "h": "2. كيف نستخدمها",
+      "p": "لتقديم الخدمة: تنظيم بياناتك الضريبية والتحقق منها ومراجعتها؛ ولتأمين حسابك ودعمه؛ ولتحسين المنتج عبر أنماط استخدام مجمعة ومجهولة الهوية. لا نبيع البيانات الشخصية.",
+      "items": []
      },
      {
-      "h": "لماذا نحتفظ بها وبأي سند",
-      "p": "لتقديم الخدمة التي طلبتها وتنفيذ عقدنا معك، ولإبقاء المنتج آمناً وعاملاً، وللوفاء بالتزاماتنا القانونية. وحيث نعتمد على موافقتك — كإرسال أخبار المنتج — يمكنك سحبها في أي وقت."
+      "h": "3. المعالجة بالذكاء الاصطناعي",
+      "p": "تعالج ميزات الذكاء الاصطناعي البيانات التي تقدمها لتوليد الملاحظات والإجابات. لا تُستخدم بياناتك لتدريب نماذج لعملاء آخرين دون موافقة صريحة.",
+      "items": []
      },
      {
-      "h": "من يطّلع عليها غيرنا",
-      "p": "عدد محدود من المعالِجين، كلّ منهم ملتزم بحماية بياناتك وباستخدامها وفق تعليماتنا فقط: Supabase (قاعدة البيانات والتخزين والمصادقة)، وVercel (الاستضافة)، وAnthropic (قراءة المستندات لاستخراج الأرقام — ولا يُستخدم المحتوى المُرسل في تدريب النماذج)، وSentry (مراقبة الأخطاء)، وZiina (المدفوعات). ولا نبيع بياناتك، ولا نشاركها مع الهيئة الاتحادية للضرائب ولا أي جهة أخرى ما لم يُلزمنا القانون."
+      "h": "4. الاحتفاظ والحذف",
+      "p": "تُحفظ البيانات ما دام حسابك نشطاً ووفق إعدادات الاحتفاظ. يمكنك التصدير أو طلب الحذف مع مراعاة واجبات حفظ السجلات القانونية.",
+      "items": []
      },
      {
-      "h": "أين تُحفظ",
-      "p": "يشغّل معالِجونا بنية تحتية داخل الدولة وخارجها. وحيث تغادر البيانات الدولة، لا تذهب إلا إلى مزوّدين ملتزمين تعاقدياً بحمايتها بمستوى يتسق مع قانون حماية البيانات."
-     },
-     {
-      "h": "مدة الاحتفاظ",
-      "p": "ما دام حسابك مفتوحاً، ولثلاثين يوماً بعد إغلاقه لتتمكن من التصدير. وتُحفظ بعض السجلات مدة أطول — كالفواتير التي أصدرناها وسجل التدقيق — حيث يلزمنا الاحتفاظ بها. والتزام الاحتفاظ لسبع سنوات التزامك أنت لا التزامنا: احتفظ بأصولك."
-     },
-     {
-      "h": "حقوقك",
-      "p": "بموجب قانون حماية البيانات الشخصية، لك أن تطلب نسخة من بياناتك أو تصحيحها أو حذفها أو تقييد استخدامها أو الاعتراض عليه، أو الحصول عليها بصيغة قابلة للنقل. ولك أن تعترض على قرار يُتخذ آلياً بالكامل. راسلنا على info@taxcheck.ae وسنجيبك."
-     },
-     {
-      "h": "الأمان",
-      "p": "الوصول إلى بياناتك مقصور على حسابك بأمان على مستوى الصف في قاعدة البيانات، والاتصال مشفّر أثناء النقل، والملفات في تخزين خاص بروابط محدودة المدة، وكل تغيير على إقرار يُكتب في سجل تدقيق يكشف العبث. ولا يوجد نظام كامل — وإذا مسّك اختراق، سنُبلغك وسنُبلغ الجهة المختصة."
+      "h": "5. التواصل",
+      "p": "لأسئلة الخصوصية: info@taxcheck.ae.",
+      "items": []
      }
     ],
-    "note": "للاستفسار عن بياناتك: info@taxcheck.ae · +971 50 552 3307 · مؤسسة فين سويت للتكنولوجيا، رخصة 1653679، القوز الأولى، بر دبي."
+    "note": ""
    },
    "terms": {
-    "kicker": "قانوني",
+    "kicker": "الشروط",
     "title": "شروط الخدمة",
-    "sub": "الاتفاق بينك وبين مؤسسة فين سويت للتكنولوجيا عند استخدام TaxCheck. سارٍ من ١ أكتوبر ٢٠٢٦.",
+    "sub": "آخر مراجعة: أغسطس 2026.",
     "sections": [
      {
-      "h": "مع من تتعاقد",
-      "p": "يُشغّل TaxCheck مؤسسة فين سويت للتكنولوجيا، وهي مؤسسة فردية مرخّصة في دبي بموجب الرخصة المهنية رقم 1653679 الصادرة عن دائرة الاقتصاد والسياحة. ويُقصد بـ«نحن» المؤسسة، وبـ«أنت» الشخص أو المنشأة التي تستخدم الخدمة."
+      "h": "1. الخدمة",
+      "p": "يوفر TaxCheck برنامجاً ينظم بيانات ضريبة الشركات والقيمة المضافة في الإمارات ويتحقق منها ويساعد في مراجعتها، إضافةً إلى خدمات محاسبية مهنية اختيارية يُتفق عليها على حدة.",
+      "items": []
      },
      {
-      "h": "ما هو TaxCheck وما ليس هو",
-      "p": "يقرأ TaxCheck المستندات التي ترفعها، ويبني منها مسودة إقرار ضريبة شركات أو قيمة مضافة، ويريك أي مستند أنتج كل رقم. وحيث لا يتطابق شيء، يرفع ملاحظة ويستشهد بمادة القانون التي تستند إليها.",
-      "items": [
-       {
-        "h": "برنامج، وليس وكيلاً ضريبياً",
-        "p": "لا نقدّم الإقرارات إلى الهيئة الاتحادية للضرائب ولا نمثّلك أمامها، والمؤسسة ليست وكيلاً ضريبياً مسجّلاً. وتبقى كل الأرقام التي تقدّمها، والتقديم نفسه، مسؤوليتك."
-       },
-       {
-        "h": "وليس مشورة",
-        "p": "لا يُعدّ أي شيء في المنتج أو في أي تقرير مشورة قانونية أو ضريبية، والملاحظة التي تستشهد بمادة تدلّك على موضع البحث لا على النتيجة."
-       }
-      ]
+      "h": "2. ليست استشارة ضريبية",
+      "p": "مخرجات البرنامج — بما فيها إجابات الذكاء الاصطناعي والملاحظات — معلومات أولية لدعم المراجعة، وليست استشارة ضريبية أو قانونية أو محاسبية، وتبقى قرارات التقديم لك.",
+      "items": []
      },
      {
-      "h": "سجلاتك تبقى لك — ولسنا سجلّك النظامي",
-      "p": "يوجب القانون الإماراتي عليك الاحتفاظ بسجلاتك الضريبية سبع سنوات على الأقل من نهاية الفترة الضريبية المعنية، ومدة أطول لبعض سجلات العقارات. ويحتفظ TaxCheck بنسخ مما ترفعه لكي تعمل الخدمة، لكنه ليس نظام حفظ سجلاتك النظامي، واستخدامه لا يُعفيك من التزام الاحتفاظ. احتفظ بأصولك لديك."
+      "h": "3. مسؤولياتك",
+      "p": "أنت مسؤول عن دقة البيانات التي تقدمها وعن الوفاء بالتزامات ومواعيد التقديم والسداد الخاصة بك.",
+      "items": []
      },
      {
-      "h": "الحسابات",
-      "p": "أنت مسؤول عن كل ما يجري عبر حسابك وعن حماية بيانات دخولك، وأبلغنا فوراً إذا رجّحت أن أحداً غيرك وصل إليه."
+      "h": "4. المسؤولية",
+      "p": "إلى الحد الذي يجيزه القانون، تنحصر المسؤولية في الرسوم المدفوعة خلال الاثني عشر شهراً السابقة؛ ولسنا مسؤولين عن غرامات تنشأ عن إقرارات تقدمها أنت.",
+      "items": []
      },
      {
-      "h": "الخطط والدفع والتجديد",
-      "p": "يستطيع الحساب المجاني إتمام إقرار واحد، وما بعده يستلزم خطة مدفوعة، والخطط وأسعارها منشورة في صفحة الأسعار.",
-      "items": [
-       {
-        "h": "سنوية وتُدفع مقدماً",
-        "p": "نفعّل خطتك يدوياً عند استلام الدفعة. ولا يوجد تجديد تلقائي ولا حفظ لبطاقة — ينتهي الاشتراك في تاريخه ما لم تجدّده."
-       },
-       {
-        "h": "لا تُحتسب ضريبة قيمة مضافة",
-        "p": "المؤسسة غير مسجّلة في ضريبة القيمة المضافة، فلا تُحتسب ضريبة ولا يجوز استرداد ضريبة مدخلات بموجب فواتيرنا. وإذا سجّلنا سنعلن ذلك ونُصدر فواتير ضريبية نظامية من ذلك التاريخ."
-       },
-       {
-        "h": "تغيير الأسعار",
-        "p": "قد نغيّر الأسعار للفترات المقبلة، ولا يمسّ أي تغيير اشتراكاً دفعت ثمنه."
-       }
-      ]
-     },
-     {
-      "h": "الاستخدام المقبول",
-      "p": "استخدم الخدمة لأعمالك أو لعملاء كلّفوك. ولا تحاول تعطيلها أو إثقالها أو الهندسة العكسية لها، ولا ترفع ما لا تملك حق رفعه، ولا تُعِد بيع الوصول إليها دون اتفاق كتابي معنا."
-     },
-     {
-      "h": "التوافر",
-      "p": "نعمل على إبقاء TaxCheck متاحاً وصحيحاً، لكننا لا نَعِد بخدمة بلا انقطاع. ومواعيد التقديم مسؤوليتك؛ فلا تترك إقراراً للساعة الأخيرة معتمداً على أننا سنكون متاحين."
-     },
-     {
-      "h": "المسؤولية",
-      "p": "إلى أقصى حد يجيزه القانون، تكون مسؤوليتنا الإجمالية الناشئة عن الخدمة في أي فترة اثني عشر شهراً محدودة بقيمة الأتعاب المدفوعة في تلك الفترة. ولا نتحمّل الغرامات أو الفوائد أو الضريبة الإضافية المفروضة عليك، ولا الربح الفائت، ولا الخسارة غير المباشرة أو التبعية. ولا يسري هذا الحد على المسؤولية التي لا يجوز قانوناً تحديدها."
-     },
-     {
-      "h": "الإيقاف والإنهاء",
-      "p": "لك أن تتوقف عن استخدام الخدمة في أي وقت، ولنا أن نوقف أو نغلق حساباً يخالف هذه الشروط أو نرى لسبب معقول أنه يُستخدم بصورة غير مشروعة. وعند الإغلاق يمكنك تصدير بياناتك خلال ثلاثين يوماً، وبعدها قد نحذفها."
-     },
-     {
-      "h": "تعديل هذه الشروط",
-      "p": "قد نُحدّث هذه الشروط، والنسخة السارية هي المنشورة هنا يوم استخدامك للخدمة، وسنُشعِرك بأي تغيير جوهري قبل نفاذه."
-     },
-     {
-      "h": "القانون والاختصاص",
-      "p": "تخضع هذه الشروط لقوانين دولة الإمارات العربية المتحدة المطبّقة في إمارة دبي، وتختص محاكم دبي وحدها بالنظر في أي نزاع."
+      "h": "5. التعديلات",
+      "p": "قد نحدّث هذه الشروط مع إشعار؛ ويُعد الاستمرار في الاستخدام قبولاً بها.",
+      "items": []
      }
     ],
-    "note": "مؤسسة فين سويت للتكنولوجيا · رخصة مهنية 1653679، دائرة الاقتصاد والسياحة بدبي · القوز الأولى، بر دبي · info@taxcheck.ae · +971 50 552 3307"
+    "note": ""
    },
    "disclaimer": {
     "kicker": "إخلاء المسؤولية",
@@ -3401,67 +2914,11 @@
      }
     ],
     "note": ""
-   },
-   "refund": {
-    "kicker": "قانوني",
-    "title": "سياسة الاسترداد والإلغاء",
-    "sub": "متى يُعاد مالك، وكيف تطلب. سارٍ من ١ أكتوبر ٢٠٢٦.",
-    "sections": [
-     {
-      "h": "جرّب قبل أن تدفع",
-      "p": "يستطيع كل حساب إتمام إقرار واحد دون دفع. هذه هي التجربة، وهي تجربة حقيقية عن قصد: ترى الملاحظات والاستشهادات والإقرار المحسوب قبل أن يُدفع أي مبلغ. ونتوقع منك أن تستخدمها قبل الاشتراك."
-     },
-     {
-      "h": "الاشتراكات",
-      "p": "الاشتراكات سنوية وتُدفع مقدماً.",
-      "items": [
-       {
-        "h": "خلال ١٤ يوماً من أول تفعيل",
-        "p": "إن لم تكن أتممت إقراراً على الخطة المدفوعة، نعيد المبلغ كاملاً دون أسئلة."
-       },
-       {
-        "h": "بعد ذلك",
-        "p": "لا تُسترد الاشتراكات لما تبقى من المدة، ويبقى وصولك قائماً حتى تاريخ الانتهاء."
-       },
-       {
-        "h": "بلا مفاجآت",
-        "p": "لا يوجد تجديد تلقائي ولا حفظ لبطاقة، فلا يُخصم منك شيء دون أن تقرر دفعه."
-       }
-      ]
-     },
-     {
-      "h": "الخدمات",
-      "p": "مراجعة ما قبل التقديم، وفحص سلامة الامتثال، وجاهزية الفوترة الإلكترونية، وأعمال التنظيف.",
-      "items": [
-       {
-        "h": "قبل بدء العمل",
-        "p": "استرداد كامل عند الطلب."
-       },
-       {
-        "h": "بعد البدء وقبل التسليم",
-        "p": "نعيد الجزء غير المستخدم، مقدّراً وفق النطاق المكتوب والأيام المبذولة فعلاً."
-       },
-       {
-        "h": "بعد التسليم",
-        "p": "لا استرداد، لأن العمل أُنجز وسُلّم. وإذا تعذّر علينا البدء خلال المدة المتفق عليها أو تغيّر التوافر، نعيد المبلغ كاملاً."
-       }
-      ]
-     },
-     {
-      "h": "إذا أخطأنا نحن",
-      "p": "إذا تعطّلت الخدمة عليك تعطّلاً جوهرياً ولم نتمكن من إصلاحه في وقت معقول، أخبرنا ونعيد قيمة الفترة المتأثرة. نُفضّل أن نعيد مالك على أن نجادلك فيه."
-     },
-     {
-      "h": "كيف تطلب",
-      "p": "راسلنا على info@taxcheck.ae أو على +971 50 552 3307 ببريد حسابك ورقم الفاتورة. نردّ خلال يومَي عمل، ونحوّل المبالغ المعتمدة إلى وسيلة الدفع الأصلية خلال أربعة عشر يوماً."
-     }
-    ],
-    "note": "مؤسسة فين سويت للتكنولوجيا · رخصة مهنية 1653679، دبي · info@taxcheck.ae · +971 50 552 3307"
    }
   },
   "ct": {
    "kicker": "ضريبة الشركات",
-   "title": "إقرار ضريبة الشركات كاملاً، منظماً ومفحوصاً",
+   "title": "الإقرار كاملاً، منظماً ومفحوصاً",
    "sub": "من بيانات الخاضع للضريبة إلى احتساب 0%/9% — كل جداول ضريبة الشركات في هيكل واحد قابل للمراجعة.",
    "plateTitle": "إقرار ضريبة الشركات — حالة الجداول",
    "doc": "CT-FY25",
@@ -3573,13 +3030,11 @@
    ],
    "calcNote": "احتساب تجريبي. النسب وفق المرسوم بقانون اتحادي رقم 47 لسنة 2022، المادة 3 (يسري على السنوات المالية التي تبدأ في 1 يونيو 2023 أو بعده).",
    "ctaTitle": "راجع إقراراً حقيقياً لا نموذجاً",
-   "ctaSub": "أحضر بيانات سنتك المالية 2025 إلى عرض تجريبي وشاهد جداولك أنت في هذا الهيكل.",
-   "seoTitle": "برنامج إقرار ضريبة الشركات في الإمارات — من ميزان المراجعة إلى الإقرار",
-   "seoDesc": "من ميزان المراجعة إلى إقرار ضريبة شركات مفحوص: التعديلات والاختيارات واحتساب 0%/9% والإفصاحات، وكل بند مسند إلى مادته في المرسوم بقانون 47 لسنة 2022."
+   "ctaSub": "أحضر بيانات سنتك المالية 2025 إلى عرض تجريبي وشاهد جداولك أنت في هذا الهيكل."
   },
   "vat": {
    "kicker": "ضريبة القيمة المضافة",
-   "title": "إقرار ضريبة القيمة المضافة 201، خانة بخانة وإمارة بإمارة",
+   "title": "إقرار 201 خانة بخانة وإمارة بإمارة",
    "sub": "يعد TaxCheck إقرار 201 ويتحقق منه بالهيكل الفعلي للنموذج — بالاحتساب العكسي والتعديلات وضريبة المدخلات في مواضعها الصحيحة.",
    "emirates": [
     "أبوظبي",
@@ -3639,9 +3094,7 @@
    "netRefund": "صافي الضريبة القابلة للاسترداد",
    "note": "بيانات تجريبية. الهيكل وفق إقرار 201؛ والاحتساب العكسي وفق المرسوم بقانون اتحادي رقم 8 لسنة 2017، المادة 48.",
    "ctaTitle": "تحقق من إقرارك القادم قبل تقديمه",
-   "ctaSub": "يطابق TaxCheck كل خانة مع دفاترك ويرصد ما لا يتطابق.",
-   "seoTitle": "مراجعة إقرار ضريبة القيمة المضافة (VAT 201) في الإمارات قبل التقديم",
-   "seoDesc": "أعدّ إقرار ضريبة القيمة المضافة 201 وراجعه قبل التقديم: المخرجات حسب الإمارة والاحتساب العكسي والتعديلات وضريبة المدخلات في خاناتها، وكل رقم مربوط بفاتورته."
+   "ctaSub": "يطابق TaxCheck كل خانة مع دفاترك ويرصد ما لا يتطابق."
   },
   "ai": {
    "kicker": "المساعد الضريبي الذكي",
@@ -3719,9 +3172,7 @@
      "h": "مخاطر المحفظة",
      "p": "تتجمع مستويات الخطورة عبر المحفظة، فلا يفاجئك العميل الأعلى خطورة أبداً."
     }
-   ],
-   "seoTitle": "برنامج ضريبي لمكاتب المحاسبة والوكلاء الضريبيين في الإمارات",
-   "seoDesc": "برنامج ضريبي متعدد العملاء لمكاتب المحاسبة في الإمارات: كل خاضع للضريبة وفترة وموعد ومراجع على لوحة واحدة، وإقرارات القيمة المضافة وضريبة الشركات مفحوصة ومسندة."
+   ]
   },
   "dash": {
    "kicker": "لوحة التحكم",
@@ -3767,8 +3218,8 @@
   },
   "pricing": {
    "kicker": "الأسعار",
-   "title": "إقرار متأخر واحد يكلّف أكثر من أي خطة هنا",
-   "sub": "الخطط تبدأ في 1 أكتوبر 2026. كل خطة تغطّي إقرار القيمة المضافة وإقرار ضريبة الشركات، بالعربية والإنجليزية، وكل ملاحظة مسندة إلى مادتها.",
+   "title": "التطبيق مجاني خلال الإطلاق المبكر",
+   "sub": "تطبيق TaxCheck مجاني بينما نبنيه مع مجتمع المحاسبة الإماراتي. بلا بطاقة ائتمان، بلا حدود، بلا شروط خفية — ملاحظاتك هي التي تشكّل المنتج.",
    "monthly": "شهري",
    "annual": "سنوي",
    "save": "",
@@ -3776,243 +3227,107 @@
     "m": "",
     "y": ""
    },
-   "popular": "الأكثر اختياراً",
-   "cta": "ابدأ بـ",
+   "popular": "إطلاق مبكر",
+   "cta": "ابدأ بخطة",
    "ctaEnt": "تحدث إلينا",
    "plans": [
     {
-     "id": "free",
-     "name": "مجانية",
+     "id": "early",
+     "name": "الوصول المبكر",
      "pm": "0 درهم",
      "py": "0 درهم",
-     "per": "",
-     "tag": "ابدأ من هنا",
-     "d": "إقرار كامل واحد، مجاناً. بلا بطاقة وبلا عدّاد — تنتهي حين تحصل على جوابك، لا حين ينتهي الوقت.",
-     "pop": false,
-     "f": [
-      "مكلّف واحد",
-      "إقرار كامل واحد — ضريبة شركات أو قيمة مضافة",
-      "كل ملاحظة مسندة إلى مادتها",
-      "سجل تدقيق لا يقبل العبث",
-      "واجهة عربية وإنجليزية",
-      "بلا بطاقة. بلا مدة محددة."
-     ],
-     "foot": "بلا بطاقة. بلا مدة محددة."
-    },
-    {
-     "id": "basic",
-     "name": "الأساسية",
-     "pm": "750 درهم",
-     "py": "750 درهم",
-     "per": "سنوياً",
-     "tag": "شركة واحدة",
-     "d": "شركة واحدة، إقرارات بلا حد، طوال السنة.",
-     "pop": false,
-     "f": [
-      "مكلّف واحد",
-      "3 مستخدمين",
-      "إقرارات قيمة مضافة وضريبة شركات بلا حد",
-      "كل ملاحظة مسندة إلى مادتها",
-      "سجل تدقيق لا يقبل العبث",
-      "المساعد الضريبي الذكي — 20 استعلاماً يومياً",
-      "دعم عبر البريد"
-     ],
-     "foot": "فوترة سنوية. تبدأ في 1 أكتوبر 2026.",
-     "wa": "مرحباً، أريد الاشتراك في خطة الأساسية (750 درهم سنوياً)."
-    },
-    {
-     "id": "pro",
-     "name": "الاحترافية",
-     "pm": "1,500 درهم",
-     "py": "1,500 درهم",
-     "per": "سنوياً",
-     "tag": "",
-     "d": "عدة منشآت، أو مكتب محاسبة في بدايته. سعر التأسيس مثبّت مدى اشتراكك — لأول 50 حساباً.",
+     "d": "كل ما في المنتج. مجاني للجميع خلال فترة الإطلاق المبكر.",
      "pop": true,
      "f": [
-      "5 مكلّفين",
-      "مستخدمون بلا حد",
-      "كل ما في الأساسية",
-      "المساعد الضريبي الذكي — 50 استعلاماً يومياً",
-      "ربط ميزان المراجعة بإقرار ضريبة الشركات",
-      "دعم ذو أولوية عبر البريد",
-      "سعر التأسيس مثبّت مدى الاشتراك"
-     ],
-     "foot": "فوترة سنوية. تبدأ في 1 أكتوبر 2026.",
-     "wa": "مرحباً، أريد الاشتراك في خطة الاحترافية (1,500 درهم سنوياً)."
+      "خاضعون وإقرارات بلا حدود",
+      "معالجا VAT 201 وضريبة الشركات",
+      "مراجعة قانونية باستشهادات المواد",
+      "المساعد الضريبي الذكي (حد استخدام عادل يومي)",
+      "سجل تدقيق غير قابل للتلاعب",
+      "واجهة عربية وإنجليزية"
+     ]
     },
     {
-     "id": "firm",
-     "name": "المكاتب",
-     "pm": "3,000 درهم",
-     "py": "3,000 درهم",
-     "per": "سنوياً",
-     "tag": "لمكاتب المحاسبة",
-     "d": "عملاء بلا حد على لوحة واحدة — وخصم 25% على كل مراجعة ما قبل التقديم.",
+     "id": "review",
+     "name": "مراجعة خبير قبل التقديم",
+     "pm": "750 درهم",
+     "py": "750 درهم",
+     "d": "إقرار واحد يُراجع قبل التقديم. تقرير مكتوب خلال 48 ساعة — كل ملاحظة باستشهاد بمادتها القانونية. خمسة إقرارات بـ 2,750 درهم.",
      "pop": false,
+     "link": "https://pay.ziina.com/taxcheck/D8rt-YjQc",
+     "cta": "اطلب مراجعة",
      "f": [
-      "مكلّفون بلا حد",
-      "مستخدمون بلا حد",
-      "كل ما في الاحترافية",
-      "لوحة متعددة العملاء",
-      "المساعد الضريبي الذكي — استخدام عادل",
-      "خصم 25% على مراجعة ما قبل التقديم",
-      "دعم ذو أولوية عبر البريد والواتساب"
-     ],
-     "foot": "فوترة سنوية. تبدأ في 1 أكتوبر 2026.",
-     "wa": "مرحباً، أريد الاشتراك في خطة المكاتب (3,000 درهم سنوياً)."
+      "أي إقرار ضريبة شركات مهما كان حجمه",
+      "تقرير مكتوب خلال 48 ساعة",
+      "استشهاد بالمواد القانونية بندًا ببند",
+      "قائمة المستندات الناقصة",
+      "حجم الغرامات لو قُدّم كما هو",
+      "مجاني إذا لم نستطع إسناد أي ملاحظة للقانون"
+     ]
     }
    ],
-   "compTitle": "قارن الخطط",
+   "compTitle": "ما تحصل عليه اليوم",
    "compCols": [
     "",
-    "مجانية",
-    "الأساسية",
-    "الاحترافية",
-    "المكاتب"
+    "الوصول المبكر"
    ],
    "compRows": [
     {
-     "l": "المكلّفون",
+     "l": "الخاضعون للضريبة",
      "v": [
-      "1",
-      "1",
-      "5",
       "بلا حد"
      ]
     },
     {
      "l": "المستخدمون",
      "v": [
-      "1",
-      "3",
-      "بلا حد",
-      "بلا حد"
-     ]
-    },
-    {
-     "l": "الإقرارات",
-     "v": [
-      "إقرار واحد",
-      "بلا حد",
-      "بلا حد",
       "بلا حد"
      ]
     },
     {
      "l": "إقرارات القيمة المضافة",
      "v": [
-      "✓",
-      "✓",
-      "✓",
-      "✓"
+      "بلا حد"
      ]
     },
     {
      "l": "إقرارات ضريبة الشركات",
      "v": [
-      "✓",
-      "✓",
-      "✓",
+      "بلا حد"
+     ]
+    },
+    {
+     "l": "استفسارات المساعد الذكي / يوم",
+     "v": [
+      "30 (استخدام عادل)"
+     ]
+    },
+    {
+     "l": "الملاحظات والمراجع",
+     "v": [
       "✓"
      ]
     },
     {
-     "l": "ملاحظات مسندة إلى المادة",
+     "l": "سجل التدقيق",
      "v": [
-      "✓",
-      "✓",
-      "✓",
       "✓"
      ]
     },
     {
-     "l": "سجل تدقيق لا يقبل العبث",
+     "l": "الطباعة (VAT 201 / ضريبة الشركات)",
      "v": [
-      "✓",
-      "✓",
-      "✓",
       "✓"
-     ]
-    },
-    {
-     "l": "عربي وإنجليزي",
-     "v": [
-      "✓",
-      "✓",
-      "✓",
-      "✓"
-     ]
-    },
-    {
-     "l": "استعلامات المساعد الذكي / يوم",
-     "v": [
-      "—",
-      "20",
-      "50",
-      "استخدام عادل"
-     ]
-    },
-    {
-     "l": "ميزان المراجعة ← إقرار الشركات",
-     "v": [
-      "—",
-      "—",
-      "✓",
-      "✓"
-     ]
-    },
-    {
-     "l": "لوحة متعددة العملاء",
-     "v": [
-      "—",
-      "—",
-      "—",
-      "✓"
-     ]
-    },
-    {
-     "l": "مراجعة ما قبل التقديم",
-     "v": [
-      "—",
-      "—",
-      "—",
-      "خصم 25%"
      ]
     },
     {
      "l": "الدعم",
      "v": [
-      "بريد",
-      "بريد",
-      "بريد ذو أولوية",
-      "بريد وواتساب"
+      "بريد إلكتروني"
      ]
     }
    ],
-   "note": "الأسعار للمنشأة سنوياً، وتسري من 1 أكتوبر 2026. الخطة المجانية بلا بطاقة وبلا مدة محددة — تغطّي إقراراً كاملاً واحداً. ومراجعة ما قبل التقديم خدمة منفصلة تُسلّم تقريراً مكتوباً، وليست تقديماً.",
-   "service": {
-    "id": "review",
-    "name": "مراجعة ما قبل التقديم",
-    "pm": "2,500 درهم",
-    "py": "2,500 درهم",
-    "launch": "1,500 درهم للإقرارات المحجوزة قبل 30 سبتمبر 2026",
-    "d": "إقرار واحد، يقرأه إنسان قبل أن تقدّمه. تقرير مكتوب خلال 48 ساعة، وكل ملاحظة مسندة إلى مادتها. 1,500 درهم للإقرارات المحجوزة قبل 30 سبتمبر 2026.",
-    "cta": "احجز مراجعة",
-    "link": "https://pay.ziina.com/taxcheck/D8rt-YjQc",
-    "f": [
-     "أي إقرار ضريبة شركات أو قيمة مضافة، مهما كان حجمه",
-     "تقرير مكتوب خلال 48 ساعة",
-     "كل ملاحظة مسندة إلى مادتها",
-     "ما هو ناقص، مذكوراً باسمه",
-     "انكشافك للغرامات لو قدّمته كما هو",
-     "مجانية إن لم نستطع إسناد أي ملاحظة إلى القانون"
-    ],
-    "note": "مراجعة، لا تقديم. لا ترسل TaxCheck شيئاً إلى الهيئة الاتحادية للضرائب ولا تعمل وكيلاً ضريبياً عنك — أنت تراجع وتعتمد وتقدّم. والتقرير قراءة ثانية مستقلة لأرقامك مقابل التشريع المنشور."
-   },
-   "serviceKicker": "يراجعها إنسان",
-   "ctaWa": "اشترك بـ",
-   "howToPay": "الاشتراك عبر واتساب: نتحقق من بيانات شركتك، ونرسل لك رابط دفع آمن، ثم نفعّل حسابك."
+   "note": "التطبيق مجاني خلال فترة الإطلاق المبكر. مراجعة الخبير خدمة مدفوعة — 750 درهمًا للإقرار، و2,750 درهمًا لخمسة إقرارات، تُسلَّم خلال 48 ساعة. وستُعلن خطط التطبيق التجارية لاحقًا بشروط تفضيلية للمستخدمين الأوائل."
   },
   "demo": {
    "kicker": "اطلب عرضاً تجريبياً",
@@ -4244,85 +3559,6 @@
     "sent": "أُرسلت الرسالة — سنرد خلال يوم عمل واحد.",
     "err": "يرجى تعبئة جميع الحقول."
    }
-  },
-  "calc": {
-   "title": "حاسبة الغرامات الضريبية في الإمارات",
-   "metaDesc": "حاسبة مجانية لغرامات الضرائب في الإمارات. احسب غرامات التأخر في التسجيل والتقديم والسداد بنسبة ١٤٪ سنوياً، مع المصدر القانوني لكل بند.",
-   "lede": "احسب التكلفة الفعلية للتأخر في التسجيل أو التقديم أو السداد وفق قواعد ٢٠٢٦ — مع النص القانوني وراء كل رقم. مجانية وبلا تسجيل.",
-   "currency": "درهم",
-   "legendTax": "أي ضريبة",
-   "legendScenario": "ما الذي حدث (اختر كل ما ينطبق)",
-   "legendDates": "التواريخ والمبالغ",
-   "taxCt": "ضريبة الشركات",
-   "taxVat": "القيمة المضافة",
-   "scReg": "تأخر في التسجيل",
-   "scRegD": "تم التسجيل بعد الموعد النهائي لأول فترة ضريبية.",
-   "scFile": "تأخر في تقديم الإقرار",
-   "scFileD": "قُدّم الإقرار بعد تاريخ الاستحقاق.",
-   "scPay": "تأخر في السداد",
-   "scPayD": "دُفعت الضريبة المستحقة بعد تاريخ الاستحقاق.",
-   "lblDue": "تاريخ الاستحقاق",
-   "hintDue": "ضريبة الشركات: تسعة أشهر من نهاية الفترة الضريبية. القيمة المضافة: ٢٨ يوماً من نهاية الفترة الضريبية.",
-   "lblFiled": "تاريخ تقديم الإقرار",
-   "lblPaid": "تاريخ سداد الضريبة",
-   "hintPaid": "اتركه كما هو إن سدّدت يوم التقديم. وإن لم تسدّد بعد، ضع تاريخ اليوم.",
-   "lblTax": "الضريبة المستحقة (درهم)",
-   "hintTax": "الضريبة الواجبة لا الغرامة. ضع صفراً إن لم يكن هناك مستحق.",
-   "lblRepeat": "مخالفة متكررة خلال ٢٤ شهراً",
-   "lblRepeatD": "تأخر ثانٍ أو أكثر في تقديم إقرار القيمة المضافة خلال ٢٤ شهراً.",
-   "resultsH": "الغرامة التقديرية",
-   "thItem": "الغرامة",
-   "thAmount": "المبلغ",
-   "thTotal": "الإجمالي التقديري",
-   "rowReg": "التأخر في التسجيل الضريبي",
-   "rowFileCt": "التأخر في إقرار ضريبة الشركات — {m}",
-   "rowFileVat": "التأخر في إقرار القيمة المضافة — أول مخالفة",
-   "rowFileVatRepeat": "التأخر في إقرار القيمة المضافة — تكرار خلال ٢٤ شهراً",
-   "rowPay": "التأخر في السداد — {m} على {t}",
-   "srcCtReg": "قرار مجلس الوزراء ٧٥ لسنة ٢٠٢٣ — عدم تقديم طلب التسجيل الضريبي",
-   "srcVatReg": "قرار مجلس الوزراء ٤٩ لسنة ٢٠٢١ المعدِّل للقرار ٤٠ لسنة ٢٠١٧",
-   "srcCtFile": "قرار مجلس الوزراء ٧٥ لسنة ٢٠٢٣ — ٥٠٠ درهم شهرياً لأول ١٢ شهراً، ثم ١٬٠٠٠ درهم شهرياً من الشهر الثالث عشر. تُفرض على الإقرار لا على الضريبة.",
-   "srcVatFile": "قرار مجلس الوزراء ٤٩ لسنة ٢٠٢١ — ١٬٠٠٠ درهم لأول مخالفة، و٢٬٠٠٠ درهم عند التكرار خلال ٢٤ شهراً",
-   "srcPay": "قرار مجلس الوزراء ١٢٩ لسنة ٢٠٢٥، النافذ من ١٤ أبريل ٢٠٢٦ — ١٤٪ سنوياً عن كل شهر أو جزء منه، دون تراكم مركّب",
-   "perMonth": "كل شهر إضافي يضيف نحو {a}.",
-   "emptyState": "اختر ما حدث واملأ التواريخ لعرض التقدير.",
-   "waiverTitle": "قد يسري إعفاء على هذا البند.",
-   "waiverBody": "أُعلنت في أبريل ٢٠٢٥ مبادرة لإعفاء غرامة التأخر في تسجيل ضريبة الشركات البالغة ١٠٬٠٠٠ درهم، بشرط تقديم أول إقرار ضريبي أو إقرار سنوي خلال سبعة أشهر من نهاية أول فترة ضريبية. الإعفاء غير محتسب في الإجمالي أعلاه — راجع حسابك في EmaraTax أو اسأل وكيلك الضريبي عن أهليتك.",
-   "oldRegimeTitle": "تاريخ الاستحقاق هذا يقع تحت النظام السابق.",
-   "oldRegimeBody": "دخل قرار مجلس الوزراء ١٢٩ لسنة ٢٠٢٥ حيّز التنفيذ في ١٤ أبريل ٢٠٢٦. قبل ذلك التاريخ كان التأخر في السداد يُحتسب بطريقة مختلفة (في القيمة المضافة: ٢٪ فوراً و٤٪ شهرياً بحد أقصى ٣٠٠٪). هذه الحاسبة تطبّق قاعدة الـ١٤٪ السنوية الحالية فقط، لذا لن يكون بند التأخر في السداد أعلاه دقيقاً لفترات سابقة لـ١٤ أبريل ٢٠٢٦.",
-   "ctaH": "أرخص خطأ هو الذي تكتشفه قبل التقديم.",
-   "ctaP": "تقرأ TaxCheck مستنداتك، وتفحص الأرقام مقابل قواعد ضريبة الشركات والقيمة المضافة في الإمارات، وتبيّن لك أي مستند أنتج كل رقم — قبل أن ترسل الإقرار.",
-   "ctaBtn": "ابدأ مجاناً ←",
-   "ctaFine": "إقرارك الكامل الأول مجاني — بلا بطاقة وبلا مدة محددة. لا تقدّم TaxCheck الإقرار نيابةً عنك — أنت تراجع وتعتمد كل شيء.",
-   "faqH": "أسئلة شائعة",
-   "faq": [
-    {
-     "q": "كيف تُحتسب غرامة التأخر في السداد؟",
-     "a": "بموجب قرار مجلس الوزراء ١٢٩ لسنة ٢٠٢٥، النافذ منذ ١٤ أبريل ٢٠٢٦، تتراكم على الضريبة غير المسددة نسبة ١٤٪ سنوياً عن كل شهر أو جزء منه، على المبلغ غير المسدد، دون تراكم مركّب. وتسري القاعدة نفسها الآن على ضريبة الشركات والقيمة المضافة معاً."
-    },
-    {
-     "q": "هل يوم واحد تأخير يُحتسب شهراً كاملاً فعلاً؟",
-     "a": "نعم. النص يفرض الغرامة عن «كل شهر أو جزء منه»، فإقرار يُقدَّم بعد الموعد بيوم واحد يستوجب شهراً كاملاً. وتتبع هذه الحاسبة القاعدة نفسها مع ضبط نهاية الشهر — من ٣١ يناير إلى ٢٨ فبراير يُحتسب شهراً واحداً لا شهرين."
-    },
-    {
-     "q": "ليس عليّ ضريبة مستحقة. هل تلحقني غرامة؟",
-     "a": "في ضريبة الشركات، نعم. غرامة التأخر في التقديم بموجب قرار مجلس الوزراء ٧٥ لسنة ٢٠٢٣ تُفرض على الإقرار لا على الضريبة. فالشركة الخاسرة، أو التي تطالب بإعفاء الأعمال الصغيرة ولا ضريبة عليها، تتراكم عليها ٥٠٠ درهم شهرياً لأول اثني عشر شهراً."
-    },
-    {
-     "q": "هل يمكن إعفاء غرامة التسجيل المتأخر البالغة ١٠٬٠٠٠ درهم؟",
-     "a": "أُعلنت في أبريل ٢٠٢٥ مبادرة لإعفاء غرامة التأخر في تسجيل ضريبة الشركات، بشرط تقديم أول إقرار ضريبي أو إقرار سنوي خلال سبعة أشهر من نهاية أول فترة ضريبية. والأهلية تعتمد على تواريخك أنت — راجع EmaraTax أو اسأل وكيلك الضريبي. هذه الحاسبة لا تفترض وجود إعفاء."
-    },
-    {
-     "q": "هل هذا احتساب رسمي من الهيئة الاتحادية للضرائب؟",
-     "a": "لا. هو تقدير مبني على القرارات المنشورة. لا يرى حسابك لدى الهيئة، ولا مخالفاتك السابقة، ولا أي إعفاء مُنح لك، ولا ربطاً ضريبياً أصدرته الهيئة. استخدمه لفهم حجم الانكشاف، ثم أكّد الرقم الفعلي في EmaraTax أو مع وكيلك الضريبي."
-    }
-   ],
-   "disclaimer": "<b>تقدير فقط — وليس استشارة ضريبية.</b> تطبّق هذه الأداة قواعد الغرامات المنشورة على التواريخ التي تدخلها. ولا تملك أي وصول إلى حسابك لدى الهيئة الاتحادية للضرائب، ولا ترى المخالفات السابقة ولا الإعفاءات الممنوحة ولا ترتيبات التقسيط ولا الربوط الصادرة. جرى التحقق من الأرقام مقابل قرار مجلس الوزراء ٧٥ لسنة ٢٠٢٣ (وتعديلاته) وقرار مجلس الوزراء ١٢٩ لسنة ٢٠٢٥ وقرار مجلس الوزراء ٤٩ لسنة ٢٠٢١ بتاريخ ١٣ سبتمبر ٢٠٢٦. أكّد أي رقم تنوي الاعتماد عليه مع الهيئة أو مع وكيل ضريبي معتمد.",
-   "h1Html": "كم يكلّفك التأخير <span class=\"hl\">فعلياً</span>",
-   "sub": "احسب التكلفة الفعلية للتأخر في التسجيل أو التقديم أو السداد وفق قواعد ٢٠٢٦ — مع النص القانوني وراء كل رقم. مجانية وبلا تسجيل.",
-   "kicker": "أداة مجانية",
-   "seoTitle": "حاسبة غرامات التأخر في إقرار ضريبة الشركات والقيمة المضافة — الإمارات 2026",
-   "seoDesc": "حاسبة مجانية لغرامات التأخر في تسجيل وتقديم وسداد ضريبة الشركات والقيمة المضافة في الإمارات وفق قواعد 2026 (14% سنوياً)، مع المصدر القانوني لكل بند."
   }
  }
 }

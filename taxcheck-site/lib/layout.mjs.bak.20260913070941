@@ -16,7 +16,7 @@ export let ASSET_V = '';
 export function setAssetVersion(v) { ASSET_V = v; }
 export const GTM_ID = 'GTM-PLSJWP9C';
 
-export const ROUTES = ['home', 'product', 'ai', 'corporate-tax', 'vat', 'review', 'dashboard', 'accountants', 'businesses', 'services', 'einvoicing', 'penalty-calculator', 'pricing', 'demo', 'resources', 'security', 'about', 'contact', 'careers', 'privacy', 'terms', 'refund', 'disclaimer'];
+export const ROUTES = ['home', 'product', 'ai', 'corporate-tax', 'vat', 'review', 'dashboard', 'accountants', 'businesses', 'services', 'einvoicing', 'pricing', 'demo', 'resources', 'security', 'about', 'contact', 'careers', 'privacy', 'terms', 'disclaimer'];
 
 // URL for a route in a language. EN lives at the root, AR under /ar.
 export function href(lang, route, hash = '') {
@@ -108,11 +108,11 @@ export function footer(lang, t) {
  * Wrap a page body in the full document.
  * opts: { lang, route, t, title, description, body, jsonLd }
  */
-export function shell({ lang, route, t, title, description, body, jsonLd, titleFull = false }) {
+export function shell({ lang, route, t, title, description, body, jsonLd }) {
   const path = href(lang, route);
   const enUrl = SITE_URL + href('en', route);
   const arUrl = SITE_URL + href('ar', route);
-  const fullTitle = titleFull ? title : (route === 'home' ? `${t.brand} ${t.brandSuffix} — ${title}` : `${title} — ${t.brand}`);
+  const fullTitle = route === 'home' ? `${t.brand} ${t.brandSuffix} — ${title}` : `${title} — ${t.brand}`;
   const dir = t.dir || (lang === 'ar' ? 'rtl' : 'ltr');
   return `<!doctype html>
 <html lang="${lang}" dir="${dir}">
