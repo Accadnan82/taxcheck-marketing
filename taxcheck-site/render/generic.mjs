@@ -19,7 +19,7 @@ export function renderGeneric({ lang, t, x, route }) {
 </section>`;
   }).join('');
 
-  const legal = ['privacy', 'terms', 'disclaimer'].includes(route);
+  const legal = ['privacy', 'terms', 'disclaimer', 'refund'].includes(route);
   const cta = legal ? '' : ctaBand(lang, t, t.home.close.title, t.home.close.sub, t.ctaDemo, APP_URL, t.labels.demo, href(lang, 'demo'));
   const ctas = legal ? '' : `<a class="btn btn-gold btn-lg" href="${APP_URL}">${esc(t.ctaDemo)} ${icons.arrow(18)}</a><a class="btn btn-ghost btn-lg" href="${href(lang, 'demo')}">${esc(t.labels.demo)}</a>`;
   const note = p.note ? `<section class="gsec"><div class="wrap"><p class="note rv" data-rv><span class="tag muted">${esc(route === 'product' ? t.sample : t.labels[route])}</span> ${esc(p.note)}</p></div></section>` : '';

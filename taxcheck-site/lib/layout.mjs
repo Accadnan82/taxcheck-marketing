@@ -99,6 +99,7 @@ export function footer(lang, t) {
       ${others}
     </div>
     <p class="legal">${esc(t.notFTA)}</p>
+    ${t.legalEntity ? `<p class="legal">${esc(t.legalEntity)}</p>` : ''}
     <div class="fbottom"><span>© ${year} ${esc(t.brand)} ${esc(t.brandSuffix)}</span><span>${esc(t.reviewed)}</span></div>
   </div>
 </footer>`;
