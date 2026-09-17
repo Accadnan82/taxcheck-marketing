@@ -990,87 +990,110 @@
    "security": {
     "kicker": "Security",
     "title": "How we protect your data",
-    "sub": "Tax data is a record. We treat it that way — factually, without slogans.",
+    "sub": "Tax data is a record. We describe the controls we actually run, and name the ones we do not.",
     "sections": [
+     {
+      "h": "Where your data lives",
+      "p": "The question every accountant asks first, answered plainly.",
+      "items": [
+       {
+        "h": "Hosting",
+        "p": "Your data is stored in the European Union (Ireland), on AWS infrastructure operated by Supabase. It does not sit in the UAE today. We would rather tell you that than imply otherwise."
+       },
+       {
+        "h": "Transfers",
+        "p": "Where data leaves the UAE it goes only to providers contractually bound to protect it to a standard consistent with the UAE Personal Data Protection Law, Federal Decree-Law No. 45 of 2021."
+       },
+       {
+        "h": "Sub-processors",
+        "p": "Named in full on the Privacy page — Supabase, Vercel, Anthropic, Sentry and Ziina — not hidden behind the phrase “trusted partners”."
+       }
+      ]
+     },
      {
       "h": "Data protection",
       "p": "",
       "items": [
        {
         "h": "Encryption",
-        "p": "Data is encrypted in transit (TLS 1.2+) and at rest (AES-256)."
+        "p": "Encrypted in transit with TLS, and at rest with AES-256 by the hosting provider."
        },
        {
-        "h": "Data residency",
-        "p": "A UAE data-residency option is available for hosted data."
+        "h": "Separation between accounts",
+        "p": "Every row carries the account that owns it, and the separation is enforced inside the database rather than in application code. One account cannot read another’s rows even if the app has a bug."
        },
        {
-        "h": "Access controls",
-        "p": "Role-based permissions; access is limited to what each role needs."
+        "h": "Files",
+        "p": "Uploads sit in private storage that is not publicly reachable. Links are generated on demand and expire within a minute."
        }
       ]
      },
      {
-      "h": "Operations",
+      "h": "The audit trail",
       "p": "",
       "items": [
        {
-        "h": "Audit logging",
-        "p": "Administrative and data actions are logged and reviewable."
+        "h": "What is recorded",
+        "p": "Every change to a return, every computation and every refusal is appended with who did it and when."
+       },
+       {
+        "h": "Tamper-evident",
+        "p": "The trail is append-only and chained, and can be re-verified on demand — a broken link in the chain is detectable, not silent."
        },
        {
         "h": "Backups",
-        "p": "Regular backups with tested restoration procedures."
-       },
-       {
-        "h": "Vendor review",
-        "p": "Sub-processors are listed and reviewed; see the Privacy page."
+        "p": "The hosting provider takes automatic daily backups. We have not yet rehearsed a full restore end to end; when we have, this line will say so."
        }
       ]
      },
      {
-      "h": "Your controls",
-      "p": "",
+      "h": "What we do not claim",
+      "p": "Three things that often appear on a page like this, which we cannot honestly put on ours yet.",
       "items": [
        {
-        "h": "Export",
-        "p": "Your data is exportable in open formats at any time."
+        "h": "UAE data residency",
+        "p": "Not available today. If your policy requires data to remain in the UAE, tell us before you subscribe rather than after."
        },
        {
-        "h": "Retention",
-        "p": "Retention periods are configurable to your record-keeping obligations."
+        "h": "One-click export",
+        "p": "You can print and download a return. A self-serve export of an entire account is not built yet — ask and we will produce it by hand, in an open format, at no charge."
        },
        {
-        "h": "Deletion",
-        "p": "Verified deletion on request, subject to legal retention duties."
+        "h": "Certification",
+        "p": "We hold no ISO 27001 or SOC 2 certification. When a vendor claims one, ask for the certificate number and the scope statement."
        }
       ]
      }
     ],
-    "note": "We describe controls specifically and avoid unverifiable claims."
+    "note": "We describe controls specifically and avoid unverifiable claims. If anything here is wrong or out of date, write to info@taxcheck.ae and we will correct it."
    },
    "about": {
     "kicker": "About",
     "title": "Built for how UAE tax actually works",
-    "sub": "TaxCheck is built by accountants and engineers in the UAE for the teams who prepare, review, and answer for tax filings.",
+    "sub": "TaxCheck is built in Dubai for the people who prepare, review and answer for tax filings.",
     "sections": [
      {
+      "h": "Who builds it",
+      "p": "One person, in Dubai — an accountant who writes the code. That is the whole team today, and saying so is the same discipline the product applies to your numbers: state what is there, not what sounds better. When it grows, this page changes first."
+     },
+     {
       "h": "What we do",
-      "p": "We make pre-filing review systematic: structured data, explicit checks, referenced findings, and a record of how each was resolved.",
-      "items": []
+      "p": "We make pre-filing review systematic: structured data, explicit checks, findings referenced to the article behind them, and a record of how each was resolved."
      },
      {
       "h": "GCC framework",
-      "p": "The platform is UAE-first. Its jurisdiction framework — rules, references, forms, and language packs per country — is designed so further GCC jurisdictions can be added as their regimes are supported. No Saudi, Bahraini, Omani, Qatari, or Kuwaiti functionality is published today.",
-      "items": []
+      "p": "The platform is UAE-first. Its jurisdiction framework — rules, references, forms and language packs per country — is designed so further GCC jurisdictions can be added as their regimes are supported. No Saudi, Bahraini, Omani, Qatari or Kuwaiti functionality is published today."
      },
      {
       "h": "How content is maintained",
-      "p": "Legal references carry their source instrument and date. Site content shows its last review date. When rules change, references are updated, not silently rewritten.",
-      "items": []
+      "p": "Legal references carry their source instrument and date. Site content shows its last review date. When rules change, references are updated, not silently rewritten."
+     },
+     {
+      "h": "The company",
+      "p": "TaxCheck is operated by Finsuite technologies, a sole establishment licensed in Dubai under professional licence 1653679 issued by the Department of Economy and Tourism. Al Quoz 1, Bur Dubai, Dubai, United Arab Emirates."
      }
     ],
-    "note": ""
+    "note": "If anything on this site overstates what TaxCheck does, tell us at info@taxcheck.ae. We would rather fix the sentence than defend it."
    },
    "privacy": {
     "kicker": "Legal",
@@ -3154,87 +3177,110 @@
    "security": {
     "kicker": "الأمان",
     "title": "كيف نحمي بياناتك",
-    "sub": "البيانات الضريبية سجل رسمي، ونتعامل معها على هذا الأساس — بوقائع لا شعارات.",
+    "sub": "البيانات الضريبية سجل. نصف الضوابط التي نطبقها فعلاً، ونسمّي التي لا نطبقها.",
     "sections": [
+     {
+      "h": "أين تُحفظ بياناتك",
+      "p": "أول سؤال يسأله أي محاسب، والجواب صريح.",
+      "items": [
+       {
+        "h": "الاستضافة",
+        "p": "تُحفظ بياناتك في الاتحاد الأوروبي (أيرلندا)، على بنية AWS التي تُشغّلها Supabase. وهي ليست داخل الإمارات اليوم، ونفضّل أن نقول ذلك على أن نوحي بغيره."
+       },
+       {
+        "h": "نقل البيانات",
+        "p": "حيث تغادر البيانات الدولة، لا تذهب إلا إلى مزوّدين ملتزمين تعاقدياً بحمايتها بمستوى يتسق مع قانون حماية البيانات الشخصية، المرسوم بقانون اتحادي رقم ٤٥ لسنة ٢٠٢١."
+       },
+       {
+        "h": "المعالِجون",
+        "p": "مسمّون بالكامل في صفحة الخصوصية — Supabase وVercel وAnthropic وSentry وZiina — لا خلف عبارة «شركاء موثوقون»."
+       }
+      ]
+     },
      {
       "h": "حماية البيانات",
       "p": "",
       "items": [
        {
         "h": "التشفير",
-        "p": "تُشفَّر البيانات أثناء النقل (TLS 1.2+) وفي حال السكون (AES-256)."
+        "p": "مشفّرة أثناء النقل بـTLS، وفي التخزين بـAES-256 من مزوّد الاستضافة."
        },
        {
-        "h": "مكان حفظ البيانات",
-        "p": "يتوفر خيار استضافة البيانات داخل دولة الإمارات."
+        "h": "الفصل بين الحسابات",
+        "p": "كل صف يحمل الحساب المالك له، والفصل مفروض داخل قاعدة البيانات لا في كود التطبيق. فلا يستطيع حساب قراءة صفوف حساب آخر حتى لو كان في التطبيق خلل."
        },
        {
-        "h": "ضوابط الوصول",
-        "p": "صلاحيات حسب الدور، ويقتصر الوصول على ما يحتاجه كل دور."
+        "h": "الملفات",
+        "p": "المرفوعات في تخزين خاص غير متاح للعامة، والروابط تُنشأ عند الطلب وتنتهي خلال دقيقة."
        }
       ]
      },
      {
-      "h": "التشغيل",
+      "h": "سجل التدقيق",
       "p": "",
       "items": [
        {
-        "h": "سجل التدقيق",
-        "p": "الإجراءات الإدارية وإجراءات البيانات تُسجل وتخضع للمراجعة."
+        "h": "ما الذي يُسجّل",
+        "p": "كل تغيير على إقرار، وكل عملية حساب، وكل رفض — يُضاف مع من قام به ومتى."
        },
        {
-        "h": "النسخ الاحتياطي",
-        "p": "نسخ احتياطية منتظمة مع إجراءات استعادة مختبرة."
+        "h": "يكشف العبث",
+        "p": "السجل يُضاف إليه ولا يُعدّل، ومتسلسل، ويُعاد التحقق منه عند الطلب — فأي حلقة مكسورة تُكتشف ولا تمرّ بصمت."
        },
        {
-        "h": "مراجعة المزودين",
-        "p": "المعالجون الفرعيون مدرجون ويُراجعون؛ انظر صفحة الخصوصية."
+        "h": "النسخ الاحتياطية",
+        "p": "يأخذ مزوّد الاستضافة نسخاً يومية تلقائية. ولم نجرّب بعد استرجاعاً كاملاً من أوله لآخره؛ وحين نفعل، سيُذكر ذلك هنا."
        }
       ]
      },
      {
-      "h": "ضوابطك أنت",
-      "p": "",
+      "h": "ما لا ندّعيه",
+      "p": "ثلاثة أشياء تكثر في صفحات كهذه، ولا نستطيع بصدق أن نضعها في صفحتنا بعد.",
       "items": [
        {
-        "h": "التصدير",
-        "p": "بياناتك قابلة للتصدير بصيغ مفتوحة في أي وقت."
+        "h": "استضافة داخل الإمارات",
+        "p": "غير متاحة اليوم. فإن كانت سياستك توجب بقاء البيانات داخل الدولة، أخبرنا قبل الاشتراك لا بعده."
        },
        {
-        "h": "الاحتفاظ",
-        "p": "فترات الاحتفاظ قابلة للضبط وفق التزاماتك في حفظ السجلات."
+        "h": "تصدير بضغطة واحدة",
+        "p": "يمكنك طباعة الإقرار وتنزيله. أما تصدير الحساب كاملاً ذاتياً فغير مبني بعد — اطلبه ونُخرجه يدوياً بصيغة مفتوحة وبلا مقابل."
        },
        {
-        "h": "الحذف",
-        "p": "حذف موثَّق عند الطلب، مع مراعاة واجبات الاحتفاظ القانونية."
+        "h": "الشهادات",
+        "p": "لا نحمل شهادة ISO 27001 ولا SOC 2. ومتى ادّعى مزوّد شهادة، اسأله عن رقمها ونطاقها."
        }
       ]
      }
     ],
-    "note": "نصف الضوابط بدقة ونتجنب الادعاءات غير القابلة للتحقق."
+    "note": "نصف الضوابط بدقة ونتجنّب الادعاءات غير القابلة للتحقق. وإن كان هنا شيء خاطئ أو قديم، راسلنا على info@taxcheck.ae ونصحّحه."
    },
    "about": {
     "kicker": "من نحن",
-    "title": "بُني لكيفية عمل الضرائب في الإمارات فعلاً",
-    "sub": "يبني TaxCheck محاسبون ومهندسون في الإمارات للفرق التي تعد الإقرارات وتراجعها وتُسأل عنها.",
+    "title": "مبني على طريقة عمل الضريبة في الإمارات فعلاً",
+    "sub": "يُبنى TaxCheck في دبي لمن يُعدّ الإقرارات ويراجعها ويتحمّل مسؤوليتها.",
     "sections": [
      {
-      "h": "ما الذي نفعله",
-      "p": "نجعل المراجعة قبل التقديم عملية منهجية: بيانات منظمة، فحوص صريحة، ملاحظات موثقة بالمراجع، وسجل بكيفية معالجة كل منها.",
-      "items": []
+      "h": "من يبنيه",
+      "p": "شخص واحد، في دبي — محاسب يكتب الكود. هذا كل الفريق اليوم، وقول ذلك هو نفس الانضباط الذي يطبّقه المنتج على أرقامك: قل ما هو موجود، لا ما يبدو أجمل. وحين يكبر، ستتغيّر هذه الصفحة أولاً."
+     },
+     {
+      "h": "ماذا نفعل",
+      "p": "نجعل مراجعة ما قبل التقديم منهجية: بيانات منظّمة، وفحوص صريحة، وملاحظات مسنودة إلى المادة التي تقوم عليها، وسجل لكيف عولجت كل واحدة."
      },
      {
       "h": "إطار دول الخليج",
-      "p": "المنصة إماراتية أولاً. صُمم إطار الاختصاصات فيها — القواعد والمراجع والنماذج وحزم اللغة لكل دولة — بحيث يمكن إضافة دول خليجية أخرى عند دعم أنظمتها. لا نُتيح اليوم أي وظائف سعودية أو بحرينية أو عُمانية أو قطرية أو كويتية.",
-      "items": []
+      "p": "المنصة إماراتية أولاً. وإطار الاختصاصات فيها — قواعد ومراجع ونماذج وحزم لغوية لكل دولة — مصمم لإضافة اختصاصات خليجية أخرى عند دعم أنظمتها. ولا توجد اليوم أي وظائف سعودية أو بحرينية أو عُمانية أو قطرية أو كويتية منشورة."
      },
      {
-      "h": "كيف يُصان المحتوى",
-      "p": "تذكر المراجع القانونية أداتها التشريعية وتاريخها. ويعرض محتوى الموقع تاريخ آخر مراجعة. وعند تغير القواعد تُحدَّث المراجع ولا تُعاد كتابتها بصمت.",
-      "items": []
+      "h": "كيف يُحافَظ على المحتوى",
+      "p": "المراجع القانونية تحمل الأداة التشريعية وتاريخها، ومحتوى الموقع يظهر تاريخ آخر مراجعة له. وحين تتغير القواعد، تُحدّث المراجع ولا تُعاد الكتابة بصمت."
+     },
+     {
+      "h": "المؤسسة",
+      "p": "يُشغّل TaxCheck مؤسسة فين سويت للتكنولوجيا، وهي مؤسسة فردية مرخّصة في دبي بموجب الرخصة المهنية رقم 1653679 الصادرة عن دائرة الاقتصاد والسياحة. القوز الأولى، بر دبي، دبي، الإمارات العربية المتحدة."
      }
     ],
-    "note": ""
+    "note": "إن كان في الموقع ما يُبالغ في وصف ما يفعله TaxCheck، أخبرنا على info@taxcheck.ae. نفضّل أن نُصلح الجملة على أن ندافع عنها."
    },
    "privacy": {
     "kicker": "قانوني",
