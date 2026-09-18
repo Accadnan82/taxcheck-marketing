@@ -67,6 +67,6 @@ ${urls.map((u) => `  <url><loc>${SITE_URL}${u.path}</loc><lastmod>${today}</last
 writeFileSync(join(dist, 'sitemap.xml'), sitemap);
 writeFileSync(join(dist, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${SITE_URL}/sitemap.xml\n`);
 // 404
-writeFileSync(join(dist, '404.html'), shell({ lang: 'en', route: 'home', t: content.en, title: 'Page not found', description: content.en.notFTA, body: `<section class="phero"><div class="wrap"><div class="eyebrow"><i></i>404</div><h1>Page not found</h1><p class="lede">The page you were looking for does not exist. <a href="/" style="color:var(--teal-2)">Go to the homepage</a> · <a href="/ar/" style="color:var(--teal-2)">النسخة العربية</a></p></div></section>` }));
+writeFileSync(join(dist, '404.html'), shell({ lang: 'en', route: 'home', t: content.en, title: 'Page not found', description: content.en.notFTA, body: `<section class="phero"><div class="wrap"><div class="eyebrow"><i></i>404</div><h1>Page not found</h1><p class="lede">The page you were looking for does not exist. <a href="/" style="color:var(--teal-2)">Go to the homepage</a> · <a href="/ar" style="color:var(--teal-2)">النسخة العربية</a></p></div></section>` }));
 
 console.log(`built ${urls.length} pages → dist/`);

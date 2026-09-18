@@ -21,7 +21,9 @@ export const ROUTES = ['home', 'product', 'ai', 'corporate-tax', 'vat', 'review'
 // URL for a route in a language. EN lives at the root, AR under /ar.
 export function href(lang, route, hash = '') {
   const base = lang === 'ar' ? '/ar' : '';
-  const path = route === 'home' ? `${base}/` : `${base}/${route}`;
+  // Home: '/' for English, '/ar' for Arabic. vercel.json has trailingSlash:false,
+  // so '/ar/' would 308 to '/ar' — canonical, sitemap and links must use '/ar'.
+  const path = route === 'home' ? (base || '/') : `${base}/${route}`;
   return path + (hash ? `#${hash}` : '');
 }
 
