@@ -154,7 +154,7 @@ const BANK_CSS = `.bank{max-width:900px;margin:0 auto}.bank h3{font-size:22px}.b
 .bank .iban{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.bank .iban bdi{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:clamp(12px,3.9vw,19px);letter-spacing:.03em;white-space:nowrap;user-select:all}
 .bank .copy{cursor:pointer;font:inherit;font-size:13px;font-weight:600;padding:6px 12px;border-radius:999px}.bank .copy[hidden]{display:none}
 .bank .safe{margin-top:18px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:13.5px}
-@media (max-width:600px){.bank dl{grid-template-columns:minmax(0,1fr)}.bank dt{padding:12px 0 0;border-top:1px solid var(--line)}.bank dd{padding:2px 0 12px;border-top:0}}`;
+@media (max-width:720px){.bank dl{grid-template-columns:minmax(0,1fr)}.bank dt{padding:12px 0 0;border-top:1px solid var(--line)}.bank dd{padding:2px 0 12px;border-top:0}}`;
 const BANK_JS = `(function(){var b=document.querySelector('.bank .copy');if(!b)return;var done=b.getAttribute('data-done'),orig=b.textContent,v=b.getAttribute('data-copy');
 function ok(){b.textContent=done;setTimeout(function(){b.textContent=orig},1800)}
 function old(){var a=document.createElement('textarea');a.value=v;a.setAttribute('readonly','');a.style.position='fixed';a.style.opacity='0';document.body.appendChild(a);a.select();try{if(document.execCommand('copy'))ok()}catch(e){}document.body.removeChild(a)}
