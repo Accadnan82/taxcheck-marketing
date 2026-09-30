@@ -1,0 +1,3564 @@
+{
+ "en": {
+  "dir": "ltr",
+  "locale": "en-AE",
+  "langToggle": "العربية",
+  "brand": "TaxCheck",
+  "brandSuffix": "UAE",
+  "labels": {
+   "home": "Home",
+   "product": "Product",
+   "ai": "AI Tax Assistant",
+   "corporate-tax": "Corporate Tax",
+   "vat": "VAT",
+   "review": "Tax Return Review",
+   "dashboard": "Dashboard",
+   "accountants": "For Accountants",
+   "businesses": "For Businesses",
+   "services": "Financial & Accounting Services",
+   "einvoicing": "UAE e-Invoicing Readiness",
+   "pricing": "Pricing",
+   "demo": "Request a Demo",
+   "resources": "Resources",
+   "security": "Security",
+   "about": "About",
+   "contact": "Contact",
+   "privacy": "Privacy",
+   "terms": "Terms",
+   "disclaimer": "AI & Tax Disclaimer",
+   "careers": "Careers"
+  },
+  "navMain": [
+   "product",
+   "corporate-tax",
+   "vat",
+   "ai",
+   "accountants",
+   "pricing",
+   "contact"
+  ],
+  "announce": "FY2025 Corporate Tax returns are due within nine months of financial year-end. Late filing carries administrative penalties.",
+  "announceLink": "Check your risk",
+  "ctaCheck": "Check My Tax Risk",
+  "ctaDemo": "Start Free",
+  "signIn": "Sign in",
+  "sample": "Sample data",
+  "preliminary": "Preliminary — illustrative only",
+  "notFTA": "TaxCheck is an independent software product. It is not affiliated with, approved, or endorsed by the Federal Tax Authority, and it is not a substitute for professional tax advice.",
+  "reviewed": "Content reviewed: August 2026. Legal references carry their source dates.",
+  "menu": "Menu",
+  "close": "Close",
+  "gcc": {
+   "label": "Jurisdictions",
+   "live": "United Arab Emirates — live",
+   "planned": "Framework ready for later jurisdictions:",
+   "others": [
+    "Saudi Arabia",
+    "Bahrain",
+    "Oman",
+    "Qatar",
+    "Kuwait"
+   ],
+   "plannedTag": "planned"
+  },
+  "footerCols": [
+   {
+    "h": "Product",
+    "links": [
+     "product",
+     "ai",
+     "corporate-tax",
+     "vat",
+     "review",
+     "dashboard",
+     "einvoicing"
+    ]
+   },
+   {
+    "h": "Solutions",
+    "links": [
+     "accountants",
+     "businesses",
+     "services",
+     "pricing"
+    ]
+   },
+   {
+    "h": "Company",
+    "links": [
+     "about",
+     "resources",
+     "security",
+     "contact",
+     "careers",
+     "demo"
+    ]
+   },
+   {
+    "h": "Legal",
+    "links": [
+     "privacy",
+     "terms",
+     "disclaimer"
+    ]
+   }
+  ],
+  "risk": {
+   "high": "High risk",
+   "med": "Medium risk",
+   "low": "Low risk",
+   "ok": "Clear"
+  },
+  "status": {
+   "review": "In review",
+   "ready": "Ready to file",
+   "data": "Awaiting data",
+   "overdue": "Action overdue",
+   "filed": "Filed"
+  },
+  "taxType": {
+   "ct": "Corporate Tax",
+   "vat": "VAT"
+  },
+  "period": {
+   "fy25": "FY 2025",
+   "q2": "Q2 2026",
+   "jul": "Jul 2026"
+  },
+  "tpNames": {
+   "tp1": "Al Noor Trading LLC",
+   "tp2": "Gulf Horizon Contracting LLC",
+   "tp3": "Marina Foods DMCC",
+   "tp4": "Desert Line Logistics LLC",
+   "tp5": "Oasis Tech FZ-LLC",
+   "tp6": "Pearl Consulting Group LLC"
+  },
+  "reviewers": {
+   "tp1": "S. Rahman",
+   "tp2": "M. Haddad",
+   "tp3": "A. Qureshi",
+   "tp4": "S. Rahman",
+   "tp5": "Unassigned",
+   "tp6": "M. Haddad"
+  },
+  "home": {
+   "heroL1": "Catch the errors",
+   "heroL2": "while they’re still free to fix.",
+   "heroSub": "Upload your invoices. TaxCheck reads every one, checks the figures against UAE VAT and Corporate Tax rules, and builds your return — showing you exactly which document produced each number.",
+   "ctaStart": "Start free →",
+   "ctaNote": "No card. No sales call. Free during early access.",
+   "outcomes": {
+    "items": [
+     {
+      "h": "A return you can defend.",
+      "p": "Every box traces back to the invoices behind it. When the FTA asks, you have the answer — not a search through folders."
+     },
+     {
+      "h": "Hours back on every return.",
+      "p": "No re-typing invoices into spreadsheets. Twenty documents read in about a minute, then you review what was flagged."
+     },
+     {
+      "h": "The cheapest time to find an error is now.",
+      "p": "Under the 2026 rules, an error you disclose yourself is priced at roughly 1% a month. The same error found in an FTA audit adds a further 15% on top."
+     }
+    ]
+   },
+   "answers": {
+    "title": "Straight answers",
+    "items": [
+     {
+      "q": "Does it file my return for me?",
+      "a": "No — and that is deliberate. TaxCheck never submits anything to the FTA. It prepares, checks, and shows its work; you review, approve, and file. You are the one signing the return, so you are the one who decides what goes in it."
+     },
+     {
+      "q": "Can I trust AI with tax figures?",
+      "a": "It does not calculate — it reads. Every figure is copied exactly as printed on the document, then recomputed and cross-checked by our engine. When something does not reconcile, you get a flag showing both numbers — never a silent correction. It will refuse to invent an exchange rate rather than guess one."
+     },
+     {
+      "q": "What happens when it gets something wrong?",
+      "a": "It tells you. On our first real batch of 19 invoices, 16 were read perfectly and all three hard cases — a USD export, an invoice split across two pages, and a duplicate from an older batch — were flagged for review. Zero silent errors. That last number is the one that matters."
+     },
+     {
+      "q": "Is it really free?",
+      "a": "Yes, during early access — no card, no sales call. We are building this alongside accountants working on real returns, and right now your feedback is worth more to us than your subscription."
+     },
+     {
+      "q": "Does it replace my accountant?",
+      "a": "No — it is built for accountants. It removes the typing and the cross-checking. The judgment stays with you."
+     },
+     {
+      "q": "Where do my documents go?",
+      "a": "Your documents are stored under your own account and read by an AI model to extract their fields. Keep your originals — TaxCheck helps you prepare and check the return; it is not a replacement for your own record-keeping. Full detail is in our ",
+      "link": "Privacy Policy",
+      "tail": "."
+     }
+    ]
+   },
+   "panel": {
+    "title": "Return review",
+    "taxpayer": "Taxpayer",
+    "taxpayerV": "Al Noor Trading LLC",
+    "type": "Tax type",
+    "typeV": "Corporate Tax",
+    "period": "Return period",
+    "periodV": "FY 2025 · due 30 Sep 2026",
+    "completion": "Completion",
+    "findings": "Findings",
+    "findingsV": "7 open",
+    "hi": "2 high",
+    "md": "3 medium",
+    "lo": "2 low",
+    "refL": "Reference",
+    "refV": "Federal Decree-Law No. 47 of 2022, Art. 28",
+    "action": "Open review"
+   },
+   "riskCheck": {
+    "kicker": "01 · Free tax risk check",
+    "title": "Where does your filing stand?",
+    "sub": "Nine questions. A preliminary view of your risk level and what to review first. No sign-up needed.",
+    "qOf": [
+     "Question",
+     "of"
+    ],
+    "questions": [
+     {
+      "q": "Is the business registered for VAT?",
+      "opts": [
+       {
+        "l": "Yes, registered",
+        "p": 0
+       },
+       {
+        "l": "No — turnover below the threshold",
+        "p": 0
+       },
+       {
+        "l": "Not registered, or not sure",
+        "p": 2
+       }
+      ]
+     },
+     {
+      "q": "Is the business registered for Corporate Tax?",
+      "opts": [
+       {
+        "l": "Yes, registered",
+        "p": 0
+       },
+       {
+        "l": "Registration in progress",
+        "p": 1
+       },
+       {
+        "l": "Not yet, or not sure",
+        "p": 2
+       }
+      ]
+     },
+     {
+      "q": "How were your most recent returns filed?",
+      "opts": [
+       {
+        "l": "On time",
+        "p": 0
+       },
+       {
+        "l": "Late at least once",
+        "p": 1
+       },
+       {
+        "l": "A return is still outstanding",
+        "p": 2
+       }
+      ]
+     },
+     {
+      "q": "How far away is your next filing deadline?",
+      "opts": [
+       {
+        "l": "More than 60 days",
+        "p": 0
+       },
+       {
+        "l": "30–60 days",
+        "p": 1
+       },
+       {
+        "l": "Under 30 days, or not sure",
+        "p": 2
+       }
+      ]
+     },
+     {
+      "q": "Is the business in a free zone?",
+      "opts": [
+       {
+        "l": "No",
+        "p": 0
+       },
+       {
+        "l": "Yes — not claiming the 0% rate",
+        "p": 1
+       },
+       {
+        "l": "Yes — claiming the 0% rate",
+        "p": 2
+       }
+      ]
+     },
+     {
+      "q": "Any related-party transactions?",
+      "opts": [
+       {
+        "l": "None",
+        "p": 0
+       },
+       {
+        "l": "Yes — documented",
+        "p": 1
+       },
+       {
+        "l": "Yes — not documented",
+        "p": 2
+       }
+      ]
+     },
+     {
+      "q": "Do you import services from abroad (reverse charge)?",
+      "opts": [
+       {
+        "l": "No",
+        "p": 0
+       },
+       {
+        "l": "Yes — recorded in returns",
+        "p": 1
+       },
+       {
+        "l": "Yes — treatment unclear",
+        "p": 2
+       }
+      ]
+     },
+     {
+      "q": "How current are your accounting records?",
+      "opts": [
+       {
+        "l": "Reconciled monthly",
+        "p": 0
+       },
+       {
+        "l": "Partially up to date",
+        "p": 1
+       },
+       {
+        "l": "Behind by more than a quarter",
+        "p": 2
+       }
+      ]
+     },
+     {
+      "q": "Any prior corrections or disclosures?",
+      "opts": [
+       {
+        "l": "Never needed",
+        "p": 0
+       },
+       {
+        "l": "Voluntary disclosure filed before",
+        "p": 1
+       },
+       {
+        "l": "Known errors, not yet corrected",
+        "p": 2
+       }
+      ]
+     }
+    ],
+    "resultTitle": "Preliminary result",
+    "levels": {
+     "low": {
+      "l": "Lower risk",
+      "d": "Your answers suggest a broadly controlled position. A pre-filing review is still worthwhile before each deadline."
+     },
+     "med": {
+      "l": "Moderate risk",
+      "d": "Several areas would benefit from a structured review before your next filing — gaps here commonly surface as findings."
+     },
+     "high": {
+      "l": "Elevated risk",
+      "d": "Your answers point to material gaps. Prioritise a review before the next deadline to reduce penalty and rework exposure."
+     }
+    },
+    "areas": "Areas to review",
+    "next": "Recommended next step",
+    "nextAction": {
+     "low": "Run a pre-filing check on your next return.",
+     "med": "Book a walkthrough of the flagged areas with your data.",
+     "high": "Request a demo this week and bring your latest return data."
+    },
+    "ctaReport": "Email me this as a report",
+    "ctaDemo": "Request a demo",
+    "restart": "Start over",
+    "note": "This result is preliminary and illustrative. It is not tax advice and does not assess your actual filings."
+   },
+   "scenarios": {
+    "kicker": "02 · Where filings go wrong",
+    "title": "Common failure patterns we check for",
+    "items": [
+     {
+      "h": "Reverse charge missed",
+      "p": "Imported services never reach Box 3, understating output VAT until an audit or voluntary disclosure surfaces it.",
+      "r": "high"
+     },
+     {
+      "h": "Free-zone 0% assumed",
+      "p": "Qualifying-income conditions unmet or undocumented while the 0% rate is claimed on everything.",
+      "r": "high"
+     },
+     {
+      "h": "Related parties undocumented",
+      "p": "Arm’s-length pricing asserted with no transfer-pricing records to support it when asked.",
+      "r": "med"
+     },
+     {
+      "h": "Ledger–return mismatch",
+      "p": "The return is filed from a spreadsheet that no longer reconciles to the general ledger.",
+      "r": "med"
+     }
+    ]
+   },
+   "how": {
+    "kicker": "03 · How TaxCheck works",
+    "plateTitle": "TaxCheck — method of work",
+    "doc": "TC-100",
+    "rev": "Rev B",
+    "sheet": "Sheet 01 of 01",
+    "cols": [
+     "No.",
+     "Step",
+     "What happens"
+    ],
+    "steps": [
+     {
+      "n": "01",
+      "h": "Structure",
+      "p": "Import trial balances, ledgers, and prior returns. TaxCheck maps them into Corporate Tax and VAT return structures."
+     },
+     {
+      "n": "02",
+      "h": "Validate",
+      "p": "Completeness and consistency checks run across every schedule — missing inputs, mismatched totals, unusual movements."
+     },
+     {
+      "n": "03",
+      "h": "Flag & explain",
+      "p": "Each finding states what is wrong, why it matters, and the legal reference behind it, graded high, medium, or low."
+     },
+     {
+      "n": "04",
+      "h": "Review & prepare",
+      "p": "Your team works the findings to a review-ready return, with an audit trail of who resolved what."
+     }
+    ],
+    "note": "The output is a review-ready return and a findings record — filing remains your decision."
+   },
+   "preview": {
+    "kicker": "04 · Inside the product",
+    "title": "A working view, not a brochure",
+    "tabs": [
+     {
+      "id": "dash",
+      "l": "Dashboard"
+     },
+     {
+      "id": "findings",
+      "l": "Findings"
+     },
+     {
+      "id": "vat",
+      "l": "VAT 201"
+     }
+    ],
+    "dashCols": [
+     "Taxpayer",
+     "Tax",
+     "Period",
+     "Deadline",
+     "Status",
+     "Risk"
+    ],
+    "findings": [
+     {
+      "sev": "high",
+      "h": "Reverse charge not applied to imported software services",
+      "ref": "Federal Decree-Law No. 8 of 2017, Art. 48",
+      "act": "Recompute Box 3; assess voluntary disclosure for prior periods."
+     },
+     {
+      "sev": "med",
+      "h": "Entertainment expenditure fully deducted",
+      "ref": "Federal Decree-Law No. 47 of 2022, Art. 32",
+      "act": "Restrict to 50% and adjust the non-deductible schedule."
+     },
+     {
+      "sev": "low",
+      "h": "Two supplier TRNs fail format validation",
+      "ref": "Input VAT documentation requirements",
+      "act": "Correct TRNs before claiming input tax."
+     }
+    ],
+    "findingCols": [
+     "Severity",
+     "Finding",
+     "Reference",
+     "Action"
+    ]
+   },
+   "trio": {
+    "kicker": "05 · Coverage",
+    "title": "Corporate Tax, VAT, and an assistant that shows its sources",
+    "items": [
+     {
+      "r": "corporate-tax",
+      "h": "Corporate Tax",
+      "p": "From taxpayer details to the 0%/9% computation — every schedule structured, validated, and explained."
+     },
+     {
+      "r": "vat",
+      "h": "VAT",
+      "p": "VAT 201 logic by emirate: outputs, reverse charge, zero-rated and exempt supplies, input tax, net position."
+     },
+     {
+      "r": "ai",
+      "h": "AI Tax Assistant",
+      "p": "Ask a question, get a preliminary answer with reasoning, missing facts, confidence, and the source it relies on."
+     }
+    ],
+    "link": "Explore"
+   },
+   "workflow": {
+    "kicker": "06 · For firms",
+    "title": "Every client, every deadline, one board",
+    "p": "Accountants run a portfolio, not a single return. TaxCheck tracks taxpayers, periods, returns, deadlines, reviewers, and open findings across the whole book.",
+    "points": [
+     "Searchable taxpayer register with risk levels",
+     "Return calendar with statutory deadlines",
+     "Assigned reviewers and outstanding actions"
+    ],
+    "link": "See the accountant workflow"
+   },
+   "explain": {
+    "kicker": "07 · Findings, explained",
+    "title": "Not just “error” — what, why, and the reference",
+    "p": "Every finding is written to be defended: the condition detected, the rule it may breach, the source of that rule, and the action that clears it.",
+    "card": {
+     "sev": "high",
+     "h": "Finding TC-0142 — Reverse charge omitted",
+     "why": "Imported consultancy services of AED 420,000 appear in the ledger with no corresponding output VAT under the reverse-charge mechanism. If unreported, the return understates output tax by AED 21,000.",
+     "refL": "Reference",
+     "ref": "Federal Decree-Law No. 8 of 2017, Art. 48 (effective 1 Jan 2018)",
+     "actL": "Action",
+     "act": "Report in Box 3 of VAT 201 and claim recoverable input tax in Box 10 where eligible."
+    }
+   },
+   "services": {
+    "kicker": "08 · Beyond software",
+    "title": "Human help when you want it",
+    "p": "Software structures and checks the data. When you need hands, our accounting team prepares, reconciles, and reviews — clearly separated from the product.",
+    "items": [
+     "Bookkeeping & monthly accounting",
+     "VAT and Corporate Tax return preparation and review",
+     "Tax data cleanup and reconciliation",
+     "Compliance health checks"
+    ],
+    "link": "View services"
+   },
+   "trust": {
+    "kicker": "09 · Security & trust",
+    "title": "Your data, treated like the record it is",
+    "items": [
+     {
+      "h": "Encrypted",
+      "p": "Data encrypted in transit and at rest, with role-based access controls."
+     },
+     {
+      "h": "Auditable",
+      "p": "Every finding, edit, and resolution is logged in an audit trail you can export."
+     },
+     {
+      "h": "Transparent",
+      "p": "Interface previews on this site use labelled sample data. Legal references carry source dates."
+     }
+    ],
+    "link": "Read the security overview"
+   },
+   "pricingPrev": {
+    "kicker": "10 · Pricing",
+    "title": "Free app during early access — no card",
+    "note": "Everything is free while we build with the community. Commercial plans come later, with preferential terms for early users.",
+    "link": "Details"
+   },
+   "faq": {
+    "kicker": "11 · Questions",
+    "title": "Asked before you did",
+    "items": [
+     {
+      "q": "Is TaxCheck approved by the Federal Tax Authority?",
+      "a": "No. TaxCheck is independent software and is not affiliated with, approved, or endorsed by the FTA. It helps you prepare and review; filing decisions remain yours or your advisor’s."
+     },
+     {
+      "q": "Does TaxCheck file returns for me?",
+      "a": "No. It produces review-ready return data, findings, and supporting references. Submission to the FTA portal is done by you or your registered agent."
+     },
+     {
+      "q": "Is the AI assistant giving tax advice?",
+      "a": "No. Answers are preliminary, source-referenced, and flag missing facts and confidence. They are inputs to professional judgement, not a substitute for it."
+     },
+     {
+      "q": "Can it handle multiple entities and free zones?",
+      "a": "Yes. Multi-taxpayer portfolios, free-zone entities, and groups are first-class: each taxpayer keeps its own periods, returns, findings, and reviewers."
+     },
+     {
+      "q": "Which languages does it support?",
+      "a": "The product and this site run fully in English and Arabic, with correct right-to-left layouts and UAE number and date formats."
+     }
+    ]
+   },
+   "close": {
+    "title": "See your risks before the FTA does",
+    "sub": "Run the free risk check, or bring your latest return data to a 30-minute demo."
+   },
+   "ftrTag": "UAE Corporate Tax & VAT compliance software"
+  },
+  "pages": {
+   "product": {
+    "kicker": "Product",
+    "title": "One workspace for UAE tax compliance",
+    "sub": "TaxCheck holds your taxpayers, periods, returns, and evidence in one structure — and checks all of it before anything is filed.",
+    "sections": [
+     {
+      "h": "Structure",
+      "p": "Everything starts from a clean model of the taxpayer.",
+      "items": [
+       {
+        "h": "Taxpayer register",
+        "p": "Entities, TRNs, free-zone status, financial years, and group relationships in one registry."
+       },
+       {
+        "h": "Return workspaces",
+        "p": "Each Corporate Tax and VAT period gets a workspace with its schedules, data, and findings."
+       },
+       {
+        "h": "Data intake",
+        "p": "Trial balances, ledgers, and prior returns import and map to return structures."
+       }
+      ]
+     },
+     {
+      "h": "Validate",
+      "p": "Checks run continuously as data lands.",
+      "items": [
+       {
+        "h": "Completeness",
+        "p": "Missing schedules, unanswered elections, and empty required fields are flagged before review."
+       },
+       {
+        "h": "Consistency",
+        "p": "Cross-checks between ledger, schedules, and return boxes catch mismatched totals."
+       },
+       {
+        "h": "Risk findings",
+        "p": "Patterns associated with penalty or audit exposure are raised with legal references."
+       }
+      ]
+     },
+     {
+      "h": "Review",
+      "p": "The output is a defensible position, not just numbers.",
+      "items": [
+       {
+        "h": "Review workflow",
+        "p": "Findings are assigned, worked, and resolved with reviewer sign-off."
+       },
+       {
+        "h": "Audit trail",
+        "p": "Every change and resolution is logged and exportable."
+       },
+       {
+        "h": "Review-ready output",
+        "p": "A return summary and findings record, ready for filing by you or your agent."
+       }
+      ]
+     }
+    ],
+    "note": "All interface previews use labelled sample data."
+   },
+   "review": {
+    "kicker": "Tax Return Review",
+    "title": "A second pair of eyes before every filing",
+    "sub": "Corporate Tax and VAT return review that shows what is wrong, why it matters, and what clears it.",
+    "sections": [
+     {
+      "h": "What the review covers",
+      "p": "",
+      "items": [
+       {
+        "h": "Completeness",
+        "p": "Every schedule, election, and required disclosure present and populated."
+       },
+       {
+        "h": "Consistency",
+        "p": "Return boxes reconciled to ledgers and supporting schedules."
+       },
+       {
+        "h": "Risk",
+        "p": "Positions that commonly attract penalties or audit questions, each with its reference."
+       }
+      ]
+     },
+     {
+      "h": "What you receive",
+      "p": "",
+      "items": [
+       {
+        "h": "Findings list",
+        "p": "Graded high, medium, low — with the reasoning and source for each."
+       },
+       {
+        "h": "Review-ready summary",
+        "p": "The return as it would be filed, annotated with open and resolved items."
+       },
+       {
+        "h": "Client-ready report",
+        "p": "For firms: a branded summary you can hand to the client."
+       }
+      ]
+     }
+    ],
+    "note": "Review output supports your filing decision; it is not tax advice or agent representation."
+   },
+   "businesses": {
+    "kicker": "For Businesses",
+    "title": "Tax confidence for finance teams",
+    "sub": "For SMEs, free-zone entities, and multi-entity groups managing VAT and Corporate Tax obligations in-house.",
+    "sections": [
+     {
+      "h": "Built for your structure",
+      "p": "",
+      "items": [
+       {
+        "h": "SMEs",
+        "p": "One entity, both taxes, clear deadlines and findings — without hiring a tax department."
+       },
+       {
+        "h": "Free-zone entities",
+        "p": "Qualifying-income conditions tracked explicitly, so the 0% rate is a documented position."
+       },
+       {
+        "h": "Groups",
+        "p": "Multiple entities with separate periods, consolidated visibility, one workspace."
+       }
+      ]
+     },
+     {
+      "h": "What your team gets",
+      "p": "",
+      "items": [
+       {
+        "h": "Deadline visibility",
+        "p": "Every statutory deadline on one calendar, with status against each."
+       },
+       {
+        "h": "Findings in plain language",
+        "p": "What is wrong, why it matters, what to do — with references your advisor can verify."
+       },
+       {
+        "h": "Review-ready returns",
+        "p": "Data your accountant or agent can file from without rework."
+       }
+      ]
+     }
+    ],
+    "note": "When findings need professional judgement, bring your advisor — or use our services team."
+   },
+   "services": {
+    "kicker": "Financial & Accounting Services",
+    "title": "Software plus professional support",
+    "sub": "The product checks your data. Our services team — separate from the software — does the accounting work when you want hands, not just findings.",
+    "sections": [
+     {
+      "h": "Accounting",
+      "p": "",
+      "items": [
+       {
+        "h": "Bookkeeping",
+        "p": "Transaction capture and coding, kept current."
+       },
+       {
+        "h": "Monthly accounting",
+        "p": "Closes, reconciliations, and schedules on a monthly rhythm."
+       },
+       {
+        "h": "Management reporting",
+        "p": "P&L, balance sheet, and cash reporting your management can read."
+       }
+      ]
+     },
+     {
+      "h": "Tax preparation & review",
+      "p": "",
+      "items": [
+       {
+        "h": "VAT returns",
+        "p": "VAT 201 preparation and independent review before you file."
+       },
+       {
+        "h": "Corporate Tax returns",
+        "p": "Return preparation and review, schedules through computation."
+       },
+       {
+        "h": "Cleanup & reconciliation",
+        "p": "Historic tax data cleanup and ledger-to-return reconciliation."
+       }
+      ]
+     },
+     {
+      "h": "Readiness & support",
+      "p": "",
+      "items": [
+       {
+        "h": "Compliance health checks",
+        "p": "A structured look at registrations, filings, and records."
+       },
+       {
+        "h": "e-Invoicing readiness",
+        "p": "Assessment of systems, data fields, and processes for UAE e-invoicing."
+       },
+       {
+        "h": "Outsourced finance support",
+        "p": "Ongoing finance capacity, scaled to your needs."
+       }
+      ]
+     },
+     {
+      "h": "UAE Corporate Tax & VAT advisory",
+      "p": "Structured advisory around the returns themselves.",
+      "items": [
+       {
+        "h": "Corporate Tax workflow",
+        "p": "Workflow setup and review-ready deliverables for each filing cycle."
+       },
+       {
+        "h": "VAT return support",
+        "p": "VAT 201 preparation support and the internal controls around it."
+       },
+       {
+        "h": "Pre-submission risk review",
+        "p": "Risk review and a compliance checklist before every submission."
+       },
+       {
+        "h": "Documentation structure",
+        "p": "Filing documentation structured to UAE requirements."
+       }
+      ]
+     },
+     {
+      "h": "Accounting & finance process design",
+      "p": "The processes behind clean tax data.",
+      "items": [
+       {
+        "h": "Chart of accounts",
+        "p": "IFRS-friendly chart of accounts structuring."
+       },
+       {
+        "h": "Period close design",
+        "p": "Close process design and a month-end checklist your team runs."
+       },
+       {
+        "h": "Accounting policies",
+        "p": "Revenue recognition, accruals, and provisions — written down."
+       },
+       {
+        "h": "Management reporting",
+        "p": "Reporting structure built for CFO-level oversight."
+       }
+      ]
+     },
+     {
+      "h": "Finance automation & FinTech consulting",
+      "p": "When the fix is a system, not a spreadsheet.",
+      "items": [
+       {
+        "h": "Requirements & specs",
+        "p": "Requirements and functional specs for financial software."
+       },
+       {
+        "h": "Validation & audit trails",
+        "p": "Enterprise-grade validation rules and audit trails."
+       },
+       {
+        "h": "Import & reconciliation",
+        "p": "Data import templates and reconciliation workflows."
+       },
+       {
+        "h": "Dashboards & approvals",
+        "p": "Dashboards, KPIs, and review/approval flows."
+       }
+      ]
+     }
+    ],
+    "note": "Services are delivered by accounting professionals. TaxCheck does not provide licensed tax-agent representation unless expressly agreed in writing."
+   },
+   "resources": {
+    "kicker": "Resources",
+    "title": "Guides and updates",
+    "sub": "Practical explainers on UAE Corporate Tax, VAT, and e-invoicing. Each guide carries its source and review date.",
+    "sections": [
+     {
+      "h": "Guides",
+      "p": "",
+      "items": [
+       {
+        "h": "Corporate Tax registration basics",
+        "p": "Who must register and when. Source: Federal Decree-Law No. 47 of 2022. Reviewed Aug 2026."
+       },
+       {
+        "h": "VAT 201, box by box",
+        "p": "What belongs in each box, by emirate. Source: Federal Decree-Law No. 8 of 2017. Reviewed Aug 2026."
+       },
+       {
+        "h": "Free-zone 0%: the conditions",
+        "p": "Qualifying income and what disqualifies it. Source: Cabinet & Ministerial Decisions of 2023. Reviewed Aug 2026."
+       }
+      ]
+     },
+     {
+      "h": "Updates",
+      "p": "",
+      "items": [
+       {
+        "h": "e-Invoicing programme",
+        "p": "Where the UAE rollout stands and what to prepare. Reviewed Aug 2026."
+       },
+       {
+        "h": "Penalty framework",
+        "p": "Administrative penalties for late registration and filing. Reviewed Aug 2026."
+       }
+      ]
+     }
+    ],
+    "note": "Guides are general information, not tax advice."
+   },
+   "security": {
+    "kicker": "Security",
+    "title": "How we protect your data",
+    "sub": "Tax data is a record. We treat it that way — factually, without slogans.",
+    "sections": [
+     {
+      "h": "Data protection",
+      "p": "",
+      "items": [
+       {
+        "h": "Encryption",
+        "p": "Data is encrypted in transit (TLS 1.2+) and at rest (AES-256)."
+       },
+       {
+        "h": "Data residency",
+        "p": "A UAE data-residency option is available for hosted data."
+       },
+       {
+        "h": "Access controls",
+        "p": "Role-based permissions; access is limited to what each role needs."
+       }
+      ]
+     },
+     {
+      "h": "Operations",
+      "p": "",
+      "items": [
+       {
+        "h": "Audit logging",
+        "p": "Administrative and data actions are logged and reviewable."
+       },
+       {
+        "h": "Backups",
+        "p": "Regular backups with tested restoration procedures."
+       },
+       {
+        "h": "Vendor review",
+        "p": "Sub-processors are listed and reviewed; see the Privacy page."
+       }
+      ]
+     },
+     {
+      "h": "Your controls",
+      "p": "",
+      "items": [
+       {
+        "h": "Export",
+        "p": "Your data is exportable in open formats at any time."
+       },
+       {
+        "h": "Retention",
+        "p": "Retention periods are configurable to your record-keeping obligations."
+       },
+       {
+        "h": "Deletion",
+        "p": "Verified deletion on request, subject to legal retention duties."
+       }
+      ]
+     }
+    ],
+    "note": "We describe controls specifically and avoid unverifiable claims."
+   },
+   "about": {
+    "kicker": "About",
+    "title": "Built for how UAE tax actually works",
+    "sub": "TaxCheck is built by accountants and engineers in the UAE for the teams who prepare, review, and answer for tax filings.",
+    "sections": [
+     {
+      "h": "What we do",
+      "p": "We make pre-filing review systematic: structured data, explicit checks, referenced findings, and a record of how each was resolved.",
+      "items": []
+     },
+     {
+      "h": "GCC framework",
+      "p": "The platform is UAE-first. Its jurisdiction framework — rules, references, forms, and language packs per country — is designed so further GCC jurisdictions can be added as their regimes are supported. No Saudi, Bahraini, Omani, Qatari, or Kuwaiti functionality is published today.",
+      "items": []
+     },
+     {
+      "h": "How content is maintained",
+      "p": "Legal references carry their source instrument and date. Site content shows its last review date. When rules change, references are updated, not silently rewritten.",
+      "items": []
+     }
+    ],
+    "note": ""
+   },
+   "privacy": {
+    "kicker": "Privacy",
+    "title": "Privacy policy",
+    "sub": "Last reviewed: August 2026.",
+    "sections": [
+     {
+      "h": "1. What we collect",
+      "p": "Account details (name, work email, company), the tax and accounting data you upload, and usage logs needed to operate and secure the service.",
+      "items": []
+     },
+     {
+      "h": "2. How we use it",
+      "p": "To provide the service: structuring, validating, and reviewing your tax data; to secure and support your account; and to improve the product using aggregated, de-identified usage patterns. We do not sell personal data.",
+      "items": []
+     },
+     {
+      "h": "3. AI processing",
+      "p": "AI features process the data you submit to generate findings and answers. Your data is not used to train models for other customers without explicit consent.",
+      "items": []
+     },
+     {
+      "h": "4. Retention & deletion",
+      "p": "Data is retained while your account is active and per configured retention settings. You may export or request deletion, subject to legal record-keeping duties.",
+      "items": []
+     },
+     {
+      "h": "5. Contact",
+      "p": "Privacy questions: info@taxcheck.ae.",
+      "items": []
+     }
+    ],
+    "note": ""
+   },
+   "terms": {
+    "kicker": "Terms",
+    "title": "Terms of service",
+    "sub": "Last reviewed: August 2026.",
+    "sections": [
+     {
+      "h": "1. The service",
+      "p": "TaxCheck provides software that structures, validates, and helps review UAE Corporate Tax and VAT data, plus optional professional accounting services agreed separately.",
+      "items": []
+     },
+     {
+      "h": "2. Not tax advice",
+      "p": "Software output — including AI answers and findings — is preliminary information to support review. It is not tax, legal, or accounting advice, and filing decisions remain yours.",
+      "items": []
+     },
+     {
+      "h": "3. Your responsibilities",
+      "p": "You are responsible for the accuracy of data you provide and for meeting your own filing and payment obligations and deadlines.",
+      "items": []
+     },
+     {
+      "h": "4. Liability",
+      "p": "To the extent permitted by law, liability is limited to fees paid in the preceding twelve months; we are not liable for penalties arising from filings you submit.",
+      "items": []
+     },
+     {
+      "h": "5. Changes",
+      "p": "We may update these terms with notice; continued use constitutes acceptance.",
+      "items": []
+     }
+    ],
+    "note": ""
+   },
+   "disclaimer": {
+    "kicker": "AI & Tax Disclaimer",
+    "title": "What TaxCheck output is — and is not",
+    "sub": "Last reviewed: August 2026.",
+    "sections": [
+     {
+      "h": "AI output is preliminary",
+      "p": "Answers and findings generated by TaxCheck are produced by software from the data and sources available to it. They can be incomplete or wrong, and are labelled with confidence and missing facts for that reason.",
+      "items": []
+     },
+     {
+      "h": "Not tax advice",
+      "p": "Nothing on this site or in the product constitutes tax, legal, or accounting advice. Decisions about registration, filings, elections, and disclosures should be made with a qualified professional.",
+      "items": []
+     },
+     {
+      "h": "Not affiliated with the FTA",
+      "p": "TaxCheck is not affiliated with, approved, or endorsed by the Federal Tax Authority, and is not a licensed tax agent unless expressly stated in a signed engagement.",
+      "items": []
+     },
+     {
+      "h": "Sources and dates",
+      "p": "Legal references cite their instrument and effective date. Verify the current state of the law before relying on any reference.",
+      "items": []
+     },
+     {
+      "h": "Sample data",
+      "p": "All interface previews, figures, and taxpayers shown on this site are fictitious sample data, labelled as such.",
+      "items": []
+     }
+    ],
+    "note": ""
+   }
+  },
+  "ct": {
+   "kicker": "Corporate Tax",
+   "title": "The whole return, structured and checked",
+   "sub": "From taxpayer information to the 0%/9% computation — every Corporate Tax schedule in one reviewable structure.",
+   "plateTitle": "Corporate Tax return — schedule status",
+   "doc": "CT-FY25",
+   "rev": "Rev A",
+   "sheet": "Al Noor Trading LLC",
+   "cols": [
+    "No.",
+    "Schedule",
+    "Status",
+    "Remark"
+   ],
+   "rows": [
+    {
+     "n": "01",
+     "h": "Taxpayer information",
+     "s": "ok",
+     "r": "TRN, financial year, and elections confirmed"
+    },
+    {
+     "n": "02",
+     "h": "Accounting schedules",
+     "s": "ok",
+     "r": "Trial balance reconciled to ledger"
+    },
+    {
+     "n": "03",
+     "h": "Elections",
+     "s": "warn",
+     "r": "Realisation-basis election unanswered"
+    },
+    {
+     "n": "04",
+     "h": "Exempt income",
+     "s": "ok",
+     "r": "Participation dividends AED 120,000 documented"
+    },
+    {
+     "n": "05",
+     "h": "Non-deductible expenditure",
+     "s": "high",
+     "r": "Entertainment deducted at 100% — Art. 32 limits to 50%"
+    },
+    {
+     "n": "06",
+     "h": "Related parties",
+     "s": "warn",
+     "r": "Two transactions missing arm’s-length support"
+    },
+    {
+     "n": "07",
+     "h": "Connected persons",
+     "s": "ok",
+     "r": "Payments within market-value support"
+    },
+    {
+     "n": "08",
+     "h": "Tax losses",
+     "s": "ok",
+     "r": "No losses carried forward"
+    },
+    {
+     "n": "09",
+     "h": "Free-zone considerations",
+     "s": "ok",
+     "r": "Not a free-zone person"
+    },
+    {
+     "n": "10",
+     "h": "Taxable income",
+     "s": "warn",
+     "r": "Pending resolution of items 03, 05, 06"
+    }
+   ],
+   "statusL": {
+    "ok": "Ready",
+    "warn": "Review",
+    "high": "High risk"
+   },
+   "calcTitle": "Computation — 0% and 9%",
+   "calcRows": [
+    {
+     "l": "Accounting income",
+     "k": "income"
+    },
+    {
+     "l": "Non-deductible expenditure (add back)",
+     "k": "nonDed"
+    },
+    {
+     "l": "Exempt income (dividends)",
+     "k": "exemptDiv"
+    },
+    {
+     "l": "Taxable income",
+     "k": "taxable"
+    },
+    {
+     "l": "Taxed at 0% (first AED 375,000)",
+     "k": "band0"
+    },
+    {
+     "l": "Taxed at 9%",
+     "k": "band9"
+    },
+    {
+     "l": "Corporate Tax payable",
+     "k": "tax"
+    }
+   ],
+   "calcNote": "Sample computation. Rates per Federal Decree-Law No. 47 of 2022, Art. 3 (effective for financial years starting on or after 1 June 2023).",
+   "ctaTitle": "Review a real return, not a sample",
+   "ctaSub": "Bring your FY2025 data to a demo and see your own schedules in this structure."
+  },
+  "vat": {
+   "kicker": "VAT",
+   "title": "VAT 201, box by box, emirate by emirate",
+   "sub": "TaxCheck prepares and validates the VAT 201 the way the form is actually structured — with the reverse charge, adjustments, and input tax where they belong.",
+   "emirates": [
+    "Abu Dhabi",
+    "Dubai",
+    "Sharjah",
+    "Ajman",
+    "Umm Al Quwain",
+    "Ras Al Khaimah",
+    "Fujairah"
+   ],
+   "outTitle": "Outputs — standard-rated supplies by emirate",
+   "cols": [
+    "Emirate",
+    "Taxable amount (AED)",
+    "VAT (AED)",
+    "Adjustment (AED)"
+   ],
+   "otherRows": [
+    {
+     "l": "Tourist refund scheme",
+     "k": "tourist",
+     "kind": "v"
+    },
+    {
+     "l": "Reverse-charge supplies (imported services)",
+     "k": "rc"
+    },
+    {
+     "l": "Zero-rated supplies",
+     "k": "zero",
+     "kind": "a"
+    },
+    {
+     "l": "Exempt supplies",
+     "k": "exempt",
+     "kind": "a"
+    },
+    {
+     "l": "Goods imported into the UAE",
+     "k": "imp"
+    }
+   ],
+   "inTitle": "Inputs — recoverable tax",
+   "inRows": [
+    {
+     "l": "Standard-rated expenses",
+     "k": "in"
+    },
+    {
+     "l": "Supplies subject to reverse charge",
+     "k": "imp2"
+    }
+   ],
+   "totOut": "Total output tax",
+   "totIn": "Total recoverable input tax",
+   "net": "Net VAT payable",
+   "netRefund": "Net VAT refundable",
+   "note": "Sample data. Structure per VAT 201; reverse charge per Federal Decree-Law No. 8 of 2017, Art. 48.",
+   "ctaTitle": "Validate your next VAT 201 before you file",
+   "ctaSub": "TaxCheck cross-checks every box against your ledger and flags what does not reconcile."
+  },
+  "ai": {
+   "kicker": "AI Tax Assistant",
+   "title": "Ask TaxCheck — answers that show their work",
+   "sub": "A preliminary answer with its reasoning, its sources, its confidence, and the facts it still needs. Controlled and auditable, not conversational bravado.",
+   "chipLabel": "Example question",
+   "chip": "Is this expense deductible for UAE Corporate Tax?",
+   "ask": "Ask TaxCheck",
+   "thinking": "Checking sources…",
+   "card": {
+    "ansL": "Preliminary answer",
+    "ans": "Likely partially deductible. Client-entertainment costs are limited to 50% deductibility; the staff-training portion appears fully deductible if incurred wholly for the business.",
+    "whyL": "Reasoning",
+    "why": "The invoice mixes client entertainment (dinner, AED 6,200) with staff training (workshop fee, AED 9,000). Art. 28 allows deduction of expenditure incurred wholly and exclusively for business; Art. 32 restricts entertainment expenditure to 50%.",
+    "missL": "Missing facts",
+    "miss": [
+     "Attendee list — were attendees clients, suppliers, or staff only?",
+     "Whether the workshop fee includes catering (entertainment component)",
+     "Whether the expense is capital in nature"
+    ],
+    "confL": "Confidence",
+    "conf": "Moderate",
+    "confPct": 62,
+    "srcL": "Sources",
+    "src": [
+     "Federal Decree-Law No. 47 of 2022, Art. 28 — deductible expenditure",
+     "Federal Decree-Law No. 47 of 2022, Art. 32 — entertainment expenditure (50%)"
+    ],
+    "effL": "Effective",
+    "eff": "Financial years starting on or after 1 June 2023",
+    "actL": "Recommended review action",
+    "act": "Split the invoice into entertainment and training components; apply the 50% restriction to the entertainment portion and document attendees.",
+    "disc": "Preliminary answer generated by software. Not tax advice — confirm with a qualified professional before filing."
+   },
+   "props": [
+    "Source-aware: every answer cites the instrument and article it relies on.",
+    "Honest about gaps: missing facts are listed, not guessed.",
+    "Graded: a confidence level, not false certainty.",
+    "Auditable: questions and answers are logged with their sources and dates."
+   ]
+  },
+  "acc": {
+   "kicker": "For Accountants",
+   "title": "Run the whole book, not one return at a time",
+   "sub": "Taxpayers, periods, deadlines, reviewers, risk, and outstanding actions — filterable, assignable, exportable.",
+   "searchPh": "Search taxpayers…",
+   "filterAll": "All risk levels",
+   "cols": [
+    "",
+    "Taxpayer",
+    "Tax",
+    "Period",
+    "Deadline",
+    "Status",
+    "Reviewer",
+    "Risk",
+    "Open items"
+   ],
+   "selected": "selected",
+   "actAssign": "Assign reviewer",
+   "actExport": "Export client report",
+   "exportDone": "Report queued — check your email in a minute.",
+   "empty": "No taxpayers match this filter.",
+   "calTitle": "Return calendar — next 90 days",
+   "workflow": [
+    {
+     "h": "Team workflow",
+     "p": "Assign returns to reviewers, track open findings per person, and see who is blocked."
+    },
+    {
+     "h": "Client-ready reports",
+     "p": "Export a findings and status summary with your firm’s framing, ready for the client meeting."
+    },
+    {
+     "h": "Portfolio risk",
+     "p": "Risk levels roll up across the book, so the riskiest client is never a surprise."
+    }
+   ]
+  },
+  "dash": {
+   "kicker": "Dashboard",
+   "title": "The state of every obligation, at a glance",
+   "sub": "Deadlines, statuses, findings, and risk across all taxpayers and both taxes.",
+   "kpis": [
+    {
+     "l": "Active taxpayers",
+     "v": "6"
+    },
+    {
+     "l": "Returns in progress",
+     "v": "4"
+    },
+    {
+     "l": "Open findings",
+     "v": "19"
+    },
+    {
+     "l": "Deadlines in 60 days",
+     "v": "3"
+    }
+   ],
+   "deadlinesTitle": "Upcoming deadlines",
+   "findingsTitle": "Findings by severity",
+   "sevRows": [
+    {
+     "l": "High",
+     "k": "high",
+     "n": 4
+    },
+    {
+     "l": "Medium",
+     "k": "med",
+     "n": 9
+    },
+    {
+     "l": "Low",
+     "k": "low",
+     "n": 6
+    }
+   ]
+  },
+  "pricing": {
+   "kicker": "Pricing",
+   "title": "The app is free during early access",
+   "sub": "The TaxCheck app is free while we build with the UAE accounting community. No credit card, no limits, no catch — your feedback shapes the product.",
+   "monthly": "Monthly",
+   "annual": "Annual",
+   "save": "",
+   "per": {
+    "m": "",
+    "y": ""
+   },
+   "popular": "Early access",
+   "cta": "Start with",
+   "ctaEnt": "Talk to us",
+   "plans": [
+    {
+     "id": "early",
+     "name": "Early Access",
+     "pm": "AED 0",
+     "py": "AED 0",
+     "d": "Everything in the product. Free for everyone during early access.",
+     "pop": true,
+     "f": [
+      "Unlimited taxpayers & returns",
+      "VAT 201 + Corporate Tax wizards",
+      "Legal review with article citations",
+      "AI Tax Assistant (fair-use daily limit)",
+      "Tamper-evident audit trail",
+      "Arabic & English interface"
+     ]
+    },
+    {
+     "id": "review",
+     "name": "Expert Filing Review",
+     "pm": "AED 750",
+     "py": "AED 750",
+     "d": "One return, reviewed before you file. Written report within 48 hours - every finding cited to the article. Five returns for AED 2,750.",
+     "pop": false,
+     "link": "https://pay.ziina.com/taxcheck/D8rt-YjQc",
+     "cta": "Book a review",
+     "f": [
+      "Any CT return, any size",
+      "48-hour written report",
+      "Article-by-article citations",
+      "Missing-document checklist",
+      "Penalty exposure if filed as-is",
+      "Free if no finding can be cited to the law"
+     ]
+    }
+   ],
+   "compTitle": "What you get today",
+   "compCols": [
+    "",
+    "Early Access"
+   ],
+   "compRows": [
+    {
+     "l": "Taxpayers",
+     "v": [
+      "Unlimited"
+     ]
+    },
+    {
+     "l": "Users",
+     "v": [
+      "Unlimited"
+     ]
+    },
+    {
+     "l": "VAT returns",
+     "v": [
+      "Unlimited"
+     ]
+    },
+    {
+     "l": "Corporate Tax returns",
+     "v": [
+      "Unlimited"
+     ]
+    },
+    {
+     "l": "AI assistant queries / day",
+     "v": [
+      "30 (fair use)"
+     ]
+    },
+    {
+     "l": "Findings & references",
+     "v": [
+      "✓"
+     ]
+    },
+    {
+     "l": "Audit trail",
+     "v": [
+      "✓"
+     ]
+    },
+    {
+     "l": "Print (VAT 201 / CT)",
+     "v": [
+      "✓"
+     ]
+    },
+    {
+     "l": "Support",
+     "v": [
+      "Email"
+     ]
+    }
+   ],
+   "note": "The app is free during early access. The Expert Filing Review is a paid service - AED 750 per return, AED 2,750 for five, delivered within 48 hours. Commercial app plans come later, with preferential terms for early users."
+  },
+  "demo": {
+   "kicker": "Request a Demo",
+   "title": "30 minutes, your data if you like",
+   "sub": "A working session, not a slideshow. Tell us your setup and pick a time.",
+   "fields": {
+    "name": {
+     "l": "Full name",
+     "ph": "Aisha Al Mansouri"
+    },
+    "email": {
+     "l": "Work email",
+     "ph": "you@company.ae"
+    },
+    "phone": {
+     "l": "Phone / WhatsApp",
+     "ph": "+971 5X XXX XXXX"
+    },
+    "company": {
+     "l": "Company",
+     "ph": "Company LLC"
+    }
+   },
+   "userType": {
+    "l": "I am…",
+    "opts": [
+     "Accountant / firm",
+     "Finance team",
+     "Business owner",
+     "Advisor / consultant"
+    ]
+   },
+   "tps": {
+    "l": "Number of taxpayers",
+    "opts": [
+     "1",
+     "2–10",
+     "11–50",
+     "50+"
+    ]
+   },
+   "scope": {
+    "l": "Interested in",
+    "opts": [
+     "VAT",
+     "Corporate Tax",
+     "Both",
+     "Services"
+    ]
+   },
+   "slotL": "Preferred meeting time (GST)",
+   "submit": "Book the demo",
+   "errs": {
+    "name": "Please enter your name.",
+    "email": "Please enter a valid work email.",
+    "phone": "Please enter a phone number.",
+    "company": "Please enter your company.",
+    "slot": "Please pick a meeting time."
+   },
+   "days": [
+    {
+     "d": "Sun",
+     "dd": "10 Aug"
+    },
+    {
+     "d": "Mon",
+     "dd": "11 Aug"
+    },
+    {
+     "d": "Tue",
+     "dd": "12 Aug"
+    }
+   ],
+   "times": [
+    "09:30",
+    "11:00",
+    "14:00",
+    "16:30"
+   ],
+   "success": {
+    "title": "Demo booked",
+    "p": "A calendar invitation is on its way to",
+    "p2": "Bring a recent return or trial balance if you would like the session run on your own data.",
+    "another": "Book another"
+   }
+  },
+  "einv": {
+   "kicker": "UAE e-Invoicing Readiness",
+   "title": "Ready before it becomes mandatory",
+   "sub": "The UAE is phasing in structured electronic invoicing. This page is about readiness and education — assessing your systems, data, and processes ahead of your go-live obligation.",
+   "concept": {
+    "h": "What a structured e-invoice is",
+    "p": "Not a PDF — a machine-readable document whose fields are validated and exchanged through accredited channels. The data has to be right at the source system.",
+    "fields": [
+     "Seller & buyer TRN",
+     "Invoice type & number",
+     "Issue date & supply date",
+     "Line items & quantities",
+     "Tax category per line",
+     "VAT amount per rate",
+     "Payment terms",
+     "Currency & totals"
+    ]
+   },
+   "check": {
+    "h": "Readiness self-check",
+    "items": [
+     "Invoices are issued from a system (not manually in Word/Excel)",
+     "Customer and supplier TRNs are validated on entry",
+     "Every product/service line carries a tax code",
+     "VAT-rate logic is applied by the system, not typed",
+     "Credit notes reference their original invoice",
+     "Master data (customers, items) has a named owner"
+    ]
+   },
+   "score": {
+    "l": "Readiness signal",
+    "low": "Early stage — start with system and master-data basics.",
+    "mid": "Partial — close the gaps above before technical onboarding.",
+    "high": "Well placed — validate field-level data quality next."
+   },
+   "timeline": {
+    "h": "A sensible preparation timeline",
+    "phases": [
+     {
+      "t": "Now",
+      "h": "Assess",
+      "p": "Map invoicing systems, data fields, and tax codes against the structured-invoice requirement."
+     },
+     {
+      "t": "+1–3 months",
+      "h": "Fix the data",
+      "p": "Clean TRNs, tax codes, and master data; close process gaps."
+     },
+     {
+      "t": "+3–6 months",
+      "h": "Integrate",
+      "p": "Plan connectivity with your provider and test field validation end to end."
+     },
+     {
+      "t": "Before mandate",
+      "h": "Rehearse",
+      "p": "Run parallel issuance and reconcile against VAT returns."
+     }
+    ]
+   },
+   "note": "TaxCheck helps you assess and prepare. It is not an accredited e-invoicing service provider; transmission is performed by accredited providers.",
+   "ctaTitle": "Book a readiness review",
+   "ctaSub": "A structured assessment of your systems, fields, and tax codes — with a written gap list."
+  },
+  "careers": {
+   "kicker": "Careers",
+   "title": "Build the tax platform the UAE runs on",
+   "sub": "We hire accountants, engineers, and client-success people in Dubai — and we read every application.",
+   "rolesT": "Open roles",
+   "roles": [
+    {
+     "h": "Senior Tax Accountant",
+     "d": "Corporate Tax and VAT review, findings quality, and client escalations.",
+     "loc": "Dubai · Full-time"
+    },
+    {
+     "h": "Product Engineer",
+     "d": "Bilingual web product and data-validation pipelines.",
+     "loc": "Dubai / Remote GCC · Full-time"
+    },
+    {
+     "h": "Customer Success Manager",
+     "d": "Onboarding firms and finance teams, in Arabic and English.",
+     "loc": "Dubai · Full-time"
+    }
+   ],
+   "formT": "Apply",
+   "roleL": "Role",
+   "fields": {
+    "name": {
+     "l": "Full name",
+     "ph": "Aisha Al Mansouri"
+    },
+    "email": {
+     "l": "Email",
+     "ph": "you@mail.com"
+    },
+    "phone": {
+     "l": "Phone / WhatsApp",
+     "ph": "+971 5X XXX XXXX"
+    },
+    "link": {
+     "l": "LinkedIn or CV link",
+     "ph": "https://…"
+    }
+   },
+   "msgL": "Why you? (a few lines)",
+   "submit": "Submit application",
+   "errs": {
+    "name": "Please enter your name.",
+    "email": "Please enter a valid email.",
+    "role": "Please pick a role."
+   },
+   "success": {
+    "title": "Application received",
+    "p": "Thank you — we reply to every applicant within one week.",
+    "another": "Submit another"
+   }
+  },
+  "contact": {
+   "kicker": "Contact",
+   "title": "Talk to a person",
+   "sub": "Questions about the product, services, or a partnership — we answer within one business day.",
+   "cells": [
+    {
+     "h": "Email",
+     "p": "info@taxcheck.ae"
+    },
+    {
+     "h": "Phone / WhatsApp",
+     "p": "+971 50 552 3307"
+    },
+    {
+     "h": "Office",
+     "p": "Dubai, United Arab Emirates"
+    }
+   ],
+   "form": {
+    "name": "Name",
+    "email": "Email",
+    "msg": "Message",
+    "send": "Send message",
+    "sent": "Message sent — we will reply within one business day.",
+    "err": "Please complete all fields."
+   }
+  }
+ },
+ "ar": {
+  "dir": "rtl",
+  "locale": "ar-AE",
+  "langToggle": "English",
+  "brand": "TaxCheck",
+  "brandSuffix": "الإمارات",
+  "labels": {
+   "home": "الرئيسية",
+   "product": "المنتج",
+   "ai": "المساعد الضريبي الذكي",
+   "corporate-tax": "ضريبة الشركات",
+   "vat": "ضريبة القيمة المضافة",
+   "review": "مراجعة الإقرارات",
+   "dashboard": "لوحة التحكم",
+   "accountants": "للمحاسبين",
+   "businesses": "للشركات",
+   "services": "الخدمات المالية والمحاسبية",
+   "einvoicing": "الجاهزية للفوترة الإلكترونية",
+   "pricing": "الأسعار",
+   "demo": "اطلب عرضاً تجريبياً",
+   "resources": "المصادر",
+   "security": "الأمان",
+   "about": "من نحن",
+   "contact": "اتصل بنا",
+   "privacy": "الخصوصية",
+   "terms": "الشروط",
+   "disclaimer": "إخلاء المسؤولية",
+   "careers": "الوظائف"
+  },
+  "navMain": [
+   "product",
+   "corporate-tax",
+   "vat",
+   "ai",
+   "accountants",
+   "pricing",
+   "contact"
+  ],
+  "announce": "يجب تقديم إقرارات ضريبة الشركات للسنة المالية 2025 خلال تسعة أشهر من نهاية السنة المالية. التأخر في التقديم يستوجب غرامات إدارية.",
+  "announceLink": "افحص مخاطرك",
+  "ctaCheck": "افحص مخاطرك الضريبية",
+  "ctaDemo": "ابدأ مجاناً",
+  "signIn": "تسجيل الدخول",
+  "sample": "بيانات تجريبية",
+  "preliminary": "نتيجة أولية — لأغراض التوضيح فقط",
+  "notFTA": "TaxCheck منتج برمجي مستقل، وهو غير تابع للهيئة الاتحادية للضرائب وغير معتمد أو مصرح به من قبلها، ولا يُعد بديلاً عن الاستشارة الضريبية المهنية.",
+  "reviewed": "تمت مراجعة المحتوى: أغسطس 2026. تحمل المراجع القانونية تواريخ مصادرها.",
+  "menu": "القائمة",
+  "close": "إغلاق",
+  "gcc": {
+   "label": "الاختصاصات",
+   "live": "الإمارات العربية المتحدة — متاح",
+   "planned": "البنية جاهزة لإضافة دول أخرى لاحقاً:",
+   "others": [
+    "السعودية",
+    "البحرين",
+    "عُمان",
+    "قطر",
+    "الكويت"
+   ],
+   "plannedTag": "قريباً"
+  },
+  "footerCols": [
+   {
+    "h": "المنتج",
+    "links": [
+     "product",
+     "ai",
+     "corporate-tax",
+     "vat",
+     "review",
+     "dashboard",
+     "einvoicing"
+    ]
+   },
+   {
+    "h": "الحلول",
+    "links": [
+     "accountants",
+     "businesses",
+     "services",
+     "pricing"
+    ]
+   },
+   {
+    "h": "الشركة",
+    "links": [
+     "about",
+     "resources",
+     "security",
+     "contact",
+     "careers",
+     "demo"
+    ]
+   },
+   {
+    "h": "قانوني",
+    "links": [
+     "privacy",
+     "terms",
+     "disclaimer"
+    ]
+   }
+  ],
+  "risk": {
+   "high": "خطورة عالية",
+   "med": "خطورة متوسطة",
+   "low": "خطورة منخفضة",
+   "ok": "سليم"
+  },
+  "status": {
+   "review": "قيد المراجعة",
+   "ready": "جاهز للتقديم",
+   "data": "بانتظار البيانات",
+   "overdue": "إجراء متأخر",
+   "filed": "تم التقديم"
+  },
+  "taxType": {
+   "ct": "ضريبة الشركات",
+   "vat": "ضريبة القيمة المضافة"
+  },
+  "period": {
+   "fy25": "السنة المالية 2025",
+   "q2": "الربع الثاني 2026",
+   "jul": "يوليو 2026"
+  },
+  "tpNames": {
+   "tp1": "شركة النور للتجارة ذ.م.م",
+   "tp2": "الأفق الخليجي للمقاولات ذ.م.م",
+   "tp3": "مارينا للأغذية (دي إم سي سي)",
+   "tp4": "خط الصحراء للخدمات اللوجستية ذ.م.م",
+   "tp5": "واحة التقنية (منطقة حرة)",
+   "tp6": "مجموعة اللؤلؤة للاستشارات ذ.م.م"
+  },
+  "reviewers": {
+   "tp1": "س. رحمن",
+   "tp2": "م. حداد",
+   "tp3": "أ. قريشي",
+   "tp4": "س. رحمن",
+   "tp5": "غير معيَّن",
+   "tp6": "م. حداد"
+  },
+  "home": {
+   "heroL1": "اكتشف الخطأ",
+   "heroL2": "وهو ما زال مجانياً.",
+   "heroSub": "ارفع فواتيرك. يقرأ TaxCheck كل واحدة منها، ويدقّق الأرقام مقابل قواعد ضريبة القيمة المضافة وضريبة الشركات في الإمارات، ويبني إقرارك — ويريك أي مستند وراء كل رقم.",
+   "ctaStart": "ابدأ مجاناً ←",
+   "ctaNote": "بلا بطاقة. بلا مكالمة مبيعات. مجاني خلال فترة الوصول المبكر.",
+   "outcomes": {
+    "items": [
+     {
+      "h": "إقرار تستطيع الدفاع عنه.",
+      "p": "كل خانة تعود إلى الفواتير التي كوّنتها. وحين تسأل الهيئة، يكون الجواب جاهزاً — لا بحثاً في المجلدات."
+     },
+     {
+      "h": "ساعات تعود إليك في كل إقرار.",
+      "p": "لا إعادة إدخال للفواتير في جداول. عشرون مستنداً تُقرأ في نحو دقيقة، ثم تراجع ما رُفع لك كعلم فقط."
+     },
+     {
+      "h": "أرخص وقت لاكتشاف الخطأ هو الآن.",
+      "p": "بموجب قواعد ٢٠٢٦، الخطأ الذي تفصح عنه بنفسك يُسعَّر بنحو ١٪ شهرياً. والخطأ نفسه إذا اكتشفه تدقيق الهيئة يضاف عليه ١٥٪ أخرى."
+     }
+    ]
+   },
+   "answers": {
+    "title": "إجابات مباشرة",
+    "items": [
+     {
+      "q": "هل يقدّم إقراري نيابة عني؟",
+      "a": "لا — وهذا قرار مقصود. لا يقدّم TaxCheck أي شيء إلى الهيئة أبداً. هو يُعِدّ ويدقّق ويُظهر حساباته؛ وأنت تراجع وتعتمد وتقدّم. أنت من يوقّع الإقرار، فأنت من يقرّر ما يدخل فيه."
+     },
+     {
+      "q": "هل أثق بالذكاء الاصطناعي في الأرقام الضريبية؟",
+      "a": "هو لا يحسب — بل يقرأ. كل رقم يُنسخ كما هو مطبوع على المستند تماماً، ثم يُعاد احتسابه ومطابقته في محرّكنا. وحين لا تتطابق الأرقام، يظهر لك علم يعرض الرقمين معاً — لا تصحيح صامت أبداً. وهو يرفض أن يخترع سعر صرف بدل أن يخمّنه."
+     },
+     {
+      "q": "ماذا يحدث حين يخطئ؟",
+      "a": "يخبرك. في أول دفعة حقيقية من ١٩ فاتورة، قُرئت ١٦ منها بلا خطأ واحد، ورُفعت الحالات الصعبة الثلاث كلها للمراجعة — تصدير بالدولار، وفاتورة على صفحتين، ونسخة مكررة من دفعة أقدم. صفر أخطاء صامتة. وهذا الرقم الأخير هو المهم."
+     },
+     {
+      "q": "هل هو مجاني فعلاً؟",
+      "a": "نعم، خلال فترة الوصول المبكر — بلا بطاقة وبلا مكالمة مبيعات. نحن نبني هذا مع محاسبين يعملون على إقرارات حقيقية، وملاحظاتك اليوم أثمن لنا من اشتراكك."
+     },
+     {
+      "q": "هل يحل محل محاسبي؟",
+      "a": "لا — بل هو مبني للمحاسبين. يزيح عنك الإدخال والمطابقة، ويبقي الحكم المهني لك."
+     },
+     {
+      "q": "أين تذهب مستنداتي؟",
+      "a": "تُحفظ مستنداتك ضمن حسابك، ويقرأها نموذج ذكاء اصطناعي لاستخراج حقولها. احتفظ بأصولك — يساعدك TaxCheck في إعداد الإقرار وتدقيقه، وليس بديلاً عن حفظك لسجلاتك. التفاصيل الكاملة في ",
+      "link": "سياسة الخصوصية",
+      "tail": "."
+     }
+    ]
+   },
+   "panel": {
+    "title": "مراجعة الإقرار",
+    "taxpayer": "الخاضع للضريبة",
+    "taxpayerV": "شركة النور للتجارة ذ.م.م",
+    "type": "نوع الضريبة",
+    "typeV": "ضريبة الشركات",
+    "period": "فترة الإقرار",
+    "periodV": "السنة المالية 2025 · الاستحقاق 30 سبتمبر 2026",
+    "completion": "نسبة الاكتمال",
+    "findings": "الملاحظات",
+    "findingsV": "7 مفتوحة",
+    "hi": "2 عالية",
+    "md": "3 متوسطة",
+    "lo": "2 منخفضة",
+    "refL": "المرجع",
+    "refV": "المرسوم بقانون اتحادي رقم 47 لسنة 2022، المادة 28",
+    "action": "فتح المراجعة"
+   },
+   "riskCheck": {
+    "kicker": "01 · فحص المخاطر الضريبية المجاني",
+    "title": "أين يقف إقرارك اليوم؟",
+    "sub": "تسعة أسئلة تمنحك تقييماً أولياً لمستوى المخاطر وما يجب مراجعته أولاً. دون تسجيل.",
+    "qOf": [
+     "السؤال",
+     "من"
+    ],
+    "questions": [
+     {
+      "q": "هل المنشأة مسجلة في ضريبة القيمة المضافة؟",
+      "opts": [
+       {
+        "l": "نعم، مسجلة",
+        "p": 0
+       },
+       {
+        "l": "لا — الإيرادات دون حد التسجيل",
+        "p": 0
+       },
+       {
+        "l": "غير مسجلة، أو لست متأكداً",
+        "p": 2
+       }
+      ]
+     },
+     {
+      "q": "هل المنشأة مسجلة في ضريبة الشركات؟",
+      "opts": [
+       {
+        "l": "نعم، مسجلة",
+        "p": 0
+       },
+       {
+        "l": "التسجيل قيد الإجراء",
+        "p": 1
+       },
+       {
+        "l": "ليس بعد، أو لست متأكداً",
+        "p": 2
+       }
+      ]
+     },
+     {
+      "q": "كيف قُدمت آخر إقراراتكم؟",
+      "opts": [
+       {
+        "l": "في الموعد",
+        "p": 0
+       },
+       {
+        "l": "متأخرة مرة واحدة على الأقل",
+        "p": 1
+       },
+       {
+        "l": "ما زال هناك إقرار غير مقدم",
+        "p": 2
+       }
+      ]
+     },
+     {
+      "q": "كم يبعد موعد التقديم القادم؟",
+      "opts": [
+       {
+        "l": "أكثر من 60 يوماً",
+        "p": 0
+       },
+       {
+        "l": "بين 30 و60 يوماً",
+        "p": 1
+       },
+       {
+        "l": "أقل من 30 يوماً، أو لست متأكداً",
+        "p": 2
+       }
+      ]
+     },
+     {
+      "q": "هل المنشأة في منطقة حرة؟",
+      "opts": [
+       {
+        "l": "لا",
+        "p": 0
+       },
+       {
+        "l": "نعم — دون المطالبة بنسبة 0%",
+        "p": 1
+       },
+       {
+        "l": "نعم — مع المطالبة بنسبة 0%",
+        "p": 2
+       }
+      ]
+     },
+     {
+      "q": "هل توجد معاملات مع أطراف مرتبطة؟",
+      "opts": [
+       {
+        "l": "لا توجد",
+        "p": 0
+       },
+       {
+        "l": "نعم — موثقة",
+        "p": 1
+       },
+       {
+        "l": "نعم — غير موثقة",
+        "p": 2
+       }
+      ]
+     },
+     {
+      "q": "هل تستوردون خدمات من الخارج (الاحتساب العكسي)؟",
+      "opts": [
+       {
+        "l": "لا",
+        "p": 0
+       },
+       {
+        "l": "نعم — مسجلة في الإقرارات",
+        "p": 1
+       },
+       {
+        "l": "نعم — المعالجة غير واضحة",
+        "p": 2
+       }
+      ]
+     },
+     {
+      "q": "ما مدى تحديث سجلاتكم المحاسبية؟",
+      "opts": [
+       {
+        "l": "تسوية شهرية منتظمة",
+        "p": 0
+       },
+       {
+        "l": "محدثة جزئياً",
+        "p": 1
+       },
+       {
+        "l": "متأخرة أكثر من ربع سنة",
+        "p": 2
+       }
+      ]
+     },
+     {
+      "q": "هل سبق إجراء تصحيحات أو إفصاحات؟",
+      "opts": [
+       {
+        "l": "لم نحتج إليها",
+        "p": 0
+       },
+       {
+        "l": "قُدم إفصاح طوعي سابقاً",
+        "p": 1
+       },
+       {
+        "l": "أخطاء معروفة لم تُصحح بعد",
+        "p": 2
+       }
+      ]
+     }
+    ],
+    "resultTitle": "النتيجة الأولية",
+    "levels": {
+     "low": {
+      "l": "مخاطر منخفضة",
+      "d": "تشير إجاباتك إلى وضع منضبط عموماً. تبقى المراجعة قبل كل موعد تقديم خطوة مفيدة."
+     },
+     "med": {
+      "l": "مخاطر متوسطة",
+      "d": "هناك عدة مجالات تستحق مراجعة منظمة قبل التقديم القادم — فالثغرات هنا تظهر عادةً كملاحظات."
+     },
+     "high": {
+      "l": "مخاطر مرتفعة",
+      "d": "تشير إجاباتك إلى ثغرات جوهرية. ننصح بمراجعة عاجلة قبل الموعد القادم لتقليل التعرض للغرامات وإعادة العمل."
+     }
+    },
+    "areas": "مجالات للمراجعة",
+    "next": "الخطوة التالية الموصى بها",
+    "nextAction": {
+     "low": "أجرِ فحصاً قبل تقديم إقرارك القادم.",
+     "med": "احجز جلسة لمراجعة المجالات المحددة ببياناتك.",
+     "high": "اطلب عرضاً تجريبياً هذا الأسبوع وأحضر بيانات آخر إقرار."
+    },
+    "ctaReport": "أرسلوا لي النتيجة كتقرير",
+    "ctaDemo": "ابدأ مجاناً",
+    "restart": "إعادة البدء",
+    "note": "هذه النتيجة أولية ولأغراض التوضيح، وليست استشارة ضريبية ولا تقييماً لإقراراتك الفعلية."
+   },
+   "scenarios": {
+    "kicker": "02 · أين تتعثر الإقرارات",
+    "title": "أنماط الخطأ الشائعة التي نفحصها",
+    "items": [
+     {
+      "h": "إغفال الاحتساب العكسي",
+      "p": "خدمات مستوردة لا تصل إلى الخانة 3، فتُبخس ضريبة المخرجات حتى يكشفها التدقيق أو الإفصاح الطوعي.",
+      "r": "high"
+     },
+     {
+      "h": "افتراض نسبة 0% للمنطقة الحرة",
+      "p": "شروط الدخل المؤهل غير مستوفاة أو غير موثقة بينما تُطبق نسبة 0% على كل شيء.",
+      "r": "high"
+     },
+     {
+      "h": "أطراف مرتبطة دون توثيق",
+      "p": "تأكيد التسعير على أساس السوق دون سجلات تسعير تحويلي تدعمه عند الطلب.",
+      "r": "med"
+     },
+     {
+      "h": "عدم تطابق الدفاتر مع الإقرار",
+      "p": "الإقرار يُعد من جدول بيانات لم يعد يتطابق مع دفتر الأستاذ العام.",
+      "r": "med"
+     }
+    ]
+   },
+   "how": {
+    "kicker": "03 · كيف يعمل TaxCheck",
+    "plateTitle": "TaxCheck — منهجية العمل",
+    "doc": "TC-100",
+    "rev": "مراجعة ب",
+    "sheet": "ورقة 01 من 01",
+    "cols": [
+     "رقم",
+     "الخطوة",
+     "ما يحدث"
+    ],
+    "steps": [
+     {
+      "n": "01",
+      "h": "التنظيم",
+      "p": "استيراد موازين المراجعة والدفاتر والإقرارات السابقة، وتحويلها إلى هيكل إقرارات ضريبة الشركات والقيمة المضافة."
+     },
+     {
+      "n": "02",
+      "h": "التحقق",
+      "p": "فحوص الاكتمال والاتساق تعمل على كل جدول — مدخلات ناقصة، مجاميع غير متطابقة، حركات غير اعتيادية."
+     },
+     {
+      "n": "03",
+      "h": "الرصد والتفسير",
+      "p": "كل ملاحظة توضح الخطأ وسبب أهميته والمرجع القانوني، مصنفة عالية أو متوسطة أو منخفضة."
+     },
+     {
+      "n": "04",
+      "h": "المراجعة والتجهيز",
+      "p": "يعالج فريقك الملاحظات وصولاً إلى إقرار جاهز للمراجعة، مع سجل تدقيق يوضح من عالج ماذا."
+     }
+    ],
+    "note": "المخرج إقرار جاهز للمراجعة وسجل ملاحظات — ويبقى قرار التقديم لك."
+   },
+   "preview": {
+    "kicker": "04 · داخل المنتج",
+    "title": "شاشة عمل حقيقية، لا كتيّب دعائي",
+    "tabs": [
+     {
+      "id": "dash",
+      "l": "لوحة التحكم"
+     },
+     {
+      "id": "findings",
+      "l": "الملاحظات"
+     },
+     {
+      "id": "vat",
+      "l": "إقرار 201"
+     }
+    ],
+    "dashCols": [
+     "الخاضع للضريبة",
+     "الضريبة",
+     "الفترة",
+     "الموعد",
+     "الحالة",
+     "الخطورة"
+    ],
+    "findings": [
+     {
+      "sev": "high",
+      "h": "لم يُطبق الاحتساب العكسي على خدمات برمجية مستوردة",
+      "ref": "المرسوم بقانون اتحادي رقم 8 لسنة 2017، المادة 48",
+      "act": "إعادة احتساب الخانة 3 وتقييم الحاجة إلى إفصاح طوعي عن الفترات السابقة."
+     },
+     {
+      "sev": "med",
+      "h": "خصم مصاريف الضيافة بالكامل",
+      "ref": "المرسوم بقانون اتحادي رقم 47 لسنة 2022، المادة 32",
+      "act": "قصر الخصم على 50% وتعديل جدول المصاريف غير القابلة للخصم."
+     },
+     {
+      "sev": "low",
+      "h": "رقما تسجيل ضريبي لموردين لا يجتازان التحقق الشكلي",
+      "ref": "متطلبات مستندات ضريبة المدخلات",
+      "act": "تصحيح أرقام التسجيل قبل المطالبة بضريبة المدخلات."
+     }
+    ],
+    "findingCols": [
+     "الخطورة",
+     "الملاحظة",
+     "المرجع",
+     "الإجراء"
+    ]
+   },
+   "trio": {
+    "kicker": "05 · نطاق التغطية",
+    "title": "ضريبة الشركات والقيمة المضافة، ومساعد يُظهر مصادره",
+    "items": [
+     {
+      "r": "corporate-tax",
+      "h": "ضريبة الشركات",
+      "p": "من بيانات الخاضع للضريبة إلى احتساب 0%/9% — كل جدول منظم ومُتحقق منه ومفسَّر."
+     },
+     {
+      "r": "vat",
+      "h": "ضريبة القيمة المضافة",
+      "p": "منطق إقرار 201 لكل إمارة: المخرجات، الاحتساب العكسي، التوريدات بنسبة الصفر والمعفاة، ضريبة المدخلات، وصافي المركز."
+     },
+     {
+      "r": "ai",
+      "h": "المساعد الضريبي الذكي",
+      "p": "اطرح سؤالاً واحصل على إجابة أولية مع التعليل والوقائع الناقصة ومستوى الثقة والمصدر المعتمد."
+     }
+    ],
+    "link": "استكشف"
+   },
+   "workflow": {
+    "kicker": "06 · لمكاتب المحاسبة",
+    "title": "كل عميل وكل موعد على لوحة واحدة",
+    "p": "المحاسب يدير محفظة لا إقراراً واحداً. يتابع TaxCheck الخاضعين للضريبة والفترات والإقرارات والمواعيد والمراجعين والملاحظات المفتوحة عبر كامل المحفظة.",
+    "points": [
+     "سجل خاضعين قابل للبحث مع مستويات الخطورة",
+     "تقويم إقرارات بالمواعيد النظامية",
+     "مراجعون معيَّنون وإجراءات معلقة"
+    ],
+    "link": "اطلع على سير عمل المحاسبين"
+   },
+   "explain": {
+    "kicker": "07 · ملاحظات مفسَّرة",
+    "title": "ليس مجرد «خطأ» — ما هو، ولماذا، وما المرجع",
+    "p": "تُكتب كل ملاحظة لتكون قابلة للدفاع عنها: الحالة المرصودة، والقاعدة التي قد تخالفها، ومصدر تلك القاعدة، والإجراء الذي يعالجها.",
+    "card": {
+     "sev": "high",
+     "h": "الملاحظة TC-0142 — إغفال الاحتساب العكسي",
+     "why": "تظهر في الدفاتر خدمات استشارية مستوردة بقيمة 420,000 درهم دون ضريبة مخرجات مقابلة وفق آلية الاحتساب العكسي. وفي حال عدم الإفصاح، يُبخس الإقرار ضريبة المخرجات بمقدار 21,000 درهم.",
+     "refL": "المرجع",
+     "ref": "المرسوم بقانون اتحادي رقم 8 لسنة 2017، المادة 48 (نافذ من 1 يناير 2018)",
+     "actL": "الإجراء",
+     "act": "الإفصاح في الخانة 3 من إقرار 201 والمطالبة بضريبة المدخلات القابلة للاسترداد في الخانة 10 عند الأهلية."
+    }
+   },
+   "services": {
+    "kicker": "08 · ما بعد البرمجيات",
+    "title": "دعم بشري عندما تحتاجه",
+    "p": "البرنامج ينظم البيانات ويفحصها. وعندما تحتاج إلى من ينفذ، يتولى فريقنا المحاسبي الإعداد والتسوية والمراجعة — بفصل واضح عن المنتج.",
+    "items": [
+     "مسك الدفاتر والمحاسبة الشهرية",
+     "إعداد ومراجعة إقرارات القيمة المضافة وضريبة الشركات",
+     "تنظيف البيانات الضريبية وتسويتها",
+     "فحوص سلامة الامتثال"
+    ],
+    "link": "استعرض الخدمات"
+   },
+   "trust": {
+    "kicker": "09 · الأمان والثقة",
+    "title": "بياناتك تُعامل كسجل رسمي",
+    "items": [
+     {
+      "h": "مشفّرة",
+      "p": "تشفير البيانات أثناء النقل وفي حال السكون، مع صلاحيات وصول حسب الدور."
+     },
+     {
+      "h": "قابلة للتدقيق",
+      "p": "كل ملاحظة وتعديل ومعالجة تُسجل في سجل تدقيق يمكن تصديره."
+     },
+     {
+      "h": "شفافة",
+      "p": "معاينات الواجهة في هذا الموقع تستخدم بيانات تجريبية موسومة، وتحمل المراجع القانونية تواريخ مصادرها."
+     }
+    ],
+    "link": "اقرأ نظرة الأمان"
+   },
+   "pricingPrev": {
+    "kicker": "10 · الأسعار",
+    "title": "التطبيق مجاني خلال الإطلاق المبكر — بلا بطاقة",
+    "note": "كل المزايا مجانية بينما نبني مع المجتمع. الخطط التجارية لاحقاً، بشروط تفضيلية للمستخدمين الأوائل.",
+    "link": "التفاصيل"
+   },
+   "faq": {
+    "kicker": "11 · أسئلة شائعة",
+    "title": "سُئلت قبل أن تسأل",
+    "items": [
+     {
+      "q": "هل TaxCheck معتمد من الهيئة الاتحادية للضرائب؟",
+      "a": "لا. TaxCheck برنامج مستقل وغير تابع للهيئة أو معتمد منها. يساعدك على الإعداد والمراجعة، ويبقى قرار التقديم لك أو لمستشارك."
+     },
+     {
+      "q": "هل يقدم TaxCheck الإقرارات نيابة عني؟",
+      "a": "لا. يُنتج بيانات إقرار جاهزة للمراجعة وملاحظات ومراجع داعمة، بينما يتم التقديم عبر بوابة الهيئة بواسطتك أو بواسطة وكيلك المسجل."
+     },
+     {
+      "q": "هل يقدم المساعد الذكي استشارة ضريبية؟",
+      "a": "لا. الإجابات أولية وموثقة بالمصادر وتُظهر الوقائع الناقصة ومستوى الثقة. إنها مدخلات للحكم المهني لا بديلاً عنه."
+     },
+     {
+      "q": "هل يدعم تعدد الكيانات والمناطق الحرة؟",
+      "a": "نعم. محافظ متعددة الخاضعين للضريبة وكيانات المناطق الحرة والمجموعات مدعومة أصلاً: لكل خاضع فتراته وإقراراته وملاحظاته ومراجعوه."
+     },
+     {
+      "q": "ما اللغات المدعومة؟",
+      "a": "يعمل المنتج وهذا الموقع بالكامل بالعربية والإنجليزية، مع تخطيط صحيح من اليمين إلى اليسار وتنسيقات أرقام وتواريخ إماراتية."
+     }
+    ]
+   },
+   "close": {
+    "title": "اكتشف مخاطرك قبل أن تكتشفها الهيئة",
+    "sub": "أجرِ فحص المخاطر المجاني، أو أحضر بيانات آخر إقرار إلى عرض تجريبي مدته 30 دقيقة."
+   },
+   "ftrTag": "برنامج امتثال لضريبة الشركات والقيمة المضافة في الإمارات"
+  },
+  "pages": {
+   "product": {
+    "kicker": "المنتج",
+    "title": "مساحة عمل واحدة للامتثال الضريبي في الإمارات",
+    "sub": "يجمع TaxCheck الخاضعين للضريبة والفترات والإقرارات والمستندات في هيكل واحد — ويفحصها كلها قبل تقديم أي شيء.",
+    "sections": [
+     {
+      "h": "التنظيم",
+      "p": "كل شيء يبدأ من نموذج نظيف للخاضع للضريبة.",
+      "items": [
+       {
+        "h": "سجل الخاضعين للضريبة",
+        "p": "الكيانات وأرقام التسجيل الضريبي ووضع المناطق الحرة والسنوات المالية وعلاقات المجموعة في سجل واحد."
+       },
+       {
+        "h": "مساحات الإقرارات",
+        "p": "لكل فترة ضريبة شركات أو قيمة مضافة مساحة عمل بجداولها وبياناتها وملاحظاتها."
+       },
+       {
+        "h": "استقبال البيانات",
+        "p": "موازين المراجعة والدفاتر والإقرارات السابقة تُستورد وتُحوَّل إلى هياكل الإقرار."
+       }
+      ]
+     },
+     {
+      "h": "التحقق",
+      "p": "تعمل الفحوص باستمرار مع وصول البيانات.",
+      "items": [
+       {
+        "h": "الاكتمال",
+        "p": "الجداول الناقصة والاختيارات غير المجابة والحقول الإلزامية الفارغة تُرصد قبل المراجعة."
+       },
+       {
+        "h": "الاتساق",
+        "p": "مطابقات بين الدفاتر والجداول وخانات الإقرار تكشف المجاميع غير المتطابقة."
+       },
+       {
+        "h": "ملاحظات المخاطر",
+        "p": "الأنماط المرتبطة بالغرامات أو التعرض للتدقيق تُرفع مع مراجعها القانونية."
+       }
+      ]
+     },
+     {
+      "h": "المراجعة",
+      "p": "المخرج مركز قابل للدفاع عنه، لا مجرد أرقام.",
+      "items": [
+       {
+        "h": "سير عمل المراجعة",
+        "p": "تُسند الملاحظات وتُعالج وتُغلق مع اعتماد المراجع."
+       },
+       {
+        "h": "سجل التدقيق",
+        "p": "كل تغيير ومعالجة يُسجل ويمكن تصديره."
+       },
+       {
+        "h": "مخرجات جاهزة للمراجعة",
+        "p": "ملخص إقرار وسجل ملاحظات جاهزان للتقديم بواسطتك أو بواسطة وكيلك."
+       }
+      ]
+     }
+    ],
+    "note": "جميع معاينات الواجهة تستخدم بيانات تجريبية موسومة."
+   },
+   "review": {
+    "kicker": "مراجعة الإقرارات",
+    "title": "عين ثانية قبل كل تقديم",
+    "sub": "مراجعة إقرارات ضريبة الشركات والقيمة المضافة تُظهر الخطأ وسبب أهميته وما يعالجه.",
+    "sections": [
+     {
+      "h": "ما تغطيه المراجعة",
+      "p": "",
+      "items": [
+       {
+        "h": "الاكتمال",
+        "p": "كل جدول واختيار وإفصاح إلزامي موجود ومعبأ."
+       },
+       {
+        "h": "الاتساق",
+        "p": "خانات الإقرار مطابقة للدفاتر والجداول الداعمة."
+       },
+       {
+        "h": "المخاطر",
+        "p": "المواقف التي تستقطب الغرامات أو أسئلة التدقيق عادةً، مع مرجع كل منها."
+       }
+      ]
+     },
+     {
+      "h": "ما تحصل عليه",
+      "p": "",
+      "items": [
+       {
+        "h": "قائمة ملاحظات",
+        "p": "مصنفة عالية ومتوسطة ومنخفضة — مع التعليل والمصدر لكل منها."
+       },
+       {
+        "h": "ملخص جاهز للمراجعة",
+        "p": "الإقرار كما سيُقدَّم، مع تعليقات بالبنود المفتوحة والمعالجة."
+       },
+       {
+        "h": "تقرير جاهز للعميل",
+        "p": "للمكاتب: ملخص بهوية مكتبك يمكن تسليمه للعميل."
+       }
+      ]
+     }
+    ],
+    "note": "مخرجات المراجعة تدعم قرار التقديم، وليست استشارة ضريبية ولا تمثيلاً بوكالة."
+   },
+   "businesses": {
+    "kicker": "للشركات",
+    "title": "ثقة ضريبية لفرق المالية",
+    "sub": "للمنشآت الصغيرة والمتوسطة وكيانات المناطق الحرة والمجموعات متعددة الكيانات التي تدير التزامات الضريبتين داخلياً.",
+    "sections": [
+     {
+      "h": "مصمم لهيكلك",
+      "p": "",
+      "items": [
+       {
+        "h": "المنشآت الصغيرة والمتوسطة",
+        "p": "كيان واحد وكلتا الضريبتين، بمواعيد وملاحظات واضحة — دون توظيف إدارة ضرائب."
+       },
+       {
+        "h": "كيانات المناطق الحرة",
+        "p": "شروط الدخل المؤهل تُتابع صراحةً، لتكون نسبة 0% موقفاً موثقاً."
+       },
+       {
+        "h": "المجموعات",
+        "p": "كيانات متعددة بفترات مستقلة، ورؤية موحدة، ومساحة عمل واحدة."
+       }
+      ]
+     },
+     {
+      "h": "ما يحصل عليه فريقك",
+      "p": "",
+      "items": [
+       {
+        "h": "وضوح المواعيد",
+        "p": "كل موعد نظامي على تقويم واحد مع حالة كل التزام."
+       },
+       {
+        "h": "ملاحظات بلغة واضحة",
+        "p": "ما الخطأ ولماذا يهم وما العمل — مع مراجع يمكن لمستشارك التحقق منها."
+       },
+       {
+        "h": "إقرارات جاهزة للمراجعة",
+        "p": "بيانات يستطيع محاسبك أو وكيلك التقديم منها دون إعادة عمل."
+       }
+      ]
+     }
+    ],
+    "note": "عندما تحتاج الملاحظات إلى حكم مهني، أشرك مستشارك — أو استعن بفريق خدماتنا."
+   },
+   "services": {
+    "kicker": "الخدمات المالية والمحاسبية",
+    "title": "برمجيات ودعم مهني معاً",
+    "sub": "المنتج يفحص بياناتك. وفريق الخدمات لدينا — المنفصل عن البرنامج — ينجز العمل المحاسبي عندما تريد أيادي عاملة لا ملاحظات فقط.",
+    "sections": [
+     {
+      "h": "المحاسبة",
+      "p": "",
+      "items": [
+       {
+        "h": "مسك الدفاتر",
+        "p": "تسجيل المعاملات وترميزها أولاً بأول."
+       },
+       {
+        "h": "المحاسبة الشهرية",
+        "p": "إقفالات وتسويات وجداول بإيقاع شهري."
+       },
+       {
+        "h": "التقارير الإدارية",
+        "p": "قوائم دخل ومراكز مالية وتقارير نقدية تقرؤها إدارتك بسهولة."
+       }
+      ]
+     },
+     {
+      "h": "إعداد ومراجعة الإقرارات",
+      "p": "",
+      "items": [
+       {
+        "h": "إقرارات القيمة المضافة",
+        "p": "إعداد إقرار 201 ومراجعته مراجعة مستقلة قبل التقديم."
+       },
+       {
+        "h": "إقرارات ضريبة الشركات",
+        "p": "إعداد الإقرار ومراجعته، من الجداول حتى الاحتساب."
+       },
+       {
+        "h": "التنظيف والتسوية",
+        "p": "تنظيف البيانات الضريبية التاريخية ومطابقة الدفاتر مع الإقرارات."
+       }
+      ]
+     },
+     {
+      "h": "الجاهزية والدعم",
+      "p": "",
+      "items": [
+       {
+        "h": "فحوص سلامة الامتثال",
+        "p": "نظرة منهجية على التسجيلات والإقرارات والسجلات."
+       },
+       {
+        "h": "جاهزية الفوترة الإلكترونية",
+        "p": "تقييم الأنظمة وحقول البيانات والعمليات للفوترة الإلكترونية الإماراتية."
+       },
+       {
+        "h": "دعم مالي خارجي",
+        "p": "قدرة مالية مستمرة تتوسع حسب حاجتك."
+       }
+      ]
+     },
+     {
+      "h": "استشارات ضريبة الشركات والقيمة المضافة",
+      "p": "استشارات منظمة حول الإقرارات نفسها.",
+      "items": [
+       {
+        "h": "سير عمل ضريبة الشركات",
+        "p": "إعداد سير العمل ومخرجات جاهزة للمراجعة لكل دورة تقديم."
+       },
+       {
+        "h": "دعم إقرارات القيمة المضافة",
+        "p": "دعم إعداد إقرار 201 والضوابط الداخلية المحيطة به."
+       },
+       {
+        "h": "مراجعة ما قبل التقديم",
+        "p": "مراجعة المخاطر وقائمة تحقق الامتثال قبل كل تقديم."
+       },
+       {
+        "h": "هيكلة المستندات",
+        "p": "مستندات التقديم منظمة وفق المتطلبات الإماراتية."
+       }
+      ]
+     },
+     {
+      "h": "تصميم العمليات المحاسبية والمالية",
+      "p": "العمليات التي تقف خلف بيانات ضريبية نظيفة.",
+      "items": [
+       {
+        "h": "دليل الحسابات",
+        "p": "هيكلة دليل حسابات متوافق مع المعايير الدولية IFRS."
+       },
+       {
+        "h": "تصميم الإقفال الدوري",
+        "p": "تصميم عملية الإقفال وقائمة مهام نهاية الشهر لفريقك."
+       },
+       {
+        "h": "السياسات المحاسبية",
+        "p": "إثبات الإيراد والمستحقات والمخصصات — مكتوبةً وموثقة."
+       },
+       {
+        "h": "التقارير الإدارية",
+        "p": "هيكل تقارير مبني لإشراف بمستوى المدير المالي."
+       }
+      ]
+     },
+     {
+      "h": "أتمتة المالية واستشارات التقنية المالية",
+      "p": "عندما يكون الحل نظاماً لا جدول بيانات.",
+      "items": [
+       {
+        "h": "المتطلبات والمواصفات",
+        "p": "متطلبات ومواصفات وظيفية للبرمجيات المالية."
+       },
+       {
+        "h": "قواعد التحقق وسجلات التدقيق",
+        "p": "قواعد تحقق وسجلات تدقيق بمستوى مؤسسي."
+       },
+       {
+        "h": "الاستيراد والتسوية",
+        "p": "قوالب استيراد البيانات ومسارات التسوية."
+       },
+       {
+        "h": "اللوحات والاعتمادات",
+        "p": "لوحات مؤشرات أداء ومسارات مراجعة واعتماد."
+       }
+      ]
+     }
+    ],
+    "note": "تُقدَّم الخدمات بواسطة محاسبين مهنيين. لا يقدم TaxCheck تمثيلاً بوكيل ضريبي مرخص ما لم يُتفق على ذلك كتابةً وصراحةً."
+   },
+   "resources": {
+    "kicker": "المصادر",
+    "title": "أدلة وتحديثات",
+    "sub": "شروح عملية عن ضريبة الشركات والقيمة المضافة والفوترة الإلكترونية في الإمارات. يحمل كل دليل مصدره وتاريخ مراجعته.",
+    "sections": [
+     {
+      "h": "أدلة",
+      "p": "",
+      "items": [
+       {
+        "h": "أساسيات التسجيل في ضريبة الشركات",
+        "p": "من يجب أن يسجل ومتى. المصدر: المرسوم بقانون اتحادي رقم 47 لسنة 2022. روجع أغسطس 2026."
+       },
+       {
+        "h": "إقرار 201 خانة بخانة",
+        "p": "ما ينتمي إلى كل خانة، ولكل إمارة. المصدر: المرسوم بقانون اتحادي رقم 8 لسنة 2017. روجع أغسطس 2026."
+       },
+       {
+        "h": "نسبة 0% للمناطق الحرة: الشروط",
+        "p": "الدخل المؤهل وما يُفقده الأهلية. المصدر: قرارات مجلس الوزراء والقرارات الوزارية لسنة 2023. روجع أغسطس 2026."
+       }
+      ]
+     },
+     {
+      "h": "تحديثات",
+      "p": "",
+      "items": [
+       {
+        "h": "برنامج الفوترة الإلكترونية",
+        "p": "أين وصل التطبيق في الإمارات وما الذي ينبغي تجهيزه. روجع أغسطس 2026."
+       },
+       {
+        "h": "إطار الغرامات",
+        "p": "الغرامات الإدارية عن التأخر في التسجيل والتقديم. روجع أغسطس 2026."
+       }
+      ]
+     }
+    ],
+    "note": "الأدلة معلومات عامة وليست استشارة ضريبية."
+   },
+   "security": {
+    "kicker": "الأمان",
+    "title": "كيف نحمي بياناتك",
+    "sub": "البيانات الضريبية سجل رسمي، ونتعامل معها على هذا الأساس — بوقائع لا شعارات.",
+    "sections": [
+     {
+      "h": "حماية البيانات",
+      "p": "",
+      "items": [
+       {
+        "h": "التشفير",
+        "p": "تُشفَّر البيانات أثناء النقل (TLS 1.2+) وفي حال السكون (AES-256)."
+       },
+       {
+        "h": "مكان حفظ البيانات",
+        "p": "يتوفر خيار استضافة البيانات داخل دولة الإمارات."
+       },
+       {
+        "h": "ضوابط الوصول",
+        "p": "صلاحيات حسب الدور، ويقتصر الوصول على ما يحتاجه كل دور."
+       }
+      ]
+     },
+     {
+      "h": "التشغيل",
+      "p": "",
+      "items": [
+       {
+        "h": "سجل التدقيق",
+        "p": "الإجراءات الإدارية وإجراءات البيانات تُسجل وتخضع للمراجعة."
+       },
+       {
+        "h": "النسخ الاحتياطي",
+        "p": "نسخ احتياطية منتظمة مع إجراءات استعادة مختبرة."
+       },
+       {
+        "h": "مراجعة المزودين",
+        "p": "المعالجون الفرعيون مدرجون ويُراجعون؛ انظر صفحة الخصوصية."
+       }
+      ]
+     },
+     {
+      "h": "ضوابطك أنت",
+      "p": "",
+      "items": [
+       {
+        "h": "التصدير",
+        "p": "بياناتك قابلة للتصدير بصيغ مفتوحة في أي وقت."
+       },
+       {
+        "h": "الاحتفاظ",
+        "p": "فترات الاحتفاظ قابلة للضبط وفق التزاماتك في حفظ السجلات."
+       },
+       {
+        "h": "الحذف",
+        "p": "حذف موثَّق عند الطلب، مع مراعاة واجبات الاحتفاظ القانونية."
+       }
+      ]
+     }
+    ],
+    "note": "نصف الضوابط بدقة ونتجنب الادعاءات غير القابلة للتحقق."
+   },
+   "about": {
+    "kicker": "من نحن",
+    "title": "بُني لكيفية عمل الضرائب في الإمارات فعلاً",
+    "sub": "يبني TaxCheck محاسبون ومهندسون في الإمارات للفرق التي تعد الإقرارات وتراجعها وتُسأل عنها.",
+    "sections": [
+     {
+      "h": "ما الذي نفعله",
+      "p": "نجعل المراجعة قبل التقديم عملية منهجية: بيانات منظمة، فحوص صريحة، ملاحظات موثقة بالمراجع، وسجل بكيفية معالجة كل منها.",
+      "items": []
+     },
+     {
+      "h": "إطار دول الخليج",
+      "p": "المنصة إماراتية أولاً. صُمم إطار الاختصاصات فيها — القواعد والمراجع والنماذج وحزم اللغة لكل دولة — بحيث يمكن إضافة دول خليجية أخرى عند دعم أنظمتها. لا نُتيح اليوم أي وظائف سعودية أو بحرينية أو عُمانية أو قطرية أو كويتية.",
+      "items": []
+     },
+     {
+      "h": "كيف يُصان المحتوى",
+      "p": "تذكر المراجع القانونية أداتها التشريعية وتاريخها. ويعرض محتوى الموقع تاريخ آخر مراجعة. وعند تغير القواعد تُحدَّث المراجع ولا تُعاد كتابتها بصمت.",
+      "items": []
+     }
+    ],
+    "note": ""
+   },
+   "privacy": {
+    "kicker": "الخصوصية",
+    "title": "سياسة الخصوصية",
+    "sub": "آخر مراجعة: أغسطس 2026.",
+    "sections": [
+     {
+      "h": "1. ما الذي نجمعه",
+      "p": "بيانات الحساب (الاسم، البريد المهني، الشركة)، والبيانات الضريبية والمحاسبية التي ترفعها، وسجلات الاستخدام اللازمة لتشغيل الخدمة وتأمينها.",
+      "items": []
+     },
+     {
+      "h": "2. كيف نستخدمها",
+      "p": "لتقديم الخدمة: تنظيم بياناتك الضريبية والتحقق منها ومراجعتها؛ ولتأمين حسابك ودعمه؛ ولتحسين المنتج عبر أنماط استخدام مجمعة ومجهولة الهوية. لا نبيع البيانات الشخصية.",
+      "items": []
+     },
+     {
+      "h": "3. المعالجة بالذكاء الاصطناعي",
+      "p": "تعالج ميزات الذكاء الاصطناعي البيانات التي تقدمها لتوليد الملاحظات والإجابات. لا تُستخدم بياناتك لتدريب نماذج لعملاء آخرين دون موافقة صريحة.",
+      "items": []
+     },
+     {
+      "h": "4. الاحتفاظ والحذف",
+      "p": "تُحفظ البيانات ما دام حسابك نشطاً ووفق إعدادات الاحتفاظ. يمكنك التصدير أو طلب الحذف مع مراعاة واجبات حفظ السجلات القانونية.",
+      "items": []
+     },
+     {
+      "h": "5. التواصل",
+      "p": "لأسئلة الخصوصية: info@taxcheck.ae.",
+      "items": []
+     }
+    ],
+    "note": ""
+   },
+   "terms": {
+    "kicker": "الشروط",
+    "title": "شروط الخدمة",
+    "sub": "آخر مراجعة: أغسطس 2026.",
+    "sections": [
+     {
+      "h": "1. الخدمة",
+      "p": "يوفر TaxCheck برنامجاً ينظم بيانات ضريبة الشركات والقيمة المضافة في الإمارات ويتحقق منها ويساعد في مراجعتها، إضافةً إلى خدمات محاسبية مهنية اختيارية يُتفق عليها على حدة.",
+      "items": []
+     },
+     {
+      "h": "2. ليست استشارة ضريبية",
+      "p": "مخرجات البرنامج — بما فيها إجابات الذكاء الاصطناعي والملاحظات — معلومات أولية لدعم المراجعة، وليست استشارة ضريبية أو قانونية أو محاسبية، وتبقى قرارات التقديم لك.",
+      "items": []
+     },
+     {
+      "h": "3. مسؤولياتك",
+      "p": "أنت مسؤول عن دقة البيانات التي تقدمها وعن الوفاء بالتزامات ومواعيد التقديم والسداد الخاصة بك.",
+      "items": []
+     },
+     {
+      "h": "4. المسؤولية",
+      "p": "إلى الحد الذي يجيزه القانون، تنحصر المسؤولية في الرسوم المدفوعة خلال الاثني عشر شهراً السابقة؛ ولسنا مسؤولين عن غرامات تنشأ عن إقرارات تقدمها أنت.",
+      "items": []
+     },
+     {
+      "h": "5. التعديلات",
+      "p": "قد نحدّث هذه الشروط مع إشعار؛ ويُعد الاستمرار في الاستخدام قبولاً بها.",
+      "items": []
+     }
+    ],
+    "note": ""
+   },
+   "disclaimer": {
+    "kicker": "إخلاء المسؤولية",
+    "title": "ما هي مخرجات TaxCheck — وما ليست إياه",
+    "sub": "آخر مراجعة: أغسطس 2026.",
+    "sections": [
+     {
+      "h": "مخرجات الذكاء الاصطناعي أولية",
+      "p": "الإجابات والملاحظات التي يولدها TaxCheck ينتجها برنامج من البيانات والمصادر المتاحة له، وقد تكون ناقصة أو خاطئة، ولهذا تُوسم بمستوى الثقة والوقائع الناقصة.",
+      "items": []
+     },
+     {
+      "h": "ليست استشارة ضريبية",
+      "p": "لا شيء في هذا الموقع أو المنتج يشكل استشارة ضريبية أو قانونية أو محاسبية. قرارات التسجيل والإقرارات والاختيارات والإفصاحات تُتخذ مع مختص مؤهل.",
+      "items": []
+     },
+     {
+      "h": "غير تابع للهيئة الاتحادية للضرائب",
+      "p": "TaxCheck غير تابع للهيئة الاتحادية للضرائب وغير معتمد أو مصرح به من قبلها، وليس وكيلاً ضريبياً مرخصاً ما لم يُنص على ذلك صراحةً في اتفاق موقع.",
+      "items": []
+     },
+     {
+      "h": "المصادر والتواريخ",
+      "p": "تذكر المراجع القانونية أداتها وتاريخ نفاذها. تحقق من الوضع الحالي للقانون قبل الاعتماد على أي مرجع.",
+      "items": []
+     },
+     {
+      "h": "البيانات التجريبية",
+      "p": "جميع معاينات الواجهة والأرقام وأسماء الخاضعين للضريبة في هذا الموقع بيانات تجريبية وهمية وموسومة بذلك.",
+      "items": []
+     }
+    ],
+    "note": ""
+   }
+  },
+  "ct": {
+   "kicker": "ضريبة الشركات",
+   "title": "الإقرار كاملاً، منظماً ومفحوصاً",
+   "sub": "من بيانات الخاضع للضريبة إلى احتساب 0%/9% — كل جداول ضريبة الشركات في هيكل واحد قابل للمراجعة.",
+   "plateTitle": "إقرار ضريبة الشركات — حالة الجداول",
+   "doc": "CT-FY25",
+   "rev": "مراجعة أ",
+   "sheet": "شركة النور للتجارة ذ.م.م",
+   "cols": [
+    "رقم",
+    "الجدول",
+    "الحالة",
+    "ملاحظة"
+   ],
+   "rows": [
+    {
+     "n": "01",
+     "h": "بيانات الخاضع للضريبة",
+     "s": "ok",
+     "r": "تم تأكيد رقم التسجيل والسنة المالية والاختيارات"
+    },
+    {
+     "n": "02",
+     "h": "الجداول المحاسبية",
+     "s": "ok",
+     "r": "ميزان المراجعة مطابق للدفاتر"
+    },
+    {
+     "n": "03",
+     "h": "الاختيارات",
+     "s": "warn",
+     "r": "اختيار أساس التحقق غير مُجاب"
+    },
+    {
+     "n": "04",
+     "h": "الدخل المعفى",
+     "s": "ok",
+     "r": "أرباح مساهمة موثقة بقيمة 120,000 درهم"
+    },
+    {
+     "n": "05",
+     "h": "المصاريف غير القابلة للخصم",
+     "s": "high",
+     "r": "خُصمت الضيافة بنسبة 100% — والمادة 32 تحددها بـ50%"
+    },
+    {
+     "n": "06",
+     "h": "الأطراف المرتبطة",
+     "s": "warn",
+     "r": "معاملتان دون إثبات لمبدأ السوق"
+    },
+    {
+     "n": "07",
+     "h": "الأشخاص المتصلون",
+     "s": "ok",
+     "r": "المدفوعات ضمن إثبات القيمة السوقية"
+    },
+    {
+     "n": "08",
+     "h": "الخسائر الضريبية",
+     "s": "ok",
+     "r": "لا خسائر مرحلة"
+    },
+    {
+     "n": "09",
+     "h": "اعتبارات المناطق الحرة",
+     "s": "ok",
+     "r": "ليس شخص منطقة حرة"
+    },
+    {
+     "n": "10",
+     "h": "الدخل الخاضع للضريبة",
+     "s": "warn",
+     "r": "بانتظار معالجة البنود 03 و05 و06"
+    }
+   ],
+   "statusL": {
+    "ok": "جاهز",
+    "warn": "للمراجعة",
+    "high": "خطورة عالية"
+   },
+   "calcTitle": "الاحتساب — 0% و9%",
+   "calcRows": [
+    {
+     "l": "الدخل المحاسبي",
+     "k": "income"
+    },
+    {
+     "l": "مصاريف غير قابلة للخصم (تُضاف)",
+     "k": "nonDed"
+    },
+    {
+     "l": "دخل معفى (أرباح أسهم)",
+     "k": "exemptDiv"
+    },
+    {
+     "l": "الدخل الخاضع للضريبة",
+     "k": "taxable"
+    },
+    {
+     "l": "يخضع لنسبة 0% (أول 375,000 درهم)",
+     "k": "band0"
+    },
+    {
+     "l": "يخضع لنسبة 9%",
+     "k": "band9"
+    },
+    {
+     "l": "ضريبة الشركات المستحقة",
+     "k": "tax"
+    }
+   ],
+   "calcNote": "احتساب تجريبي. النسب وفق المرسوم بقانون اتحادي رقم 47 لسنة 2022، المادة 3 (يسري على السنوات المالية التي تبدأ في 1 يونيو 2023 أو بعده).",
+   "ctaTitle": "راجع إقراراً حقيقياً لا نموذجاً",
+   "ctaSub": "أحضر بيانات سنتك المالية 2025 إلى عرض تجريبي وشاهد جداولك أنت في هذا الهيكل."
+  },
+  "vat": {
+   "kicker": "ضريبة القيمة المضافة",
+   "title": "إقرار 201 خانة بخانة وإمارة بإمارة",
+   "sub": "يعد TaxCheck إقرار 201 ويتحقق منه بالهيكل الفعلي للنموذج — بالاحتساب العكسي والتعديلات وضريبة المدخلات في مواضعها الصحيحة.",
+   "emirates": [
+    "أبوظبي",
+    "دبي",
+    "الشارقة",
+    "عجمان",
+    "أم القيوين",
+    "رأس الخيمة",
+    "الفجيرة"
+   ],
+   "outTitle": "المخرجات — التوريدات الخاضعة للنسبة الأساسية حسب الإمارة",
+   "cols": [
+    "الإمارة",
+    "المبلغ الخاضع (درهم)",
+    "الضريبة (درهم)",
+    "التعديل (درهم)"
+   ],
+   "otherRows": [
+    {
+     "l": "نظام رد الضريبة للسياح",
+     "k": "tourist",
+     "kind": "v"
+    },
+    {
+     "l": "توريدات الاحتساب العكسي (خدمات مستوردة)",
+     "k": "rc"
+    },
+    {
+     "l": "التوريدات الخاضعة لنسبة الصفر",
+     "k": "zero",
+     "kind": "a"
+    },
+    {
+     "l": "التوريدات المعفاة",
+     "k": "exempt",
+     "kind": "a"
+    },
+    {
+     "l": "السلع المستوردة إلى الدولة",
+     "k": "imp"
+    }
+   ],
+   "inTitle": "المدخلات — الضريبة القابلة للاسترداد",
+   "inRows": [
+    {
+     "l": "مصاريف خاضعة للنسبة الأساسية",
+     "k": "in"
+    },
+    {
+     "l": "توريدات خاضعة للاحتساب العكسي",
+     "k": "imp2"
+    }
+   ],
+   "totOut": "إجمالي ضريبة المخرجات",
+   "totIn": "إجمالي ضريبة المدخلات القابلة للاسترداد",
+   "net": "صافي الضريبة المستحقة الدفع",
+   "netRefund": "صافي الضريبة القابلة للاسترداد",
+   "note": "بيانات تجريبية. الهيكل وفق إقرار 201؛ والاحتساب العكسي وفق المرسوم بقانون اتحادي رقم 8 لسنة 2017، المادة 48.",
+   "ctaTitle": "تحقق من إقرارك القادم قبل تقديمه",
+   "ctaSub": "يطابق TaxCheck كل خانة مع دفاترك ويرصد ما لا يتطابق."
+  },
+  "ai": {
+   "kicker": "المساعد الضريبي الذكي",
+   "title": "اسأل TaxCheck — إجابات تُظهر منهجها",
+   "sub": "إجابة أولية مع تعليلها ومصادرها ومستوى ثقتها والوقائع التي ما زالت تنقصها. منضبط وقابل للتدقيق، لا ثقة حوارية زائفة.",
+   "chipLabel": "سؤال تجريبي",
+   "chip": "هل هذا المصروف قابل للخصم لأغراض ضريبة الشركات؟",
+   "ask": "اسأل TaxCheck",
+   "thinking": "جارٍ فحص المصادر…",
+   "card": {
+    "ansL": "إجابة أولية",
+    "ans": "قابل للخصم جزئياً على الأرجح. مصاريف ضيافة العملاء يقتصر خصمها على 50%؛ بينما يبدو جزء تدريب الموظفين قابلاً للخصم بالكامل إذا تُكبد كلياً لأغراض العمل.",
+    "whyL": "التعليل",
+    "why": "تجمع الفاتورة بين ضيافة عملاء (عشاء بقيمة 6,200 درهم) وتدريب موظفين (رسوم ورشة بقيمة 9,000 درهم). تجيز المادة 28 خصم النفقات المتكبدة كلياً وحصرياً لأغراض العمل؛ وتقصر المادة 32 مصاريف الضيافة على 50%.",
+    "missL": "وقائع ناقصة",
+    "miss": [
+     "قائمة الحضور — هل هم عملاء أم موردون أم موظفون فقط؟",
+     "هل تشمل رسوم الورشة ضيافة (عنصر ترفيهي)؟",
+     "هل المصروف رأسمالي الطبيعة؟"
+    ],
+    "confL": "مستوى الثقة",
+    "conf": "متوسط",
+    "confPct": 62,
+    "srcL": "المصادر",
+    "src": [
+     "المرسوم بقانون اتحادي رقم 47 لسنة 2022، المادة 28 — النفقات القابلة للخصم",
+     "المرسوم بقانون اتحادي رقم 47 لسنة 2022، المادة 32 — مصاريف الضيافة (50%)"
+    ],
+    "effL": "النفاذ",
+    "eff": "السنوات المالية التي تبدأ في 1 يونيو 2023 أو بعده",
+    "actL": "إجراء المراجعة الموصى به",
+    "act": "فصل الفاتورة إلى عنصري الضيافة والتدريب؛ وتطبيق قيد الـ50% على عنصر الضيافة وتوثيق الحضور.",
+    "disc": "إجابة أولية مولدة برمجياً. ليست استشارة ضريبية — تحقق مع مختص مؤهل قبل التقديم."
+   },
+   "props": [
+    "واعٍ بالمصادر: كل إجابة تذكر الأداة التشريعية والمادة التي تستند إليها.",
+    "صريح بشأن الفجوات: الوقائع الناقصة تُدرج ولا تُخمَّن.",
+    "مصنَّف: مستوى ثقة معلن لا يقين زائف.",
+    "قابل للتدقيق: الأسئلة والإجابات تُسجل مع مصادرها وتواريخها."
+   ]
+  },
+  "acc": {
+   "kicker": "للمحاسبين",
+   "title": "أدر المحفظة كلها لا إقراراً واحداً",
+   "sub": "الخاضعون للضريبة والفترات والمواعيد والمراجعون والخطورة والإجراءات المعلقة — قابلة للتصفية والإسناد والتصدير.",
+   "searchPh": "ابحث عن خاضع للضريبة…",
+   "filterAll": "كل مستويات الخطورة",
+   "cols": [
+    "",
+    "الخاضع للضريبة",
+    "الضريبة",
+    "الفترة",
+    "الموعد",
+    "الحالة",
+    "المراجع",
+    "الخطورة",
+    "بنود مفتوحة"
+   ],
+   "selected": "محدد",
+   "actAssign": "إسناد مراجع",
+   "actExport": "تصدير تقرير للعميل",
+   "exportDone": "التقرير قيد الإعداد — راجع بريدك خلال دقيقة.",
+   "empty": "لا يطابق أي خاضع للضريبة هذا الفلتر.",
+   "calTitle": "تقويم الإقرارات — التسعون يوماً القادمة",
+   "workflow": [
+    {
+     "h": "سير عمل الفريق",
+     "p": "أسند الإقرارات إلى المراجعين، وتابع الملاحظات المفتوحة لكل شخص، واعرف من ينتظر ماذا."
+    },
+    {
+     "h": "تقارير جاهزة للعملاء",
+     "p": "صدّر ملخص الملاحظات والحالة بصياغة مكتبك، جاهزاً لاجتماع العميل."
+    },
+    {
+     "h": "مخاطر المحفظة",
+     "p": "تتجمع مستويات الخطورة عبر المحفظة، فلا يفاجئك العميل الأعلى خطورة أبداً."
+    }
+   ]
+  },
+  "dash": {
+   "kicker": "لوحة التحكم",
+   "title": "حالة كل التزام في نظرة واحدة",
+   "sub": "المواعيد والحالات والملاحظات والخطورة عبر جميع الخاضعين للضريبة وكلتا الضريبتين.",
+   "kpis": [
+    {
+     "l": "خاضعون نشطون",
+     "v": "6"
+    },
+    {
+     "l": "إقرارات قيد الإعداد",
+     "v": "4"
+    },
+    {
+     "l": "ملاحظات مفتوحة",
+     "v": "19"
+    },
+    {
+     "l": "مواعيد خلال 60 يوماً",
+     "v": "3"
+    }
+   ],
+   "deadlinesTitle": "المواعيد القادمة",
+   "findingsTitle": "الملاحظات حسب الخطورة",
+   "sevRows": [
+    {
+     "l": "عالية",
+     "k": "high",
+     "n": 4
+    },
+    {
+     "l": "متوسطة",
+     "k": "med",
+     "n": 9
+    },
+    {
+     "l": "منخفضة",
+     "k": "low",
+     "n": 6
+    }
+   ]
+  },
+  "pricing": {
+   "kicker": "الأسعار",
+   "title": "التطبيق مجاني خلال الإطلاق المبكر",
+   "sub": "تطبيق TaxCheck مجاني بينما نبنيه مع مجتمع المحاسبة الإماراتي. بلا بطاقة ائتمان، بلا حدود، بلا شروط خفية — ملاحظاتك هي التي تشكّل المنتج.",
+   "monthly": "شهري",
+   "annual": "سنوي",
+   "save": "",
+   "per": {
+    "m": "",
+    "y": ""
+   },
+   "popular": "إطلاق مبكر",
+   "cta": "ابدأ بخطة",
+   "ctaEnt": "تحدث إلينا",
+   "plans": [
+    {
+     "id": "early",
+     "name": "الوصول المبكر",
+     "pm": "0 درهم",
+     "py": "0 درهم",
+     "d": "كل ما في المنتج. مجاني للجميع خلال فترة الإطلاق المبكر.",
+     "pop": true,
+     "f": [
+      "خاضعون وإقرارات بلا حدود",
+      "معالجا VAT 201 وضريبة الشركات",
+      "مراجعة قانونية باستشهادات المواد",
+      "المساعد الضريبي الذكي (حد استخدام عادل يومي)",
+      "سجل تدقيق غير قابل للتلاعب",
+      "واجهة عربية وإنجليزية"
+     ]
+    },
+    {
+     "id": "review",
+     "name": "مراجعة خبير قبل التقديم",
+     "pm": "750 درهم",
+     "py": "750 درهم",
+     "d": "إقرار واحد يُراجع قبل التقديم. تقرير مكتوب خلال 48 ساعة — كل ملاحظة باستشهاد بمادتها القانونية. خمسة إقرارات بـ 2,750 درهم.",
+     "pop": false,
+     "link": "https://pay.ziina.com/taxcheck/D8rt-YjQc",
+     "cta": "اطلب مراجعة",
+     "f": [
+      "أي إقرار ضريبة شركات مهما كان حجمه",
+      "تقرير مكتوب خلال 48 ساعة",
+      "استشهاد بالمواد القانونية بندًا ببند",
+      "قائمة المستندات الناقصة",
+      "حجم الغرامات لو قُدّم كما هو",
+      "مجاني إذا لم نستطع إسناد أي ملاحظة للقانون"
+     ]
+    }
+   ],
+   "compTitle": "ما تحصل عليه اليوم",
+   "compCols": [
+    "",
+    "الوصول المبكر"
+   ],
+   "compRows": [
+    {
+     "l": "الخاضعون للضريبة",
+     "v": [
+      "بلا حد"
+     ]
+    },
+    {
+     "l": "المستخدمون",
+     "v": [
+      "بلا حد"
+     ]
+    },
+    {
+     "l": "إقرارات القيمة المضافة",
+     "v": [
+      "بلا حد"
+     ]
+    },
+    {
+     "l": "إقرارات ضريبة الشركات",
+     "v": [
+      "بلا حد"
+     ]
+    },
+    {
+     "l": "استفسارات المساعد الذكي / يوم",
+     "v": [
+      "30 (استخدام عادل)"
+     ]
+    },
+    {
+     "l": "الملاحظات والمراجع",
+     "v": [
+      "✓"
+     ]
+    },
+    {
+     "l": "سجل التدقيق",
+     "v": [
+      "✓"
+     ]
+    },
+    {
+     "l": "الطباعة (VAT 201 / ضريبة الشركات)",
+     "v": [
+      "✓"
+     ]
+    },
+    {
+     "l": "الدعم",
+     "v": [
+      "بريد إلكتروني"
+     ]
+    }
+   ],
+   "note": "التطبيق مجاني خلال فترة الإطلاق المبكر. مراجعة الخبير خدمة مدفوعة — 750 درهمًا للإقرار، و2,750 درهمًا لخمسة إقرارات، تُسلَّم خلال 48 ساعة. وستُعلن خطط التطبيق التجارية لاحقًا بشروط تفضيلية للمستخدمين الأوائل."
+  },
+  "demo": {
+   "kicker": "اطلب عرضاً تجريبياً",
+   "title": "30 دقيقة، وببياناتك إن شئت",
+   "sub": "جلسة عمل لا عرض شرائح. أخبرنا عن وضعك واختر وقتاً.",
+   "fields": {
+    "name": {
+     "l": "الاسم الكامل",
+     "ph": "عائشة المنصوري"
+    },
+    "email": {
+     "l": "البريد المهني",
+     "ph": "you@company.ae"
+    },
+    "phone": {
+     "l": "الهاتف / واتساب",
+     "ph": "+971 5X XXX XXXX"
+    },
+    "company": {
+     "l": "الشركة",
+     "ph": "شركة ذ.م.م"
+    }
+   },
+   "userType": {
+    "l": "أنا…",
+    "opts": [
+     "محاسب / مكتب محاسبة",
+     "فريق مالية",
+     "صاحب عمل",
+     "مستشار"
+    ]
+   },
+   "tps": {
+    "l": "عدد الخاضعين للضريبة",
+    "opts": [
+     "1",
+     "2–10",
+     "11–50",
+     "+50"
+    ]
+   },
+   "scope": {
+    "l": "مهتم بـ",
+    "opts": [
+     "القيمة المضافة",
+     "ضريبة الشركات",
+     "كلتاهما",
+     "الخدمات"
+    ]
+   },
+   "slotL": "الوقت المفضل للاجتماع (بتوقيت الخليج)",
+   "submit": "احجز العرض",
+   "errs": {
+    "name": "يرجى إدخال اسمك.",
+    "email": "يرجى إدخال بريد مهني صحيح.",
+    "phone": "يرجى إدخال رقم هاتف.",
+    "company": "يرجى إدخال اسم الشركة.",
+    "slot": "يرجى اختيار وقت للاجتماع."
+   },
+   "days": [
+    {
+     "d": "الأحد",
+     "dd": "10 أغسطس"
+    },
+    {
+     "d": "الاثنين",
+     "dd": "11 أغسطس"
+    },
+    {
+     "d": "الثلاثاء",
+     "dd": "12 أغسطس"
+    }
+   ],
+   "times": [
+    "09:30",
+    "11:00",
+    "14:00",
+    "16:30"
+   ],
+   "success": {
+    "title": "تم حجز العرض",
+    "p": "دعوة التقويم في طريقها إلى",
+    "p2": "أحضر إقراراً حديثاً أو ميزان مراجعة إذا رغبت بأن تُدار الجلسة ببياناتك.",
+    "another": "حجز آخر"
+   }
+  },
+  "einv": {
+   "kicker": "الجاهزية للفوترة الإلكترونية",
+   "title": "كن جاهزاً قبل أن تصبح إلزامية",
+   "sub": "تطبق الإمارات الفوترة الإلكترونية المهيكلة على مراحل. هذه الصفحة للجاهزية والتثقيف — تقييم أنظمتك وبياناتك وعملياتك قبل موعد التزامك.",
+   "concept": {
+    "h": "ما الفاتورة الإلكترونية المهيكلة",
+    "p": "ليست ملف PDF — بل مستند مقروء آلياً تُتحقق حقوله ويُتبادل عبر قنوات معتمدة. يجب أن تكون البيانات صحيحة من النظام المصدر.",
+    "fields": [
+     "رقم التسجيل الضريبي للبائع والمشتري",
+     "نوع الفاتورة ورقمها",
+     "تاريخ الإصدار وتاريخ التوريد",
+     "البنود والكميات",
+     "الفئة الضريبية لكل بند",
+     "مبلغ الضريبة لكل نسبة",
+     "شروط الدفع",
+     "العملة والإجماليات"
+    ]
+   },
+   "check": {
+    "h": "فحص الجاهزية الذاتي",
+    "items": [
+     "تصدر الفواتير من نظام (لا يدوياً في Word/Excel)",
+     "أرقام التسجيل الضريبي للعملاء والموردين تُتحقق عند الإدخال",
+     "كل بند منتج/خدمة يحمل رمزاً ضريبياً",
+     "منطق نسب الضريبة يطبقه النظام لا الإدخال اليدوي",
+     "إشعارات الدائن تشير إلى فاتورتها الأصلية",
+     "للبيانات الرئيسية (عملاء، أصناف) مالك مسمى"
+    ]
+   },
+   "score": {
+    "l": "مؤشر الجاهزية",
+    "low": "مرحلة مبكرة — ابدأ بأساسيات النظام والبيانات الرئيسية.",
+    "mid": "جزئية — أغلق الفجوات أعلاه قبل الربط التقني.",
+    "high": "وضع جيد — تحقق تالياً من جودة البيانات على مستوى الحقول."
+   },
+   "timeline": {
+    "h": "خطة تحضير منطقية",
+    "phases": [
+     {
+      "t": "الآن",
+      "h": "قيّم",
+      "p": "حدد أنظمة الفوترة وحقول البيانات والرموز الضريبية مقابل متطلبات الفاتورة المهيكلة."
+     },
+     {
+      "t": "+1–3 أشهر",
+      "h": "صحح البيانات",
+      "p": "نظّف أرقام التسجيل والرموز الضريبية والبيانات الرئيسية وأغلق فجوات العمليات."
+     },
+     {
+      "t": "+3–6 أشهر",
+      "h": "اربط",
+      "p": "خطط للربط مع مزودك واختبر التحقق من الحقول من البداية إلى النهاية."
+     },
+     {
+      "t": "قبل الإلزام",
+      "h": "تدرب",
+      "p": "شغّل إصداراً موازياً وطابقه مع إقرارات القيمة المضافة."
+     }
+    ]
+   },
+   "note": "يساعدك TaxCheck على التقييم والتحضير، وهو ليس مزود خدمات فوترة إلكترونية معتمداً؛ فالإرسال يتم عبر مزودين معتمدين.",
+   "ctaTitle": "احجز مراجعة جاهزية",
+   "ctaSub": "تقييم منهجي لأنظمتك وحقولك ورموزك الضريبية — مع قائمة فجوات مكتوبة."
+  },
+  "careers": {
+   "kicker": "الوظائف",
+   "title": "ساهم في بناء منصة الضرائب في الإمارات",
+   "sub": "نوظف محاسبين ومهندسين ومسؤولي نجاح عملاء في دبي — ونقرأ كل طلب يصلنا.",
+   "rolesT": "الوظائف المتاحة",
+   "roles": [
+    {
+     "h": "محاسب ضرائب أول",
+     "d": "مراجعة ضريبة الشركات والقيمة المضافة وجودة الملاحظات وتصعيدات العملاء.",
+     "loc": "دبي · دوام كامل"
+    },
+    {
+     "h": "مهندس منتج",
+     "d": "منتج ويب ثنائي اللغة وخطوط تحقق من البيانات.",
+     "loc": "دبي / عن بُعد خليجياً · دوام كامل"
+    },
+    {
+     "h": "مدير نجاح العملاء",
+     "d": "تأهيل مكاتب المحاسبة وفرق المالية، بالعربية والإنجليزية.",
+     "loc": "دبي · دوام كامل"
+    }
+   ],
+   "formT": "قدّم الآن",
+   "roleL": "الوظيفة",
+   "fields": {
+    "name": {
+     "l": "الاسم الكامل",
+     "ph": "عائشة المنصوري"
+    },
+    "email": {
+     "l": "البريد الإلكتروني",
+     "ph": "you@mail.com"
+    },
+    "phone": {
+     "l": "الهاتف / واتساب",
+     "ph": "+971 5X XXX XXXX"
+    },
+    "link": {
+     "l": "رابط LinkedIn أو السيرة الذاتية",
+     "ph": "https://…"
+    }
+   },
+   "msgL": "لماذا أنت؟ (بضعة أسطر)",
+   "submit": "أرسل الطلب",
+   "errs": {
+    "name": "يرجى إدخال اسمك.",
+    "email": "يرجى إدخال بريد صحيح.",
+    "role": "يرجى اختيار وظيفة."
+   },
+   "success": {
+    "title": "استلمنا طلبك",
+    "p": "شكراً لك — نرد على كل متقدم خلال أسبوع واحد.",
+    "another": "تقديم طلب آخر"
+   }
+  },
+  "contact": {
+   "kicker": "اتصل بنا",
+   "title": "تحدث إلى إنسان",
+   "sub": "أسئلة عن المنتج أو الخدمات أو شراكة — نرد خلال يوم عمل واحد.",
+   "cells": [
+    {
+     "h": "البريد",
+     "p": "info@taxcheck.ae"
+    },
+    {
+     "h": "الهاتف / واتساب",
+     "p": "+971 50 552 3307"
+    },
+    {
+     "h": "المكتب",
+     "p": "دبي، الإمارات العربية المتحدة"
+    }
+   ],
+   "form": {
+    "name": "الاسم",
+    "email": "البريد",
+    "msg": "الرسالة",
+    "send": "أرسل الرسالة",
+    "sent": "أُرسلت الرسالة — سنرد خلال يوم عمل واحد.",
+    "err": "يرجى تعبئة جميع الحقول."
+   }
+  }
+ }
+}
