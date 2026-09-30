@@ -1,5 +1,6 @@
 import { esc, attr, icons, badge } from '../lib/html.mjs';
-import { href, APP_URL, ZIINA, PHONE_E164, pageHero, sectionHead, ctaBand, sampleNote } from '../lib/layout.mjs';
+import { assertBankIban, formatIban } from '../lib/iban.mjs';
+import { href, APP_URL, ZIINA, PHONE, PHONE_E164, pageHero, sectionHead, ctaBand, sampleNote } from '../lib/layout.mjs';
 import { fmtDate, fmtDay, money } from '../lib/fmt.mjs';
 
 const frameBar = (t, label) => `<div class="bar"><i></i><i></i><i></i><span class="url">app.taxcheck.ae · ${esc(label)}</span><span class="live"><i></i>${esc(t.sample)}</span></div>`;
@@ -147,8 +148,51 @@ export function renderDash({ lang, t, x, data }) {
 }
 
 // ---------------- Pricing ----------------
-export function renderPricing({ lang, t, x }) {
+const BANK_CSS = `.bank{max-width:900px;margin:0 auto}.bank h3{font-size:22px}.bank .lead{margin-top:10px;color:var(--ink-2);font-size:15px}
+.bank dl{margin:20px 0 0;display:grid;grid-template-columns:minmax(0,max-content) minmax(0,1fr);gap:0 28px}
+.bank dt,.bank dd{margin:0;padding:12px 0;border-top:1px solid var(--line)}.bank dt{color:var(--muted);font-size:14px}.bank dd{color:var(--ink);font-weight:600;overflow-wrap:anywhere}
+.bank .iban{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.bank .iban bdi{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:clamp(12px,3.9vw,19px);letter-spacing:.03em;white-space:nowrap;user-select:all}
+.bank .copy{cursor:pointer;font:inherit;font-size:13px;font-weight:600;padding:6px 12px;border-radius:999px}.bank .copy[hidden]{display:none}
+.bank .safe{margin-top:18px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:13.5px}
+@media (max-width:600px){.bank dl{grid-template-columns:minmax(0,1fr)}.bank dt{padding:12px 0 0;border-top:1px solid var(--line)}.bank dd{padding:2px 0 12px;border-top:0}}`;
+const BANK_JS = `(function(){var b=document.querySelector('.bank .copy');if(!b)return;var done=b.getAttribute('data-done'),orig=b.textContent,v=b.getAttribute('data-copy');
+function ok(){b.textContent=done;setTimeout(function(){b.textContent=orig},1800)}
+function old(){var a=document.createElement('textarea');a.value=v;a.setAttribute('readonly','');a.style.position='fixed';a.style.opacity='0';document.body.appendChild(a);a.select();try{if(document.execCommand('copy'))ok()}catch(e){}document.body.removeChild(a)}
+b.hidden=false;b.addEventListener('click',function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(v).then(ok,old)}else old()})})();`;
+
+// Bank-transfer block: rendered only when content/data.json → bank.iban is set (validated; an invalid IBAN fails the build).
+function bankBlock(lang, t, data) {
+  const bk = data.bank || {};
+  const iban = assertBankIban(bk.iban);
+  if (!iban) return '';
+  const b = t.pricing.bank;
+  const L = b.labels;
+  const benef = lang === 'ar' ? `${esc(bk.beneficiary)} (${esc(bk.beneficiaryAr)})` : esc(bk.beneficiary);
+  const safety = esc(b.safety).replace('{phone}', `<span dir="ltr" translate="no" style="white-space:nowrap">${esc(PHONE)}</span>`);
+  return `
+<section style="padding-top:8px">
+  <div class="wrap">
+    <div class="card bank rv" data-rv>
+      <h3>${esc(b.title)}</h3>
+      <p class="lead">${esc(b.lead)}</p>
+      <dl>
+        <dt>${esc(L.beneficiary)}</dt><dd translate="no">${benef}</dd>
+        <dt>${esc(L.bank)}</dt><dd translate="no">${esc(bk.bank)}</dd>
+        <dt>${esc(L.iban)}</dt><dd class="iban"><bdi dir="ltr" translate="no">${esc(formatIban(iban))}</bdi><button type="button" class="btn btn-ghost copy" hidden data-copy="${attr(iban)}" data-done="${attr(b.copied)}">${esc(b.copy)}</button></dd>
+        <dt>${esc(L.swift)}</dt><dd translate="no"><bdi dir="ltr">${esc(bk.swift)}</bdi></dd>
+        <dt>${esc(L.currency)}</dt><dd>${esc(b.currency)}</dd>
+      </dl>
+      <p class="safe">${safety}</p>
+    </div>
+  </div>
+  <style>${BANK_CSS}</style>
+  <script>${BANK_JS}</script>
+</section>`;
+}
+
+export function renderPricing({ lang, t, x, data }) {
   const p = t.pricing;
+  const bankOn = !!assertBankIban((data.bank || {}).iban);
   const sv = p.service;
   const plan = (pl) => `
 <div class="plan ${pl.pop ? 'pop' : ''} rv" data-rv>
@@ -165,9 +209,9 @@ export function renderPricing({ lang, t, x }) {
 <section style="padding-top:24px">
   <div class="wrap">
     <div class="plans">${p.plans.map(plan).join('')}</div>
-    ${p.howToPay ? `<p class="note rv" data-rv style="text-align:center;margin-top:20px">${esc(p.howToPay)}</p>` : ''}
+    ${p.howToPay ? `<p class="note rv" data-rv style="text-align:center;margin-top:20px">${esc(bankOn && p.howToPayBank ? p.howToPayBank : p.howToPay)}</p>` : ''}
   </div>
-</section>
+</section>${bankBlock(lang, t, data)}
 <section style="padding-top:8px">
   <div class="wrap">
     ${sectionHead(p.serviceKicker, sv.name, sv.d)}

@@ -118,5 +118,13 @@
    "risk": "low",
    "open": 0
   }
- ]
+ ],
+ "bank": {
+  "beneficiary": "Finsuite technologies",
+  "beneficiaryAr": "فين سويت للتكنولوجيا",
+  "bank": "Wio Bank PJSC",
+  "swift": "WIOBAEADXXX",
+  "currency": "AED",
+  "iban": ""
+ }
 }

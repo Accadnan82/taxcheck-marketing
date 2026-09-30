@@ -1872,7 +1872,23 @@
    },
    "serviceKicker": "Reviewed by a person",
    "ctaWa": "Subscribe to",
-   "howToPay": "Subscribing goes through WhatsApp: we confirm your company details, send a secure payment link, then activate your account."
+   "howToPay": "Subscribing goes through WhatsApp: we confirm your company details, send a secure payment link, then activate your account.",
+   "howToPayBank": "Subscribing goes through WhatsApp: we confirm your company details and send your invoice, you pay by bank transfer or a secure payment link, and we activate your account.",
+   "bank": {
+    "title": "Pay by bank transfer",
+    "lead": "Message us on WhatsApp first: we confirm your plan and send your invoice. Then transfer the amount in AED and put the invoice number in the payment reference. We activate your account as soon as the transfer arrives.",
+    "labels": {
+     "beneficiary": "Beneficiary",
+     "bank": "Bank",
+     "iban": "IBAN",
+     "swift": "SWIFT / BIC",
+     "currency": "Currency"
+    },
+    "currency": "UAE dirham (AED)",
+    "safety": "We only ever ask for payment into this account, in the name of Finsuite technologies. If you receive different bank details in our name, do not pay — call us first on {phone}.",
+    "copy": "Copy IBAN",
+    "copied": "Copied"
+   }
   },
   "demo": {
    "kicker": "Request a Demo",
@@ -4059,7 +4075,23 @@
    },
    "serviceKicker": "يراجعها إنسان",
    "ctaWa": "اشترك بـ",
-   "howToPay": "الاشتراك عبر واتساب: نتحقق من بيانات شركتك، ونرسل لك رابط دفع آمن، ثم نفعّل حسابك."
+   "howToPay": "الاشتراك عبر واتساب: نتحقق من بيانات شركتك، ونرسل لك رابط دفع آمن، ثم نفعّل حسابك.",
+   "howToPayBank": "الاشتراك عبر واتساب: نتحقق من بيانات شركتك ونرسل لك الفاتورة، ثم تدفع بتحويل بنكي أو برابط دفع آمن، ونفعّل حسابك.",
+   "bank": {
+    "title": "الدفع بتحويل بنكي",
+    "lead": "راسلنا على واتساب أولاً: نؤكد خطتك ونرسل لك الفاتورة. ثم حوّل المبلغ بالدرهم واكتب رقم الفاتورة في مرجع التحويل. نفعّل حسابك فور وصول التحويل.",
+    "labels": {
+     "beneficiary": "المستفيد",
+     "bank": "البنك",
+     "iban": "رقم الحساب المصرفي الدولي (IBAN)",
+     "swift": "رمز السويفت (SWIFT / BIC)",
+     "currency": "العملة"
+    },
+    "currency": "درهم إماراتي",
+    "safety": "لا نطلب الدفع إلا إلى هذا الحساب باسم Finsuite technologies. إن وصلتك بيانات بنكية مختلفة باسمنا فلا تدفع، واتصل بنا أولاً على {phone}.",
+    "copy": "نسخ رقم الحساب",
+    "copied": "تم النسخ"
+   }
   },
   "demo": {
    "kicker": "اطلب عرضاً تجريبياً",
