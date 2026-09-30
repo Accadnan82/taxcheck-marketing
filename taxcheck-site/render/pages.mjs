@@ -173,7 +173,7 @@ export function renderPricing({ lang, t, x }) {
     ${sectionHead(p.serviceKicker, sv.name, sv.d)}
     <div class="card rv" data-rv style="max-width:900px;margin:0 auto">
       <div class="price"><span class="amt" style="font-size:44px">${esc(sv.pm)}</span><span class="per">${esc(x.perReturn)}</span></div>
-      <p class="note" style="margin-top:10px"><b>${esc(sv.launch)}</b></p>
+      ${sv.launch ? `<p class="note" style="margin-top:10px"><b>${esc(sv.launch)}</b></p>` : ""}
       <ul class="list" style="margin-top:18px">${sv.f.map((f) => `<li>${esc(f)}</li>`).join('')}</ul>
       <p class="note" style="margin-top:18px">${esc(sv.note)}</p>
       <div class="acts2" style="margin-top:20px">
