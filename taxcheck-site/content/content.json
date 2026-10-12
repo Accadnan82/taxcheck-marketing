@@ -28,7 +28,8 @@
    "disclaimer": "AI & Tax Disclaimer",
    "careers": "Careers",
    "penalty-calculator": "Penalty calculator",
-   "refund": "Refunds"
+   "refund": "Refunds",
+   "challenge": "Tax Challenge"
   },
   "navMain": [
    "product",
@@ -74,7 +75,8 @@
      "review",
      "dashboard",
      "einvoicing",
-     "penalty-calculator"
+     "penalty-calculator",
+     "challenge"
     ]
    },
    {
@@ -2199,7 +2201,194 @@
    "seoTitle": "UAE Corporate Tax & VAT late filing penalty calculator 2026",
    "seoDesc": "Free UAE tax penalty calculator: Corporate Tax and VAT late filing, late payment and late registration under the 2026 rules, with the law behind every figure."
   },
-  "legalEntity": "TaxCheck is operated by Finsuite technologies, a sole establishment licensed in Dubai under professional licence 1653679 issued by the Department of Economy and Tourism."
+  "legalEntity": "TaxCheck is operated by Finsuite technologies, a sole establishment licensed in Dubai under professional licence 1653679 issued by the Department of Economy and Tourism.",
+  "challenge": {
+   "seoTitle": "UAE Corporate Tax Challenge: find the 8 errors",
+   "seoDesc": "A UAE Corporate Tax return with 8 hidden errors. Find them, work out the right tax and send your answers by 25 October 2026. Free, no signup.",
+   "kicker": "Corporate Tax Challenge #1",
+   "h1Html": "This return has <span class=\"hl\">8 errors</span>. How many can you find?",
+   "sub": "A UAE Corporate Tax return, prepared and ready to file. Read it the way a reviewer would, then send us your answers. Free, no signup.",
+   "pdf": "/challenge/taxcheck-ct-challenge-1-en.pdf",
+   "pdfLabel": "Download the challenge (PDF)",
+   "sendLabel": "Send your answers",
+   "mailto": "mailto:info@taxcheck.ae?subject=Corporate%20Tax%20Challenge%20%231",
+   "status": "Open · entries close Sunday 25 October 2026 · answers Tuesday 27 October 2026",
+   "factsH": "What the preparer's file says",
+   "factsK": "1 · The company",
+   "profile": [
+    {
+     "k": "Entity",
+     "v": "Mainland LLC, Dubai — general trading"
+    },
+    {
+     "k": "Tax period",
+     "v": "1 Apr 2025 – 31 Mar 2026"
+    },
+    {
+     "k": "Revenue",
+     "v": "AED 14,600,000"
+    },
+    {
+     "k": "Status",
+     "v": "Not a Free Zone Person · not in a tax group"
+    }
+   ],
+   "notesH": "Notes on the file",
+   "notes": [
+    "<b>Entertainment AED 96,000</b> — dinners and event tickets for customers and suppliers.",
+    "<b>Fines AED 23,500</b> — traffic fines 8,500 and a municipality fine for signage 15,000.",
+    "<b>Donation AED 40,000</b> — a local community sports club. It is not on the list of Qualifying Public Benefit Entities.",
+    "<b>Other income AED 150,000</b> — cash dividend from a UAE-resident LLC in which the company holds 3%. No expenses relate to it.",
+    "<b>Bank interest AED 210,000</b> — term loan from a UAE bank. No interest income in the period.",
+    "<b>Salaries</b> include AED 300,000 paid to the managing partner (a Connected Person). HR benchmark for the role: AED 320,000.",
+    "<b>Tax losses brought forward</b> — FY 1 Apr 2023 – 31 Mar 2024: 500,000. FY 1 Apr 2024 – 31 Mar 2025: 1,900,000."
+   ],
+   "plH": "Statement of profit or loss",
+   "plK": "2 · The accounts",
+   "unit": "AED · year ended 31 March 2026",
+   "pl": [
+    {
+     "l": "Revenue",
+     "v": "14,600,000",
+     "c": ""
+    },
+    {
+     "l": "Cost of sales",
+     "v": "(9,490,000)",
+     "c": ""
+    },
+    {
+     "l": "Gross profit",
+     "v": "5,110,000",
+     "c": "sub"
+    },
+    {
+     "l": "Salaries and wages",
+     "v": "1,860,000",
+     "c": "in"
+    },
+    {
+     "l": "Rent",
+     "v": "336,000",
+     "c": "in"
+    },
+    {
+     "l": "Depreciation",
+     "v": "142,000",
+     "c": "in"
+    },
+    {
+     "l": "Client entertainment",
+     "v": "96,000",
+     "c": "in"
+    },
+    {
+     "l": "Fines and penalties",
+     "v": "23,500",
+     "c": "in"
+    },
+    {
+     "l": "Donations",
+     "v": "40,000",
+     "c": "in"
+    },
+    {
+     "l": "Bank interest",
+     "v": "210,000",
+     "c": "in"
+    },
+    {
+     "l": "Other administrative",
+     "v": "302,500",
+     "c": "in"
+    },
+    {
+     "l": "Total operating expenses",
+     "v": "(3,010,000)",
+     "c": "sub"
+    },
+    {
+     "l": "Dividend income",
+     "v": "150,000",
+     "c": ""
+    },
+    {
+     "l": "Net profit before tax",
+     "v": "2,250,000",
+     "c": "total"
+    }
+   ],
+   "rtH": "Corporate Tax computation, as prepared",
+   "rtK": "3 · The return",
+   "rt": [
+    {
+     "l": "Accounting net profit",
+     "v": "2,250,000",
+     "c": ""
+    },
+    {
+     "l": "Add: interest disallowed (30% × 210,000)",
+     "v": "63,000",
+     "c": "in"
+    },
+    {
+     "l": "Taxable income before loss relief",
+     "v": "2,313,000",
+     "c": "sub"
+    },
+    {
+     "l": "Tax losses available",
+     "v": "2,400,000",
+     "c": "in"
+    },
+    {
+     "l": "Tax losses used",
+     "v": "(2,313,000)",
+     "c": "in"
+    },
+    {
+     "l": "Taxable income",
+     "v": "0",
+     "c": "sub"
+    },
+    {
+     "l": "Corporate Tax payable",
+     "v": "0",
+     "c": "total"
+    },
+    {
+     "l": "Tax losses carried forward",
+     "v": "87,000",
+     "c": ""
+    }
+   ],
+   "side": [
+    {
+     "k": "Small Business Relief elected",
+     "v": "No"
+    },
+    {
+     "k": "Return due date",
+     "v": "30 September 2026"
+    }
+   ],
+   "rulesH": "Your move",
+   "rulesK": "4 · How to take part",
+   "rules": [
+    "Find the errors. Work out the correct Corporate Tax payable and the losses carried forward.",
+    "Comment <b>“Done”</b> with your count — don’t post your answers, so others can play.",
+    "Send your full list to <b>info@taxcheck.ae</b> by <b>Sunday 25 October 2026</b>.",
+    "Answers and law references posted <b>Tuesday 27 October 2026</b>."
+   ],
+   "score": "Scoring: 1 point per error found, 2 points for the correct tax payable. <b>10 points</b> in total.",
+   "hire": "Top scorers: we’ll review your profile first for roles at TaxCheck.",
+   "thItem": "Line",
+   "thAed": "AED",
+   "disclaimer": "Fictional company and figures, built for this challenge. Not tax advice.",
+   "ctaH": "Then try it on a real return.",
+   "ctaP": "TaxCheck reads your documents, checks the figures against UAE Corporate Tax and VAT rules, and shows which document produced each number. Your first complete return is free. No card, no time limit.",
+   "label": "Tax Challenge"
+  }
  },
  "ar": {
   "dir": "rtl",
@@ -2230,7 +2419,8 @@
    "disclaimer": "إخلاء المسؤولية",
    "careers": "الوظائف",
    "penalty-calculator": "حاسبة الغرامات",
-   "refund": "الاسترداد"
+   "refund": "الاسترداد",
+   "challenge": "تحدّي الضريبة"
   },
   "navMain": [
    "product",
@@ -2276,7 +2466,8 @@
      "review",
      "dashboard",
      "einvoicing",
-     "penalty-calculator"
+     "penalty-calculator",
+     "challenge"
     ]
    },
    {
@@ -4401,6 +4592,193 @@
    "seoTitle": "حاسبة غرامات التأخر في إقرار ضريبة الشركات والقيمة المضافة — الإمارات 2026",
    "seoDesc": "حاسبة مجانية لغرامات التأخر في تسجيل وتقديم وسداد ضريبة الشركات والقيمة المضافة في الإمارات وفق قواعد 2026 (14% سنوياً)، مع المصدر القانوني لكل بند."
   },
-  "legalEntity": "يُشغّل TaxCheck مؤسسة فين سويت للتكنولوجيا، مؤسسة فردية مرخّصة في دبي بموجب الرخصة المهنية رقم 1653679 الصادرة عن دائرة الاقتصاد والسياحة."
+  "legalEntity": "يُشغّل TaxCheck مؤسسة فين سويت للتكنولوجيا، مؤسسة فردية مرخّصة في دبي بموجب الرخصة المهنية رقم 1653679 الصادرة عن دائرة الاقتصاد والسياحة.",
+  "challenge": {
+   "seoTitle": "تحدّي ضريبة الشركات: هل تكتشف الأخطاء الثمانية؟",
+   "seoDesc": "إقرار ضريبة شركات إماراتي فيه 8 أخطاء مخفية. اكتشفها، احسب الضريبة الصحيحة، وأرسل إجاباتك قبل 25 أكتوبر 2026. مجاني وبلا تسجيل.",
+   "kicker": "تحدّي ضريبة الشركات #1",
+   "h1Html": "في هذا الإقرار <span class=\"hl\">8 أخطاء</span>. كم خطأً تستطيع أن تكتشف؟",
+   "sub": "إقرار ضريبة شركات إماراتي، مُعدّ وجاهز للتقديم. اقرأه بعين المراجِع، ثم أرسل لنا إجاباتك. مجاني وبلا تسجيل.",
+   "pdf": "/challenge/taxcheck-ct-challenge-1-ar.pdf",
+   "pdfLabel": "حمّل التحدي (PDF)",
+   "sendLabel": "أرسل إجاباتك",
+   "mailto": "mailto:info@taxcheck.ae?subject=%D8%AA%D8%AD%D8%AF%D9%91%D9%8A%20%D8%B6%D8%B1%D9%8A%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B4%D8%B1%D9%83%D8%A7%D8%AA%20%231",
+   "status": "مفتوح · آخر موعد للمشاركة الأحد 25 أكتوبر 2026 · الإجابات الثلاثاء 27 أكتوبر 2026",
+   "factsH": "ماذا يقول ملف المُعِدّ",
+   "factsK": "1 · الشركة",
+   "profile": [
+    {
+     "k": "الكيان",
+     "v": "شركة ذ.م.م في البر الرئيسي، دبي — تجارة عامة"
+    },
+    {
+     "k": "الفترة الضريبية",
+     "v": "1 أبريل 2025 – 31 مارس 2026"
+    },
+    {
+     "k": "الإيرادات",
+     "v": "14,600,000 درهم"
+    },
+    {
+     "k": "الوضع",
+     "v": "ليست شخصًا في منطقة حرة · ليست ضمن مجموعة ضريبية"
+    }
+   ],
+   "notesH": "ملاحظات الملف",
+   "notes": [
+    "<b>ضيافة 96,000 درهم</b> — عشاءات وتذاكر فعاليات للعملاء والموردين.",
+    "<b>غرامات 23,500 درهم</b> — مخالفات مرورية 8,500 وغرامة بلدية على لافتة 15,000.",
+    "<b>تبرع 40,000 درهم</b> — لنادٍ رياضي مجتمعي محلي، غير مدرج في قائمة الجهات ذات النفع العام المؤهلة.",
+    "<b>إيرادات أخرى 150,000 درهم</b> — توزيعات أرباح نقدية من شركة ذ.م.م مقيمة في الدولة تملك فيها الشركة 3%. لا مصروفات مرتبطة بها.",
+    "<b>فوائد بنكية 210,000 درهم</b> — قرض لأجل من بنك إماراتي. لا إيرادات فوائد في الفترة.",
+    "<b>الرواتب</b> تشمل 300,000 درهم للشريك المدير (شخص مرتبط). المرجع السوقي للوظيفة لدى الموارد البشرية: 320,000 درهم.",
+    "<b>الخسائر الضريبية المرحّلة</b> — السنة 1 أبريل 2023 – 31 مارس 2024: 500,000. السنة 1 أبريل 2024 – 31 مارس 2025: 1,900,000."
+   ],
+   "plH": "قائمة الأرباح أو الخسائر",
+   "plK": "2 · الحسابات",
+   "unit": "بالدرهم · السنة المنتهية في 31 مارس 2026",
+   "pl": [
+    {
+     "l": "الإيرادات",
+     "v": "14,600,000",
+     "c": ""
+    },
+    {
+     "l": "تكلفة المبيعات",
+     "v": "(9,490,000)",
+     "c": ""
+    },
+    {
+     "l": "مجمل الربح",
+     "v": "5,110,000",
+     "c": "sub"
+    },
+    {
+     "l": "الرواتب والأجور",
+     "v": "1,860,000",
+     "c": "in"
+    },
+    {
+     "l": "الإيجار",
+     "v": "336,000",
+     "c": "in"
+    },
+    {
+     "l": "الاستهلاك",
+     "v": "142,000",
+     "c": "in"
+    },
+    {
+     "l": "ضيافة العملاء",
+     "v": "96,000",
+     "c": "in"
+    },
+    {
+     "l": "الغرامات والجزاءات",
+     "v": "23,500",
+     "c": "in"
+    },
+    {
+     "l": "التبرعات",
+     "v": "40,000",
+     "c": "in"
+    },
+    {
+     "l": "الفوائد البنكية",
+     "v": "210,000",
+     "c": "in"
+    },
+    {
+     "l": "مصروفات إدارية أخرى",
+     "v": "302,500",
+     "c": "in"
+    },
+    {
+     "l": "إجمالي المصروفات التشغيلية",
+     "v": "(3,010,000)",
+     "c": "sub"
+    },
+    {
+     "l": "إيرادات توزيعات الأرباح",
+     "v": "150,000",
+     "c": ""
+    },
+    {
+     "l": "صافي الربح قبل الضريبة",
+     "v": "2,250,000",
+     "c": "total"
+    }
+   ],
+   "rtH": "احتساب ضريبة الشركات، كما أُعِدّ",
+   "rtK": "3 · الإقرار",
+   "rt": [
+    {
+     "l": "صافي الربح المحاسبي",
+     "v": "2,250,000",
+     "c": ""
+    },
+    {
+     "l": "يُضاف: فوائد غير مسموح بها (<bdi dir='ltr'>30% × 210,000</bdi>)",
+     "v": "63,000",
+     "c": "in"
+    },
+    {
+     "l": "الدخل الخاضع للضريبة قبل الخسائر",
+     "v": "2,313,000",
+     "c": "sub"
+    },
+    {
+     "l": "الخسائر الضريبية المتاحة",
+     "v": "2,400,000",
+     "c": "in"
+    },
+    {
+     "l": "الخسائر الضريبية المستخدمة",
+     "v": "(2,313,000)",
+     "c": "in"
+    },
+    {
+     "l": "الدخل الخاضع للضريبة",
+     "v": "0",
+     "c": "sub"
+    },
+    {
+     "l": "ضريبة الشركات المستحقة",
+     "v": "0",
+     "c": "total"
+    },
+    {
+     "l": "الخسائر الضريبية المرحّلة",
+     "v": "87,000",
+     "c": ""
+    }
+   ],
+   "side": [
+    {
+     "k": "اختيار إعفاء الأعمال الصغيرة",
+     "v": "لا"
+    },
+    {
+     "k": "تاريخ استحقاق الإقرار",
+     "v": "30 سبتمبر 2026"
+    }
+   ],
+   "rulesH": "دورك الآن",
+   "rulesK": "4 · طريقة المشاركة",
+   "rules": [
+    "اكتشف الأخطاء، واحسب ضريبة الشركات الصحيحة والخسائر المرحّلة.",
+    "علّق بكلمة <b>«تم»</b> مع عدد الأخطاء التي وجدتها — لا تنشر إجاباتك حتى يستمتع غيرك بالتحدي.",
+    "أرسل قائمتك الكاملة إلى <b>info@taxcheck.ae</b> قبل <b>الأحد 25 أكتوبر 2026</b>.",
+    "ننشر الإجابات مع المراجع القانونية <b>الثلاثاء 27 أكتوبر 2026</b>."
+   ],
+   "score": "التقييم: نقطة لكل خطأ، ونقطتان للضريبة المستحقة الصحيحة. المجموع <b>10 نقاط</b>.",
+   "hire": "أصحاب أعلى النتائج: نراجع ملفاتهم أولًا عند التوظيف في TaxCheck.",
+   "thItem": "البند",
+   "thAed": "درهم",
+   "disclaimer": "شركة وأرقام افتراضية أُعدّت لهذا التحدي. ليست استشارة ضريبية.",
+   "ctaH": "ثم جرّبه على إقرار حقيقي.",
+   "ctaP": "يقرأ TaxCheck مستنداتك، ويطابق الأرقام مع قواعد ضريبة الشركات والقيمة المضافة في الإمارات، ويبيّن المستند الذي جاء منه كل رقم. أول إقرار كامل مجاني، بلا بطاقة، وبلا مدة محددة.",
+   "label": "تحدّي الضريبة"
+  }
  }
 }

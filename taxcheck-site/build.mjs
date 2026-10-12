@@ -9,6 +9,7 @@ import { renderGeneric } from './render/generic.mjs';
 import { renderCT, renderVAT, renderAI, renderACC, renderDash, renderPricing, renderEinv } from './render/pages.mjs';
 import { renderDemo, renderCareers, renderContact } from './render/forms.mjs';
 import { renderCalculator } from './render/calculator.mjs';
+import { renderChallenge } from './render/challenge.mjs';
 
 const root = dirname(fileURLToPath(import.meta.url));
 const content = JSON.parse(readFileSync(join(root, 'content/content.json'), 'utf8'));
@@ -17,7 +18,7 @@ const dist = join(root, 'dist');
 
 const renderers = {
   home: renderHome, 'corporate-tax': renderCT, vat: renderVAT, ai: renderAI, accountants: renderACC, dashboard: renderDash,
-  pricing: renderPricing, 'penalty-calculator': renderCalculator, einvoicing: renderEinv, demo: renderDemo, careers: renderCareers, contact: renderContact,
+  pricing: renderPricing, 'penalty-calculator': renderCalculator, challenge: renderChallenge, einvoicing: renderEinv, demo: renderDemo, careers: renderCareers, contact: renderContact,
 };
 const dictKey = { 'penalty-calculator': 'calc', 'corporate-tax': 'ct', accountants: 'acc', dashboard: 'dash', einvoicing: 'einv' };
 
